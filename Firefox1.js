@@ -5,7 +5,7 @@ iimPlayCode("URL GOTO=about:home");
 ClearCookie(); // Signup6 | CashbackFortune
 
 
-var Ma_off = ["436","509","595","454","355","607","585"];
+var Ma_off = ["436","509","595","454","355","607","555"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
