@@ -18,7 +18,7 @@ while(true)
 		break;
 	}
 	else
-	{// check nếu số lượng off chưa làm xong
+	{// check nếu số lượng off chưa làm xong 
 		var site_Lam = "Thông";
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		ClearCookie();
