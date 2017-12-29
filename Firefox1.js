@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["530","647","527","625","648","294","528"];
+var Ma_off = ["514","647","527","625","648","294","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -522,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "530":case "519":
+							case "514":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
@@ -1200,13 +1200,13 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Get a Gift Card")
-				{// 634 chưa code
+				{// 634
 					try
 					{
 						switch(Check_Off)
 						{
 							case "634":
-							
+							Get_a_Gift_Card(File_Mail_info);
 							break;
 						}
 						off++;
@@ -1672,6 +1672,62 @@ function RewardBee(File_Mail_info)
 			}
 		}
 	}
+}
+function Get_a_Gift_Card(File_Mail_info)
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
+	var Random_Phon1 = Math.floor((Math.random() * (999 - 111  + 1)) + 111 );
+	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111  + 1)) + 1111 );
+	var Get_a_Gift_Card = "CODE:";
+	Get_a_Gift_Card += "SET !ERRORIGNORE YES"+"\n";
+	Get_a_Gift_Card += "SET !TIMEOUT_TAG 0 "+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=ID:btn1"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=ID:btn2"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=ID:btn3"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=5"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_LINE 1"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+	Get_a_Gift_Card += "ONDIALOG POS=1 BUTTON=OK CONTENT="+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ID:commandBean ATTR=ID:submitbutton"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=5"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE Last_First.txt"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_COLUMNS 2"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_LINE 1"+"\n";
+	Get_a_Gift_Card += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:street CONTENT={{!COL2}}"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:postalCode CONTENT={{!COL5}}"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:city CONTENT={{!COL3}}"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=SELECT FORM=ID:commandBean ATTR=ID:state CONTENT=%{{!COL4}}"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:homeAreaCode CONTENT=420"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:homePrefix CONTENT="+Random_Phon1+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:commandBean ATTR=ID:homeSuffix CONTENT="+Random_Phon2+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=SELECT FORM=ID:commandBean ATTR=ID:gender CONTENT=%M"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=SELECT FORM=ID:commandBean ATTR=ID:birthYear CONTENT=%"+Random_Nam+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=SELECT FORM=ID:commandBean ATTR=ID:366 CONTENT=%729"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ID:commandBean ATTR=ID:submitbutton"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=SRC:http://concept.imageservepro.com/MidPass/1.jpg"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=SRC:http://concept.imageservepro.com/MidPass/2(1).jpg"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=A ATTR=ID:skipButton"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=2"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=SRC:http://concept.imageservepro.com/MidPass/2(1).jpg"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=SRC:http://concept.imageservepro.com/MidPass/1.jpg"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=1"+"\n";
+	Get_a_Gift_Card += "TAG POS=1 TYPE=IMG ATTR=SRC:http://concept.imageservepro.com/MidPass/1.jpg"+"\n";
+	Get_a_Gift_Card += "WAIT SECONDS=20"+"\n";
+	iimPlay(Get_a_Gift_Card);
 }
 function Amazon_$500(File_Mail_info)
 {
