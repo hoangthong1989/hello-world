@@ -1,13 +1,12 @@
-﻿//======================================================================================================================
+//======================================================================================================================
 iimPlayCode("WAIT SECONDS=1");
 iimPlayCode("TAB CLOSEALLOTHERS"); 
 iimPlayCode("URL GOTO=about:home");        
-ClearCookie(); // Signup6 | CashbackFortune
+ClearCookie();
 
-
-var Ma_off = ["436","509","595","454","355","607","555"];
+var Ma_off = ["207","620","625","208","294","606"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -18,11 +17,11 @@ while(true)
 		break;
 	}
 	else
-	{// check nếu số lượng off chưa làm xong 
+	{// check nếu số lượng off chưa làm xong
 		var site_Lam = "Thông";
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		ClearCookie();
-		var User_member = ["lamborghini"];
+		var User_member = ["Bugatti"];
 		// var Ten_member = Math.floor((Math.random() * 3) + 0);
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
 		iimDisplay("Đang chạy Off Có Mã Là : "+Check_Off+"\nSố Off Đã Làm Là : "+off);
@@ -78,7 +77,7 @@ while(true)
 		{ // vồng lặp làm off
 			var title = window.document.title;
 			if(title != "")
-			{ // Kiểm Tra Title Site Hiện Tại
+			{ // Kiểm Tra Title Site Hiện Tại 
 				if(Check_Off == "1536")
 				{ //
 					var Insurance_check = "CODE:";
@@ -109,13 +108,13 @@ while(true)
 					off++;
 					break;
 				}
-				if(title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
+				if(title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
 				{ // Dailybreak
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "454":case "355":
+							case "518":case "625":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -130,7 +129,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "527":case "585":
+							case "265":case "585":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -308,14 +307,31 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 15 204 151 244 245 247 248 372 392 446 541 590
+				{ // 15 204 151 244 245 247 248 372 392 446 541 590 604 605 596
 					try
 					{
 						switch(Check_Off)
 						{
 							case "204":case "248":case "247":case "245":case "244":case "151":
-							case "590":case "446":case "392":case "372":case "541":
+							case "604":case "590":case "446":case "392":case "372":case "541":
+							case "596":case "605":
 							National_Consumer_Center(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "SurveysandPromotions")
+				{ // 604 605
+					try
+					{
+						switch(Check_Off)
+						{
+							
+							case "604":case "605":
+							National_FRAME_1(File_Mail_info);
 							break;
 						}
 						off++;
@@ -506,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "607":case "519":
+							case "620":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
@@ -669,23 +685,27 @@ while(true)
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
 							a.setBoolPref("enabled",false);
-							var STT = Math.floor((Math.random() * 2) + 0);
+							var STT = Math.floor((Math.random() * 3) + 1);
 							var Country = ["Mexico<SP>City,<SP>Mexico","New<SP>York,<SP>NY,<SP>USA","Canterbury,<SP>New<SP>Zealand"];
 							var Tripping = "CODE:";
 							Tripping += "SET !ERRORIGNORE YES" + "\n";
 							Tripping += "SET !TIMEOUT_TAG 0"+"\n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT" BUTTON=0 '+" \n";
-							Tripping += 'EVENTS TYPE=KEYPRESS SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT" CHARS='+Country[0]+" \n";
+							Tripping += 'EVENTS TYPE=KEYPRESS SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT" CHARS='+Country[1]+" \n";
 							Tripping += "WAIT SECONDS = 7"+" \n";
 							Tripping += 'EVENT TYPE=MOUSEDOWN SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV" BUTTON=0 '+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV>DIV>DIV" BUTTON=0 '+" \n";
-							Tripping += "TAG POS=1 TYPE=SPAN ATTR=TXT:28"+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(6)>SPAN" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
-							Tripping += "TAG POS=1 TYPE=TD ATTR=TXT:29"+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(7)" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-							Tripping += "WAIT SECONDS = 3"+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>A>DIV>DIV>UL>LI>DIV>IMG" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>SPAN>DIV" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV>UL>LI:nth-of-type(3)" BUTTON=0'+" \n";
+							Tripping += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Search"+" \n";
+							Tripping += "WAIT SECONDS = 5"+" \n";
+							Tripping += "TAG POS=1 TYPE=IMG ATTR=SRC:https://s0.trippng.com/attachments/*/store/fill/400/275/*/media.jpeg"+" \n";
+							Tripping += "TAG POS=1 TYPE=IMG ATTR=SRC:https://s0.trippng.com/attachments/*/store/fill/400/275/*/media.jpeg"+" \n";
+							Tripping += "TAG POS=1 TYPE=IMG ATTR=SRC:https://s0.trippng.com/attachments/*/store/fill/400/275/*/media.jpeg"+" \n";
 							Tripping += "TAB T = 2"+" \n";
 							Tripping += "WAIT SECONDS = 10"+" \n";
 							iimPlay(Tripping);
@@ -972,7 +992,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Depend - Formstack") 
+				else if(title == "Depend - Formstack")
 				{// 415
 					try
 					{
@@ -987,7 +1007,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "ConsumerRewards.us.com") 
+				else if(title == "ConsumerRewards.us.com")
 				{// 450
 					try
 					{
@@ -1036,7 +1056,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "FavoriteConsumerBrands.com") 
+				else if(title == "FavoriteConsumerBrands.com")
 				{// 493
 					try
 					{
@@ -1051,7 +1071,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "$500 Amazon Gift Card") 
+				else if(title == "$500 Amazon Gift Card")
 				{// 494
 					try
 					{
@@ -1067,12 +1087,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Disney")
-				{// 594
+				{// 594 583
 					try
 					{
 						switch(Check_Off)
 						{
-							case "594":
+							case "583":case "594":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
@@ -1118,6 +1138,60 @@ while(true)
 							Disney += "TAG POS=1 TYPE=DIV ATTR=ID:dlrinterest-label"+"\n";
 							Disney += "TAG POS=2 TYPE=SPAN ATTR=TXT:Finish"+"\n";
 							iimPlay(Disney);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Sign up now for access to your exclusive offers!")
+				{// 621 chưa test code
+					try
+					{
+						switch(Check_Off)
+						{
+							case "621":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Dieting_Solutions = "CODE:";
+							Dieting_Solutions += "SET !ERRORIGNORE YES"+"\n";
+							Dieting_Solutions += "SET !TIMEOUT_TAG 0"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:optin"+"\n";
+							Dieting_Solutions += "TAG POS=2 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:gender"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:NUMBER FORM=ID:offerForm ATTR=ID:age CONTENT=25"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Continue"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+							Dieting_Solutions += "TAG POS=5 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+							Dieting_Solutions += "TAG POS=10 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Click<SP>Here<SP>To<SP>Get<SP>Your<SP>Free<SP>Samples"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_LINE 1"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:offerForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Submit"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=IMG ATTR=SRC:http://us2-us1.ckcdnassets.com/182/creatives/38240/17-08_Atkins_5Off_Banners_300x250.png"+"\n";
+							Dieting_Solutions += "TAB T=2"+"\n";
+							Dieting_Solutions += "WAIT SECONDS = 1"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE Last_First.txt"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:first_name CONTENT={{!COL1}}"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:last_name CONTENT={{!COL2}}"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_LINE 1"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE Last_First.txt"+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:username CONTENT={{!COL1}}{{!COL2}}"+"\n";
+							Dieting_Solutions += "SET !ENCRYPTION NO"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password CONTENT=hjuhygtde"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password_confirmation CONTENT=hjuhygtde"+"\n";
+							Dieting_Solutions += "TAG POS=3 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=*"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=A ATTR=TXT:Get<SP>Started<SP>»"+"\n";
+							Dieting_Solutions += "WAIT SECONDS = 20"+"\n";
+							iimPlay(Dieting_Solutions);
 							break;
 						}
 						off++;
@@ -1189,8 +1263,9 @@ while(true)
 						break;
 					}
 				}
-				else if(Check_Off == "202"||Check_Off == "483"||Check_Off == "388"||Check_Off == "387"||Check_Off == "201"||Check_Off == "203")
+				else if(Check_Off == "605"||Check_Off == "604"||Check_Off == "202"||Check_Off == "483"||Check_Off == "388"||Check_Off == "387"||Check_Off == "201"||Check_Off == "203")
 				{
+					// iimPlay(REFRESH_Site);
 					var National_Quay = "CODE:";
 					National_Quay += "SET !ERRORIGNORE YES"+"\n";
 					National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
@@ -1203,10 +1278,17 @@ while(true)
 					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
 					National_Quay += "WAIT SECONDS=5"+"\n";
 					iimPlay(National_Quay);
+					iimPlayCode("WAIT SECONDS=1");
 					var title = window.document.title;
 					if(title == "National Consumer Center")
 					{
 						National_Consumer_Center(File_Mail_info);
+						off++;
+						break;
+					}
+					else if(title == "SurveysandPromotions")
+					{
+						National_FRAME_1(File_Mail_info);
 						off++;
 						break;
 					}
@@ -1244,7 +1326,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "355":
+		case "123":
 		Line = 2;
 		break;
 	}
@@ -1417,7 +1499,7 @@ function Dailybreak(File_Mail_info)
 					case "365":case "362":case "363":case "355":case "302":case "224":case "249":
 					case "404":case "366":case "411":case "421":case "378":case "374":case "159":
 					case "511":case "202":case "454":case "478":case "485":case "474":case "487":
-					case "455":case "518":case "495":case "320":case "463":
+					case "625":case "455":case "518":case "495":case "320":case "463":
 					iimPlay(Dailybreak_KS1); // chạy Khảo sát Loại 1
 					break;
 					default:
@@ -1442,7 +1524,7 @@ function Dailybreak(File_Mail_info)
 }
 function RewardBee(File_Mail_info)
 {// check mã off để chạy khảo sát
-	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;
+	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;var C10 = 0;
 	var load_F5 = 0;var Line = 1;var SL_Chon_KS = 0;
 	var Pass = Tao_Pass();
 	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
@@ -1523,6 +1605,13 @@ function RewardBee(File_Mail_info)
 						C3 = 3;C8 = 7;
 						C4 = 3;C9 = 3;
 						break;
+						case "265":
+						C0 = 4;C5 = 4;
+						C1 = 4;C6 = 3;
+						C2 = 4;C7 = 3;
+						C3 = 4;C8 = 7;
+						C4 = 4;C9 = 3;C10 = 2;
+						break;
 					}
 					var cau_0 = Math.floor((Math.random() * C0) + 1);
 					var cau_1 = Math.floor((Math.random() * C1) + 1);
@@ -1534,6 +1623,7 @@ function RewardBee(File_Mail_info)
 					var cau_7 = Math.floor((Math.random() * C7) + 1);
 					var cau_8 = Math.floor((Math.random() * C8) + 1);
 					var cau_9 = Math.floor((Math.random() * C9) + 1);
+					var cau_10 = Math.floor((Math.random() * C10) + 1);
 					SL_Chon_KS++;
 					var RewardBee_KS = "CODE:";
 					RewardBee_KS += "SET !ERRORIGNORE YES" + "\n";
@@ -1548,6 +1638,7 @@ function RewardBee(File_Mail_info)
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_7>DIV:nth-of-type("+cau_7+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_8>DIV:nth-of-type("+cau_8+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_9+")>LABEL\" BUTTON=0"+"\n";
+					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
 					iimPlay(RewardBee_KS);
 				}
 			}
@@ -2653,7 +2744,7 @@ function National_Consumer_Center(File_Mail_info)
 	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
-	//// Khúc Điền Thông Tin dạng National
+// Khúc Điền Thông Tin dạng National
 	var National = "CODE:";
 	National += "SET !ERRORIGNORE YES"+" \n";
 	National += "SET !TIMEOUT_TAG 0"+" \n";
@@ -2706,7 +2797,7 @@ function National_Consumer_Center(File_Mail_info)
 	National += "TAG POS=1 TYPE=DIV ATTR=TXT:SUBMIT"+" \n";
 	National += "SET !TIMEOUT_TAG 30"+" \n";
 	National += "TAG POS=1 TYPE=DIV ATTR=ID:hfcta"+" \n";
-	//// điền thông tin dạng Step_1
+// điền thông tin dạng Step_1
 	var Step_1 = "CODE:";
 	Step_1 += "SET !ERRORIGNORE YES"+"\n";
 	Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
@@ -2746,6 +2837,183 @@ function National_Consumer_Center(File_Mail_info)
 	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
 	Step_1 += "SET !TIMEOUT_TAG 30"+"\n";
 	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:Take<SP>Survey"+"\n";
+// chạy Khảo Sát
+	var National_KS = "CODE:";
+	National_KS += "SET !ERRORIGNORE YES"+"\n";
+	National_KS += "SET !TIMEOUT_TAG 0"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:The<SP>food"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid165339"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Health/Advice"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174569"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2<SP>children"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174659"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2-5<SP>years"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174789"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Moving<SP>/<SP>Just<SP>Moved"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174509 CONTENT=YES"+"\n";
+	National_KS += "WAIT SECONDS=1"+"\n";
+	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52689"+"\n";
+	National_KS += "TAG POS=2 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid177549"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Today"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid162949"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Cigars"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid157959"+"\n";
+	National_KS += "TAG POS=7 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147381"+"\n";
+	National_KS += "TAG POS=10 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid113381"+"\n";
+	National_KS += "TAG POS=13 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid135781"+"\n";
+	National_KS += "TAG POS=14 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid163169"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:New<SP>Windows"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid175229 CONTENT=YES"+"\n";
+	National_KS += "WAIT SECONDS=3"+"\n";
+	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52869"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:DirecTV"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid111001"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Student"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid171149"+"\n";
+	National_KS += "TAG POS=16 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid156141"+"\n";
+	National_KS += "TAG POS=17 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid155501"+"\n";
+	National_KS += "TAG POS=18 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147401"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Democrat"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid30071"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid77921"+"\n";
+	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes,<SP>Life<SP>Insurance"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174469 CONTENT=YES"+"\n";
+	National_KS += "WAIT SECONDS=3"+"\n";
+	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid51059"+"\n";
+	National_KS += "TAG POS=29 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid143831"+"\n";
+	National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:confirmbox"+"\n";
+	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:cb CONTENT=YES"+"\n";
+	National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
+	National_KS += "WAIT SECONDS=5"+"\n";
+	National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+	National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
+// bước quay thưởng
+	switch(Check_Off)
+	{
+		case "204":case "202":
+		var National_Quay = "CODE:";
+		National_Quay += "SET !ERRORIGNORE YES"+"\n";
+		National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+		National_Quay += "WAIT SECONDS=7"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal02>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		National_Quay += "WAIT SECONDS=7"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal03>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		National_Quay += "WAIT SECONDS=5"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>SPAN\" BUTTON=0"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q4>SPAN\" BUTTON=0"+"\n";
+		National_Quay += "WAIT SECONDS=10"+"\n";
+		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
+		iimPlay(National_Quay);
+		break;
+// click vào hình mặt cười
+		case "596":case "590":case "541":case "392":case "604":case "605":
+		var National_reward = "CODE:";
+		National_reward += "SET !ERRORIGNORE YES"+"\n";
+		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
+		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
+		National_reward += "SET !TIMEOUT_TAG 0"+"\n";
+		iimPlay(National_reward);
+		break;
+	}
+// Điền Thông Tin
+	switch(Check_Off)
+	{ 
+		case "392":case "387":case "388":case "375":case "201":case "203":case "202":
+		case "596":case "604":case "590":case "541":case "483":case "204":case "605":
+		iimPlay(National);
+		break;
+		case "446":
+		iimPlay(Step_1);
+		break;
+	}
+// Làm Khảo Sát
+	var str = window.document.body.textContent;
+	if(str.indexOf("100 points"))
+	{
+		iimPlay(National_KS); 
+		iimPlayCode("WAIT SECONDS=30");
+	}
+	if(str.indexOf("Take Survey"))
+	{// Làm Khảo Sát
+		iimPlay(National_KS); 
+		iimPlayCode("WAIT SECONDS=30");
+	}
+}
+function National_FRAME_1(File_Mail_info)
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
+	// Điền thông tin có ký tự đặt biệt
+	var National_FRAME_1 = "CODE:";
+	National_FRAME_1 += "SET !ERRORIGNORE YES"+" \n";
+	National_FRAME_1 += "SET !TIMEOUT_TAG 0"+" \n";
+	National_FRAME_1 += "FRAME F=1"+" \n";
+	National_FRAME_1 += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=10"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_LINE 1"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_COLUMNS 1"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:em CONTENT={{!COL1}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:submitbtn"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:rcsbt"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE Last_First.txt"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_COLUMNS 2"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=10"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:fn CONTENT={{!COL1}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:ln CONTENT={{!COL2}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_LINE 1"+" \n";
+	National_FRAME_1 += "SET !DATASOURCE_COLUMNS 5 "+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:ad CONTENT={{!COL2}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:zp CONTENT={{!COL5}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=1"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:ad CONTENT={{!COL2}}"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:CELLAREA CONTENT=520"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell2 CONTENT="+Random_Phon1+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell3 CONTENT="+Random_Phon2+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:Continue"+" \n";
+	National_FRAME_1 += "WAIT SECONDS=1"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:DOBYEAR CONTENT=%"+Random_Nam+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:chkboxn CONTENT=YES"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:SUBMIT"+" \n";
+	National_FRAME_1 += "SET !TIMEOUT_TAG 30"+" \n";
+	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:hfcta"+" \n";
 	/////////// Khúc Khảo Sát
 	var National_KS = "CODE:";
 	National_KS += "SET !ERRORIGNORE YES"+"\n";
@@ -2805,31 +3073,16 @@ function National_Consumer_Center(File_Mail_info)
 	National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
 	National_KS += "WAIT SECONDS=5"+"\n";
 	National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+	National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
 	
 	switch(Check_Off)
-	{// bước quay thưởng
-		case "204":case "202":
-		var National_Quay = "CODE:";
-		National_Quay += "SET !ERRORIGNORE YES"+"\n";
-		National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=7"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal02>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=7"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal03>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=5"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>SPAN\" BUTTON=0"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q4>SPAN\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=10"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
-		iimPlay(National_Quay);
-		break;
-		case "590":case "541":case "392":
+	{
+		// click vào hình mặt cười
+		case "604":case "605":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
+		National_reward += "FRAME F=1"+"\n";
 		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 0"+"\n";
 		iimPlay(National_reward);
@@ -2837,21 +3090,12 @@ function National_Consumer_Center(File_Mail_info)
 	}
 	switch(Check_Off)
 	{ // Điền Thông Tin
-		case "392":case "387":case "388":case "375":case "201":case "203":case "202":
-		case "590":case "541":case "483":case "204":
-		iimPlay(National);
-		break;
-		case "446":
-		iimPlay(Step_1);
+		case "604":case "605":
+		iimPlay(National_FRAME_1);
 		break;
 	}
 	var str = window.document.body.textContent;
 	if(str.indexOf("100 points"))
-	{// Làm Khảo Sát
-		iimPlay(National_KS); 
-		iimPlayCode("WAIT SECONDS=30");
-	}
-	if(str.indexOf("Take Survey"))
 	{// Làm Khảo Sát
 		iimPlay(National_KS); 
 		iimPlayCode("WAIT SECONDS=30");
