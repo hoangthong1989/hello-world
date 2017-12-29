@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["207","620","625","208","294","606"];
+var Ma_off = ["635","620","625","208","294","606"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
@@ -108,13 +108,13 @@ while(true)
 					off++;
 					break;
 				}
-				if(title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
+				if(title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
 				{ // Dailybreak
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "518":case "625":
+							case "635":case "625":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1326,7 +1326,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "123":
+		case "635":
 		Line = 2;
 		break;
 	}
@@ -1499,7 +1499,7 @@ function Dailybreak(File_Mail_info)
 					case "365":case "362":case "363":case "355":case "302":case "224":case "249":
 					case "404":case "366":case "411":case "421":case "378":case "374":case "159":
 					case "511":case "202":case "454":case "478":case "485":case "474":case "487":
-					case "625":case "455":case "518":case "495":case "320":case "463":
+					case "635":case "625":case "455":case "518":case "495":case "320":case "463":
 					iimPlay(Dailybreak_KS1); // chạy Khảo sát Loại 1
 					break;
 					default:
