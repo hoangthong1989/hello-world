@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["635","620","625","208","294","606"];
+var Ma_off = ["436","509","355","635","619","208","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
@@ -24,7 +24,7 @@ while(true)
 		var User_member = ["Bugatti"];
 		// var Ten_member = Math.floor((Math.random() * 3) + 0);
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
-		iimDisplay("Đang chạy Off Có Mã Là : "+Check_Off+"\nSố Off Đã Làm Là : "+off);
+		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////////////////////
 		var REFRESH_Site = "CODE:";
 		REFRESH_Site += "SET !ERRORIGNORE YES" + "\n";
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "635":case "625":
+							case "635":case "355":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -522,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "620":case "519":
+							case "619":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
