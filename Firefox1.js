@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["207","620","625","208","294","606"];
+var Ma_off = ["635","620","625","208","294","606"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
