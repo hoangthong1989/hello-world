@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["436","509","355","635","619","208","528"];
+var Ma_off = ["436","509","355","643","626","208","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "635":case "355":
+							case "643":case "355":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -522,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "619":case "519":
+							case "626":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
@@ -1199,6 +1199,21 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Get a Gift Card")
+				{// 634 chưa code
+					try
+					{
+						switch(Check_Off)
+						{
+							case "634":
+							
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu 
 					try
@@ -1326,7 +1341,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "635":
+		case "643":
 		Line = 2;
 		break;
 	}
@@ -1500,6 +1515,7 @@ function Dailybreak(File_Mail_info)
 					case "404":case "366":case "411":case "421":case "378":case "374":case "159":
 					case "511":case "202":case "454":case "478":case "485":case "474":case "487":
 					case "635":case "625":case "455":case "518":case "495":case "320":case "463":
+					case "643":
 					iimPlay(Dailybreak_KS1); // chạy Khảo sát Loại 1
 					break;
 					default:
