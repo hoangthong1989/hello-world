@@ -3,8 +3,9 @@ iimPlayCode("WAIT SECONDS=1");
 iimPlayCode("TAB CLOSEALLOTHERS"); 
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
+ ,  ,  ,  ,  ,  , 
 
-var Ma_off = ["436","509","645","643","626","208","528"];
+var Ma_off = ["626","647","527","625","606","294","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -114,7 +115,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "643":case "645":
+							case "625":case "645":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -129,7 +130,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "265":case "585":
+							case "647":case "527":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -209,9 +210,9 @@ while(true)
 						}
 						switch(Check_Off)
 						{
-							case "403 ":case "163":case "162":case "161":case "168":case "167":
-							case "426":case "152":case "166":case "436":case "19":case "61":case "261":
-							case "437":case "438":case "447":case "414":case "420":case "482":case "484":
+							case "403":case "163":case "162":case "161":case "168":case "167":
+							case "426":case "152":case "166":case "436":case "261":case "484":
+							case "437":case "438":case "447":case "414":case "420":case "482":
 							case "595":case "509":case "499":case "498":case "445":case "481":
 							var Line = 1;
 							switch(Check_Off)
@@ -256,7 +257,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Life Insurance"||title == "Mortgage"||title == "Insurance Branch"||title == "Mortgage Insurance"||title == "Health Insurance"||title == "Medicare Insurance"||title == "Home Insurance")
-				{ // Hàng Zipcode  
+				{ // Hàng Zipcode   
 					try  
 					{
 						switch(Check_Off)
@@ -1549,7 +1550,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// check mã để lấy Mail 
-		case "123":
+		case "527":
 		Line = 2;
 		break;
 	}
@@ -1607,7 +1608,7 @@ function RewardBee(File_Mail_info)
 						C3 = 7;C8 = 7;
 						C4 = 4;C9 = 2;
 						break;
-						case "585":case "549":case "527":
+						case "647":case "585":case "549":case "527":
 						C0 = 8;C5 = 3;
 						C1 = 5;C6 = 7;
 						C2 = 6;C7 = 3;
