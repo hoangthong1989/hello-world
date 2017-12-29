@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["436","509","355","643","626","208","528"];
+var Ma_off = ["436","509","645","643","626","208","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "643":case "355":
+							case "643":case "645":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1515,7 +1515,7 @@ function Dailybreak(File_Mail_info)
 					case "404":case "366":case "411":case "421":case "378":case "374":case "159":
 					case "511":case "202":case "454":case "478":case "485":case "474":case "487":
 					case "635":case "625":case "455":case "518":case "495":case "320":case "463":
-					case "643":
+					case "645":case "643":
 					iimPlay(Dailybreak_KS1); // chạy Khảo sát Loại 1
 					break;
 					default:
