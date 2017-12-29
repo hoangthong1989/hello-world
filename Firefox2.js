@@ -2,9 +2,9 @@
 iimPlayCode("WAIT SECONDS=1");
 iimPlayCode("TAB CLOSEALLOTHERS"); 
 iimPlayCode("URL GOTO=about:home");        
-ClearCookie();
+ClearCookie(); // 656 aa 657 rolox sang chay
 
-var Ma_off = ["436","509","625","514","527","648","634"];
+var Ma_off = ["657","656","625","648","647","584","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -479,12 +479,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Roblox")
-				{ // 36 207
+				{ // 36 207 657
 					try
 					{
 						switch(Check_Off)
 						{
-							case "207":case "36":
+							case "657":case "207":case "36":
 							var Thang = Math.floor((Math.random() * 12) + 2);
 							var Ngay = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
@@ -522,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "514":case "519":
+							case "656":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
