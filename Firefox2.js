@@ -1,12 +1,12 @@
-﻿//======================================================================================================================
+//======================================================================================================================
 iimPlayCode("WAIT SECONDS=1");
 iimPlayCode("TAB CLOSEALLOTHERS"); 
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["620","518","509","590","208","528","606"];
+var Ma_off = ["207","620","625","208","294","606"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -21,7 +21,7 @@ while(true)
 		var site_Lam = "Thông";
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		ClearCookie();
-		var User_member = ["lamborghini"];
+		var User_member = ["Bugatti"];
 		// var Ten_member = Math.floor((Math.random() * 3) + 0);
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
 		iimDisplay("Đang chạy Off Có Mã Là : "+Check_Off+"\nSố Off Đã Làm Là : "+off);
@@ -129,7 +129,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "527":case "585":
+							case "265":case "585":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -695,7 +695,7 @@ while(true)
 							Tripping += "WAIT SECONDS = 7"+" \n";
 							Tripping += 'EVENT TYPE=MOUSEDOWN SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV" BUTTON=0 '+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV>DIV>DIV" BUTTON=0 '+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(5)>SPAN" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(6)>SPAN" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(7)" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
@@ -1326,7 +1326,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "625":
+		case "123":
 		Line = 2;
 		break;
 	}
@@ -1524,7 +1524,7 @@ function Dailybreak(File_Mail_info)
 }
 function RewardBee(File_Mail_info)
 {// check mã off để chạy khảo sát
-	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;
+	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;var C10 = 0;
 	var load_F5 = 0;var Line = 1;var SL_Chon_KS = 0;
 	var Pass = Tao_Pass();
 	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
@@ -1605,6 +1605,13 @@ function RewardBee(File_Mail_info)
 						C3 = 3;C8 = 7;
 						C4 = 3;C9 = 3;
 						break;
+						case "265":
+						C0 = 4;C5 = 4;
+						C1 = 4;C6 = 3;
+						C2 = 4;C7 = 3;
+						C3 = 4;C8 = 7;
+						C4 = 4;C9 = 3;C10 = 2;
+						break;
 					}
 					var cau_0 = Math.floor((Math.random() * C0) + 1);
 					var cau_1 = Math.floor((Math.random() * C1) + 1);
@@ -1616,6 +1623,7 @@ function RewardBee(File_Mail_info)
 					var cau_7 = Math.floor((Math.random() * C7) + 1);
 					var cau_8 = Math.floor((Math.random() * C8) + 1);
 					var cau_9 = Math.floor((Math.random() * C9) + 1);
+					var cau_10 = Math.floor((Math.random() * C10) + 1);
 					SL_Chon_KS++;
 					var RewardBee_KS = "CODE:";
 					RewardBee_KS += "SET !ERRORIGNORE YES" + "\n";
@@ -1630,6 +1638,7 @@ function RewardBee(File_Mail_info)
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_7>DIV:nth-of-type("+cau_7+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_8>DIV:nth-of-type("+cau_8+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_9+")>LABEL\" BUTTON=0"+"\n";
+					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
 					iimPlay(RewardBee_KS);
 				}
 			}
