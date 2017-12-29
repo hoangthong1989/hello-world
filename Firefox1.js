@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie();
 
-var Ma_off = ["626","647","527","625","648","294","528"];
+var Ma_off = ["530","647","527","625","648","294","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -522,7 +522,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "626":case "519":
+							case "530":case "519":
 							AARP(File_Mail_info);
 							break;
 						}
