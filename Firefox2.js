@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["436","509","626","635","645","634","208"];
+var Ma_off = ["436","509","626","647","643","645","208"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "635":case "645":
+							case "643":case "645":
 							Dailybreak(File_Mail_info);
 							break;
 						}
