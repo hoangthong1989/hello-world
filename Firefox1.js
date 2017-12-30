@@ -2,9 +2,9 @@
 iimPlayCode("WAIT SECONDS=1");
 iimPlayCode("TAB CLOSEALLOTHERS"); 
 iimPlayCode("URL GOTO=about:home");        
-ClearCookie(); // 656 aa 657 rolox sang chay
+ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["657","656","625","648","647","584","528"];
+var Ma_off = ["657","625","648","660","659","584","528"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -307,14 +307,14 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 15 204 151 244 245 247 248 372 392 446 541 590 604 605 596
+				{ // 15 204 151 244 245 247 248 372 392 446 541 590 604 605 596 659 660
 					try
 					{
 						switch(Check_Off)
 						{
 							case "204":case "248":case "247":case "245":case "244":case "151":
 							case "604":case "590":case "446":case "392":case "372":case "541":
-							case "596":case "605":
+							case "660":case "659":case "596":case "605":
 							National_Consumer_Center(File_Mail_info);
 							break;
 						}
@@ -3005,6 +3005,7 @@ function National_Consumer_Center(File_Mail_info)
 	{ 
 		case "392":case "387":case "388":case "375":case "201":case "203":case "202":
 		case "596":case "604":case "590":case "541":case "483":case "204":case "605":
+		case "660":case "659":
 		iimPlay(National);
 		break;
 		case "446":
