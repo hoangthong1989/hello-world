@@ -65,7 +65,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "345":case "167":
+			case "436":case "509":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -697,7 +697,7 @@ while(true)
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV>DIV>DIV" BUTTON=0 '+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(6)>SPAN" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(7)" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(6)>TD:nth-of-type(1)" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>SPAN>DIV" BUTTON=0'+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV>UL>LI:nth-of-type(3)" BUTTON=0'+" \n";
