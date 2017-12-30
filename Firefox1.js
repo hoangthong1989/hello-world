@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["656","527","625","648","294","528","584"];
+var Ma_off = ["663","656","662","625","648","652","528","584"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 7; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -49,7 +49,7 @@ while(true)
 		}
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "208":case "173":case "4":case "118":case "81":case "67":case "58":
+			case "208":case "173":case "652":case "118":case "81":case "67":case "58":
 			case "281":case "334":case "329":case "289":case "294":case "6":case "347":
 			case "439":case "402":case "376":case "373":case "353":case "350":case "419":
 			case "606":case "584":case "476":case "534":case "528":case "471":case "472":
@@ -261,7 +261,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "537":case "536":case "535":case "471":case "472":
+							case "663":case "537":case "536":case "535":case "471":case "472":
 							var Insurance = "CODE:";
 							Insurance += "SET !ERRORIGNORE YES"+" \n";
 							Insurance += "SET !TIMEOUT_TAG 0"+" \n";
@@ -681,7 +681,7 @@ while(true)
 							case "208":case "173":case "528":case "118":case "81":case "67":case "58":
 							case "281":case "334":case "329":case "289":case "294":case "6":case "347":
 							case "476":case "439":case "402":case "376":case "373":case "353":case "350":
-							case "606":case "584":case "354":
+							case "652":case "606":case "584":case "354":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
 							a.setBoolPref("enabled",false);
@@ -963,12 +963,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Register To Play")
-				{ // 311
+				{ // 662
 					try
 					{
 						switch(Check_Off)
 						{
-							case "311":
+							case "662":
 							Giveaway(File_Mail_info);
 							break;
 						}
