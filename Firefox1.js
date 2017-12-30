@@ -216,7 +216,7 @@ while(true)
 							var Line = 1;
 							switch(Check_Off)
 							{
-								case "123":
+								case "436":
 								Line = 2;
 								break;
 							}
