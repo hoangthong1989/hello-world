@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["657","625","591","208","528","584"];
+var Ma_off = ["656","643","355","647","294","208","584"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "625":case "648":
+							case "355":case "643":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1341,7 +1341,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "648":
+		case "355":
 		Line = 2;
 		break;
 	}
