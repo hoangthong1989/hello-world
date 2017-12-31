@@ -4,13 +4,13 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["663","656","662","625","648","652","528","584"];
+var Ma_off = ["657","625","591","208","528","584"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
-var File_Mail_info = 1; var sl_chay_off = 7; var off = 0; var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm 4xong
+	{// check nếu số lượng off đã làm xong
 		// Hàng đợi code mã 407 415
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
