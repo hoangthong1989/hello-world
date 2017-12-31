@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); // ma da add chi can len vps doi
 
-var Ma_off = ["656","643","355","647","294","208","584"];
+var Ma_off = ["668","527","643","625","528","652","584"];
 // var Ma_off = ["","","","","","",""]; // Hàng 3h
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; var Ma_Member = 0;
 while(true)
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "355":case "643":
+							case "625":case "643":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -771,12 +771,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "- Save With Coupons")
-				{ // 117 218 255
+				{ // 117 218 255 668
 					try
 					{
 						switch(Check_Off)
 						{
-							case "255":case "218":case "117":
+							case "255":case "218":case "668":
 							iimPlay(REFRESH_Site);
 							var Coupons = "CODE:";
 							Coupons += "SET !ERRORIGNORE YES"+"\n";
@@ -1341,7 +1341,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// check mã để lấy mail
-		case "355":
+		case "625":
 		Line = 2;
 		break;
 	}
