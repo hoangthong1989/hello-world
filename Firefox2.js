@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); 
 
-var Ma_off = ["31","30","49","47","17","45","23"];
+var Ma_off = ["31","30","46","47","17","45","23"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -158,6 +158,22 @@ while(true)
 							Tripping += "TAB T = 2"+" \n";
 							Tripping += "WAIT SECONDS = 10"+" \n";
 							iimPlay(Tripping);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				// AARP 
+				else if(title == "(re)starting YOUR CAREER AFTER 45"||title == "Small Gestures. BIG Impact. By AARP"||title == "THE AARP DAILY DISCOVERY GIVEAWAY"||title == "Retirement in Reach $50,000 Sweepstakes")
+				{ // 49 46
+					try
+					{
+						switch(Check_Off)
+						{
+							case "46":case "49":
+							AARP(File_Mail_info);
 							break;
 						}
 						off++;
@@ -548,22 +564,6 @@ while(true)
 							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
 							Roblox += "	WAIT SECONDS=20"+" \n";
 							iimPlay(Roblox);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				// AARP 
-				else if(title == "(re)starting YOUR CAREER AFTER 45"||title == "Small Gestures. BIG Impact. By AARP"||title == "THE AARP DAILY DISCOVERY GIVEAWAY"||title == "Retirement in Reach $50,000 Sweepstakes")
-				{ // 49
-					try
-					{
-						switch(Check_Off)
-						{
-							case "49":
-							AARP(File_Mail_info);
 							break;
 						}
 						off++;
