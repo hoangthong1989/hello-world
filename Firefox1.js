@@ -181,86 +181,37 @@ while(true)
 					}
 					catch(exception){}
 				}
-				// Spam Mail Submit
-				else if(title == "Survey Voices"||title.indexOf("Super Mario Odyssey® Game")||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31
+				else if(title == "Roblox")
+				{ // 48
 					try
 					{
-						var Line = 1;
 						switch(Check_Off)
-						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "31":
-							Line = 2;
-							break;
-						}
-						switch(Check_Off)
-						{ // chọn Yes No đầu rồi mới 
-							case "1":case "2":
-							var Trang_1 = "CODE:"; 
-							Trang_1 += "SET !ERRORIGNORE YES" + "\n";
-							Trang_1 += "SET !TIMEOUT_TAG 0" + "\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5 "+"\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
-							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
-							Trang_1 += "TAG POS=2 TYPE=A ATTR=TXT:yes" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
-							Trang_1 += "TAG POS=3 TYPE=A ATTR=TXT:yes" + "\n";
-							iimPlay(Trang_1);
-							iimPlayCode("WAIT SECONDS=1");
-							var Trang_2 = "CODE:";
-							Trang_2 += "SET !ERRORIGNORE YES" + "\n";
-							Trang_2 += "SET !TIMEOUT_TAG 0" + "\n";
-							Trang_2 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
-							Trang_2 += "SET !DATASOURCE_LINE "+Line+"\n";
-							Trang_2 += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:email-form ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
-							Trang_2 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
-							Trang_2 += "WAIT SECONDS=15"+"\n";
-							iimPlay(Trang_2);
-							break;
-						}
-						switch(Check_Off)
-						{ // Dien Mail Done
-							case "31":case "30":
-							var SUBMIT = "CODE:";
-							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
-							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
-							SUBMIT += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
-							SUBMIT += "SET !DATASOURCE_LINE "+Line+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:email-form ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
-							SUBMIT += "WAIT SECONDS=15"+"\n";
-							iimPlay(SUBMIT);
-							break;
-						}
-						switch(Check_Off)
-						{ // Điền Mai và chọn yes no
-							case "3":
-							var SUBMIT = "CODE:"; 
-							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
-							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
-							SUBMIT += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
-							SUBMIT += "SET !DATASOURCE_LINE 1"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:txt_email CONTENT={{!COL1}}"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ID:form1 ATTR=ID:btnEmailSubmit"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=A ATTR=TXT:Yes"+"\n";
-							SUBMIT += "TAG POS=1 TYPE=A ATTR=TXT:No"+"\n";
-							SUBMIT += "WAIT SECONDS=15"+"\n";
-							iimPlay(SUBMIT);
+						{
+							case "48":
+							var Thang = Math.floor((Math.random() * 12) + 2);
+							var Ngay = Math.floor((Math.random() * 9) + 1);
+							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var pass = "hugyftdedw";
+							var Name = Tao_Name();
+							var Roblox = "CODE:";		
+							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
+							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
+							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
+							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
+							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
+							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
+							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
+							Roblox += "	SET !ENCRYPTION NO"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
+							Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
+							Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
+							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
+							Roblox += "	WAIT SECONDS=20"+" \n";
+							iimPlay(Roblox);
 							break;
 						}
 						off++;
@@ -529,44 +480,6 @@ while(true)
 						{
 							case "1":
 							Vouchers_Avenue(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Roblox")
-				{ // 48
-					try
-					{
-						switch(Check_Off)
-						{
-							case "48":
-							var Thang = Math.floor((Math.random() * 12) + 2);
-							var Ngay = Math.floor((Math.random() * 9) + 1);
-							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
-							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var pass = "hugyftdedw";
-							var Name = Tao_Name();
-							var Roblox = "CODE:";		
-							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
-							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
-							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
-							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
-							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
-							Roblox += "	SET !ENCRYPTION NO"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
-							Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
-							Roblox += "	WAIT SECONDS=20"+" \n";
-							iimPlay(Roblox);
 							break;
 						}
 						off++;
@@ -1199,6 +1112,93 @@ while(true)
 						{
 							case "1":
 							Get_a_Gift_Card(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				// Spam Mail Submit
+				else if(title == "Survey Voices"||title.indexOf("Super Mario Odyssey® Game")||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				{ // 30 31
+					try
+					{
+						var Line = 1;
+						switch(Check_Off)
+						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
+							case "31":
+							Line = 2;
+							break;
+						}
+						switch(Check_Off)
+						{ // chọn Yes No đầu rồi mới 
+							case "1":case "2":
+							var Trang_1 = "CODE:"; 
+							Trang_1 += "SET !ERRORIGNORE YES" + "\n";
+							Trang_1 += "SET !TIMEOUT_TAG 0" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5 "+"\n";
+							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=2 TYPE=A ATTR=TXT:yes" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=3 TYPE=A ATTR=TXT:yes" + "\n";
+							iimPlay(Trang_1);
+							iimPlayCode("WAIT SECONDS=1");
+							var Trang_2 = "CODE:";
+							Trang_2 += "SET !ERRORIGNORE YES" + "\n";
+							Trang_2 += "SET !TIMEOUT_TAG 0" + "\n";
+							Trang_2 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+							Trang_2 += "SET !DATASOURCE_LINE "+Line+"\n";
+							Trang_2 += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:email-form ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+							Trang_2 += "WAIT SECONDS=15"+"\n";
+							iimPlay(Trang_2);
+							break;
+						}
+						switch(Check_Off)
+						{ // Dien Mail Done
+							case "31":case "30":
+							var SUBMIT = "CODE:";
+							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
+							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
+							SUBMIT += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+							SUBMIT += "SET !DATASOURCE_LINE "+Line+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:email-form ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+							SUBMIT += "WAIT SECONDS=15"+"\n";
+							iimPlay(SUBMIT);
+							break;
+						}
+						switch(Check_Off)
+						{ // Điền Mai và chọn yes no
+							case "3":
+							var SUBMIT = "CODE:"; 
+							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
+							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
+							SUBMIT += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+							SUBMIT += "SET !DATASOURCE_LINE 1"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:txt_email CONTENT={{!COL1}}"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ID:form1 ATTR=ID:btnEmailSubmit"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=A ATTR=TXT:Yes"+"\n";
+							SUBMIT += "TAG POS=1 TYPE=A ATTR=TXT:No"+"\n";
+							SUBMIT += "WAIT SECONDS=15"+"\n";
+							iimPlay(SUBMIT);
 							break;
 						}
 						off++;
