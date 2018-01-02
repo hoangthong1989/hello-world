@@ -538,41 +538,37 @@ while(true)
 				}
 				else if(title == "Roblox")
 				{ // 48
-					try
+					switch(Check_Off)
 					{
-						switch(Check_Off)
-						{
-							case "48":
-							var Thang = Math.floor((Math.random() * 12) + 2);
-							var Ngay = Math.floor((Math.random() * 9) + 1);
-							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
-							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var pass = "hugyftdedw";
-							var Name = Tao_Name();
-							var Roblox = "CODE:";		
-							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
-							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
-							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
-							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
-							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
-							Roblox += "	SET !ENCRYPTION NO"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
-							Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
-							Roblox += "	WAIT SECONDS=20"+" \n";
-							iimPlay(Roblox);
-							break;
-						}
-						off++;
+						case "48":
+						var Thang = Math.floor((Math.random() * 12) + 2);
+						var Ngay = Math.floor((Math.random() * 9) + 1);
+						var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
+						var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+						var pass = "hugyftdedw";
+						var Name = Tao_Name();
+						var Roblox = "CODE:";		
+						Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
+						Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
+						Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
+						Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
+						// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
+						// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
+						// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
+						Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
+						Roblox += "	SET !ENCRYPTION NO"+" \n";
+						Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
+						Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
+						Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
+						Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
+						Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
+						Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
+						Roblox += "	WAIT SECONDS=20"+" \n";
+						iimPlay(Roblox);
 						break;
 					}
-					catch(exception){}
+					off++;
+					break;
 				}
 				else if(title == "Depend - Formstack")
 				{ //
