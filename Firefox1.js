@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["7","17","67","12","1","18","45"];
+var Ma_off = ["30","31","57","55","3","18,","45"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -35,11 +35,11 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "1":
+			case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "1":case "57":case "55":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "17":
+			case "17":case "2":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "7":case "22":
+			case "7":case "22":case "3":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -97,7 +97,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "67":
+							case "67":case "55":
 							case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
@@ -1126,7 +1126,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "7":
+							case "7":case "3":
 							var Thang = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1965 - 1960 + 1)) + 1960);
 							var QualityHealth = "CODE:";
@@ -1441,7 +1441,7 @@ function Dailybreak(File_Mail_info)
 				switch(Check_Off)
 				{// 47 57 11 20 27
 					// khao sat khong doi nhan net
-					case "67":
+					case "67":case "55":
 					case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
