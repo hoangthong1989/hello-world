@@ -1,11 +1,11 @@
 //======================================================================================================================
 iimPlayCode("WAIT SECONDS=1");
-iimPlayCode("TAB CLOSEALLOTHERS"); 
-iimPlayCode("URL GOTO=about:home");        
-ClearCookie(); 
+iimPlayCode("TAB CLOSEALLOTHERS");
+iimPlayCode("URL GOTO=about:home");
+ClearCookie();
 
-var Ma_off = ["31","30","27","20","18","50"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["31","30","27","20","22","18","50"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "1":
+			case "22":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
