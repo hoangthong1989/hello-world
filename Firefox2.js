@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["31","30","27","20","22","18","50"];
+var Ma_off = ["7","17","66","12","1","18","45"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -15,7 +15,7 @@ while(true)
 		break;
 	}
 	else
-	{// check nếu số lượng off chưa làm xong
+	{// check nếu số lượng off chưa làm xong 
 		ClearCookie();
 		var User_member = ["","FireFox_1","FireFox_2"];
 		// var Ten_member = Math.floor((Math.random() * 3) + 0);
@@ -35,7 +35,7 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "30":case "31":case "23":case "45":case "18":case "50":
+			case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "1":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "22":
+			case "7":case "22":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -92,12 +92,12 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27
+				{ // 47 57 11 20 27 66 12
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "27":case "20":case "11":case "47":case "57":
+							case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1119,6 +1119,55 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Winter Samples")
+				{// 7
+					try
+					{
+						switch(Check_Off)
+						{
+							case "7":
+							var Thang = Math.floor((Math.random() * 9) + 1);
+							var Nam = Math.floor((Math.random() * (1965 - 1960 + 1)) + 1960);
+							var QualityHealth = "CODE:";
+							QualityHealth += "SET !ERRORIGNORE YES"+"\n";
+							QualityHealth += "SET !TIMEOUT_TAG 0 "+"\n";
+							QualityHealth += "SET !DATASOURCE Last_First.txt"+"\n";
+							QualityHealth += "SET !DATASOURCE_LINE 2"+"\n";
+							QualityHealth += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
+							QualityHealth += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
+							QualityHealth += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							QualityHealth += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
+							QualityHealth += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:addressLineOne CONTENT={{!COL2}} "+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:city CONTENT={{!COL3}} "+"\n";
+							QualityHealth += "TAG POS=1 TYPE=SELECT FORM=ID:registration ATTR=ID:stateProvince CONTENT=%{{!COL4}} "+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:zipPostalCode CONTENT={{!COL5}} "+"\n";
+							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:phoneNumber CONTENT={{!COL1}} "+"\n";
+							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#_birthDate\" BUTTON=0"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNo* CONTENT=%"+Thang+"\n";
+							QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:191819191920192119221923192419251926192719281929193019311932* CONTENT=%"+Nam+"\n";
+							QualityHealth += "EVENT TYPE=MOUSEDOWN SELECTOR=\"HTML>BODY>DIV:nth-of-type(5)>DIV>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=SPAN ATTR=TXT:Female"+"\n";
+							QualityHealth += "TAG POS=1 TYPE=BUTTON FORM=ID:registration ATTR=TXT:Get<SP>My<SP>FREE<SP>Samples!"+"\n";
+							QualityHealth += "SET !TIMEOUT_TAG 10"+"\n";
+							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(4)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
+							QualityHealth += "SET !TIMEOUT_TAG 0"+"\n";
+							QualityHealth += "WAIT SECONDS=1"+"\n";
+							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
+							QualityHealth += "WAIT SECONDS=20"+"\n";
+							iimPlay( QualityHealth);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
 				{ // 30 31
@@ -1206,6 +1255,7 @@ while(true)
 					}
 					catch(exception){}
 				}
+				
 				else if(title == "Check Title Offers")
 				{// Code Mẫu 
 					try
@@ -1333,7 +1383,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// Lay info Khac neu Lam Off Giong nhau
-		case "20":
+		case "12":
 		Line = 2;
 		break;
 	}
@@ -1390,7 +1440,7 @@ function Dailybreak(File_Mail_info)
 				switch(Check_Off)
 				{// 47 57 11 20 27
 					// khao sat khong doi nhan net
-					case "27":case "20":case "11":case "57":case "47":
+					case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
 					Dailybreak_KS1 += "SET !TIMEOUT_TAG 0 "+"\n";
