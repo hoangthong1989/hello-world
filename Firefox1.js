@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["30","31","57","55","3","18,","45"];
+var Ma_off = ["30","31","57","71","3","18,","45"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -114,7 +114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "17":case "22":
+							case "71":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
