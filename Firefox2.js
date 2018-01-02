@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); 
 
-var Ma_off = ["31","30","47","11","22","18","50"];
+var Ma_off = ["31","30","24","11","22","18","50"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -97,7 +97,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "11":case "47":case "57":
+							case "11":case "47":case "24":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1390,7 +1390,7 @@ function Dailybreak(File_Mail_info)
 				switch(Check_Off)
 				{// 47 57 11
 					// khao sat khong doi nhan net
-					case "11":case "57":case "47":
+					case "11":case "24":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
 					Dailybreak_KS1 += "SET !TIMEOUT_TAG 0 "+"\n";
