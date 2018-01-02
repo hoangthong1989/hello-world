@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); 
 
-var Ma_off = ["48","46","47","50","45","23"];
+var Ma_off = ["48","57","47","50","45","23"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -92,12 +92,12 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47
+				{ // 47 57
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "47":case "2":
+							case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -367,12 +367,12 @@ while(true)
 				{ // 
 					try
 					{
-						var Random_Thang = Math.floor((Math.random() * 9) + 1);
-						var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
-						var Pass = Tao_Pass();
 						switch(Check_Off)
 						{
 							case "1":
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+							var Pass = Tao_Pass();
 							var Reward_TV = "CODE:";
 							Reward_TV += "SET !ERRORIGNORE YES"+" \n";
 							Reward_TV += "SET !TIMEOUT_TAG 0"+" \n";
@@ -407,10 +407,10 @@ while(true)
 				{ // 
 					try
 					{
-						var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 						switch(Check_Off)
 						{
-							case "1":case "2":
+							case "1":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Your = "CODE:";
 							Your += "SET !ERRORIGNORE YES"+" \n";
 							Your += "SET !TIMEOUT_TAG 0"+" \n";
@@ -699,7 +699,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":case "2":
+							case "1":
 							Free_Fall_Samples(File_Mail_info);
 							break;
 						}
@@ -712,13 +712,13 @@ while(true)
 				{ // 
 					try
 					{
-						var pass = Tao_Pass();
-						var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-						var Random_Thang = Math.floor((Math.random() * 9) + 1);
-						var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
 						switch(Check_Off)
 						{
 							case "1":
+							var pass = Tao_Pass();
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
 							var Pillsbury = "CODE:";
 							Pillsbury += "SET !ERRORIGNORE YES"+"\n";
 							Pillsbury += "SET !TIMEOUT_TAG 0"+"\n";
@@ -762,9 +762,6 @@ while(true)
 				{ // 
 					try
 					{			
-						var line = 1;
-						var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-						var Pass = Tao_Pass();
 						switch(Check_Off)
 						{ // Lay Info khac Neu Lam Off dang giong nhau
 							case "1":
@@ -774,6 +771,9 @@ while(true)
 						switch(Check_Off)
 						{ // Dang Lancome
 							case "2":
+							var line = 1;
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Pass = Tao_Pass();
 							var Lancome = "CODE:";
 							Lancome += "SET !ERRORIGNORE YES"+"\n";
 							Lancome += "SET !TIMEOUT_TAG 0"+"\n";
@@ -887,7 +887,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":case "2":
+							case "1":
 							Amazon(File_Mail_info);
 							break;
 						}
@@ -915,13 +915,13 @@ while(true)
 				{// 
 					try
 					{
-						var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-						var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-						var Random_Thang = Math.floor((Math.random() * 9) + 1);
-						var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 						switch(Check_Off)
 						{
 							case "1":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 							var ConsumerRewards = "CODE:";
 							ConsumerRewards += "SET !ERRORIGNORE YES"+"\n";
 							ConsumerRewards += "SET !TIMEOUT_TAG 0 "+"\n";
@@ -961,7 +961,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "FavoriteConsumerBrands.com")
-				{// 1
+				{// 
 					try
 					{
 						switch(Check_Off)
@@ -994,15 +994,15 @@ while(true)
 				{// 
 					try
 					{
-						var Ngay = ["February","March","April","May","June","August","January"];
-						var random_Ngay = Math.floor((Math.random() * 6) + 0);
-						var Thang = Math.floor((Math.random() * 9) + 1);
-						var Nam = Math.floor((Math.random() * (1998 - 2004 + 1)) + 2004);
-						var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-						var random1 = Math.floor((Math.random() * 6) + 1);
 						switch(Check_Off)
 						{
-							case "1":case "2":
+							case "1":
+							var Ngay = ["February","March","April","May","June","August","January"];
+							var random_Ngay = Math.floor((Math.random() * 6) + 0);
+							var Thang = Math.floor((Math.random() * 9) + 1);
+							var Nam = Math.floor((Math.random() * (1998 - 2004 + 1)) + 2004);
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var random1 = Math.floor((Math.random() * 6) + 1);
 							var Disney = "CODE:";
 							Disney += "SET !ERRORIGNORE YES"+"\n";
 							Disney += "SET !TIMEOUT_TAG 50"+"\n";
@@ -1120,7 +1120,7 @@ while(true)
 					catch(exception){}
 				}
 				// Spam Mail Submit
-				else if(title == "Survey Voices"||title.indexOf("Super Mario Odyssey® Game")||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
 				{ // 30 31
 					try
 					{
@@ -1333,7 +1333,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// Lay info Khac neu Lam Off Giong nhau
-		case "1":
+		case "57":
 		Line = 2;
 		break;
 	}
@@ -1388,9 +1388,9 @@ function Dailybreak(File_Mail_info)
 			else
 			{// Khao Sat DAILY
 				switch(Check_Off)
-				{// 47
+				{// 47 57
 					// khao sat khong doi nhan net
-					case "47":
+					case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
 					Dailybreak_KS1 += "SET !TIMEOUT_TAG 0 "+"\n";
