@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");        
 ClearCookie(); 
 
-var Ma_off = ["31","30","46","47","17","45","23"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["48","46","47","50","45","23"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -124,12 +124,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45
+				{ // 23 45 50
 					try
 					{
 						switch(Check_Off)
 						{
-							case "23":case "45":
+							case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
 							a.setBoolPref("enabled",false);
@@ -174,51 +174,6 @@ while(true)
 						{
 							case "46":case "49":
 							AARP(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Free Offer for Outdoor Life Digital"||title == "Free Offer for Popular Science digital"||title == "Free Offer for Yachting Digital"||title == "Free Offer for Cruising World Digital"||title == "Free Offer for Boating Digital"||title == "Free Offer for Cycle World Digital"||title == "Free Offer for Flying Digital"||title == "Free Offer for Pain-Free Living Digital") 
-				{ //
-					try
-					{
-						switch(Check_Off)
-						{
-							case "1":
-							Free_Offer_for_capcha(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Free Fantasy Football - NFL.com")
-				{ //
-					try
-					{
-						switch(Check_Off)
-						{
-							case "1":
-							NFL(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Witch Trivia Quiz."||title == "Marvel Super Hero Quiz."||title == "IQ Quiz."||title == "10 Things That You Didn’t Know About Christmas."||title == "The Top Ten Best Gifts for Men Under $30 « ExtraExtraPost"||title == "The Top 10 Best Deals on Back to School Supplies"||title == "Game Of Thrones Slideshow, The Top 10 Deaths - Extraextrapost")
-				{ //
-					try
-					{
-						switch(Check_Off)
-						{
-							case "1":
-							Tra_loi_Cau_hoi(Check_Off);
 							break;
 						}
 						off++;
@@ -360,6 +315,51 @@ while(true)
 							Insurance1 += "TAG POS=3 TYPE=BUTTON FORM=ID:questionaire ATTR=ID:submit"+"\n";
 							Insurance1 += "WAIT SECONDS=15"+" \n";
 							iimPlay(Insurance1);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Free Offer for Outdoor Life Digital"||title == "Free Offer for Popular Science digital"||title == "Free Offer for Yachting Digital"||title == "Free Offer for Cruising World Digital"||title == "Free Offer for Boating Digital"||title == "Free Offer for Cycle World Digital"||title == "Free Offer for Flying Digital"||title == "Free Offer for Pain-Free Living Digital") 
+				{ //
+					try
+					{
+						switch(Check_Off)
+						{
+							case "1":
+							Free_Offer_for_capcha(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Free Fantasy Football - NFL.com")
+				{ //
+					try
+					{
+						switch(Check_Off)
+						{
+							case "1":
+							NFL(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Witch Trivia Quiz."||title == "Marvel Super Hero Quiz."||title == "IQ Quiz."||title == "10 Things That You Didn’t Know About Christmas."||title == "The Top Ten Best Gifts for Men Under $30 « ExtraExtraPost"||title == "The Top 10 Best Deals on Back to School Supplies"||title == "Game Of Thrones Slideshow, The Top 10 Deaths - Extraextrapost")
+				{ //
+					try
+					{
+						switch(Check_Off)
+						{
+							case "1":
+							Tra_loi_Cau_hoi(Check_Off);
 							break;
 						}
 						off++;
@@ -537,7 +537,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Roblox")
-				{ // 
+				{ // 48
 					try
 					{
 						var Thang = Math.floor((Math.random() * 12) + 2);
@@ -548,7 +548,7 @@ while(true)
 						var Name = Tao_Name();
 						switch(Check_Off)
 						{
-							case "1":
+							case "48":
 							var Roblox = "CODE:";		
 							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
 							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
