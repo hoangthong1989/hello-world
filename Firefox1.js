@@ -550,12 +550,13 @@ while(true)
 							var pass = "hugyftdedw";
 							var Name = Tao_Name();
 							var Roblox = "CODE:";		
-							Roblox += "SET !ERRORIGNORE YES "+" \n";
-							Roblox += "SET !TIMEOUT_TAG 0"+" \n";
 							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
 							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
 							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
 							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
+							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
+							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
+							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
 							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
 							Roblox += "	SET !ENCRYPTION NO"+" \n";
 							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
