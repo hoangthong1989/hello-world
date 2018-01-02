@@ -35,7 +35,7 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "30":case "31":case "23":case "45":
+			case "30":case "31":case "23":case "45":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -540,16 +540,18 @@ while(true)
 				{ // 48
 					try
 					{
-						var Thang = Math.floor((Math.random() * 12) + 2);
-						var Ngay = Math.floor((Math.random() * 9) + 1);
-						var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
-						var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-						var pass = "hugyftdedw";
-						var Name = Tao_Name();
 						switch(Check_Off)
 						{
 							case "48":
+							var Thang = Math.floor((Math.random() * 12) + 2);
+							var Ngay = Math.floor((Math.random() * 9) + 1);
+							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var pass = "hugyftdedw";
+							var Name = Tao_Name();
 							var Roblox = "CODE:";		
+							Roblox += "SET !ERRORIGNORE YES "+" \n";
+							Roblox += "SET !TIMEOUT_TAG 0"+" \n";
 							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
 							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
 							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
