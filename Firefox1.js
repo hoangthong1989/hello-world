@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["57","71","25","30","31","45","18"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["77","48","71","45","10","18"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -35,6 +35,7 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
+			case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
@@ -125,12 +126,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83
+				{ // 23 45 50 18 1 83 10
 					try
 					{
 						switch(Check_Off)
 						{
-							case "83":case "1":case "18":case "50":case "23":case "45":
+							case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
 							a.setBoolPref("enabled",false);
@@ -144,10 +145,10 @@ while(true)
 							Tripping += "WAIT SECONDS = 7"+" \n";
 							Tripping += 'EVENT TYPE=MOUSEDOWN SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV" BUTTON=0 '+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV>DIV>DIV" BUTTON=0 '+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(6)>TD:nth-of-type(1)>SPAN" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(2)>SPAN" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
-							// Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(6)>TD:nth-of-type(1)" BUTTON=0'+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(2)>TD" BUTTON=0'+" \n";
+							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(4)" BUTTON=0'+" \n";
+							// Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(2)>TD" BUTTON=0'+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>SPAN>DIV" BUTTON=0'+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV>UL>LI:nth-of-type(3)" BUTTON=0'+" \n";
