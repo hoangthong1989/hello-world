@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["31","30","71","77","50","45"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["31","30","71","22","66","27","18"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1384,7 +1384,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// Lay info Khac neu Lam Off Giong nhau
-		case "12":
+		case "27":
 		Line = 2;
 		break;
 	}
