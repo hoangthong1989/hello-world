@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["30","31","57","71","3","18,","45"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["31","48","71","66","50","45"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -35,11 +35,11 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "1":case "57":case "55":
+			case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "1":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "17":case "2":
+			case "17":case "71":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "7":case "22":case "3":
+			case "7":case "22":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -92,12 +92,12 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67
+				{ // 47 57 11 20 27 66 12 67 8
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "67":case "55":
+							case "8":case "67":
 							case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
@@ -109,12 +109,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22
+				{ // 17 22 71
 					try
 					{
 						switch(Check_Off)
 						{
-							case "71":case "22":
+							case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -1126,7 +1126,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "7":case "3":
+							case "7":
 							var Thang = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1965 - 1960 + 1)) + 1960);
 							var QualityHealth = "CODE:";
@@ -1439,9 +1439,9 @@ function Dailybreak(File_Mail_info)
 			else
 			{// Khao Sat DAILY
 				switch(Check_Off)
-				{// 47 57 11 20 27
+				{// 47 57 11 20 27 8
 					// khao sat khong doi nhan net
-					case "67":case "55":
+					case "8":case "67":
 					case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
@@ -1654,7 +1654,8 @@ function RewardBee(File_Mail_info)
 						C3 = 7;C8 = 7;
 						C4 = 4;C9 = 2;
 						break;
-						case "1":
+						// RewardBee - Love
+						case "71":
 						C0 = 2;C5 = 5;
 						C1 = 4;C6 = 5;
 						C2 = 8;C7 = 3;
