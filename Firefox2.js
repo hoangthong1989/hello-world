@@ -39,15 +39,15 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "17":case "71":
+			case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "25":
+			case "1":
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "7":case "22":
+			case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -109,12 +109,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71
+				{ // 17 22 71 76 25
 					try
 					{
 						switch(Check_Off)
 						{
-							case "71":case "17":case "22":
+							case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -1647,7 +1647,7 @@ function RewardBee(File_Mail_info)
 						C4 = 4;C9 = 2;
 						break;
 						//RewardBee -(key)
-						case "25":case "22":case "17":
+						case "76":case "25":case "22":case "17":
 						C0 = 8;C5 = 3;
 						C1 = 5;C6 = 7;
 						C2 = 6;C7 = 3;
