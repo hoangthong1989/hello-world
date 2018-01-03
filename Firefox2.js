@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["57","71","17","73","45","18","83"];
+var Ma_off = ["57","71","25","30","31","45","18"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -39,7 +39,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "73":case "17":case "71":case "76":case "25":case "22":
+			case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "7":
+			case "3":case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -1120,48 +1120,44 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Winter Samples")
+				else if(title == "Vaniki US")
+				{// 62
+					try
+					{
+						switch(Check_Off)
+						{
+							case "62":
+							Vaniki(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Winter Samples") // QualityHealth
 				{// 7
 					try
 					{
 						switch(Check_Off)
 						{
 							case "7":
-							var Thang = Math.floor((Math.random() * 9) + 1);
-							var Nam = Math.floor((Math.random() * (1965 - 1960 + 1)) + 1960);
-							var QualityHealth = "CODE:";
-							QualityHealth += "SET !ERRORIGNORE YES"+"\n";
-							QualityHealth += "SET !TIMEOUT_TAG 0 "+"\n";
-							QualityHealth += "SET !DATASOURCE Last_First.txt"+"\n";
-							QualityHealth += "SET !DATASOURCE_LINE 2"+"\n";
-							QualityHealth += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
-							QualityHealth += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
-							QualityHealth += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							QualityHealth += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
-							QualityHealth += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:addressLineOne CONTENT={{!COL2}} "+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:city CONTENT={{!COL3}} "+"\n";
-							QualityHealth += "TAG POS=1 TYPE=SELECT FORM=ID:registration ATTR=ID:stateProvince CONTENT=%{{!COL4}} "+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:zipPostalCode CONTENT={{!COL5}} "+"\n";
-							QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:phoneNumber CONTENT={{!COL1}} "+"\n";
-							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#_birthDate\" BUTTON=0"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNo* CONTENT=%"+Thang+"\n";
-							QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:191819191920192119221923192419251926192719281929193019311932* CONTENT=%"+Nam+"\n";
-							QualityHealth += "EVENT TYPE=MOUSEDOWN SELECTOR=\"HTML>BODY>DIV:nth-of-type(5)>DIV>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=SPAN ATTR=TXT:Female"+"\n";
-							QualityHealth += "TAG POS=1 TYPE=BUTTON FORM=ID:registration ATTR=TXT:Get<SP>My<SP>FREE<SP>Samples!"+"\n";
-							QualityHealth += "SET !TIMEOUT_TAG 10"+"\n";
-							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(4)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
-							QualityHealth += "SET !TIMEOUT_TAG 0"+"\n";
-							QualityHealth += "WAIT SECONDS=1"+"\n";
-							QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
-							QualityHealth += "WAIT SECONDS=20"+"\n";
-							iimPlay( QualityHealth);
+							QualityHealth(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Check Title Offers")
+				{// Code Mẫu 
+					try
+					{
+						switch(Check_Off)
+						{
+							case "Mã_Off":
+							Ham_lam_viec(File_Mail_info);
 							break;
 						}
 						off++;
@@ -1256,22 +1252,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				
-				else if(title == "Check Title Offers")
-				{// Code Mẫu 
-					try
-					{
-						switch(Check_Off)
-						{
-							case "Mã_Off":
-							Ham_lam_viec(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
 				else if(title == "Problem loading page")
 				{// Lỗi Mạng F5 lại                                  
 					try
@@ -1295,7 +1275,7 @@ while(true)
 				}
 			}
 			else 
-			{ //
+			{ // 3
 				if(Check_Off == "0")
 				{
 					var Insurance_check = "CODE:";
@@ -1311,7 +1291,16 @@ while(true)
 						break;
 					}
 				}
-				else if(Check_Off == "0")
+				else if(Check_Off == "3")
+				{
+					var str = window.document.body.textContent;
+					if(str.indexOf("QualityHealth"))
+					{
+						QualityHealth(File_Mail_info);
+						off++;
+						break;
+					}
+				}else if(Check_Off == "0")
 				{
 					var str = window.document.body.textContent;
 					if(str.indexOf("Congratulations, you are today's lucky visitor!"))
@@ -1588,7 +1577,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":
+		case "25":
 		Line = 2;
 		break;
 	}
@@ -1713,6 +1702,44 @@ function RewardBee(File_Mail_info)
 			}
 		}
 	}
+}
+function QualityHealth(File_Mail_info)
+{
+	var Thang = Math.floor((Math.random() * 9) + 1);
+	var Nam = Math.floor((Math.random() * (1965 - 1960 + 1)) + 1960);
+	var QualityHealth = "CODE:";
+	QualityHealth += "SET !ERRORIGNORE YES"+"\n";
+	QualityHealth += "SET !TIMEOUT_TAG 0 "+"\n";
+	QualityHealth += "SET !DATASOURCE Last_First.txt"+"\n";
+	QualityHealth += "SET !DATASOURCE_LINE 2"+"\n";
+	QualityHealth += "SET !DATASOURCE_COLUMNS 2"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
+	QualityHealth += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
+	QualityHealth += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+	QualityHealth += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	QualityHealth += "SET !DATASOURCE_LINE 1"+"\n";
+	QualityHealth += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:addressLineOne CONTENT={{!COL2}} "+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:city CONTENT={{!COL3}} "+"\n";
+	QualityHealth += "TAG POS=1 TYPE=SELECT FORM=ID:registration ATTR=ID:stateProvince CONTENT=%{{!COL4}} "+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:zipPostalCode CONTENT={{!COL5}} "+"\n";
+	QualityHealth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registration ATTR=ID:phoneNumber CONTENT={{!COL1}} "+"\n";
+	QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#_birthDate\" BUTTON=0"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNo* CONTENT=%"+Thang+"\n";
+	QualityHealth += "TAG POS=1 TYPE=SELECT ATTR=TXT:191819191920192119221923192419251926192719281929193019311932* CONTENT=%"+Nam+"\n";
+	QualityHealth += "EVENT TYPE=MOUSEDOWN SELECTOR=\"HTML>BODY>DIV:nth-of-type(5)>DIV>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=SPAN ATTR=TXT:Female"+"\n";
+	QualityHealth += "TAG POS=1 TYPE=BUTTON FORM=ID:registration ATTR=TXT:Get<SP>My<SP>FREE<SP>Samples!"+"\n";
+	QualityHealth += "SET !TIMEOUT_TAG 10"+"\n";
+	QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(4)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
+	QualityHealth += "SET !TIMEOUT_TAG 0"+"\n";
+	QualityHealth += "WAIT SECONDS=1"+"\n";
+	QualityHealth += "EVENT TYPE=CLICK SELECTOR=\"#registration>DIV:nth-of-type(5)>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>LABEL>SPAN\" BUTTON=0"+"\n";
+	QualityHealth += "WAIT SECONDS=20"+"\n";
+	iimPlay( QualityHealth);
 }
 function Get_a_Gift_Card(File_Mail_info)
 {
@@ -1892,50 +1919,43 @@ function Depend(File_Mail_info)
 	Depend += "WAIT SECONDS=20"+"\n";
 	iimPlay(Depend);
 }
-function Ma_Off_395() 
-{// code chưa test
-	var Ma_Off_395 = "CODE:";
-	Ma_Off_395 += "SET !ERRORIGNORE YES"+"\n";
-	Ma_Off_395 += "SET !TIMEOUT_TAG 0"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE Last_First.txt"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_LINE 2"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_COLUMNS 2 "+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:sel CONTENT=%Mr"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_LINE 1"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_COLUMNS 1"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_LINE 1"+"\n";
-	Ma_Off_395 += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
-	Ma_Off_395 += "WAIT SECONDS=2"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobmonth CONTENT=%03"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobday CONTENT=%03"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobyear CONTENT=%1983"+"\n";
-	Ma_Off_395 += "EVENT TYPE=CLICK SELECTOR=\"#addressLine\" BUTTON=0"+"\n";
-	Ma_Off_395 += "EVENTS TYPE=KEYPRESS SELECTOR=\"#addressLine\" CHAR=\"{{!COL2}}\""+"\n";
-	Ma_Off_395 += "WAIT SECONDS=3"+"\n";
-	Ma_Off_395 += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>B:nth-of-type(3)\" BUTTON=0"+"\n";
-	Ma_Off_395 += "WAIT SECONDS=1"+"\n";
-	Ma_Off_395 += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
-	Ma_Off_395 += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
-	Ma_Off_395 += "WAIT SECONDS=10"+"\n";
-	Ma_Off_395 += "TAG POS=2 TYPE=LABEL FORM=NAME:Toro<SP>Media<SP>-<SP>Auto<SP>Accident ATTR=TXT:No"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:Toro<SP>Media<SP>-<SP>Auto<SP>Accident ATTR=ID:11e7d8de4b7dc3d2afa742010a84025e-Get<SP>a<SP>FREE<SP>PHONE<SP>Consultation<SP>with<SP>an<SP>auto<SP>accident<SP>injury<SP>attorney<SP>now-1-No CONTENT=YES"+"\n";
-	Ma_Off_395 += "TAG POS=2 TYPE=LABEL FORM=NAME:TimeOneGroup<SP>-<SP>Jacadi<SP>US ATTR=TXT:No"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:TimeOneGroup<SP>-<SP>Jacadi<SP>US ATTR=ID:11e7da6de691a897afa742010a84025e-Get<SP>access<SP>to<SP>Jacadi's<SP>Private<SP>Sale<SP>and<SP>get<SP>30%<SP>off!-1-No CONTENT=YES"+"\n";
-	Ma_Off_395 += "TAG POS=2 TYPE=LABEL FORM=NAME:Ziprecruiter<SP>-<SP>Job<SP>Alerts ATTR=TXT:No"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:Ziprecruiter<SP>-<SP>Job<SP>Alerts ATTR=ID:11e75cc806235751b08c42010a840014-Looking<SP>for<SP>a<SP>job?<SP>Get<SP>the<SP>latest<SP>ZipRecruiter​<SP>jobs<SP>to<SP>your<SP>inbox<SP>daily.<SP>We<SP><SP>do<SP>the<SP>searching<SP>for<SP>you!-1-No CONTENT=YES"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=SELECT FORM=NAME:Ziprecruiter<SP>-<SP>Job<SP>Alerts ATTR=ID:sel CONTENT=%accounts<SP>assistant"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:CLICK<SP>TO<SP>CONFIRM<SP>YOUR<SP>ENTRY"+"\n";
-	Ma_Off_395 += "TAG POS=2 TYPE=LABEL FORM=NAME:Reservetechinc<SP>-<SP>Dry<SP>Skin ATTR=TXT:Yes"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:Reservetechinc<SP>-<SP>Dry<SP>Skin ATTR=ID:11e7d67be9578076afa742010a84025e-Do<SP>you<SP>suffer<SP>from<SP>dry<SP>skin,<SP>psoriasis<SP>or<SP>eczema?-0-Yes CONTENT=YES"+"\n";
-	Ma_Off_395 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:CLICK<SP>TO<SP>CONFIRM<SP>YOUR<SP>ENTRY"+"\n";
-	Ma_Off_395 += "WAIT SECONDS=20"+"\n";
-	iimPlay(Ma_Off_395);
+function Vaniki(File_Mail_info) 
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
+	var Vaniki = "CODE:";
+	Vaniki += "SET !ERRORIGNORE YES"+"\n";
+	Vaniki += "SET !TIMEOUT_TAG 0"+"\n";
+	Vaniki += "SET !DATASOURCE Last_First.txt"+"\n";
+	Vaniki += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	Vaniki += "SET !DATASOURCE_COLUMNS 2 "+"\n";
+	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:sel CONTENT=%Mr"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
+	Vaniki += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Vaniki += "SET !DATASOURCE_LINE 1"+"\n";
+	Vaniki += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+	Vaniki += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	Vaniki += "SET !DATASOURCE_LINE 1"+"\n";
+	Vaniki += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
+	Vaniki += "WAIT SECONDS=2"+"\n";
+	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+"\n";
+	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+"\n";
+	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobyear CONTENT=%"+Random_Nam+"\n";
+	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#addressLine\" BUTTON=0"+"\n";
+	Vaniki += 'EVENTS TYPE=KEYPRESS SELECTOR="#addressLine" CHARS="{{!COL2}}"'+"\n";
+	Vaniki += "WAIT SECONDS=3"+"\n";
+	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>B:nth-of-type(3)\" BUTTON=0"+"\n";
+	Vaniki += "WAIT SECONDS=1"+"\n";
+	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
+	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
+	Vaniki += "WAIT SECONDS=30"+"\n";
+	iimPlay(Vaniki);
 }
 function Amazon(File_Mail_info)
 {// điều chỉnh lại một chút nữa
