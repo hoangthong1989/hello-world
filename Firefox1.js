@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["66","82","17","71","45","10","18"];
+var Ma_off = ["73","82","17","71","45","10","18"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -1002,7 +1002,7 @@ while(true)
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
-							var Nam = Math.floor((Math.random() * (1998 - 2004 + 1)) + 2004);
+							var Nam = Math.floor((Math.random() * (1989 - 1985 + 1)) + 1985);
 							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var random1 = Math.floor((Math.random() * 6) + 1);
 							var Disney = "CODE:";
