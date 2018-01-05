@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["77","17","71","110","18","45"]; // FF1
-// var Ma_off = ["79","17","71","110","18","45"]; // FF2
+var Ma_off = ["77","17","71","116","18","45"]; // FF1
+// var Ma_off = ["79","25","71","116","18","45"]; // FF2
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -41,7 +41,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "109":
+			case "86":
 			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
@@ -112,12 +112,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 109
+				{ // 17 22 71 76 25 86
 					try
 					{
 						switch(Check_Off)
 						{
-							case "109":case "25":case "76":case "71":case "17":case "22":
+							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -171,12 +171,12 @@ while(true)
 				}
 				// AARP 
 				else if(title == "(re)starting YOUR CAREER AFTER 45"||title == "Small Gestures. BIG Impact. By AARP"||title == "THE AARP DAILY DISCOVERY GIVEAWAY"||title == "Retirement in Reach $50,000 Sweepstakes")
-				{ // 49 46
+				{ // 49 46 116
 					try
 					{
 						switch(Check_Off)
 						{
-							case "46":case "49":
+							case "116":case "46":case "49":
 							AARP(File_Mail_info);
 							break;
 						}
@@ -995,12 +995,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Disney")
-				{// 73 106
+				{// 73 106 112
 					try
 					{
 						switch(Check_Off)
 						{
-							case "106":case "73":
+							case "112":case "106":case "73":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
@@ -1060,7 +1060,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "0":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Dieting_Solutions = "CODE:";
 							Dieting_Solutions += "SET !ERRORIGNORE YES"+"\n";
@@ -1114,7 +1114,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "0":
 							Get_a_Gift_Card(File_Mail_info);
 							break;
 						}
@@ -1580,7 +1580,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":case "109":
+		case "17":case "25":
 		Line = 2;
 		break;
 	}
@@ -1637,6 +1637,13 @@ function RewardBee(File_Mail_info)
 						C2 = 6;C7 = 3;
 						C3 = 7;C8 = 7;
 						C4 = 4;C9 = 2;
+						break;
+						case "86":
+						C0 = 7;C5 = 5;
+						C1 = 3;C6 = 6;
+						C2 = 5;C7 = 3;
+						C3 = 3;C8 = 7;
+						C4 = 3;C9 = 2;C10 = 6;
 						break;
 						//RewardBee -(key)
 						case "76":case "25":case "22":case "17":
