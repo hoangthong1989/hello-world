@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["11","17","71","116","18","45"]; // FF1
-// var Ma_off = ["79","25","71","116","18","45"]; // FF2
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["115","104","109","82","31","45","18"]; // FF1
+// var Ma_off = ["114","57","71","30","5","45","18"]; // FF2
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -41,7 +41,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "86":
+			case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
@@ -100,7 +100,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "104":case "79":case "77":case "8":case "67":
+							case "11":case "104":case "79":case "77":case "8":case "67":
 							case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
@@ -112,11 +112,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86
+				{ // 17 22 71 76 25 86 109
 					try
 					{
 						switch(Check_Off)
 						{
+							case "109":
 							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -225,12 +226,12 @@ while(true)
 				}
 				// Hàng Zipcode
 				else if(title == "Life Insurance"||title == "Mortgage"||title == "Insurance Branch"||title == "Mortgage Insurance"||title == "Health Insurance"||title == "Medicare Insurance"||title == "Home Insurance")
-				{ //    
+				{ // 115 114
 					try  
 					{
 						switch(Check_Off)
 						{ // Zip dang Insurance
-							case "1":
+							case "114":case "115":
 							var Insurance = "CODE:";
 							Insurance += "SET !ERRORIGNORE YES"+" \n";
 							Insurance += "SET !TIMEOUT_TAG 0"+" \n";
@@ -1170,13 +1171,13 @@ while(true)
 				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82
+				{ // 30 31 75 82 5
 					try
 					{
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "31":
+							case "5":case "82":
 							Line = 2;
 							break;
 						}
@@ -1217,7 +1218,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "82":case "75":case "31":case "30":
+							case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
 							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1638,7 +1639,7 @@ function RewardBee(File_Mail_info)
 						C3 = 7;C8 = 7;
 						C4 = 4;C9 = 2;
 						break;
-						case "86":
+						case "86":case "109":
 						C0 = 7;C5 = 5;
 						C1 = 3;C6 = 6;
 						C2 = 5;C7 = 3;
