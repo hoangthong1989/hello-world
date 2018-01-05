@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["67","31","30","71","25","18","45"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["66","22","71","110","18","45"];
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -35,8 +35,8 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "10":
-			case "57":case "67":case "30":case "31":case "23":case "45":case "18":case "50":
+			case "110":case "10":
+			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -326,7 +326,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
 						}
@@ -1578,7 +1578,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "25":
+		case "22":
 		Line = 2;
 		break;
 	}
@@ -3005,10 +3005,10 @@ function National_Consumer_Center(File_Mail_info)
 // Điền Thông Tin
 	switch(Check_Off)
 	{ 
-		case "1":case "2":
+		case "110":
 		iimPlay(National);
 		break;
-		case "1":
+		case "0":
 		iimPlay(Step_1);
 		break;
 	}
