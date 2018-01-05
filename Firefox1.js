@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["66","31","30","71","10","45"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["66","31","30","71","25","18","45"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -993,12 +993,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Disney")
-				{// 73
+				{// 73 106
 					try
 					{
 						switch(Check_Off)
 						{
-							case "73":
+							case "106":case "73":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
