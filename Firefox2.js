@@ -1588,6 +1588,29 @@ function RewardBee(File_Mail_info)
 		Line = 2;
 		break;
 	}
+	switch(Check_Off)
+	{
+		case "17":
+		var Phieu_Mua_Hang = "CODE:";
+		Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
+		Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
+		// chọn Phiếu mua hàng
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		// Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		// Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		iimPlay(Phieu_Mua_Hang);
+		break;
+		default:
+		var Phieu_Mua_Hang = "CODE:";
+		Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
+		Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
+		// chọn Phiếu mua hàng
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		iimPlay(Phieu_Mua_Hang);
+		break;
+	}
 	var RewardBee = "CODE:";
 	RewardBee += "SET !ERRORIGNORE YES" + "\n";
 	RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
@@ -1599,10 +1622,6 @@ function RewardBee(File_Mail_info)
 	RewardBee += "SET !ENCRYPTION NO" + "\n";
 	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwd CONTENT="+Pass+"\n";
 	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwdCnfrm CONTENT="+Pass+"\n";
-	// chọn Phiếu mua hàng
-	RewardBee += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-	RewardBee += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-	RewardBee += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
 	// Điền info
 	RewardBee += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
 	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
@@ -1698,7 +1717,7 @@ function RewardBee(File_Mail_info)
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_7>DIV:nth-of-type("+cau_7+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_8>DIV:nth-of-type("+cau_8+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_9+")>LABEL\" BUTTON=0"+"\n";
-					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
+					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_10>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
 					iimPlay(RewardBee_KS);
 				}
 			}
