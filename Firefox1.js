@@ -4,10 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["66","30","71","45","18"]; // FF1
-// var Ma_off = ["48","57","","71","","45","18"]; // FF2
-
-var File_Mail_info = 1; var sl_chay_off = 4; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["102","31","30","66","71","109","18"];
+// var Ma_off = ["102","31","30","79","25","109","18"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -42,7 +41,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "114":case "115":case "5":case "86":case "82":
+			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
@@ -1172,13 +1171,13 @@ while(true)
 				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5
+				{ // 30 31 75 82 5 118 102
 					try
 					{
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "5":case "82":
+							case "102":case "5":case "82":
 							Line = 2;
 							break;
 						}
@@ -1219,7 +1218,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "5":case "82":case "75":case "31":case "30":
+							case "102":case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
 							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1582,7 +1581,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":case "25":
+		case "109":
 		Line = 2;
 		break;
 	}
@@ -1663,7 +1662,7 @@ function RewardBee(File_Mail_info)
 						C3 = 3;C8 = 7;
 						C4 = 3;C9 = 3;
 						break;
-						case "1":
+						case "0":
 						C0 = 4;C5 = 4;
 						C1 = 4;C6 = 3;
 						C2 = 4;C7 = 3;
