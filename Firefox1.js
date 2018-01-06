@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["119","30","77","109","71","26","1"];
-// var Ma_off = ["21","31","57","109","71","26","1"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["77","109","71","26","1"];
+// var Ma_off = ["57","109","71","26","1"];
+var File_Mail_info = 1; var sl_chay_off = 4; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1635,10 +1635,10 @@ function RewardBee(File_Mail_info)
 	RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
 	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "SET !TIMEOUT_TAG 15" + "\n";
+	RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "WAIT SECONDS=20"+"\n";
+	RewardBee += "WAIT SECONDS=30"+"\n";
 	while(true)
 	{
 		var capcha = check_capcha();
