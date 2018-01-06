@@ -4,10 +4,10 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["48","77","30","71","45","18"]; // FF1
+var Ma_off = ["66","30","71","45","18"]; // FF1
 // var Ma_off = ["48","57","","71","","45","18"]; // FF2
 
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
+var File_Mail_info = 1; var sl_chay_off = 4; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1633,12 +1633,12 @@ function RewardBee(File_Mail_info)
 				{ // Hoặc là chọn 
 					switch(Check_Off)
 					{ // Đặt Số câu Hỏi để random
-						case "1":
-						C0 = 7;C5 = 3;
-						C1 = 5;C6 = 7;
-						C2 = 6;C7 = 3;
-						C3 = 7;C8 = 7;
-						C4 = 4;C9 = 2;
+						case "71":
+						C0 = 3;C5 = 4;
+						C1 = 3;C6 = 3;
+						C2 = 5;C7 = 7;
+						C3 = 8;C8 = 3;
+						C4 = 3;C9 = 3;
 						break;
 						case "86":case "109":
 						C0 = 7;C5 = 5;
@@ -1656,7 +1656,7 @@ function RewardBee(File_Mail_info)
 						C4 = 4;C9 = 2;
 						break;
 						// RewardBee - Love
-						case "71":
+						case "0":
 						C0 = 2;C5 = 5;
 						C1 = 4;C6 = 5;
 						C2 = 8;C7 = 3;
