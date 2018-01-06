@@ -1588,29 +1588,6 @@ function RewardBee(File_Mail_info)
 		Line = 2;
 		break;
 	}
-	switch(Check_Off)
-	{
-		case "17":
-		var Phieu_Mua_Hang = "CODE:";
-		Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
-		Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
-		// chọn Phiếu mua hàng
-		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		// Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		// Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		iimPlay(Phieu_Mua_Hang);
-		break;
-		default:
-		var Phieu_Mua_Hang = "CODE:";
-		Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
-		Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
-		// chọn Phiếu mua hàng
-		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
-		iimPlay(Phieu_Mua_Hang);
-		break;
-	}
 	var RewardBee = "CODE:";
 	RewardBee += "SET !ERRORIGNORE YES" + "\n";
 	RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
@@ -1644,6 +1621,26 @@ function RewardBee(File_Mail_info)
 		var capcha = check_capcha();
 		if(capcha == true)
 		{
+			switch(Check_Off)
+			{// chọn Phiếu mua hàng
+				case "0":
+				var Phieu_Mua_Hang_1 = "CODE:";
+				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
+				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
+				Phieu_Mua_Hang_1 += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+				iimPlay(Phieu_Mua_Hang_1);
+				break;
+				//
+				default:
+				var Phieu_Mua_Hang = "CODE:";
+				Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
+				Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
+				Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+				Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+				Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+				iimPlay(Phieu_Mua_Hang);
+				break;
+			}
 			while(true)
 			{ // làm Khảo sát trước
 				if(SL_Chon_KS > 2)
