@@ -4,9 +4,10 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["115","104","109","82","31","45","18"]; // FF1
-// var Ma_off = ["114","57","71","30","5","45","18"]; // FF2
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["48","77","30","71","45","18"]; // FF1
+// var Ma_off = ["48","57","","71","","45","18"]; // FF2
+
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
