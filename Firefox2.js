@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-// var Ma_off = ["77","102","110","17","71","45","18"];
-var Ma_off = ["79","102","110","17","71","45","18"];
+// var Ma_off = ["119","30","77","109","71","26","1"];
+var Ma_off = ["21","31","57","109","71","26","1"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -36,11 +36,12 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "110":case "10":
+			case "26":case "110":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
+			case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
@@ -129,11 +130,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10
+				{ // 23 45 50 18 1 83 10 26
 					try
 					{
 						switch(Check_Off)
 						{
+							case "26":
 							case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
@@ -1171,13 +1173,13 @@ while(true)
 				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102
+				{ // 30 31 75 82 5 118 102 119
 					try
 					{
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "102":case "5":case "82":
+							case "119":case "21":
 							Line = 2;
 							break;
 						}
@@ -1218,7 +1220,8 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "102":case "118":case "5":case "82":case "75":case "31":case "30":
+							case "21":case "119":case "102":
+							case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
 							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1581,7 +1584,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":
+		case "109":
 		Line = 2;
 		break;
 	}
