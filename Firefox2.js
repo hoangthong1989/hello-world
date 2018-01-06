@@ -1386,7 +1386,7 @@ function Dailybreak(File_Mail_info)
 	}
 	var Dailybreak_1 = "CODE:"; 
 	Dailybreak_1 += "SET !ERRORIGNORE YES" + "\n";
-	Dailybreak_1 += "SET !TIMEOUT_TAG 120" + "\n";
+	Dailybreak_1 += "SET !TIMEOUT_TAG 100" + "\n";
 	Dailybreak_1 += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
 	Dailybreak_1 += "SET !TIMEOUT_TAG 0" + "\n";
 	Dailybreak_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
@@ -1635,10 +1635,10 @@ function RewardBee(File_Mail_info)
 	RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
 	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "SET !TIMEOUT_TAG 30" + "\n";
+	RewardBee += "SET !TIMEOUT_TAG 15" + "\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
 	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "WAIT SECONDS=30"+"\n";
+	RewardBee += "WAIT SECONDS=20"+"\n";
 	while(true)
 	{
 		var capcha = check_capcha();
