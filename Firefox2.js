@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-// var Ma_off = ["48","127","71","45","10"];
-var Ma_off = ["48","77","109","45","10"];
+var Ma_off = ["48","127","71","109","45"];
+// var Ma_off = ["48","77","109","45","10"];
 var File_Mail_info = 2; var sl_chay_off = 4; var off = 0; //var Ma_Member = 0;
 while(true)
 {
@@ -1402,7 +1402,7 @@ function Dailybreak(File_Mail_info)
 	Dailybreak_1 += "TAG POS=4 TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
 	Dailybreak_1 += "TAG POS=* TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
 	Dailybreak_1 += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Sign<SP>Up" + "\n";	
-	Dailybreak_1 += "WAIT SECONDS=13" + "\n";
+	Dailybreak_1 += "WAIT SECONDS=10" + "\n";
 	//
 	while(true)
 	{
@@ -1584,7 +1584,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "0":
+		case "71":
 		Line = 2;
 		break;
 	}
