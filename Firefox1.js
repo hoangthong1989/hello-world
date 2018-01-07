@@ -1182,7 +1182,7 @@ while(true)
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "119":case "21":
+							case "119":case "118":
 							Line = 2;
 							break;
 						}
