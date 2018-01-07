@@ -4,9 +4,12 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["30","77","71","109","45"];
-// var Ma_off = ["30","57","71","109","45"];
-var File_Mail_info = 1; var sl_chay_off = 4; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["118","31","79","71","110","45"];
+// var Ma_off = ["119","30","67","109","110","18"];
+// hàng 3h ngày mai ko xóa
+// var Ma_off = ["118","31","79","71","110","45"]; 
+// var Ma_off = ["119","30","67","109","110","18"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
