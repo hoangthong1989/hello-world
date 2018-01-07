@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-// var Ma_off = ["118","31","79","71","110","45"];
-var Ma_off = ["119","30","67","109","110","18"];
+// var Ma_off = ["118","77","71","128","110","18"];
+var Ma_off = ["118","79","17","128","110","18"];
 // hàng 3h ngày mai ko xóa
 // var Ma_off = ["118","31","79","71","110","45"]; 
 // var Ma_off = ["119","30","67","109","110","18"];
@@ -44,7 +44,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "127":case "21":case "119":
+			case "128":case "127":case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
@@ -1001,12 +1001,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Disney")
-				{// 73 106 112
+				{// 73 106 112 128
 					try
 					{
 						switch(Check_Off)
 						{
-							case "112":case "106":case "73":
+							case "128":case "112":case "106":case "73":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
@@ -1587,7 +1587,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "71":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -1626,7 +1626,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "0":
+				case "17":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
