@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["119","77","71","109","45","18"];
+var Ma_off = ["31","57","71","109","45","18"];
 // hàng 3h ngày mai ko xóa
 // var Ma_off = ["118","31","79","71","110","45"]; 
 // var Ma_off = ["119","30","67","109","110","18"];
@@ -45,11 +45,11 @@ while(true)
 			////
 			case "128":case "127":case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
-			case "75":case "62":case "73":case "17":case "71":case "76":case "25":case "22":
+			case "75":case "62":case "73":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "1":
+			case "17":
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
@@ -1717,6 +1717,8 @@ function RewardBee(File_Mail_info)
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_8>DIV:nth-of-type("+cau_8+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_9+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_10>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
+					// click cố định câu 9 
+					RewardBee_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:frmSurveyBee ATTR=ID:d42404b2-23e0-e711-b60d-0e4c37f58098"+"\n";
 					iimPlay(RewardBee_KS);
 				}
 			}
