@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["48","127","17","109","45","18"];
+var Ma_off = ["31","67","71","109","45","18"];
 // hàng 3h ngày mai ko xóa
 // var Ma_off = ["118","31","79","71","110","45"]; 
 // var Ma_off = ["119","30","67","109","110","18"];
@@ -1620,7 +1620,7 @@ function RewardBee(File_Mail_info)
 	RewardBee += "WAIT SECONDS=30"+"\n";
 	while(true)
 	{
-		var capcha = check_capcha(); var click_KS = 0;
+		var capcha = check_capcha();
 		if(capcha == true)
 		{
 			switch(Check_Off)
@@ -1631,7 +1631,6 @@ function RewardBee(File_Mail_info)
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
 				Phieu_Mua_Hang_1 += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
 				iimPlay(Phieu_Mua_Hang_1);
-				click_KS = 10;
 				break;
 				//
 				default:
@@ -1642,12 +1641,11 @@ function RewardBee(File_Mail_info)
 				Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
 				Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
 				iimPlay(Phieu_Mua_Hang);
-				click_KS = 2;
 				break;
 			}
 			while(true)
 			{ // làm Khảo sát trước
-				if(SL_Chon_KS > click_KS)
+				if(SL_Chon_KS > 2)
 				{
 					break;
 				}
@@ -1704,10 +1702,14 @@ function RewardBee(File_Mail_info)
 					var cau_8 = Math.floor((Math.random() * C8) + 1);
 					var cau_9 = Math.floor((Math.random() * C9) + 1);
 					var cau_10 = Math.floor((Math.random() * C10) + 1);
+					SL_Chon_KS++;
 					var RewardBee_KS = "CODE:";
 					RewardBee_KS += "SET !ERRORIGNORE YES" + "\n";
 					RewardBee_KS += "SET !TIMEOUT_TAG 0" + "\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_0>DIV:nth-of-type("+cau_0+")>LABEL\" BUTTON=0"+"\n";
+					// click cố định câu 0
+					RewardBee_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:frmSurveyBee ATTR=ID:9fe215cb-9451-4574-a057-588301c42865 CONTENT=YES"+"\n";
+					//
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_1>DIV:nth-of-type("+cau_1+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_2>DIV:nth-of-type("+cau_2+")>LABEL\" BUTTON=0"+"\n";
 					RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_3>DIV:nth-of-type("+cau_3+")>LABEL\" BUTTON=0"+"\n";
@@ -1721,7 +1723,6 @@ function RewardBee(File_Mail_info)
 					// click cố định câu 9 
 					RewardBee_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:frmSurveyBee ATTR=ID:d42404b2-23e0-e711-b60d-0e4c37f58098"+"\n";
 					iimPlay(RewardBee_KS);
-					SL_Chon_KS++;
 				}
 			}
 			//
