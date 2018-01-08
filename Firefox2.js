@@ -4,11 +4,11 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["118","77","109","71","110","23","45"];
+var Ma_off = ["61","31","57","71","109","45","23"];
 // hàng 3h ngày mai ko xóa
 // var Ma_off = ["118","31","79","71","110","45"]; 
 // var Ma_off = ["119","30","67","109","110","18"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; //var Ma_Member = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -38,7 +38,7 @@ while(true)
 		iimPlay(Load_Link_Nhanh);
 		switch(Check_Off)
 		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "26":case "110":case "10":
+			case "61":case "26":case "110":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
@@ -53,7 +53,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "3":case "7":
+			case "131":case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -115,12 +115,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109
+				{ // 17 22 71 76 25 86 109 123
 					try
 					{
 						switch(Check_Off)
 						{
-							case "109":
+							case "123":case "109":
 							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -358,12 +358,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Share Your Freebies")
-				{ //
+				{ // 131
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "131":
 							Share_Your_Freebies(File_Mail_info);
 							break;
 						}
@@ -1129,12 +1129,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Vaniki US")
-				{// 62
+				{// 62 61
 					try
 					{
 						switch(Check_Off)
 						{
-							case "62":
+							case "61":case "62":
 							Vaniki(File_Mail_info);
 							break;
 						}
@@ -1660,7 +1660,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				//RewardBee -(key)
-				case "76":case "25":case "22":case "17":
+				case "123":case "76":case "25":case "22":case "17":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
