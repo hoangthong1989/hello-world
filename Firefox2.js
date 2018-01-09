@@ -4,9 +4,9 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["118","82","67","71","18","31","30"];
+var Ma_off = ["134","138","67","71","25","31","18"];
 // hàng 3h ngày mai ko xóa
-// var Ma_off = ["118","31","79","71","110","45"]; 
+// var Ma_off = ["118","31","79","71","110","45"];
 // var Ma_off = ["119","30","67","109","110","18"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
 while(true)
@@ -43,7 +43,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "128":case "127":case "21":case "119":
+			case "138":case "128":case "127":case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
@@ -53,7 +53,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "131":case "7":
+			case "134":case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -358,12 +358,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Share Your Freebies")
-				{ // 131
+				{ // 134
 					try
 					{
 						switch(Check_Off)
 						{
-							case "131":
+							case "134":
 							Share_Your_Freebies(File_Mail_info);
 							break;
 						}
@@ -1000,12 +1000,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Disney")
-				{// 73 106 112 128
+				{// 73 106 112 128 138
 					try
 					{
 						switch(Check_Off)
 						{
-							case "128":case "112":case "106":case "73":
+							case "138":case "128":case "112":case "106":case "73":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
 							var Thang = Math.floor((Math.random() * 9) + 1);
@@ -1586,7 +1586,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "109":
+		case "25":
 		Line = 2;
 		break;
 	}
@@ -2783,6 +2783,7 @@ function Share_Your_Freebies(File_Mail_info)
 	Share_Your_Freebies += "TAG POS=2 TYPE=SPAN ATTR=TXT:"+" \n";
 	Share_Your_Freebies += "TAG POS=4 TYPE=SPAN ATTR=TXT:"+" \n";
 	Share_Your_Freebies += "TAG POS=6 TYPE=SPAN ATTR=TXT:"+" \n";
+	Share_Your_Freebies += "TAG POS=9 TYPE=SPAN ATTR=TXT:"+" \n";
 	Share_Your_Freebies += "WAIT SECONDS=1"+" \n";
 	Share_Your_Freebies += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-316651b8-b3cb-48bb-93b3-6f16675349ad"+" \n";
 	Share_Your_Freebies += "SET !TIMEOUT_TAG 30"+" \n";
