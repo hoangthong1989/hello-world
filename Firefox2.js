@@ -4,11 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["134","138","67","71","25","31","18"];
-// hàng 3h ngày mai ko xóa
-// var Ma_off = ["118","31","79","71","110","45"];
-// var Ma_off = ["119","30","67","109","110","18"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; //var Ma_Member = 0;
+var Ma_off = ["137","138","77","71","17","103","118"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -53,7 +50,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "134":case "7":
+			case "137":case "134":case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -358,12 +355,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Share Your Freebies")
-				{ // 134
+				{ // 134 137
 					try
 					{
 						switch(Check_Off)
 						{
-							case "134":
+							case "137":case "134":
 							Share_Your_Freebies(File_Mail_info);
 							break;
 						}
@@ -926,42 +923,41 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "0":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
 							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
-							var ConsumerRewards = "CODE:";
-							ConsumerRewards += "SET !ERRORIGNORE YES"+"\n";
-							ConsumerRewards += "SET !TIMEOUT_TAG 0 "+"\n";
-							ConsumerRewards += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							ConsumerRewards += "SET !DATASOURCE_LINE 1"+"\n";
-							ConsumerRewards += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ACTION:/?session_id=* ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=ID:resident CONTENT=YES"+"\n";
-							ConsumerRewards += "WAIT SECONDS=5"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=* ATTR=TXT:Continue"+"\n";
-							ConsumerRewards += "WAIT SECONDS=10"+"\n";
-							ConsumerRewards += "SET !DATASOURCE Last_First.txt"+"\n";
-							ConsumerRewards += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							ConsumerRewards += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:fname CONTENT={{!COL1}}"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:lname CONTENT={{!COL2}}"+"\n";
-							ConsumerRewards += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							ConsumerRewards += "SET !DATASOURCE_LINE 1"+"\n";
-							ConsumerRewards += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:address CONTENT={{!COL2}}"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_month_digit CONTENT="+Random_Ngay+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_day CONTENT="+Random_Thang+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_year CONTENT="+Random_Nam+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:reg-form ATTR=ID:gender-male"+"\n";
-							ConsumerRewards += "TAG POS=1 TYPE=BUTTON FORM=ID:reg-form ATTR=TXT:Continue"+"\n";
-							ConsumerRewards += "WAIT SECONDS=20"+"\n";
-							iimPlay(ConsumerRewards);
+							var us_com = "CODE:";
+							us_com += "SET !ERRORIGNORE YES"+"\n";
+							us_com += "SET !TIMEOUT_TAG 0 "+"\n";
+							us_com += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							us_com += "SET !DATASOURCE_LINE 1"+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ACTION:/?session_id=* ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=ID:resident CONTENT=YES"+"\n";
+							us_com += "WAIT SECONDS=5"+"\n";
+							us_com += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=* ATTR=TXT:Continue"+"\n";
+							us_com += "WAIT SECONDS=10"+"\n";
+							us_com += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:fname CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:lname CONTENT={{!COL2}}"+"\n";
+							us_com += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							us_com += "SET !DATASOURCE_LINE 1"+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_month_digit CONTENT="+Random_Ngay+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_day CONTENT="+Random_Thang+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_year CONTENT="+Random_Nam+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:reg-form ATTR=ID:gender-male"+"\n";
+							us_com += "TAG POS=1 TYPE=BUTTON FORM=ID:reg-form ATTR=TXT:Continue"+"\n";
+							us_com += "WAIT SECONDS=20"+"\n";
+							iimPlay(us_com);
 							break;
 						}
 						off++;
@@ -969,13 +965,13 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "FavoriteConsumerBrands.com")
-				{// 
+				else if(title == "myrewardscenter.us.com"||title == "FavoriteConsumerBrands.com")
+				{// 103
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "103":
 							FavoriteConsumerBrands(File_Mail_info);
 							break;
 						}
@@ -1181,7 +1177,7 @@ while(true)
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "30":case "118":
+							case "30":case "0":
 							Line = 2;
 							break;
 						}
@@ -1586,7 +1582,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "25":
+		case "17":
 		Line = 2;
 		break;
 	}
@@ -1872,22 +1868,21 @@ function FavoriteConsumerBrands(File_Mail_info)
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
-	// var Random_Phon0 = Math.floor((Math.random() * (999 - 111  + 1)) + 111 );
 	var Random_Phon1 = Math.floor((Math.random() * (999 - 111  + 1)) + 111 );
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111  + 1)) + 1111 );
-	var chon_Random = ["Eggs","Chicken","Sushi","Tacos","Pad<SP>Thai","Pizza","Everything!"];
-	var So_RanDom = Math.floor((Math.random() * 6) + 0);
+	var So_RanDom = Math.floor((Math.random() * 9) + 2);
 	var FavoriteConsumerBrands = "CODE:";
 	FavoriteConsumerBrands += "SET !ERRORIGNORE YES"+"\n";
 	FavoriteConsumerBrands += "SET !TIMEOUT_TAG 0 "+"\n";
 	FavoriteConsumerBrands += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
 	FavoriteConsumerBrands += "SET !DATASOURCE_LINE 1"+"\n";
 	FavoriteConsumerBrands += "SET !DATASOURCE_COLUMNS 1"+"\n";
-	FavoriteConsumerBrands += "TAG POS=1 TYPE=SELECT FORM=ACTION:/?session_id=* ATTR=ID:vote CONTENT=%"+chon_Random[So_RanDom]+"\n";
+	FavoriteConsumerBrands += "EVENT TYPE=CLICK SELECTOR=\"#vote\" BUTTON=0"+"\n";
+	FavoriteConsumerBrands += "EVENT TYPE=CLICK SELECTOR=\"#vote>OPTION:nth-of-type("+So_RanDom+")\" BUTTON=0"+"\n";
 	FavoriteConsumerBrands += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/?session_id=* ATTR=ID:email2 CONTENT={{!COL1}}"+"\n";
 	FavoriteConsumerBrands += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=NAME:pse_980_resident CONTENT=YES"+"\n";
-	FavoriteConsumerBrands += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ACTION:/?session_id=* ATTR=NAME:submit&&SRC:http://favoriteconsumerbrands.com/8284/registration/button1.png"+"\n";
-	FavoriteConsumerBrands += "WAIT SECONDS=3"+"\n";
+	FavoriteConsumerBrands += "EVENT TYPE=CLICK SELECTOR=\"#middle>TABLE>TBODY>TR:nth-of-type(6)>TD>INPUT\" BUTTON=0"+"\n";
+	FavoriteConsumerBrands += "WAIT SECONDS=3"+"\n";	
 	FavoriteConsumerBrands += "SET !DATASOURCE Last_First.txt"+"\n";
 	FavoriteConsumerBrands += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
 	FavoriteConsumerBrands += "SET !DATASOURCE_COLUMNS 2 "+"\n";
