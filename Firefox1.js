@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["48","127","71","109","18","45"];
+var Ma_off = ["48","127","71","109","110","45"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
