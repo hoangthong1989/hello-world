@@ -4,12 +4,12 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["118","79","71","17","103","45","18"];
+var Ma_off = ["30","77","71","109","103","146","45"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm xong
+	{// check nếu số lượng off đã làm xong    Opinion City
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
@@ -324,14 +324,34 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 110
+				else if(title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
+				{ // 110 146 154
 					try
 					{
 						switch(Check_Off)
 						{
-							case "110":
+							case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
+							break;
+							//
+							case "154":
+							var National_Quay = "CODE:";
+							National_Quay += "SET !ERRORIGNORE YES"+"\n";
+							National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+							National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>DIV\" BUTTON=0"+"\n";
+							National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>DIV\" BUTTON=0"+"\n";
+							National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>DIV\" BUTTON=0"+"\n";
+							National_Quay += "WAIT SECONDS=10"+"\n";
+							National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#content3>A>DIV\" BUTTON=0"+"\n";
+							National_Quay += "TAB T=2"+"\n";
+							National_Quay += "WAIT SECONDS=1"+"\n";
+							iimPlay(National_Quay);
+							iimPlayCode("WAIT SECONDS=1");
+							var title = window.document.title;
+							if(title == "National Consumer Center")
+							{
+								National_Consumer_Center(File_Mail_info);
+							}
 							break;
 						}
 						off++;
@@ -1316,7 +1336,7 @@ while(true)
 						break;
 					}
 				}
-				else if(Check_Off == "0"||Check_Off == "2")
+				else if(Check_Off == "0")
 				{
 					// iimPlay(REFRESH_Site);
 					var National_Quay = "CODE:";
@@ -1583,7 +1603,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":
+		case "109":
 		Line = 2;
 		break;
 	}
@@ -3021,7 +3041,7 @@ function National_Consumer_Center(File_Mail_info)
 		iimPlay(National_Quay);
 		break;
 // click vào hình mặt cười
-		case "596":
+		case "154":case "146":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3033,7 +3053,7 @@ function National_Consumer_Center(File_Mail_info)
 // Điền Thông Tin
 	switch(Check_Off)
 	{ 
-		case "110":
+		case "154":case "146":case "110":
 		iimPlay(National);
 		break;
 		case "0":
