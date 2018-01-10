@@ -4,9 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["110","79","71","109","18","45"];
-// var Ma_off = ["134","77","71","109","103","118"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["30","119","110","67","71","25","103"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -326,7 +325,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 
+				{ // 110
 					try
 					{
 						switch(Check_Off)
@@ -1583,7 +1582,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "109":
+		case "25":
 		Line = 2;
 		break;
 	}
