@@ -4,7 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["157","71","77","109","45","18"];
+var Ma_off = ["109","71","77","148","45","146"];
+// var Ma_off = ["109","71","77","162","45","163"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -40,7 +41,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "138":case "128":case "127":case "21":case "119":
+			case "2":case "138":case "128":case "127":case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
 			case "75":case "62":case "73":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
@@ -227,12 +228,12 @@ while(true)
 				}
 				// Hàng Zipcode
 				else if(title == "Life Insurance"||title == "Mortgage"||title == "Insurance Branch"||title == "Mortgage Insurance"||title == "Health Insurance"||title == "Medicare Insurance"||title == "Home Insurance")
-				{ // 115 114
+				{ // 115 114 2
 					try  
 					{
 						switch(Check_Off)
 						{ // Zip dang Insurance
-							case "114":case "115":
+							case "2":case "114":case "115":
 							var Insurance = "CODE:";
 							Insurance += "SET !ERRORIGNORE YES"+" \n";
 							Insurance += "SET !TIMEOUT_TAG 0"+" \n";
@@ -255,7 +256,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // zip dang Khac
-							case "1":
+							case "0":
 							var Insurance1 = "CODE:";
 							Insurance1 += "SET !ERRORIGNORE YES"+" \n";
 							Insurance1 += "SET !TIMEOUT_TAG 0"+" \n";
@@ -325,15 +326,15 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 110 146 154
+				{ // 110 146 154 162 163 169
 					try
 					{
 						switch(Check_Off)
 						{
-							case "146":case "110":
+							case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
-							//
+							// nhảy tab 2 mới làm 
 							case "154":
 							var National_Quay = "CODE:";
 							National_Quay += "SET !ERRORIGNORE YES"+"\n";
@@ -1167,6 +1168,43 @@ while(true)
 						{
 							case "7":
 							QualityHealth(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "EverydayFamily.com - Get FREE Baby Samples in your mailbox!")
+				{// 148
+					try
+					{
+						switch(Check_Off)
+						{
+							case "148":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Nam = Math.floor((Math.random() * (2017 - 2010  + 1)) + 2010 );
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_checkbox = Math.floor((Math.random() * 6) + 1);
+							var EverydayFamily = "CODE:";
+							EverydayFamily += "SET !ERRORIGNORE YES"+"\n";
+							EverydayFamily += "SET !TIMEOUT_TAG 0 "+"\n";
+							EverydayFamily += "SET !DATASOURCE Last_First.txt"+"\n";
+							EverydayFamily += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							EverydayFamily += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							EverydayFamily += "TAG POS="+Random_checkbox+" TYPE=SPAN ATTR=TXT:"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:fn CONTENT={{!COL1}}"+"\n";
+							EverydayFamily += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							EverydayFamily += "SET !DATASOURCE_LINE 1"+"\n";
+							EverydayFamily += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:e CONTENT={{!COL1}}"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_month CONTENT=%"+Random_Thang+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_day CONTENT=%"+Random_Ngay+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_year CONTENT=%"+Random_Nam+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=A ATTR=TXT:Join<SP>Now<SP>>>"+"\n";
+							EverydayFamily += "WAIT SECONDS=20"+"\n";
+							iimPlay(EverydayFamily);
 							break;
 						}
 						off++;
@@ -3045,7 +3083,7 @@ function National_Consumer_Center(File_Mail_info)
 		iimPlay(National_Quay);
 		break;
 // click vào hình mặt cười
-		case "154":case "146":
+		case "154":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3057,7 +3095,7 @@ function National_Consumer_Center(File_Mail_info)
 // Điền Thông Tin
 	switch(Check_Off)
 	{ 
-		case "154":case "146":case "110":
+		case "154":case "146":case "110":case "169":case "163":case "162":
 		iimPlay(National);
 		break;
 		case "0":
