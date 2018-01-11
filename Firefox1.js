@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["157","77","17","71","45","154"];
+var Ma_off = ["157","71","77","86","45","154"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -112,12 +112,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123
+				{ // 17 22 71 76 25 86 109 123 84
 					try
 					{
 						switch(Check_Off)
 						{
-							case "123":case "109":
+							case "84":case "123":case "109":
 							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -1642,7 +1642,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "25":case "109":case "17":
+				case "84":case "86":case "25":case "109":case "17":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1685,12 +1685,12 @@ function RewardBee(File_Mail_info)
 				C4 = 4;C9 = 2;
 				break;
 				// RewardBee - Love
-				case "0":
-				C0 = 2;C5 = 5;
-				C1 = 4;C6 = 5;
-				C2 = 8;C7 = 3;
-				C3 = 3;C8 = 7;
-				C4 = 3;C9 = 3;
+				case "84":
+				C0 = 6;C5 = 8;
+				C1 = 11;C6 = 7;
+				C2 = 4;C7 = 3;
+				C3 = 6;C8 = 3;
+				C4 = 4;C9 = 2;
 				break;
 				case "0":
 				C0 = 4;C5 = 4;
