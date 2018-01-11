@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["48","138","137","146","110","45"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["48","118","119","30","31","10","45"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1197,7 +1197,7 @@ while(true)
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "30":case "0":
+							case "30":case "118":
 							Line = 2;
 							break;
 						}
