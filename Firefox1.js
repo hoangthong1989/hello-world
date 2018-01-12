@@ -4,12 +4,12 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["153","66","71","157","25","18","45"];
+var Ma_off = ["84","86","77","157","147","18","45"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm xong    Opinion City
+	{// check nếu số lượng off đã làm xong    
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
@@ -1211,8 +1211,95 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Opinion City")
+				{// 147
+					try
+					{
+						switch(Check_Off)
+						{
+							case "147":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 111  + 1)) + 111 );
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111  + 1)) + 1111 );
+							var Opinion = "CODE:";
+							Opinion += "SET !ERRORIGNORE YES"+"\n";
+							Opinion += "SET !TIMEOUT_TAG 0 "+"\n";
+							Opinion += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Opinion += "SET !DATASOURCE_LINE 1"+"\n";
+							Opinion += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:EMAIL FORM=NAME:NoFormName ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+							Opinion += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Continue"+"\n";
+							Opinion += "WAIT SECONDS=10"+"\n";
+							Opinion += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Continue"+"\n";
+							Opinion += "SET !DATASOURCE Last_First.txt"+"\n";
+							Opinion += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							Opinion += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:first_name CONTENT={{!COL1}}"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:last_name CONTENT={{!COL2}}"+"\n";
+							Opinion += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:gender CONTENT=%F"+"\n";
+							Opinion += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:dob_month CONTENT=%"+Random_Ngay+"\n";
+							Opinion += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:dob_day CONTENT=%"+Random_Thang+"\n";
+							Opinion += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:dob_year CONTENT=%"+Random_Nam+"\n";
+							Opinion += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Opinion += "SET !DATASOURCE_LINE 1"+"\n";
+							Opinion += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:address1 CONTENT={{!COL2}}"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:phone1 CONTENT=301"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:phone2 CONTENT="+Random_Phon1+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:phone3 CONTENT="+Random_Phon2+"\n";
+							Opinion += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=FOR:checkbox&&TXT:"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=ID:checkbox CONTENT=YES"+"\n";
+							Opinion += "WAIT SECONDS=10"+"\n";
+							Opinion += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV>DIV>SECTION:nth-of-type(2)>DIV:nth-of-type(2)>DIV>FORM>DIV:nth-of-type(2)>DIV>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+							Opinion += "WAIT SECONDS=10"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:dropdownOfferForm ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:dropdownOfferForm ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=2 TYPE=INPUT:BUTTON ATTR=NAME:answer"+"\n";
+							Opinion += "WAIT SECONDS=0.5"+"\n";
+							Opinion += "TAG POS=1 TYPE=BUTTON ATTR=ID:continueBtn"+"\n";
+							Opinion += "WAIT SECONDS=20"+"\n";
+							iimPlay(Opinion);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
-				{// Code Mẫu 
+				{// Code Mẫu
 					try
 					{
 						switch(Check_Off)
@@ -1437,31 +1524,13 @@ function Dailybreak(File_Mail_info)
 	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Pass  = Tao_Pass();var Line = 1;
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
+	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
-	{// Lay info Khac neu Lam Off Giong nhau
+	{
 		case "157":
 		Line = 2;
 		break;
 	}
-	var Dailybreak_1 = "CODE:"; 
-	Dailybreak_1 += "SET !ERRORIGNORE YES" + "\n";
-	Dailybreak_1 += "SET !TIMEOUT_TAG 100" + "\n";
-	Dailybreak_1 += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
-	Dailybreak_1 += "SET !TIMEOUT_TAG 0" + "\n";
-	Dailybreak_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
-	Dailybreak_1 += "SET !DATASOURCE_LINE "+Line+ "\n";
-	Dailybreak_1 += "TAG POS=2 TYPE=INPUT:EMAIL FORM=NAME:NoFormName ATTR=* CONTENT={{!COL1}}" + "\n";
-	Dailybreak_1 += "SET !ENCRYPTION NO" + "\n";
-	Dailybreak_1 += "TAG POS=2 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=* CONTENT="+Pass+ "\n";
-	Dailybreak_1 += "TAG POS=2 TYPE=INPUT:RADIO FORM=NAME:NoFormName ATTR=NAME:gender" + "\n";
-	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayMonth CONTENT=%"+Ngay+ "\n";
-	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayDay CONTENT=%"+Thang+ "\n";
-	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayYear CONTENT=%"+Nam+ "\n";
-	Dailybreak_1 += "TAG POS="+KS1+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
-	Dailybreak_1 += "TAG POS="+KS2+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
-	Dailybreak_1 += "TAG POS="+KS3+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
-	Dailybreak_1 += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Sign<SP>Up" + "\n";	
-	Dailybreak_1 += "WAIT SECONDS=10" + "\n";
 	//
 	while(true)
 	{
@@ -1469,7 +1538,26 @@ function Dailybreak(File_Mail_info)
 		var capcha = check_capcha();
 		if(capcha == true)
 		{
-			iimPlay(Dailybreak_1);
+			var Dailybreak_INFO = "CODE:"; 
+			Dailybreak_INFO += "SET !ERRORIGNORE YES" + "\n";
+			Dailybreak_INFO += "SET !TIMEOUT_TAG 100" + "\n";
+			Dailybreak_INFO += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
+			Dailybreak_INFO += "SET !TIMEOUT_TAG 0" + "\n";
+			Dailybreak_INFO += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+			Dailybreak_INFO += "SET !DATASOURCE_LINE "+Line+ "\n";
+			Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:EMAIL FORM=NAME:NoFormName ATTR=* CONTENT={{!COL1}}" + "\n";
+			Dailybreak_INFO += "SET !ENCRYPTION NO" + "\n";
+			Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=* CONTENT="+Pass+ "\n";
+			Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:RADIO FORM=NAME:NoFormName ATTR=NAME:gender" + "\n";
+			Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayMonth CONTENT=%"+Ngay+ "\n";
+			Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayDay CONTENT=%"+Thang+ "\n";
+			Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayYear CONTENT=%"+Nam+ "\n";
+			Dailybreak_INFO += "TAG POS="+KS1+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+			Dailybreak_INFO += "TAG POS="+KS2+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+			Dailybreak_INFO += "TAG POS="+KS3+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+			Dailybreak_INFO += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Sign<SP>Up" + "\n";	
+			Dailybreak_INFO += "WAIT SECONDS=10" + "\n";
+			iimPlay(Dailybreak_INFO);
 			// check lỗi mail hoặc capcha
 			var check_Error = "CODE:";
 			check_Error += "SET !ERRORIGNORE YES" + "\n";
@@ -1553,7 +1641,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "25":
+		case "86":
 		Line = 2;
 		break;
 	}
