@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["157","71","77","17","18","45"];
+var Ma_off = ["157","71","77","78","18","45"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -33,9 +33,10 @@ while(true)
 		Load_Link_Nhanh += "TAB CLOSEALLOTHERS"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
+		///////////////////////////////
 		switch(Check_Off)
-		{// Cho Lệnh Chờ Nếu Site Bị Trắng
-			case "61":case "26":case "110":case "10":
+		{
+			case "78":case "61":case "26":case "110":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
@@ -58,8 +59,9 @@ while(true)
 			iimPlayCode("WAIT SECONDS=1");
 			break;
 		}
+		// Cho Lệnh Chờ Nếu Site Bị Trắng
 		while(true)
-		{ // vồng lặp làm off
+		{ 
 			var title = window.document.title;
 			if(title != "")
 			{ // Kiểm Tra Title Site Hiện Tại 
@@ -112,12 +114,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145
+				{ // 17 22 71 76 25 86 109 123 84 145 78
 					try
 					{
 						switch(Check_Off)
 						{
-							case "145":case "84":case "123":case "109":
+							case "78":case "145":case "84":case "123":case "109":
 							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -1508,8 +1510,11 @@ while(true)
 				}
 			}
 		} // vồng lặp làm off
-	} // nếu of chưa xong
-} // vong lap chính
+		// vồng lặp làm off
+	} 
+	// nếu of chưa xong
+} 
+// vong lap chính
 
 //@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\
 
@@ -1663,7 +1668,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "17":
+		case "78":
 		Line = 2;
 		break;
 	}
@@ -1722,7 +1727,7 @@ function RewardBee(File_Mail_info)
 			}
 			switch(Check_Off)
 			{ // Đặt Số câu Hỏi để random
-				case "71":
+				case "78":case "71":
 				C0 = 3;C5 = 4;
 				C1 = 3;C6 = 3;
 				C2 = 5;C7 = 7;
