@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["48","109","127","169","45","18"];
+var Ma_off = ["48","109","77","169","45","18"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1428,6 +1428,9 @@ while(true)
 
 function Dailybreak(File_Mail_info) 
 {
+	var KS1 = Math.floor((Math.random() * 3) + 1);
+	var KS2 = Math.floor((Math.random() * 6) + 3);
+	var KS3 = Math.floor((Math.random() * 10) + 6);
 	var Ngay = Math.floor((Math.random() * 9) + 1);
 	var Thang = Math.floor((Math.random() * 9) + 1);
 	var Nam = Math.floor((Math.random() * (1998 - 2004 + 1)) + 2004);
@@ -1436,7 +1439,7 @@ function Dailybreak(File_Mail_info)
 	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
 	switch(Check_Off)
 	{// Lay info Khac neu Lam Off Giong nhau
-		case "77":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -1454,9 +1457,9 @@ function Dailybreak(File_Mail_info)
 	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayMonth CONTENT=%"+Ngay+ "\n";
 	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayDay CONTENT=%"+Thang+ "\n";
 	Dailybreak_1 += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayYear CONTENT=%"+Nam+ "\n";
-	Dailybreak_1 += "TAG POS=2 TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
-	Dailybreak_1 += "TAG POS=4 TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
-	Dailybreak_1 += "TAG POS=* TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+	Dailybreak_1 += "TAG POS="+KS1+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+	Dailybreak_1 += "TAG POS="+KS2+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+	Dailybreak_1 += "TAG POS="+KS3+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
 	Dailybreak_1 += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Sign<SP>Up" + "\n";	
 	Dailybreak_1 += "WAIT SECONDS=10" + "\n";
 	//
@@ -1492,7 +1495,6 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
-					// khao sat khong doi nhan net
 					case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
@@ -1507,114 +1509,21 @@ function Dailybreak(File_Mail_info)
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON:nth-of-type(3)\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n"; // click net 
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(6)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click buoc cuoi xem video
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=10"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 					iimPlay(Dailybreak_KS1);
-					break;
-					// Khao sat Doi Net
-					default:
-					var Dailybreak_KS = "CODE:";
-					Dailybreak_KS += "SET !ERRORIGNORE YES" + "\n";
-					Dailybreak_KS += "SET !TIMEOUT_TAG 0" + "\n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)" BUTTON=0'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=MOUSEDOWN SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=MOUSEMOVE SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON" POINT="(245,578)"'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=MOUSEUP POINT="(245,578)"'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV>DIV>SPAN" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV>DIV>SPAN" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>BUTTON" BUTTON=0'+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0'+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON:nth-of-type(3)" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(3)" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(4)" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=5 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV>DIV>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV>DIV>DIV:nth-of-type(3)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=2 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += "REFRESH "+" \n";
-					Dailybreak_KS += "WAIT SECONDS=1 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>SPAN" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>SPAN" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV:nth-of-type(6)>DIV>DIV>DIV:nth-of-type(4)>A" BUTTON=0 '+" \n";
-					Dailybreak_KS += "WAIT SECONDS=3 "+" \n";
-					Dailybreak_KS += 'EVENT TYPE=CLICK SELECTOR="#modals>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0 '+" \n";
-					iimPlay(Dailybreak_KS);
 					break;
 				}
 				iimPlayCode("WAIT SECONDS=30");
