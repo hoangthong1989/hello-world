@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["77","71","157","17","147","18","45"];
+var Ma_off = ["157","71","77","17","147","18","45"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -1599,27 +1599,35 @@ function Dailybreak(File_Mail_info)
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n"; // click net 
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n"; // click KS
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
-					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click vô skip
+					Dailybreak_KS1 += "WAIT SECONDS=3"+"\n"; // click skip
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";// clikc bo qua va xem video
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click net dang khac
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click buoc cuoi xem video
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
 					Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
