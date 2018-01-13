@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["148","177","173","71","176","181"];
+var Ma_off = ["185","177","173","71","176","181"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -114,12 +114,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185
 					try
 					{
 						switch(Check_Off)
 						{
-							case "78":case "145":case "84":case "123":case "109":
+							case "185":case "78":case "145":case "84":case "123":case "109":
 							case "86":case "25":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -1727,7 +1727,7 @@ function RewardBee(File_Mail_info)
 			}
 			switch(Check_Off)
 			{ // Đặt Số câu Hỏi để random
-				case "78":case "71":
+				case "185":case "78":case "71":
 				C0 = 3;C5 = 4;
 				C1 = 3;C6 = 3;
 				C2 = 5;C7 = 7;
