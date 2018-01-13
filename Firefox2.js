@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["71","177","180","182","172","181"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["71","186","179","182","172","30","31"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -51,7 +51,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "137":case "134":case "7":
+			case "186":case "137":case "134":case "7":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -115,12 +115,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179
 					try
 					{
 						switch(Check_Off)
 						{
-							case "185":case "78":case "145":case "84":case "123":case "109":
+							case "179":case "185":case "78":case "145":case "84":case "123":case "109":
 							case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -378,12 +378,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Share Your Freebies")
-				{ // 134 137
+				{ // 134 137 186
 					try
 					{
 						switch(Check_Off)
 						{
-							case "137":case "134":
+							case "186":case "137":case "134":
 							Share_Your_Freebies(File_Mail_info);
 							break;
 						}
@@ -1670,7 +1670,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "180":
+		case "179":
 		Line = 2;
 		break;
 	}
@@ -1709,7 +1709,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "145":case "84":case "86":case "25":case "109":case "17":
+				case "179":case "145":case "84":case "86":case "25":case "109":case "17":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1736,7 +1736,7 @@ function RewardBee(File_Mail_info)
 				C3 = 8;C8 = 3;
 				C4 = 3;C9 = 3;
 				break;
-				case "86":case "109":
+				case "179":case "86":case "109":
 				C0 = 7;C5 = 5;
 				C1 = 3;C6 = 6;
 				C2 = 5;C7 = 3;
