@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["185","177","175","71","172","181"];
+var Ma_off = ["71","177","180","182","172","181"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -97,11 +97,12 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175
+				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182
 				    try
 					{
 						switch(Check_Off)
 						{
+							case "182":
 							case "175":case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
@@ -114,13 +115,13 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 185
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180
 					try
 					{
 						switch(Check_Off)
 						{
 							case "185":case "78":case "145":case "84":case "123":case "109":
-							case "86":case "25":case "76":case "71":case "17":case "22":
+							case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -1532,7 +1533,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "175":
+		case "182":
 		Line = 2;
 		break;
 	}
@@ -1588,6 +1589,7 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
+					case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
@@ -1668,7 +1670,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "71":
+		case "180":
 		Line = 2;
 		break;
 	}
@@ -1727,7 +1729,7 @@ function RewardBee(File_Mail_info)
 			}
 			switch(Check_Off)
 			{ // Đặt Số câu Hỏi để random
-				case "185":case "78":case "71":
+				case "185":case "78":
 				C0 = 3;C5 = 4;
 				C1 = 3;C6 = 3;
 				C2 = 5;C7 = 7;
@@ -1742,7 +1744,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				//RewardBee -(key)
-				case "145":case "123":case "76":case "25":case "22":case "17":
+				case "180":case "145":case "123":case "76":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
