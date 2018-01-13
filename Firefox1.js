@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["109","127","71","45","50"];
-var File_Mail_info = 1; var sl_chay_off = 4; var off = 0;
+var Ma_off = ["148","177","173","71","176","181"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -36,7 +36,7 @@ while(true)
 		///////////////////////////////
 		switch(Check_Off)
 		{
-			case "78":case "61":case "26":case "110":case "10":
+			case "181":case "176":case "78":case "61":case "26":case "110":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
@@ -97,13 +97,13 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159
+				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177
 				    try
 					{
 						switch(Check_Off)
 						{
 							case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
-							case "12":case "66":case "27":case "20":case "11":case "47":case "57":
+							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -131,12 +131,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26
+				{ // 23 45 50 18 1 83 10 26 176 181
 					try
 					{
 						switch(Check_Off)
 						{
-							case "26":
+							case "181":case "176":case "26":
 							case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
@@ -1513,7 +1513,7 @@ while(true)
 		// vồng lặp làm off
 	} 
 	// nếu of chưa xong
-} 
+}
 // vong lap chính
 
 //@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\
@@ -1532,7 +1532,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "157":
+		case "173":
 		Line = 2;
 		break;
 	}
@@ -1588,7 +1588,7 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
-					case "157":case "127":case "104":case "79":case "77":case "8":case "67":
+					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
 					Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
