@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["146","71","182","179","186","181"];
+var Ma_off = ["204","127","179","22","176","172"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1533,7 +1533,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "182":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -1580,7 +1580,7 @@ function Dailybreak(File_Mail_info)
 				Failed_Recaptcha++;
 				iimPlay(REFRESH_Site);
 				iimDisplay("Error Failed Recaptcha");
-				if(Failed_Recaptcha > 2)
+				if(Failed_Recaptcha > 1)
 				{
 					break;
 				}
@@ -1652,7 +1652,7 @@ function Dailybreak(File_Mail_info)
 			Error_capcha++;
 			iimPlay(REFRESH_Site);
 			iimDisplay("Error Recaptcha");
-			if(Error_capcha > 2)
+			if(Error_capcha > 1)
 			{
 				break;
 			}
@@ -1670,7 +1670,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "179":
+		case "22":
 		Line = 2;
 		break;
 	}
