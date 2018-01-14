@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["71","186","179","182","172","30","31"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
+var Ma_off = ["174","71","127","25","187","181"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -191,12 +191,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Roblox")
-				{ // 48
+				{ // 174
 					try
 					{
 						switch(Check_Off)
 						{
-							case "48":
+							case "174":
 							var Thang = Math.floor((Math.random() * 12) + 2);
 							var Ngay = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
@@ -1318,7 +1318,7 @@ while(true)
 				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119
+				{ // 30 31 75 82 5 118 102 119 187
 					try
 					{
 						var Line = 1;
@@ -1365,7 +1365,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "21":case "119":case "102":
+							case "187":case "21":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
@@ -1533,7 +1533,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "182":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -1670,7 +1670,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "179":
+		case "25":
 		Line = 2;
 		break;
 	}
@@ -1728,7 +1728,8 @@ function RewardBee(File_Mail_info)
 				break;
 			}
 			switch(Check_Off)
-			{ // Đặt Số câu Hỏi để random
+			{// Phân loại câu hỏi RewardBee
+				// RewardBee
 				case "185":case "78":
 				C0 = 3;C5 = 4;
 				C1 = 3;C6 = 3;
@@ -1736,6 +1737,7 @@ function RewardBee(File_Mail_info)
 				C3 = 8;C8 = 3;
 				C4 = 3;C9 = 3;
 				break;
+				// RewardBee (Game Night)
 				case "179":case "86":case "109":
 				C0 = 7;C5 = 5;
 				C1 = 3;C6 = 6;
@@ -1744,7 +1746,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				//RewardBee -(key)
-				case "180":case "145":case "123":case "76":
+				case "180":case "145":case "123":case "25":case "76":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
