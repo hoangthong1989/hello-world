@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["177","71","173","180","176","181"];
+var Ma_off = ["177","71","173","180","172","181"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1709,7 +1709,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "179":case "145":case "84":case "86":case "25":case "109":case "17":case "22":
+				case "180":case "179":case "145":case "84":case "86":case "25":case "109":case "17":case "22":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
