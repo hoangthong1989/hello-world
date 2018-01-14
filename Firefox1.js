@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["177","71","182","180","172","181"];
+var Ma_off = ["177","71","182","180","186","181"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1318,7 +1318,7 @@ while(true)
 				}
 				// Spam Mail Submit
 				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187
+				{ // 30 31 75 82 5 118 102 119 187 
 					try
 					{
 						var Line = 1;
@@ -2832,7 +2832,7 @@ function Share_Your_Freebies(File_Mail_info)
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
-	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+	var Random_Nam = Math.floor((Math.random() * (1975 - 1965 + 1)) + 1965);
 
 	var Share_Your_Freebies = "CODE:";
 	Share_Your_Freebies += "SET !ERRORIGNORE YES"+" \n";
