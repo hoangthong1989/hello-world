@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["177","71","182","179","186","181"];
+var Ma_off = ["204","71","182","179","186","181"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -191,12 +191,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Roblox")
-				{ // 174
+				{ // 174 204
 					try
 					{
 						switch(Check_Off)
 						{
-							case "174":
+							case "174":case "204":
 							var Thang = Math.floor((Math.random() * 12) + 2);
 							var Ngay = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
