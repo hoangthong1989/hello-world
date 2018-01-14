@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["179","127","22","187","181"];
+var Ma_off = ["22","178","179","187","181"];
 var File_Mail_info = 1; var sl_chay_off = 4; var off = 0;
 while(true)
 {
@@ -115,13 +115,13 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179 178
 					try
 					{
 						switch(Check_Off)
 						{
 							case "179":case "185":case "78":case "145":case "84":case "123":case "109":
-							case "86":case "180":case "76":case "71":case "17":case "22":
+							case "178":case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -1589,7 +1589,7 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
-					case "182":
+					case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
