@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["175","199","179","31","176","181"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["31","187","177","71","175","185","147"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1309,6 +1309,59 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Next Millennium")
+				{// 209
+					try
+					{
+						switch(Check_Off)
+						{
+							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
+							case "209":
+							var NextMillennium = "CODE:";
+							NextMillennium += "SET !ERRORIGNORE YES"+"\n";
+							NextMillennium += "SET !TIMEOUT_TAG 0"+"\n";
+							NextMillennium += "SET !DATASOURCE Last_First.txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 5"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:FIRST_NAME CONTENT={{!COL1}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:LAST_NAME CONTENT={{!COL2}}"+"\n";
+							NextMillennium += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:ADDRESS1 CONTENT={{!COL2}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:ZIP CONTENT={{!COL5}}"+"\n";
+							NextMillennium += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:PageForm ATTR=ID:form1_leadem CONTENT={{!COL1}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_AREA CONTENT="+Random_Phon0+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_PREFIX CONTENT="+Random_Phon1+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_SUFFIX CONTENT="+Random_Phon2+"\n";
+							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Do<SP>you<SP>have<SP>an<SP>active<SP>checking<SP>account?*"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnHasCheckingAccountYes"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnConsultationNo"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnCheckingNSYes"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:PageForm ATTR=ID:TERMS CONTENT=YES"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=BUTTON FORM=ID:PageForm ATTR=ID:SUBMIT"+"\n";
+							NextMillennium += "WAIT SECONDS=3"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=A ATTR=ID:SKIP1"+"\n";
+							NextMillennium += "WAIT SECONDS=1"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "TAG POS=2 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
+							NextMillennium += "TAG POS=3 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "TAG POS=4 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
+							NextMillennium += "TAG POS=5 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "WAIT SECONDS=20"+"\n";
+							iimPlay(NextMillennium);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 					try
@@ -1332,7 +1385,7 @@ while(true)
 						var Line = 1;
 						switch(Check_Off)
 						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
-							case "30":case "118":
+							case "31":
 							Line = 2;
 							break;
 						}
@@ -1541,7 +1594,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "0":
+		case "175":
 		Line = 2;
 		break;
 	}
@@ -1678,7 +1731,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "71":
+		case "185":
 		Line = 2;
 		break;
 	}
