@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["175","71","179","31","176","181"];
+var Ma_off = ["175","199","179","31","176","181"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -3169,40 +3169,28 @@ function Step_1(File_Mail_info)
 	Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
 	Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
 	Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}} "+"\n";
-	Step_1 += "EVENT TYPE=CLICK SELECTOR=\"#subbtn\" BUTTON=0"+"\n";
-	Step_1 += "EVENT TYPE=CLICK SELECTOR=\"#submit-text\" BUTTON=0"+"\n";
-	Step_1 += "WAIT SECONDS=10"+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+	Step_1 += "WAIT SECONDS=5"+"\n";
 	Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
 	Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
 	Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}} "+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
-	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL2}} "+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
+	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
 	Step_1 += "WAIT SECONDS=1"+"\n";
 	Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
 	Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
 	Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
+	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
 	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:Zip<SP>Code:"+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
-	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:CELLAREA CONTENT=420"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell2 CONTENT="+Random_Phon1+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell3 CONTENT="+Random_Phon2+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
-	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:DOBYEAR CONTENT=%"+Random_Nam+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:checkbox CONTENT=YES"+"\n";
-	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
-	Step_1 += "SET !TIMEOUT_TAG 30"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:Take<SP>Survey"+"\n";
+	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
+	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
+	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
+	Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
+	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
 	iimPlay(Step_1);
 	var str = window.document.body.textContent;
 	if(str.indexOf("Take Survey"))
@@ -3263,10 +3251,13 @@ function Step_1(File_Mail_info)
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:confirmbox"+"\n";
 		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:cb CONTENT=YES"+"\n";
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
 		National_KS += "WAIT SECONDS=5"+"\n";
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
 		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
-		National_KS += "WAIT SECONDS=30"+"\n";
+		National_KS += "WAIT SECONDS=20"+"\n";
 		iimPlay(National_KS); 
 	}
 }
