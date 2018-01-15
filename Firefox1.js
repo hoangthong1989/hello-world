@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["84","177","86","173","211","181","172"];
+var Ma_off = ["180","177","185","193","211","181","172"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -102,7 +102,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "182":
+							case "193":case "182":
 							case "175":case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
@@ -1624,7 +1624,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "173":
+		case "193":
 		Line = 2;
 		break;
 	}
@@ -1680,7 +1680,7 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
-					case "178":case "182":
+					case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
@@ -1761,7 +1761,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "86":
+		case "185":
 		Line = 2;
 		break;
 	}
