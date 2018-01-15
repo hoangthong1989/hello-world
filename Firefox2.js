@@ -120,7 +120,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "179":case "185":case "78":case "145":case "84":case "123":case "109":
+							case "25":case "179":case "185":case "78":case "145":case "84":case "123":case "109":
 							case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
