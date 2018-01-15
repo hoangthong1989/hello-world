@@ -1315,10 +1315,10 @@ while(true)
 					{
 						switch(Check_Off)
 						{
+							case "209":
 							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
-							case "209":
 							var NextMillennium = "CODE:";
 							NextMillennium += "SET !ERRORIGNORE YES"+"\n";
 							NextMillennium += "SET !TIMEOUT_TAG 0"+"\n";
