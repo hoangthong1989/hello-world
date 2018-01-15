@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["84","177","86","173","181","172"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["84","177","86","173","211","181","172"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -51,7 +51,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "186":case "137":case "134":case "7":
+			case "186":case "137":case "134":case "211":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -1355,6 +1355,36 @@ while(true)
 							NextMillennium += "TAG POS=5 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
 							NextMillennium += "WAIT SECONDS=20"+"\n";
 							iimPlay(NextMillennium);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "Publishers Clearing House - Win $2,600,000 Plus $5,000 a Week for Life!")
+				{// 211
+					try
+					{
+						switch(Check_Off)
+						{
+							case "211":
+							var PCH = "CODE:";
+							PCH += "SET !ERRORIGNORE YES"+"\n";
+							PCH += "SET !TIMEOUT_TAG 0"+"\n";
+							PCH += "SET !DATASOURCE Last_First.txt"+"\n";
+							PCH += "SET !DATASOURCE_LINE 3"+"\n";
+							PCH += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:First_Name CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:Last_Name CONTENT={{!COL2}}"+"\n";
+							PCH += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							PCH += "SET !DATASOURCE_LINE 1"+"\n";
+							PCH += "SET !DATASOURCE_COLUMNS 1 "+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:confirm_email CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ACTION:/s/link/acq ATTR=SRC:http://link.e.pchgiveaway.com/site/9039/images/btn-cs-lp-6-20-16-001.gif"+"\n";
+							PCH += "WAIT SECONDS=20"+"\n";
+							iimPlay(PCH);
 							break;
 						}
 						off++;
