@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["204","127","179","22","176","172"];
+var Ma_off = ["96","127","179","22","176","172"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -327,13 +327,13 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
-				{ // 110 146 154 162 163 169
+				else if(title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
+				{ // 110 146 154 162 163 169 96
 					try
 					{
 						switch(Check_Off)
 						{
-							case "169":case "163":case "162":case "146":case "110":
+							case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
 							// nhảy tab 2 mới làm 
@@ -3088,10 +3088,9 @@ function National_Consumer_Center(File_Mail_info)
 	Step_1 += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
 	Step_1 += "SET !TIMEOUT_TAG 30"+"\n";
 	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:Take<SP>Survey"+"\n";
-// bước quay thưởng
 	switch(Check_Off)
-	{
-		case "204":case "202":
+	{// bước quay thưởng
+		case "96":case "202":
 		var National_Quay = "CODE:";
 		National_Quay += "SET !ERRORIGNORE YES"+"\n";
 		National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
@@ -3109,8 +3108,10 @@ function National_Consumer_Center(File_Mail_info)
 		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
 		iimPlay(National_Quay);
 		break;
-// click vào hình mặt cười
-		case "154":case "146":case "169":case "163":case "162":
+	}
+	switch(Check_Off)
+	{// click vào hình mặt cười
+		case "96":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3119,10 +3120,9 @@ function National_Consumer_Center(File_Mail_info)
 		iimPlay(National_reward);
 		break;
 	}
-// Điền Thông Tin
 	switch(Check_Off)
-	{ 
-		case "154":case "146":case "110":case "169":case "163":case "162":
+	{ // Điền Thông Tin
+		case "96":case "146":case "110":case "169":case "163":case "162":
 		iimPlay(National);
 		break;
 		case "0":
