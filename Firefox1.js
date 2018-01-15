@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["180","177","185","193","186","181","172"];
+var Ma_off = ["180","177","71","193","186","181","172"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -43,7 +43,7 @@ while(true)
 			////
 			case "180":case "145":case "2":case "138":case "128":case "127":case "21":case "119":
 			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
-			case "75":case "62":case "73":case "71":case "76":case "25":case "22":
+			case "213":case "75":case "62":case "73":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
@@ -115,13 +115,13 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179 178
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179 178 39
 					try
 					{
 						switch(Check_Off)
 						{
 							case "179":case "185":case "78":case "145":case "84":case "123":case "109":
-							case "178":case "86":case "180":case "76":case "71":case "17":case "22":
+							case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -1392,6 +1392,43 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "LivingWIthPain.org")
+				{// 213
+					try
+					{
+						switch(Check_Off)
+						{ // chưa code xong
+							case "213":
+							var Random_checkbox = ["9","10","11","13","14"];
+							var RD = Math.floor((Math.random() * 4) + 0);
+							var LivingWIthPain = "CODE:";
+							LivingWIthPain += "SET !ERRORIGNORE YES"+"\n";
+							LivingWIthPain += "SET !TIMEOUT_TAG 0"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Last_First.txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 4"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:name-2 CONTENT={{!COL1}}"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Last-Name-3 CONTENT={{!COL2}}"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:wf-form-about ATTR=ID:email-2 CONTENT={{!COL1}}"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Phone-2 CONTENT={{!COL1}} "+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:field-2 CONTENT={{!COL5}} "+"\n";
+							LivingWIthPain += "EVENT TYPE=CLICK SELECTOR=\"#checkbox-"+Random_checkbox[RD]+"\" BUTTON=0"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:wf-form-about ATTR=ID:checkbox CONTENT=YES"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=A ATTR=ID:start"+"\n";
+							iimPlay(LivingWIthPain);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 					try
@@ -1761,7 +1798,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "185":
+		case "71":
 		Line = 2;
 		break;
 	}
@@ -1800,6 +1837,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
+				case "39":
 				case "180":case "179":case "145":case "84":case "86":case "25":case "109":case "17":case "22":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
@@ -1829,7 +1867,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 3;
 				break;
 				// RewardBee (Game Night)
-				case "179":case "86":case "109":
+				case "39":case "179":case "86":case "109":
 				C0 = 7;C5 = 5;
 				C1 = 3;C6 = 6;
 				C2 = 5;C7 = 3;
