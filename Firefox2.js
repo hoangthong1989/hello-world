@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["180","177","71","193","186","181","172"];
+var Ma_off = ["114","182","179","25","186","146","171"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -37,7 +37,7 @@ while(true)
 		switch(Check_Off)
 		{
 			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
-			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
+			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -132,12 +132,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171
 					try
 					{
 						switch(Check_Off)
 						{
-							case "172":case "181":case "176":case "26":
+							case "171":case "172":case "181":case "176":case "26":
 							case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
@@ -1798,7 +1798,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "71":
+		case "179":
 		Line = 2;
 		break;
 	}
