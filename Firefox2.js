@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["30","119","177","71","173","185"];
+var Ma_off = ["177","71","173","185","1","221"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -132,12 +132,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221
 					try
 					{
 						switch(Check_Off)
 						{
-							case "171":case "172":case "181":case "176":case "26":
+							case "221":case "171":case "172":case "181":case "176":case "26":
 							case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 							var a = pref.getBranch("privacy.trackingprotection.");
