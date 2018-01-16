@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["177","86","182","84","181","218","172"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["177","71","182","185","181","218","172"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1918,7 +1918,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "84":
+		case "185":
 		Line = 2;
 		break;
 	}
