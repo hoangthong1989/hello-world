@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["204","175","179","71","172","181"];
+var Ma_off = ["30","119","177","71","173","185"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -33,7 +33,7 @@ while(true)
 		Load_Link_Nhanh += "TAB CLOSEALLOTHERS"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
-		///////////////////////////////
+		/////////////////////////////// 
 		switch(Check_Off)
 		{
 			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
@@ -319,7 +319,59 @@ while(true)
 						switch(Check_Off)
 						{
 							case "1":
-							Tra_loi_Cau_hoi(Check_Off);
+								var Sl_F5 = 0;
+								var Off_2263_link1 = "http://quizfactory.com/simple/witches/2.php";
+								switch(Check_Off)
+								{
+									case "2263":
+										var Witches_Trivia_Quiz = "CODE:";
+										Witches_Trivia_Quiz += "SET !ERRORIGNORE YES" + "\n";
+										Witches_Trivia_Quiz += "SET !TIMEOUT_PAGE 20"+"\n";
+										Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
+										Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
+										Witches_Trivia_Quiz += "WAIT SECONDS=5"+" \n";
+										Witches_Trivia_Quiz += "REFRESH"+" \n";
+										Witches_Trivia_Quiz += "URL GOTO="+Off_2263_link1+"\n";
+										Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Continue<SP>>>"+" \n";
+										iimPlay(Witches_Trivia_Quiz);
+									break;
+									case "1280":
+										var IQ_Quiz = "CODE:";
+										IQ_Quiz += "SET !ERRORIGNORE YES"+" \n";
+										IQ_Quiz += "SET !TIMEOUT_PAGE 30"+" \n";
+										IQ_Quiz += "TAG POS=1 TYPE=FONT ATTR=TXT:START"+" \n";
+										IQ_Quiz += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:1.php ATTR=*"+" \n";
+										IQ_Quiz += "WAIT SECONDS=10"+" \n";
+										IQ_Quiz += "URL GOTO="+off_1280+"\n";
+										iimPlay(IQ_Quiz);
+									break;
+									case "1960":
+										var SuperHeroQuiz = "CODE:";
+										SuperHeroQuiz += "SET !ERRORIGNORE YES"+" \n";
+										SuperHeroQuiz += "SET !TIMEOUT_PAGE 30"+" \n";
+										SuperHeroQuiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
+										SuperHeroQuiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
+										SuperHeroQuiz += "WAIT SECONDS=10"+" \n";
+										SuperHeroQuiz += "URL GOTO="+off_1960+"\n";
+										iimPlay(SuperHeroQuiz);
+									break;
+								}
+								while(true)
+								{
+									var F5 = "CODE:";
+									F5 += "SET !ERRORIGNORE YES" + "\n";
+									F5 += "SET !TIMEOUT_PAGE 5"+"\n";
+									F5 += "REFRESH"+"\n";
+									iimPlay(F5);
+									if(Sl_F5 > 15)
+									{
+										break;
+									}
+									Sl_F5++;
+									iimPlayCode("WAIT SECONDS=0.5");
+									iimDisplay("Số lần F5 là: "+Sl_F5);
+								}
+
 							break;
 						}
 						off++;
@@ -479,14 +531,36 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Make Room")
-				{ //
+				else if(title == "CUFI"||title == "Make Room")
+				{ // 218
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":
-							Make_Room(File_Mail_info);
+							case "218":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Make_Room = "CODE:";
+							Make_Room += "SET !ERRORIGNORE YES"+" \n";
+							Make_Room += "SET !TIMEOUT_TAG 0 "+" \n";
+							Make_Room += "SET !DATASOURCE Last_First.txt"+" \n";
+							Make_Room += "SET !DATASOURCE_LINE "+Random_Ten_Ho+" \n";
+							Make_Room += "SET !DATASOURCE_COLUMNS 2"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:firstname CONTENT={{!COL1}}"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:lastname CONTENT={{!COL2}}"+" \n";
+							Make_Room += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
+							Make_Room += "SET !DATASOURCE_LINE 1"+" \n";
+							Make_Room += "SET !DATASOURCE_COLUMNS 1"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:email CONTENT={{!COL1}}"+" \n";
+							Make_Room += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+" \n";
+							Make_Room += "SET !DATASOURCE_LINE 1"+" \n";
+							Make_Room += "SET !DATASOURCE_COLUMNS 5 "+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:address CONTENT={{!COL2}}"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:city CONTENT={{!COL3}}"+" \n";
+							Make_Room += "TAG POS=1 TYPE=SELECT FORM=ACTION:action_page.php ATTR=ID:state CONTENT=%{{!COL4}}"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:zip CONTENT={{!COL5}}"+" \n";
+							Make_Room += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:action_page.php ATTR=*"+" \n";
+							Make_Room += "WAIT SECONDS=10"+" \n";
+							iimPlay(Make_Room);
 							break;
 						}
 						off++;
@@ -1429,6 +1503,52 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Rent 2 Own Homes")
+				{// 219
+					try
+					{
+						switch(Check_Off)
+						{
+							case "219":
+							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
+							var Rent_2_Own_Homes = "CODE:";
+							Rent_2_Own_Homes += "SET !ERRORIGNORE YES"+"\n";
+							Rent_2_Own_Homes += "SET !TIMEOUT_TAG 0"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Rent_2_Own_Homes += "EVENT TYPE=CLICK SELECTOR=\"#zip\" BUTTON=0"+"\n";
+							Rent_2_Own_Homes += "EVENTS TYPE=KEYPRESS SELECTOR=\"#zip\" CHARS={{!COL5}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:SEARCH"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Last_First.txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 3"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+""+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:YES"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=A ATTR=TXT:Not<SP>interested<SP>in<SP>repairing<SP>my<SP>credit"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=15"+"\n";
+							iimPlay(Rent_2_Own_Homes);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 					try
@@ -1661,7 +1781,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "193":
+		case "177":
 		Line = 2;
 		break;
 	}
@@ -1798,7 +1918,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "179":
+		case "71":
 		Line = 2;
 		break;
 	}
@@ -2868,32 +2988,6 @@ function Win_$1000(File_Mail_info)
 		}
 	}
 }
-function Make_Room(File_Mail_info)
-{
-	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-	var Make_Room = "CODE:";
-	Make_Room += "SET !ERRORIGNORE YES"+" \n";
-	Make_Room += "SET !TIMEOUT_TAG 0 "+" \n";
-	Make_Room += "SET !DATASOURCE Last_First.txt"+" \n";
-	Make_Room += "SET !DATASOURCE_LINE "+Random_Ten_Ho+" \n";
-	Make_Room += "SET !DATASOURCE_COLUMNS 2"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:firstname CONTENT={{!COL1}}"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:lastname CONTENT={{!COL2}}"+" \n";
-	Make_Room += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
-	Make_Room += "SET !DATASOURCE_LINE 1"+" \n";
-	Make_Room += "SET !DATASOURCE_COLUMNS 1"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:email CONTENT={{!COL1}}"+" \n";
-	Make_Room += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+" \n";
-	Make_Room += "SET !DATASOURCE_LINE 1"+" \n";
-	Make_Room += "SET !DATASOURCE_COLUMNS 5 "+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:address CONTENT={{!COL2}}"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:city CONTENT={{!COL3}}"+" \n";
-	Make_Room += "TAG POS=1 TYPE=SELECT FORM=ACTION:action_page.php ATTR=ID:state CONTENT=%{{!COL4}}"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:action_page.php ATTR=NAME:zip CONTENT={{!COL5}}"+" \n";
-	Make_Room += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:action_page.php ATTR=*"+" \n";
-	iimPlay(Make_Room);
-	iimPlayCode("WAIT SECONDS=10");
-}
 function Find_Family_Support(File_Mail_info)
 {
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
@@ -3539,7 +3633,6 @@ function NFL(File_Mail_info)
 	var Thang = Math.floor((Math.random() * 9) + 1);
 	var Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-	
 	var NFL = "CODE:";
 	NFL += "SET !ERRORIGNORE YES"+" \n";
 	NFL += "SET !TIMEOUT_TAG 0"+" \n";
@@ -3592,61 +3685,6 @@ function NFL(File_Mail_info)
 	NFL += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:* ATTR=CLASS:submit&&NAME:jSubmit&&VALUE:Create<SP>My<SP>League&&ID:*&&TYPE:submit"+" \n";
 	iimPlay(NFL);
 	iimPlayCode("WAIT SECONDS=10");
-}
-function Tra_loi_Cau_hoi(Check_Off) 
-{
-	var Sl_F5 = 0;
-	var Off_2263_link1 = "http://quizfactory.com/simple/witches/2.php";
-	switch(Check_Off)
-	{
-		case "2263":
-			var Witches_Trivia_Quiz = "CODE:";
-			Witches_Trivia_Quiz += "SET !ERRORIGNORE YES" + "\n";
-			Witches_Trivia_Quiz += "SET !TIMEOUT_PAGE 20"+"\n";
-			Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
-			Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
-			Witches_Trivia_Quiz += "WAIT SECONDS=5"+" \n";
-			Witches_Trivia_Quiz += "REFRESH"+" \n";
-			Witches_Trivia_Quiz += "URL GOTO="+Off_2263_link1+"\n";
-			Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Continue<SP>>>"+" \n";
-			iimPlay(Witches_Trivia_Quiz);
-		break;
-		case "1280":
-			var IQ_Quiz = "CODE:";
-			IQ_Quiz += "SET !ERRORIGNORE YES"+" \n";
-			IQ_Quiz += "SET !TIMEOUT_PAGE 30"+" \n";
-			IQ_Quiz += "TAG POS=1 TYPE=FONT ATTR=TXT:START"+" \n";
-			IQ_Quiz += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:1.php ATTR=*"+" \n";
-			IQ_Quiz += "WAIT SECONDS=10"+" \n";
-			IQ_Quiz += "URL GOTO="+off_1280+"\n";
-			iimPlay(IQ_Quiz);
-		break;
-		case "1960":
-			var SuperHeroQuiz = "CODE:";
-			SuperHeroQuiz += "SET !ERRORIGNORE YES"+" \n";
-			SuperHeroQuiz += "SET !TIMEOUT_PAGE 30"+" \n";
-			SuperHeroQuiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
-			SuperHeroQuiz += "TAG POS=1 TYPE=A ATTR=TXT:Start<SP>The<SP>Quiz"+" \n";
-			SuperHeroQuiz += "WAIT SECONDS=10"+" \n";
-			SuperHeroQuiz += "URL GOTO="+off_1960+"\n";
-			iimPlay(SuperHeroQuiz);
-		break;
-	}
-	while(true)
-	{
-		var F5 = "CODE:";
-		F5 += "SET !ERRORIGNORE YES" + "\n";
-		F5 += "SET !TIMEOUT_PAGE 5"+"\n";
-		F5 += "REFRESH"+"\n";
-		iimPlay(F5);
-		if(Sl_F5 > 15)
-		{
-			break;
-		}
-		Sl_F5++;
-		iimPlayCode("WAIT SECONDS=0.5");
-		iimDisplay("Số lần F5 là: "+Sl_F5);
-	}
 }
 function Tao_Mail() 
 {// hàm reg Mail.com
