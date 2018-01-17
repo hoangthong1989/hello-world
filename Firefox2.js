@@ -5,7 +5,7 @@ iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
 // var Ma_off = ["114","30","182","185","186","119","181"];
-var Ma_off = ["182","185","146","30","186","119","233"];
+var Ma_off = ["182","185","146","71","186","236","181"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -103,7 +103,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "193":case "182":
+							case "193":case "182":case "236":
 							case "175":case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
