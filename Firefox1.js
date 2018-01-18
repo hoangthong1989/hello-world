@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["119","30","177","71","173","185"];
+var Ma_off = ["119","30","177","239","173","185"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -115,13 +115,13 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179 178 39
+				{ // 17 22 71 76 25 86 109 123 84 145 78 185 180 179 178 39 239
 					try
 					{
 						switch(Check_Off)
 						{
 							case "25":case "179":case "185":case "78":case "145":case "84":case "123":case "109":
-							case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
+							case "239":case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -2022,12 +2022,12 @@ function RewardBee(File_Mail_info)
 				C3 = 6;C8 = 3;
 				C4 = 4;C9 = 2;
 				break;
-				case "0":
-				C0 = 4;C5 = 4;
-				C1 = 4;C6 = 3;
-				C2 = 4;C7 = 3;
-				C3 = 4;C8 = 7;
-				C4 = 4;C9 = 3;C10 = 2;
+				case "239":
+				C0 = 8;C5 = 3;
+				C1 = 5;C6 = 7;
+				C2 = 6;C7 = 3;
+				C3 = 7;C8 = 7;
+				C4 = 4;
 				break;
 			}
 			while(true)
