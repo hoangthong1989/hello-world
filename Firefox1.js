@@ -4,8 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","175","185","31","172","233"]; // hàng sáng mai
-// var Ma_off = ["182","185","146","30","186","119","233"];
+var Ma_off = ["119","30","177","71","173","185"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -979,12 +978,24 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Register To Play")
-				{ // 
+				{ // 164 165 167
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "167":case "164":case "165":
+							var Register_To_Play = "CODE:";
+							Register_To_Play += "SET !ERRORIGNORE YES"+"\n";
+							Register_To_Play += "SET !TIMEOUT_TAG 0"+"\n";
+							Register_To_Play += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Register_To_Play += "SET !DATASOURCE_LINE 1"+"\n";
+							Register_To_Play += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Register_To_Play += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
+							Register_To_Play += "TAG POS=1 TYPE=DIV ATTR=ID:subbtn"+"\n";
+							Register_To_Play += "WAIT SECONDS = 15"+"\n";
+							iimPlay(Register_To_Play);
+							break;
+							case "0":
 							Giveaway(File_Mail_info);
 							break;
 						}
@@ -1919,7 +1930,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "0":
+		case "185":
 		Line = 2;
 		break;
 	}
