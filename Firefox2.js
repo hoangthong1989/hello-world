@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["174","175","185","31","172","233"]; // hàng sáng mai
+var Ma_off = ["245","175","185","31","172","233"]; // hàng sáng mai
 // var Ma_off = ["182","185","146","30","186","119","233"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
@@ -192,12 +192,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Roblox")
-				{ // 174 204
+				{ // 174 204 245
 					try
 					{
 						switch(Check_Off)
 						{
-							case "174":case "204":
+							case "245":case "174":case "204":
 							var Thang = Math.floor((Math.random() * 12) + 2);
 							var Ngay = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
@@ -993,13 +993,13 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "XMAS"||title == "(1) Amazon Gift!")
-				{ // 
+				else if(title == "Visa Pre-paidcard"||title == "XMAS"||title == "(1) Amazon Gift!")
+				{ // 224
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "224":
 							Amazon(File_Mail_info);
 							break;
 						}
@@ -1761,7 +1761,7 @@ while(true)
 			}
 		} // vồng lặp làm off
 		// vồng lặp làm off
-	} 
+	}
 	// nếu of chưa xong
 }
 // vong lap chính
@@ -2325,7 +2325,7 @@ function Vaniki(File_Mail_info)
 	iimPlay(Vaniki);
 }
 function Amazon(File_Mail_info)
-{// điều chỉnh lại một chút nữa 224
+{
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
@@ -2335,7 +2335,7 @@ function Amazon(File_Mail_info)
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111  + 1)) + 1111 );
 	switch(Check_Off)
 	{
-		case "405":
+		case "0":
 			var ONDIALOG = "CODE:";
 			ONDIALOG += "WAIT SECONDS=5"+"\n";
 			ONDIALOG += "ONDIALOG POS=1 BUTTON=OK CONTENT="+"\n";
@@ -2351,8 +2351,13 @@ function Amazon(File_Mail_info)
 			Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 			iimPlay(Amazon_B1);
 		break;
-		case "470":
-		iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(2)>BUTTON\" BUTTON=0");
+		case "224":
+		var Amazon_B1 = "CODE:";
+		Amazon_B1 += "SET !ERRORIGNORE YES"+"\n";
+		Amazon_B1 += "SET !TIMEOUT_TAG 0 "+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(2)>DIV>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		iimPlay(Amazon_B1);
 		iimPlayCode("WAIT SECONDS=1");
 		break;
 	}
@@ -2377,9 +2382,11 @@ function Amazon(File_Mail_info)
 	Amazon += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:frm-form-2 ATTR=ID:zip_code CONTENT={{!COL5}}"+"\n";
 	Amazon += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frm-form-2 ATTR=ID:address CONTENT={{!COL2}}"+"\n";
 	Amazon += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frm-form-2 ATTR=ID:region CONTENT={{!COL4}}"+"\n";
-	Amazon += "WAIT SECONDS=5"+"\n";
+	Amazon += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frm-form-2 ATTR=ID:city CONTENT={{!COL3}}"+"\n";
+	Amazon += "SET !TIMEOUT_TAG 5"+"\n";
 	Amazon += "EVENT TYPE=CLICK SELECTOR=\"#city-select\" BUTTON=0"+"\n";
 	Amazon += "EVENT TYPE=CLICK SELECTOR=\"#city-select>OPTION:nth-of-type(2)\" BUTTON=0"+"\n";
+	Amazon += "SET !TIMEOUT_TAG 0"+"\n";
 	Amazon += "EVENT TYPE=CLICK SELECTOR=\"#phone_cell_1\" BUTTON=0"+"\n";
 	Amazon += "EVENTS TYPE=KEYPRESS SELECTOR=\"#phone_cell_1\" CHARS="+Random_Phon0+"\n";
 	Amazon += "EVENTS TYPE=KEYPRESS SELECTOR=\"#phone_cell_2\" CHARS="+Random_Phon1+"\n";
@@ -3379,35 +3386,40 @@ function Step_1(File_Mail_info)
 	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
-	var Step_1 = "CODE:";
-	Step_1 += "SET !ERRORIGNORE YES"+"\n";
-	Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
-	Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-	Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-	Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
-	Step_1 += "WAIT SECONDS=5"+"\n";
-	Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
-	Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-	Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-	Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-	Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-	Step_1 += "WAIT SECONDS=1"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
-	Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
-	Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
-	Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
-	iimPlay(Step_1);
+	switch(Check_Off)
+	{
+		case "0":
+			var Step_1 = "CODE:";
+			Step_1 += "SET !ERRORIGNORE YES"+"\n";
+			Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
+			Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+			Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
+			Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
+			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:*"+"\n";
+			Step_1 += "WAIT SECONDS=5"+"\n";
+			Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
+			Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+			Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
+			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+			Step_1 += "WAIT SECONDS=1"+"\n";
+			Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+			Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
+			Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
+			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+			Step_1 += "WAIT SECONDS=1"+"\n";
+			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
+			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
+			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
+			Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
+			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
+			iimPlay(Step_1);
+		break;
+	}
 	var str = window.document.body.textContent;
 	if(str.indexOf("Take Survey"))
 	{
