@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","177","185","193","181","233"]; // 4h đổi lần nữa
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["30","119","182","179","221","185","233"]; // 4h đổi lần nữa
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1930,7 +1930,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "239":
+		case "185":
 		Line = 2;
 		break;
 	}
@@ -1969,8 +1969,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "39":
-				case "180":case "179":case "145":case "84":case "86":case "25":case "109":case "17":case "22":
+				case "180":case "145":case "84":case "86":case "25":case "109":case "17":case "22":case "39":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
