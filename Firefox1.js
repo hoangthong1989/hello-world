@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["248","239","175","31","203","252"];
+var Ma_off = ["30","119","258","173","245","203"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -423,14 +423,42 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "SurveysandPromotions")
+				else if(title == "McDonalds-100$"||title == "SurveysandPromotions")
 				{ // 
 					try
 					{
 						switch(Check_Off)
 						{
-							case "1":case "2":
-							National_FRAME_1(File_Mail_info);
+							case "0":
+							switch(Check_Off)
+							{// bước quay thưởng
+								case "0":
+								var National_Quay = "CODE:";
+								National_Quay += "SET !ERRORIGNORE YES"+"\n";
+								National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+								National_Quay += "WAIT SECONDS=3"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>SPAN\" BUTTON=0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q4>SPAN\" BUTTON=0"+"\n";
+								National_Quay += "WAIT SECONDS=10"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
+								iimPlay(National_Quay);
+								break;
+							}
+							switch(Check_Off)
+							{// Check Title Tab 2
+								case "0":
+								iimPlayCode("TAB T=2");
+								iimPlayCode("WAIT SECONDS=1");
+								var title = window.document.title;
+								if(title == "SurveysandPromotions")
+								{
+									National_FRAME_1(File_Mail_info);
+								}
+								break;
+							}
 							break;
 						}
 						off++;
@@ -1310,12 +1338,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Opinion City")
-				{// 147
+				{// 147 257
 					try
 					{
 						switch(Check_Off)
 						{
-							case "147":
+							case "257":case "147":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
@@ -1794,7 +1822,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "251":
+		case "173":
 		Line = 2;
 		break;
 	}
@@ -3239,7 +3267,7 @@ function National_Consumer_Center(File_Mail_info)
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
 	switch(Check_Off)
 	{// bước quay thưởng
-		case "96":case "202":
+		case "202":
 		var National_Quay = "CODE:";
 		National_Quay += "SET !ERRORIGNORE YES"+"\n";
 		National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
@@ -3260,7 +3288,7 @@ function National_Consumer_Center(File_Mail_info)
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "96":case "146":case "169":case "163":case "162":
+		case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3507,20 +3535,30 @@ function National_FRAME_1(File_Mail_info)
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
-	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
-	// Điền thông tin có ký tự đặt biệt
+	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);		
+	switch(Check_Off)
+	{// click vào hình mặt cười
+		case "0":
+		var National_reward = "CODE:";
+		National_reward += "SET !ERRORIGNORE YES"+"\n";
+		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
+		National_reward += "FRAME F=1"+"\n";
+		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
+		iimPlay(National_reward);
+		break;
+	}
 	var National_FRAME_1 = "CODE:";
 	National_FRAME_1 += "SET !ERRORIGNORE YES"+" \n";
 	National_FRAME_1 += "SET !TIMEOUT_TAG 0"+" \n";
 	National_FRAME_1 += "FRAME F=1"+" \n";
-	National_FRAME_1 += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
-	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
-	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
-	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
-	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
-	National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
-	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
-	National_FRAME_1 += "WAIT SECONDS=10"+" \n";
+	// National_FRAME_1 += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
+	// National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	// National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
+	// National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	// National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
+	// National_FRAME_1 += "WAIT SECONDS=0.5"+" \n";
+	// National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
+	// National_FRAME_1 += "WAIT SECONDS=10"+" \n";
 	National_FRAME_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
 	National_FRAME_1 += "SET !DATASOURCE_LINE 1"+" \n";
 	National_FRAME_1 += "SET !DATASOURCE_COLUMNS 1"+" \n";
@@ -3562,91 +3600,71 @@ function National_FRAME_1(File_Mail_info)
 	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=TXT:SUBMIT"+" \n";
 	National_FRAME_1 += "SET !TIMEOUT_TAG 30"+" \n";
 	National_FRAME_1 += "TAG POS=1 TYPE=DIV ATTR=ID:hfcta"+" \n";
-	/////////// Khúc Khảo Sát
-	var National_KS = "CODE:";
-	National_KS += "SET !ERRORIGNORE YES"+"\n";
-	National_KS += "SET !TIMEOUT_TAG 0"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:The<SP>food"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid165339"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Health/Advice"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174569"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2<SP>children"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174659"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2-5<SP>years"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174789"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Moving<SP>/<SP>Just<SP>Moved"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174509 CONTENT=YES"+"\n";
-	National_KS += "WAIT SECONDS=1"+"\n";
-	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52689"+"\n";
-	National_KS += "TAG POS=2 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid177549"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Today"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid162949"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Cigars"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid157959"+"\n";
-	National_KS += "TAG POS=7 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147381"+"\n";
-	National_KS += "TAG POS=10 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid113381"+"\n";
-	National_KS += "TAG POS=13 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid135781"+"\n";
-	National_KS += "TAG POS=14 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid163169"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:New<SP>Windows"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid175229 CONTENT=YES"+"\n";
-	National_KS += "WAIT SECONDS=3"+"\n";
-	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52869"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:DirecTV"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid111001"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Student"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid171149"+"\n";
-	National_KS += "TAG POS=16 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid156141"+"\n";
-	National_KS += "TAG POS=17 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid155501"+"\n";
-	National_KS += "TAG POS=18 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147401"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Democrat"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid30071"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid77921"+"\n";
-	National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes,<SP>Life<SP>Insurance"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174469 CONTENT=YES"+"\n";
-	National_KS += "WAIT SECONDS=3"+"\n";
-	National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid51059"+"\n";
-	National_KS += "TAG POS=29 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid143831"+"\n";
-	National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:confirmbox"+"\n";
-	National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:cb CONTENT=YES"+"\n";
-	National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
-	National_KS += "WAIT SECONDS=5"+"\n";
-	National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
-	National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
-	
-	switch(Check_Off)
-	{
-		// click vào hình mặt cười
-		case "604":case "605":
-		var National_reward = "CODE:";
-		National_reward += "SET !ERRORIGNORE YES"+"\n";
-		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
-		National_reward += "FRAME F=1"+"\n";
-		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
-		National_reward += "SET !TIMEOUT_TAG 0"+"\n";
-		iimPlay(National_reward);
-		break;
-	}
-	switch(Check_Off)
-	{ // Điền Thông Tin
-		case "604":case "605":
-		iimPlay(National_FRAME_1);
-		break;
-	}
+	iimPlay(National_FRAME_1);
 	var str = window.document.body.textContent;
 	if(str.indexOf("100 points"))
 	{// Làm Khảo Sát
-		iimPlay(National_KS); 
-		iimPlayCode("WAIT SECONDS=30");
+		var National_KS = "CODE:";
+		National_KS += "SET !ERRORIGNORE YES"+"\n";
+		National_KS += "SET !TIMEOUT_TAG 0"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:The<SP>food"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid165339"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Health/Advice"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174569"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2<SP>children"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174659"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2-5<SP>years"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174789"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Moving<SP>/<SP>Just<SP>Moved"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174509 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52689"+"\n";
+		National_KS += "TAG POS=2 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid177549"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Today"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid162949"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Cigars"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid157959"+"\n";
+		National_KS += "TAG POS=7 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147381"+"\n";
+		National_KS += "TAG POS=10 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid113381"+"\n";
+		National_KS += "TAG POS=13 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid135781"+"\n";
+		National_KS += "TAG POS=14 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid163169"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:New<SP>Windows"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid175229 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52869"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:DirecTV"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid111001"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Student"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid171149"+"\n";
+		National_KS += "TAG POS=16 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid156141"+"\n";
+		National_KS += "TAG POS=17 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid155501"+"\n";
+		National_KS += "TAG POS=18 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147401"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Democrat"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid30071"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid77921"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes,<SP>Life<SP>Insurance"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174469 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid51059"+"\n";
+		National_KS += "TAG POS=29 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid143831"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:confirmbox"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:cb CONTENT=YES"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
+		National_KS += "WAIT SECONDS=5"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
+		National_KS += "WAIT SECONDS=30"+"\n";
+		iimPlay(National_KS);
 	}
 }
 function NFL(File_Mail_info)
