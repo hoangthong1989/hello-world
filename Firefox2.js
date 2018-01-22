@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["84","177","245","277","261","6","286"]; // 241
+var Ma_off = ["84","177","245","193","261","6","286"]; // 241
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -36,7 +36,7 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "252":case "203":
+			case "277":case "252":case "203":
 			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
 			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
 			iimPlayCode("WAIT SECONDS=5");
