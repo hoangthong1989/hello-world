@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","177","84","277","261","6","286"];
+var Ma_off = ["84","177","245","277","261","6","286"]; // 241
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -42,8 +42,8 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "180":case "145":case "2":case "138":case "128":case "127":case "21":case "119":
-			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "82":
+			case "241":case "180":case "145":case "2":case "138":case "128":case "127":case "21":case "119":
+			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "84":
 			case "239":case "213":case "75":case "62":case "73":case "71":case "76":case "25":case "22":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
@@ -116,12 +116,12 @@ while(true)
 				}
 				// RewardBee
 				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241
 					try
 					{
 						switch(Check_Off)
 						{
-							case "25":case "179":case "78":case "145":case "84":case "123":case "109":
+							case "241":case "25":case "179":case "78":case "145":case "84":case "123":case "109":
 							case "239":case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
 							RewardBee(File_Mail_info);
 							break;
@@ -2093,7 +2093,7 @@ function RewardBee(File_Mail_info)
 				C3 = 6;C8 = 3;
 				C4 = 4;C9 = 2;
 				break;
-				case "239":
+				case "241":case "239":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
