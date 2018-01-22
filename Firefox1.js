@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","258","239","195","281","221",""]; // 
+var Ma_off = ["174","258","239","175","252","233",""]; // 
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1835,7 +1835,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "195":
+		case "175":
 		Line = 2;
 		break;
 	}
