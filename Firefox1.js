@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","258","239","173","181","203"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["245","177","86","277","261","6","286"];
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -65,7 +65,7 @@ while(true)
 		{ 
 			var title = window.document.title;
 			if(title != "")
-			{ // Kiểm Tra Title Site Hiện Tại 
+			{ // Kiểm Tra Title Site Hiện Tại
 				if(Check_Off == "0")
 				{ //
 					var Insurance_check = "CODE:";
@@ -98,12 +98,12 @@ while(true)
 				}
 				// Dailybreak
 				if(title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182 193 251 258
+				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182 193 251 258 277
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "258":case "251":case "193":case "182":
+							case "277":case "258":case "251":case "193":case "182":
 							case "175":case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
 							Dailybreak(File_Mail_info);
@@ -133,11 +133,12 @@ while(true)
 				}
 				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6
 					try
 					{
 						switch(Check_Off)
 						{
+							case "6":case "286":
 							case "240":case "203":case "221":case "171":case "172":case "181":case "176":case "26":
 							case "252":case "233":case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -380,7 +381,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions"||title == "Congratulations!")
+				else if(title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
 				{ // 110 146 154 162 163 169 96 199
 					try
 					{
@@ -423,16 +424,16 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "McDonalds-100$"||title == "SurveysandPromotions")
-				{ // 
+				else if(title == "Congratulations!"||title == "McDonalds-100$"||title == "SurveysandPromotions")
+				{ // 261
 					try
 					{
 						switch(Check_Off)
 						{
-							case "0":
+							case "261":
 							switch(Check_Off)
 							{// bước quay thưởng
-								case "0":
+								case "261":
 								var National_Quay = "CODE:";
 								National_Quay += "SET !ERRORIGNORE YES"+"\n";
 								National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
@@ -449,13 +450,17 @@ while(true)
 							}
 							switch(Check_Off)
 							{// Check Title Tab 2
-								case "0":
+								case "261":
 								iimPlayCode("TAB T=2");
 								iimPlayCode("WAIT SECONDS=1");
 								var title = window.document.title;
 								if(title == "SurveysandPromotions")
 								{
 									National_FRAME_1(File_Mail_info);
+								}
+								else if(title == "National Consumer Center")
+								{
+									National_Consumer_Center(File_Mail_info);
 								}
 								break;
 							}
@@ -1606,8 +1611,8 @@ while(true)
 					catch(exception){}
 				}
 				// Spam Mail Submit
-				else if(title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 
+				else if(title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				{ // 30 31 75 82 5 118 102 119 187 283
 					try
 					{
 						var Line = 1;
@@ -1686,6 +1691,12 @@ while(true)
 							SUBMIT += "TAG POS=1 TYPE=A ATTR=TXT:No"+"\n";
 							SUBMIT += "WAIT SECONDS=15"+"\n";
 							iimPlay(SUBMIT);
+							break;
+						}
+						switch(Check_Off)
+						{// Dailybreak có Title đặt biệt
+							case "283":
+							Dailybreak(File_Mail_info);
 							break;
 						}
 						off++;
@@ -1822,7 +1833,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "173":
+		case "177":
 		Line = 2;
 		break;
 	}
@@ -1878,7 +1889,7 @@ function Dailybreak(File_Mail_info)
 			{// Khao Sat DAILY
 				switch(Check_Off)
 				{
-					case "258":case "251":case "193":case "178":case "182":
+					case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
 					var Dailybreak_KS1 = "CODE:";
@@ -1930,6 +1941,38 @@ function Dailybreak(File_Mail_info)
 					Dailybreak_KS1 += "WAIT SECONDS=10"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 					iimPlay(Dailybreak_KS1);
+					break;
+					//
+					case "283":
+					var Dailybreak_KS2 = "CODE:";
+					Dailybreak_KS2 += "SET !ERRORIGNORE YES"+"\n";
+					Dailybreak_KS2 += "SET !TIMEOUT_TAG 0 "+"\n";
+					Dailybreak_KS2 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
+					Dailybreak_KS2 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
+					Dailybreak_KS2 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
+					Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:50"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:6<SP>feet"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS2 += "TAG POS=2 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:2<SP>Days"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS2 += "TAG POS=3 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS2 += "TAG POS=4 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS2 += "WAIT SECONDS=10"+"\n";
+					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Start"+"\n";
+					iimPlay(Dailybreak_KS2);
 					break;
 				}
 				iimPlayCode("WAIT SECONDS=30");
@@ -3272,10 +3315,10 @@ function National_Consumer_Center(File_Mail_info)
 		National_Quay += "SET !ERRORIGNORE YES"+"\n";
 		National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
 		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=7"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal02>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
-		National_Quay += "WAIT SECONDS=7"+"\n";
-		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal03>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		// National_Quay += "WAIT SECONDS=7"+"\n";
+		// National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal02>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		// National_Quay += "WAIT SECONDS=7"+"\n";
+		// National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal03>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 		National_Quay += "WAIT SECONDS=5"+"\n";
 		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
 		National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
@@ -3288,26 +3331,25 @@ function National_Consumer_Center(File_Mail_info)
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "146":case "169":case "163":case "162":
+		case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
-		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
+		National_reward += "SET !TIMEOUT_TAG 40"+"\n";
 		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
-		National_reward += "SET !TIMEOUT_TAG 0"+"\n";
 		iimPlay(National_reward);
 		break;
 	}
 	var National = "CODE:";
 	National += "SET !ERRORIGNORE YES"+" \n";
 	National += "SET !TIMEOUT_TAG 0"+" \n";
-	National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
-	National += "WAIT SECONDS=10"+" \n";
+	// National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
+	// National += "WAIT SECONDS=10"+" \n";
 	National += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
 	National += "SET !DATASOURCE_LINE 1"+" \n";
 	National += "SET !DATASOURCE_COLUMNS 1"+" \n";
