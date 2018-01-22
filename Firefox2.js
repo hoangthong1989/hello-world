@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["84","177","245","193","261","6","286"]; // 241
+var Ma_off = ["241","177","245","193","261","6","286"]; // 
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -36,9 +36,9 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "277":case "252":case "203":
+			case "286":case "277":case "252":case "203":
 			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
-			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":
+			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -154,10 +154,13 @@ while(true)
 							Tripping += "WAIT SECONDS = 7"+" \n";
 							Tripping += 'EVENT TYPE=MOUSEDOWN SELECTOR="HTML>BODY>DIV:nth-of-type(3)>DIV" BUTTON=0 '+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV>DIV>DIV" BUTTON=0 '+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(3)>SPAN" BUTTON=0'+" \n";
+							// TAG POS=2 TYPE=TD ATTR=TXT:11
+							// Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(2)>SPAN" BUTTON=0'+" \n";
+							Tripping += "TAG POS=1 TYPE=TD ATTR=TXT:30"+" \n";
 							Tripping += "WAIT SECONDS = 1"+" \n";
-							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(4)" BUTTON=0'+" \n";
-							// Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(2)>TD" BUTTON=0'+" \n";
+							Tripping += "TAG POS=2 TYPE=TD ATTR=TXT:31"+" \n";
+							// Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>TABLE>TBODY>TR:nth-of-type(5)>TD:nth-of-type(3)" BUTTON=0'+" \n";
+							
 							Tripping += "WAIT SECONDS = 1"+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>SPAN>DIV" BUTTON=0'+" \n";
 							Tripping += 'EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV>UL>LI:nth-of-type(3)" BUTTON=0'+" \n";
