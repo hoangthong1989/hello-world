@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["292","239","177","193","245","281"]; // 
+var Ma_off = ["292","180","258","193","245","281"]; // 
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1885,7 +1885,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "177":
+		case "193":
 		Line = 2;
 		break;
 	}
@@ -2093,7 +2093,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "180":case "145":case "84":case "86":case "109":case "17":case "22":case "39":
+				case "145":case "84":case "86":case "109":case "17":case "22":case "39":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
@@ -2130,7 +2130,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				//RewardBee -(key) + TV
-				case "180":case "145":case "123":case "22":case "76":
+				case "145":case "123":case "22":case "76":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
@@ -2145,7 +2145,7 @@ function RewardBee(File_Mail_info)
 				C3 = 6;C8 = 3;
 				C4 = 4;C9 = 2;
 				break;
-				case "241":case "239":case "25":
+				case "241":case "239":case "25":case "180":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
