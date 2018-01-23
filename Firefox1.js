@@ -4,8 +4,8 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","175","239","240","233",""]; // 
-var File_Mail_info = 1; var sl_chay_off = 4; var off = 0;
+var Ma_off = ["30","119","258","25","173","291","281"]; // 
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1835,7 +1835,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "175":
+		case "173":
 		Line = 2;
 		break;
 	}
@@ -2004,7 +2004,7 @@ function RewardBee(File_Mail_info)
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
 	switch(Check_Off) 
 	{// lay inf khac neu lam off giong nhau
-		case "239":
+		case "25":
 		Line = 2;
 		break;
 	}
@@ -2043,7 +2043,7 @@ function RewardBee(File_Mail_info)
 		{
 			switch(Check_Off)
 			{// chọn Phiếu mua hàng
-				case "180":case "145":case "84":case "86":case "25":case "109":case "17":case "22":case "39":
+				case "180":case "145":case "84":case "86":case "109":case "17":case "22":case "39":
 				var Phieu_Mua_Hang_1 = "CODE:";
 				Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
 				Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
@@ -2080,7 +2080,7 @@ function RewardBee(File_Mail_info)
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				//RewardBee -(key) + TV
-				case "180":case "145":case "123":case "25":case "22":case "76":
+				case "180":case "145":case "123":case "22":case "76":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
@@ -2095,7 +2095,7 @@ function RewardBee(File_Mail_info)
 				C3 = 6;C8 = 3;
 				C4 = 4;C9 = 2;
 				break;
-				case "241":case "239":
+				case "241":case "239":case "25":
 				C0 = 8;C5 = 3;
 				C1 = 5;C6 = 7;
 				C2 = 6;C7 = 3;
@@ -3779,6 +3779,7 @@ function NFL(File_Mail_info)
 }
 function Tao_Mail() 
 {// hàm reg Mail.com
+	var User_Pas_Mail = "";
 	var SELECT = ["FEMALE","MALE"];
 	var Nam_Nu = Math.floor((Math.random() * 1) + 0);
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
@@ -3817,13 +3818,15 @@ function Tao_Mail()
 		if(str.indexOf("Thank you for creating a mail.com email account."))
 		{
 			var mail = str.match(/([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+/gi)
-			alert(mail);
+			User_Pas_Mail += mail+","+"1Mhujjhn@";
+			// alert();
 		}
 		else
 		{
 			alert("Tạo Mail Thất Bại");
 		}
 	}
+	return User_Pas_Mail;
 }
 function check_capcha()
 {
