@@ -4,7 +4,7 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","129","239","240","233",""]; // 
+var Ma_off = ["291","245","129","239","240","233",""]; // 
 var File_Mail_info = 2; var sl_chay_off = 4; var off = 0;
 while(true)
 {
@@ -2878,18 +2878,19 @@ function AARP(File_Mail_info)
 {// chỉnh mã off để lấy info
 	var Error = 0;var line = 1;
 	var pass = Tao_Pass();
+	var KS1 = Math.floor((Math.random() * 6) + 1);
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var AARP_1 = "CODE:";
 	AARP_1 += "SET !ERRORIGNORE YES "+" \n";
 	AARP_1 += "SET !TIMEOUT_TAG 0 "+" \n";
-	AARP_1 += "TAG POS=1 TYPE=A ATTR=TXT:DISCOVER<SP>EASY<SP>WAYS<SP>TO<SP>GIVE "+" \n";
-	AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:primary_opt_in_checkbox&&NAME:primary_opt_in&&CHECKED:checked&&TYPE:checkbox CONTENT=YES"+" \n";
-	AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:secondary_opt_in_checkbox&&NAME:secondary_opt_in&&CHECKED:checked&&TYPE:checkbox CONTENT=YES"+" \n";
-	AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:primary_opt_in_checkbox CONTENT=YES"+" \n";
-	AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:secondary_opt_in_checkbox CONTENT=YES"+" \n";
-	AARP_1 += "TAG POS=1 TYPE=A ATTR=CLASS:btn&&HREF:#&&ONCLICK:document.forms.login_form.submit();return<SP>false;"+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=A ATTR=TXT:DISCOVER<SP>EASY<SP>WAYS<SP>TO<SP>GIVE "+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:primary_opt_in_checkbox&&NAME:primary_opt_in&&CHECKED:checked&&TYPE:checkbox CONTENT=YES"+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:secondary_opt_in_checkbox&&NAME:secondary_opt_in&&CHECKED:checked&&TYPE:checkbox CONTENT=YES"+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:primary_opt_in_checkbox CONTENT=YES"+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:intro_login_form ATTR=ID:secondary_opt_in_checkbox CONTENT=YES"+" \n";
+	// AARP_1 += "TAG POS=1 TYPE=A ATTR=CLASS:btn&&HREF:#&&ONCLICK:document.forms.login_form.submit();return<SP>false;"+" \n";
 	AARP_1 += "TAG POS=1 TYPE=A ATTR=TXT:Get<SP>started"+" \n";
 	iimPlay(AARP_1);	
 	switch(Check_Off)
@@ -2925,8 +2926,12 @@ function AARP(File_Mail_info)
 	AARP += "TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=ID:birthYear CONTENT=%1968"+" \n";
 	AARP += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:registerForm ATTR=ID:tos CONTENT=YES"+" \n";
 	AARP += "TAG POS=1 TYPE=SPAN ATTR=TXT:Register"+" \n";
-	AARP += "SET !TIMEOUT_TAG 30 "+" \n";
-	AARP += "TAG POS=1 TYPE=A ATTR=TXT:START<SP>EXPLORING<SP>TO<SP>EARN<SP>MORE<SP>SWEEPSTAKES<SP>E*"+" \n";
+	AARP += "SET !TIMEOUT_TAG 15 "+" \n";
+	// AARP += "TAG POS=1 TYPE=A ATTR=TXT:START<SP>EXPLORING<SP>TO<SP>EARN<SP>MORE<SP>SWEEPSTAKES<SP>E*"+" \n";
+	AARP += "TAG POS="+KS1+" TYPE=INPUT:CHECKBOX FORM=ID:newUserNewsletterForm ATTR=ID:selectedNewsLetters CONTENT=YES"+" \n";
+	AARP += "TAG POS=1 TYPE=SPAN ATTR=TXT:Continue"+" \n";
+	AARP += "SET !TIMEOUT_TAG 10 "+" \n";
+	AARP += "EVENT TYPE=CLICK SELECTOR=\"#subscriptionsSuccessOverlay>DIV:nth-of-type(3)>A>SPAN\" BUTTON=0"+" \n";
 	AARP += "WAIT SECONDS=30"+" \n";
 	while(true)
 	{
