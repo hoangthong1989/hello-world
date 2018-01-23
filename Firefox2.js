@@ -4,12 +4,12 @@ iimPlayCode("TAB CLOSEALLOTHERS");
 iimPlayCode("URL GOTO=about:home");
 ClearCookie();
 
-var Ma_off = ["245","258","239","173","281","203"]; // 
+var Ma_off = ["292","84","177","195","245","281"]; // 
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm xong    
+	{// check nếu số lượng off đã làm xong    Enfamil_WF - Formstack  Enfamil_WF - Formstack
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
@@ -36,7 +36,7 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "291":case "286":case "277":case "252":case "203":
+			case "292":case "291":case "286":case "277":case "252":case "203":
 			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
 			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
 			iimPlayCode("WAIT SECONDS=5");
@@ -1597,6 +1597,56 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Enfamil_WF - Formstack")
+				{// 292
+					try
+					{
+						switch(Check_Off)
+						{
+							case "292":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1989 - 1973  + 1)) + 1973 );
+							var Enfamil_WF = "CODE:";
+							Enfamil_WF += "SET !ERRORIGNORE YES"+"\n";
+							Enfamil_WF += "SET !TIMEOUT_TAG 0"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Last_First.txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:fsForm2915699 ATTR=ID:field59646738_1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-first CONTENT={{!COL1}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-last CONTENT={{!COL2}}"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:fsForm2915699 ATTR=ID:field59646719 CONTENT={{!COL1}}"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646862 CONTENT={{!COL2}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646863 CONTENT={{!COL3}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59646864 CONTENT=%{{!COL4}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646867 CONTENT={{!COL5}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361M CONTENT=%0"+Random_Ngay+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361D CONTENT=%0"+Random_Thang+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361Y CONTENT=%"+Random_Nam+"\n";
+							Enfamil_WF += "WAIT SECONDS=1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580M CONTENT=%0"+Random_Ngay+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580D CONTENT=%0"+Random_Thang+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580Y CONTENT=%2018"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647584 CONTENT=%0002"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647902 CONTENT=%1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:fsForm2915699 ATTR=ID:fsSubmitButton2915699"+"\n";
+							Enfamil_WF += "WAIT SECONDS=15"+"\n";
+							iimPlay(Enfamil_WF);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 					try
@@ -1835,7 +1885,7 @@ function Dailybreak(File_Mail_info)
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "173":
+		case "177":
 		Line = 2;
 		break;
 	}
