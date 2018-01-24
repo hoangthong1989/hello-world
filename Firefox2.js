@@ -1,10 +1,13 @@
 //======================================================================================================================
-iimPlayCode("WAIT SECONDS=1");
-iimPlayCode("TAB CLOSEALLOTHERS");
-iimPlayCode("URL GOTO=about:home");
-ClearCookie();
+var home = "CODE:";
+home += "SET !ERRORIGNORE YES" + "\n";
+home += "SET !TIMEOUT_PAGE 0"+"\n";
+home += "WAIT SECONDS=1"+"\n";
+home += "TAB CLOSEALLOTHERS"+"\n";
+home += "URL GOTO=about:home"+"\n";
+iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","297","239","175","233","281"]; // 
+var Ma_off = ["174","175","239","297","233","281"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -15,10 +18,8 @@ while(true)
 		break;
 	}
 	else
-	{// check nếu số lượng off chưa làm xong 
-		ClearCookie();
-		var User_member = ["","FireFox_1","FireFox_2"];
-		// var Ten_member = Math.floor((Math.random() * 3) + 0);
+	{// check nếu số lượng off chưa làm xong 	
+		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
 		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////////////////////
@@ -31,24 +32,26 @@ while(true)
 		Load_Link_Nhanh += "SET !ERRORIGNORE YES" + "\n";
 		Load_Link_Nhanh += "SET !TIMEOUT_PAGE 50"+"\n";
 		Load_Link_Nhanh += "TAB CLOSEALLOTHERS"+"\n";
+		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "292":case "291":case "286":case "277":case "252":case "203":
-			case "172":case "187":case "181":case "176":case "78":case "61":case "26":case "110":case "10":
-			case "171":case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
+			case "175":case "297":case "292":case "291":case "286":case "277":
+			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
+			case "61":case "26":case "10":
+			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "241":case "180":case "145":case "2":case "138":case "128":case "127":case "21":case "119":
-			case "109":case "102":case "118":case "114":case "115":case "5":case "86":case "84":
-			case "239":case "213":case "75":case "62":case "73":case "71":case "76":case "25":case "22":
+			case "119":
+			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
+			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "17":
+			case "0":
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
@@ -90,7 +93,7 @@ while(true)
 							Insurance += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formemail ATTR=ID:zipcode CONTENT={{!COL5}}"+" \n";
 							Insurance += "TAG POS=1 TYPE=BUTTON FORM=ID:formemail ATTR=ID:btnRcpSubmit"+" \n";
 							iimPlay(Insurance);
-							iimPlayCode("WAIT SECONDS=30");
+							iimPlayCode("WAIT SECONDS=20");
 						}
 					}
 					off++;
@@ -103,9 +106,10 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "182":
-							case "175":case "159":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
-							case "173":case "177":case "12":case "66":case "27":case "20":case "11":case "47":case "57":
+							case "297":case "129":case "195":case "277":case "258":case "251":case "193":
+							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
+							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
+							case "57":case "8":
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -121,8 +125,9 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "241":case "25":case "179":case "78":case "145":case "84":case "123":case "109":
-							case "239":case "39":case "178":case "86":case "180":case "76":case "71":case "17":case "22":
+							case "241":case "180":case "179":case "123":case "109":case "145":case "239":case "178":
+							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
+							iimPlayCode("WAIT SECONDS=5");
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -667,13 +672,13 @@ while(true)
 				else if(title == "Survey")
 				{ //
 					try
-					{
-						var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-						var Random_Thang = Math.floor((Math.random() * 9) + 1);
-						var Random_Nam = Math.floor((Math.random() * (1955 - 1945 + 1)) + 1945);
+					{	
 						switch(Check_Off)
 						{
 							case "1":
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1955 - 1945 + 1)) + 1945);
 							var Survey = "CODE:";
 							Survey += "SET !ERRORIGNORE YES "+" \n";
 							Survey += "SET !TIMEOUT_TAG 0   "+" \n";
@@ -1871,7 +1876,7 @@ while(true)
 
 //@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\
 
-function Dailybreak(File_Mail_info) 
+function Dailybreak(File_Mail_info)                      // Dailybreak
 {
 	var KS1 = Math.floor((Math.random() * 3) + 1);
 	var KS2 = Math.floor((Math.random() * 6) + 3);
@@ -2043,8 +2048,8 @@ function Dailybreak(File_Mail_info)
 		}
 	}
 }
-function RewardBee(File_Mail_info)
-{// check mã off để chạy khảo sát
+function RewardBee(File_Mail_info)                     // RewardBee
+{
 	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;var C10 = 0;
 	var load_F5 = 0;var Line = 1;var SL_Chon_KS = 0;
 	var Pass = Tao_Pass();
@@ -2924,8 +2929,8 @@ function Depend(File_Mail_info)
 	Depend += "WAIT SECONDS = 20"+" \n";
 	iimPlay(Depend);
 }
-function AARP(File_Mail_info)
-{// chỉnh mã off để lấy info
+function AARP(File_Mail_info)                         // AARP
+{
 	var Error = 0;var line = 1;
 	var pass = Tao_Pass();
 	var KS1 = Math.floor((Math.random() * 6) + 1);
@@ -3357,7 +3362,7 @@ function Free_Offer_for_capcha(File_Mail_info)
 		}
 	}
 }
-function National_Consumer_Center(File_Mail_info)
+function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 {
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
@@ -3516,7 +3521,7 @@ function National_Consumer_Center(File_Mail_info)
 		iimPlay(National_KS); 
 	}
 }
-function Step_1(File_Mail_info)
+function Step_1(File_Mail_info)                  // Step_1
 {
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
@@ -3627,7 +3632,7 @@ function Step_1(File_Mail_info)
 		iimPlay(National_KS); 
 	}
 }
-function National_FRAME_1(File_Mail_info)
+function National_FRAME_1(File_Mail_info)       // National_FRAME_1
 {
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
