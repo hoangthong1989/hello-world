@@ -8,10 +8,9 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","300","306","297","177","233"];
+var Ma_off = ["317","314","300","297","305","233"];
+// var Ma_off = ["318","316","300","297","305","233"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //
-
-
 while(true)
 {
 	if(off > sl_chay_off)
@@ -393,12 +392,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				{ // 110 146 154 162 163 169 96 199
+				{ // 110 146 154 162 163 169 96 199 313 316
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
-							case "96":case "169":case "163":case "162":case "146":case "110":
+							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
 						}
@@ -436,18 +435,21 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Congratulations!"||title == "McDonalds-100$"||title == "SurveysandPromotions")
-				{ // 261
+				{ // 261 314
 					try
 					{
 						switch(Check_Off)
 						{
-							case "261":
+							case "314":case "261":
 							switch(Check_Off)
 							{// bước quay thưởng
 								case "261":
 								var National_Quay = "CODE:";
 								National_Quay += "SET !ERRORIGNORE YES"+"\n";
 								National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#lb-confirm\" BUTTON=0"+"\n";
+								National_Quay += "WAIT SECONDS=1"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#cp_main>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)\" BUTTON=0"+"\n";
 								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
 								National_Quay += "WAIT SECONDS=3"+"\n";
 								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
@@ -458,10 +460,19 @@ while(true)
 								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
 								iimPlay(National_Quay);
 								break;
+								case "314":
+								var National_Quay = "CODE:";
+								National_Quay += "SET !ERRORIGNORE YES"+"\n";
+								National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#lb-confirm\" BUTTON=0"+"\n";
+								National_Quay += "WAIT SECONDS=1"+"\n";
+								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#cp_main>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)\" BUTTON=0"+"\n";
+								iimPlay(National_Quay);
+								break;
 							}
 							switch(Check_Off)
 							{// Check Title Tab 2
-								case "261":
+								case "314":case "261":
 								iimPlayCode("TAB T=2");
 								iimPlayCode("WAIT SECONDS=1");
 								var title = window.document.title;
@@ -973,8 +984,8 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{ // Lancome dang Khac
-							case "0":
+						{ // 308
+							case "308":
 							var Lancome_Loai_2 = "CODE:";
 							Lancome_Loai_2 += "SET !ERRORIGNORE YES"+"\n";
 							Lancome_Loai_2 += "SET !TIMEOUT_TAG 0"+"\n";
@@ -1015,9 +1026,43 @@ while(true)
 								Lancome += "WAIT SECONDS = 30"+"\n";
 								iimPlay(Lancome);
 							}
-							else if(title == "Enfamil_WF - Formstack")
-							{
-								
+							else if(title == "Earn Points With Kellogg's Family Rewards")
+							{// chưa test code
+								var Family = "CODE:";
+								Family += "SET !ERRORIGNORE YES"+"\n";
+								Family += "SET !TIMEOUT_TAG 0"+"\n";
+								Family += "EVENT TYPE=CLICK SELECTOR=\"#printArea>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>CENTER>A>IMG\" BUTTON=0"+"\n";
+								Family += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+								Family += "SET !DATASOURCE_LINE 1"+"\n";
+								Family += "SET !DATASOURCE_COLUMNS 1"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:KSTL-Registration-UserName CONTENT={{!COL1}}"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:KSTL-Registration-UserNameConfirm CONTENT={{!COL1}}"+"\n";
+								Family += "SET !ENCRYPTION NO"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:KSTL-Registration-Password CONTENT=G$1ygtfrd"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:KSTL-Registration-PasswordConfirm CONTENT=G$1ygtfrd"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-BirthDate CONTENT=6/5/1989"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:KSTL-Registration-PrivacyPolicy CONTENT=YES"+"\n";
+								Family += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Continue"+"\n";
+								Family += "WAIT SECONDS = 5"+"\n";
+								Family += "SET !DATASOURCE Last_First.txt"+"\n";
+								Family += "SET !DATASOURCE_LINE 3"+"\n";
+								Family += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:KSTL-Registration-TermsConditions1 CONTENT=YES"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-FirstName CONTENT={{!COL1}}"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-LastName CONTENT={{!COL2}}"+"\n";
+								Family += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+								Family += "SET !DATASOURCE_LINE 1"+"\n";
+								Family += "SET !DATASOURCE_COLUMNS 5 "+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-AddressLine1 CONTENT={{!COL2}}"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-City CONTENT={{!COL3}}"+"\n";
+								Family += "TAG POS=1 TYPE=SELECT ATTR=ID:KSTL-Registration-State CONTENT=%4"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:KSTL-Registration-PostalCode CONTENT={{!COL5}}"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:TEL ATTR=ID:KSTL-Registration-PhoneNumber1 CONTENT={{!COL1}}"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:RADIO ATTR=ID:KSTL-Registration-Gender-0"+"\n";
+								Family += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:KSTL-Registration-subscription10100_PH CONTENT=YES"+"\n";
+								Family += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Continue"+"\n";
+								Family += "WAIT SECONDS = 5"+"\n";
+								iimPlay(Family);
 							}
 							break;
 						}
@@ -1687,9 +1732,9 @@ while(true)
 					catch(exception){}
 				}
 				// Spam Mail Submit
-				else if(title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283
-					try
+				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315
+					try //
 					{
 						var Line = 1;
 						switch(Check_Off)
@@ -1699,7 +1744,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{ // chọn Yes No đầu rồi mới 
+						{ // chọn Yes No đầu rồi mới  
 							case "1":case "2":
 							var Trang_1 = "CODE:"; 
 							Trang_1 += "SET !ERRORIGNORE YES" + "\n";
@@ -1735,7 +1780,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "187":case "21":case "119":case "102":
+							case "315":case "321":case "318":case "317":case "187":case "21":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
@@ -3412,10 +3457,10 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "261":case "146":case "169":case "163":case "162":
+		case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
-		National_reward += "SET !TIMEOUT_TAG 40"+"\n";
+		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
 		National_reward += "EVENT TYPE=CLICK SELECTOR=\"#reward\" BUTTON=0"+"\n";
 		iimPlay(National_reward);
 		break;
@@ -3423,13 +3468,13 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	var National = "CODE:";
 	National += "SET !ERRORIGNORE YES"+" \n";
 	National += "SET !TIMEOUT_TAG 0"+" \n";
-	// National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
-	// National += "WAIT SECONDS=0.5"+" \n";
-	// National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
-	// National += "WAIT SECONDS=0.5"+" \n";
-	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
-	// National += "WAIT SECONDS=0.5"+" \n";
-	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
+	National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
+	National += "WAIT SECONDS=0.5"+" \n";
+	National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
+	National += "WAIT SECONDS=0.5"+" \n";
+	National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
+	National += "WAIT SECONDS=0.5"+" \n";
+	National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
 	// National += "WAIT SECONDS=10"+" \n";
 	National += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
 	National += "SET !DATASOURCE_LINE 1"+" \n";
