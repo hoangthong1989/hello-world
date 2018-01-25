@@ -8,9 +8,9 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-// var Ma_off = ["317","318","314","300","297","305"];
-var Ma_off = ["318","317","316","300","297","305"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; //
+var Ma_off = ["330","319","316","300","297","305"];
+// var Ma_off = ["318","317","316","300","297","305"]; FlowSQForm
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; // 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -391,19 +391,20 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "National Consumer Center"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				{ // 110 146 154 162 163 169 96 199 313 316
+				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
+				{ // 110 146 154 162 163 169 96 199 313 316 319 320
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
+							case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
 						}
 						switch(Check_Off)
 						{ // Step_1
-							case "199":
+							case "319":
 							Step_1(File_Mail_info);
 							break;
 						}
@@ -925,8 +926,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Weight Loss Formula – Your Ultimate Slimming Guide"||title == "Gap - Get on the List"||title == "Lancome")
-				{ // 308
+				else if(title == "OMG Sweeps"||title == "Weight Loss Formula – Your Ultimate Slimming Guide"||title == "Gap - Get on the List"||title == "Lancome")
+				{ // 308 330
 					try
 					{			
 						switch(Check_Off)
@@ -969,7 +970,7 @@ while(true)
 							break;							
 						}
 						switch(Check_Off)
-						{ // Dang spam Mail Gap
+						{ // Gap  OMG
 							case "0": 
 							var Gap = "CODE:";
 							Gap += "SET !ERRORIGNORE YES"+"\n";
@@ -981,6 +982,18 @@ while(true)
 							Gap += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ACTION:/s/link/acq ATTR=SRC:http://link.gap.csemleng.net/site/11191/images/gap-cs-lp-submit-button-11-20-17-001.png"+"\n";
 							Gap += "WAIT SECONDS = 20"+" \n";
 							iimPlay(Gap);
+							break;
+							case "330": 
+							var OMG = "CODE:";
+							OMG += "SET !ERRORIGNORE YES"+"\n";
+							OMG += "SET !TIMEOUT_TAG 0"+"\n";
+							OMG += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							OMG += "SET !DATASOURCE_LINE 1"+"\n";
+							OMG += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							OMG += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:omgForm ATTR=ID:txt_email CONTENT={{!COL1}}"+"\n";
+							OMG += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ID:omgForm ATTR=SRC:https://d3v7hbq4afry8x.cloudfront.net/images/button_enternow.png"+"\n";
+							OMG += "WAIT SECONDS = 10"+" \n";
+							iimPlay(OMG);
 							break;
 						}
 						switch(Check_Off)
@@ -3457,7 +3470,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
+		case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3596,35 +3609,72 @@ function Step_1(File_Mail_info)                  // Step_1
 	switch(Check_Off)
 	{
 		case "0":
-			var Step_1 = "CODE:";
-			Step_1 += "SET !ERRORIGNORE YES"+"\n";
-			Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
-			Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-			Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-			Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
-			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:*"+"\n";
-			Step_1 += "WAIT SECONDS=5"+"\n";
-			Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
-			Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-			Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
-			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-			Step_1 += "WAIT SECONDS=1"+"\n";
-			Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-			Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-			Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
-			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-			Step_1 += "WAIT SECONDS=1"+"\n";
-			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
-			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
-			Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
-			Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
-			Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
-			iimPlay(Step_1);
+		var Step_1 = "CODE:";
+		Step_1 += "SET !ERRORIGNORE YES"+"\n";
+		Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
+		Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+		Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
+		Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
+		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:*"+"\n";
+		Step_1 += "WAIT SECONDS=5"+"\n";
+		Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
+		Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+		Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
+		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		Step_1 += "WAIT SECONDS=1"+"\n";
+		Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+		Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
+		Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
+		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		Step_1 += "WAIT SECONDS=1"+"\n";
+		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
+		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
+		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
+		Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
+		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
+		iimPlay(Step_1);
+		break;
+		case "319":
+		var sweepstakesamonth_Mail = "CODE:";
+		sweepstakesamonth_Mail += "SET !ERRORIGNORE YES"+"\n";
+		sweepstakesamonth_Mail += "SET !TIMEOUT_TAG 0"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE_LINE 1"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE_COLUMNS 1"+"\n";
+		sweepstakesamonth_Mail += "FRAME F=1"+"\n";
+		sweepstakesamonth_Mail += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth_Mail += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+		sweepstakesamonth_Mail += "WAIT SECONDS=10"+"\n";
+		iimPlay(sweepstakesamonth_Mail);
+		var sweepstakesamonth = "CODE:";
+		sweepstakesamonth += "SET !ERRORIGNORE YES"+"\n";
+		sweepstakesamonth += "SET !TIMEOUT_TAG 0"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE Last_First.txt"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=1"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_LINE 1"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_COLUMNS 5"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=1"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=10"+"\n";
+		iimPlay(sweepstakesamonth);
 		break;
 	}
 	var str = window.document.body.textContent;
