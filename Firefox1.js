@@ -8,8 +8,10 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","300","310","297","233","281"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["305","300","306","297","177","233"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; //
+
+
 while(true)
 {
 	if(off > sl_chay_off)
@@ -913,18 +915,18 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Weight Loss Formula – Your Ultimate Slimming Guide"||title == "Gap - Get on the List"||title == "Lancome")
-				{ // 
+				{ // 308
 					try
 					{			
 						switch(Check_Off)
 						{ // Lay Info khac Neu Lam Off dang giong nhau
-							case "1":
+							case "0":
 							line = 2;
 							break;
 						}
 						switch(Check_Off)
 						{ // Dang Lancome
-							case "2":
+							case "0":
 							var line = 1;
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Pass = Tao_Pass();
@@ -957,7 +959,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dang spam Mail Gap
-							case "3": 
+							case "0": 
 							var Gap = "CODE:";
 							Gap += "SET !ERRORIGNORE YES"+"\n";
 							Gap += "SET !TIMEOUT_TAG 0"+"\n";
@@ -972,7 +974,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Lancome dang Khac
-							case "2":
+							case "0":
 							var Lancome_Loai_2 = "CODE:";
 							Lancome_Loai_2 += "SET !ERRORIGNORE YES"+"\n";
 							Lancome_Loai_2 += "SET !TIMEOUT_TAG 0"+"\n";
@@ -1012,6 +1014,10 @@ while(true)
 								Lancome += "TAG POS=1 TYPE=BUTTON FORM=ID:RegistrationForm ATTR=NAME:dwfrm_profile_confirm"+"\n";
 								Lancome += "WAIT SECONDS = 30"+"\n";
 								iimPlay(Lancome);
+							}
+							else if(title == "Enfamil_WF - Formstack")
+							{
+								
 							}
 							break;
 						}
@@ -1216,12 +1222,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Sign up now for access to your exclusive offers!")
-				{// 310
+				{// 310 306
 					try
 					{
 						switch(Check_Off)
 						{
-							case "310":
+							case "306":case "310":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Tuoi = Math.floor((Math.random() * 30) + 19);
 							var Dieting_Solutions = "CODE:";
@@ -1231,11 +1237,9 @@ while(true)
 							Dieting_Solutions += "TAG POS=2 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:gender"+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:NUMBER FORM=ID:offerForm ATTR=ID:age CONTENT="+Random_Tuoi+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Continue"+"\n";
-
 							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
 							Dieting_Solutions += "TAG POS=5 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
 							Dieting_Solutions += "TAG POS=10 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
-
 							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Click<SP>Here<SP>To<SP>Get<SP>Your<SP>Free<SP>Samples"+"\n";
 							Dieting_Solutions += "WAIT SECONDS = 3"+"\n";
 							Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
@@ -1905,7 +1909,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "175":
+		case "177":
 		Line = 2;
 		break;
 	}
