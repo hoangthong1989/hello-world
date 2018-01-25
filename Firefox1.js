@@ -8,7 +8,7 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["174","175","297","233","281"];
+var Ma_off = ["305","174","182","233","281"];
 var File_Mail_info = 1; var sl_chay_off = 4; var off = 0;
 while(true)
 {
@@ -40,7 +40,7 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "175":case "297":case "292":case "291":case "286":case "277":
+			case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
@@ -1605,12 +1605,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Enfamil_WF - Formstack")
-				{// 292
+				{// 292 305
 					try
 					{
 						switch(Check_Off)
 						{
-							case "292":
+							case "305":case "292":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
