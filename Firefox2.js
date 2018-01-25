@@ -8,12 +8,12 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","174","182","233","281"];
-var File_Mail_info = 2; var sl_chay_off = 4; var off = 0;
+var Ma_off = ["305","300","174","182","233","281"];
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm xong    Enfamil_WF - Formstack  Enfamil_WF - Formstack
+	{// check nếu số lượng off đã làm xong
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
@@ -57,7 +57,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
-			case "186":case "137":case "134":case "211":
+			case "186":case "137":case "300":case "211":
 			iimPlayCode("WAIT SECONDS=20");
 			break;
 			////
@@ -1492,12 +1492,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Publishers Clearing House - Win $2,600,000 Plus $5,000 a Week for Life!")
-				{// 211
+				{// 211 300
 					try
 					{
 						switch(Check_Off)
 						{
-							case "211":
+							case "300":case "211":
 							var PCH = "CODE:";
 							PCH += "SET !ERRORIGNORE YES"+"\n";
 							PCH += "SET !TIMEOUT_TAG 0"+"\n";
