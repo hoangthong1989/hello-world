@@ -8,7 +8,7 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","300","174","297","175","281"];
+var Ma_off = ["305","300","310","297","175","281"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -40,7 +40,7 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
-			case "305":case "175":case "297":case "292":case "291":case "286":case "277":
+			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
 			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
@@ -1216,52 +1216,65 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Sign up now for access to your exclusive offers!")
-				{//  chưa test code
+				{// 310
 					try
 					{
 						switch(Check_Off)
 						{
-							case "0":
+							case "310":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Tuoi = Math.floor((Math.random() * 30) + 19);
 							var Dieting_Solutions = "CODE:";
 							Dieting_Solutions += "SET !ERRORIGNORE YES"+"\n";
 							Dieting_Solutions += "SET !TIMEOUT_TAG 0"+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:optin"+"\n";
 							Dieting_Solutions += "TAG POS=2 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:gender"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:NUMBER FORM=ID:offerForm ATTR=ID:age CONTENT=25"+"\n";
+							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:NUMBER FORM=ID:offerForm ATTR=ID:age CONTENT="+Random_Tuoi+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Continue"+"\n";
+
 							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
 							Dieting_Solutions += "TAG POS=5 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
 							Dieting_Solutions += "TAG POS=10 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+
 							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Click<SP>Here<SP>To<SP>Get<SP>Your<SP>Free<SP>Samples"+"\n";
+							Dieting_Solutions += "WAIT SECONDS = 3"+"\n";
 							Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
 							Dieting_Solutions += "SET !DATASOURCE_LINE 1"+"\n";
 							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 1"+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:offerForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
 							Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Submit"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=IMG ATTR=SRC:http://us2-us1.ckcdnassets.com/182/creatives/38240/17-08_Atkins_5Off_Banners_300x250.png"+"\n";
-							Dieting_Solutions += "TAB T=2"+"\n";
-							Dieting_Solutions += "WAIT SECONDS = 1"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE Last_First.txt"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:first_name CONTENT={{!COL1}}"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:last_name CONTENT={{!COL2}}"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_LINE 1"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE Last_First.txt"+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							Dieting_Solutions += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:username CONTENT={{!COL1}}{{!COL2}}"+"\n";
-							Dieting_Solutions += "SET !ENCRYPTION NO"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password CONTENT=hjuhygtde"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password_confirmation CONTENT=hjuhygtde"+"\n";
-							Dieting_Solutions += "TAG POS=3 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=*"+"\n";
-							Dieting_Solutions += "TAG POS=1 TYPE=A ATTR=TXT:Get<SP>Started<SP>»"+"\n";
-							Dieting_Solutions += "WAIT SECONDS = 20"+"\n";
+							Dieting_Solutions += "WAIT SECONDS = 3"+"\n";
+							Dieting_Solutions += "EVENT TYPE=CLICK SELECTOR=\"#slot>A>IMG\" BUTTON=0"+"\n";
 							iimPlay(Dieting_Solutions);
+							iimPlayCode("TAB T=2");
+							iimPlayCode("WAIT SECONDS=1");
+							var title = window.document.title;
+							if(title == "Free Weight Loss Starter Kit Registration | Atkins")
+							{
+								var Atkins = "CODE:";
+								Atkins += "SET !ERRORIGNORE YES"+"\n";
+								Atkins += "SET !TIMEOUT_TAG 0"+"\n";
+								Atkins += "SET !DATASOURCE Last_First.txt"+"\n";
+								Atkins += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+								Atkins += "SET !DATASOURCE_COLUMNS 2"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:first_name CONTENT={{!COL1}}"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:last_name CONTENT={{!COL2}}"+"\n";
+								Atkins += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+								Atkins += "SET !DATASOURCE_LINE 1"+"\n";
+								Atkins += "SET !DATASOURCE_COLUMNS 1"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+								Atkins += "SET !DATASOURCE Last_First.txt"+"\n";
+								Atkins += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+								Atkins += "SET !DATASOURCE_COLUMNS 2"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:username CONTENT={{!COL1}}{{!COL2}}"+"\n";
+								Atkins += "SET !ENCRYPTION NO"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password CONTENT=hjuhygtde"+"\n";
+								Atkins += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password_confirmation CONTENT=hjuhygtde"+"\n";
+								Atkins += "TAG POS=3 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=*"+"\n";
+								Atkins += "TAG POS=1 TYPE=A ATTR=TXT:Get<SP>Started<SP>»"+"\n";
+								Atkins += "WAIT SECONDS = 20"+"\n";
+								iimPlay(Atkins);
+							}
 							break;
 						}
 						off++;
