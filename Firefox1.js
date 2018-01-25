@@ -5,10 +5,11 @@ home += "SET !TIMEOUT_PAGE 0"+"\n";
 home += "WAIT SECONDS=1"+"\n";
 home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
-iimPlay(home);ClearCookie();
+iimPlay(home);
+ClearCookie();
 
-var Ma_off = ["245","175","239","297","233","281"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["175","174","182","233","281"];
+var File_Mail_info = 1; var sl_chay_off = 4; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -19,7 +20,8 @@ while(true)
 	}
 	else
 	{// check nếu số lượng off chưa làm xong 	
-		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
+		var User_member = ["","FireFox_1","FireFox_2"];
+		ClearCookie();
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
 		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////////////////////
