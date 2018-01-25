@@ -8,8 +8,8 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["330","319","316","300","297","305"];
-// var Ma_off = ["318","317","316","300","297","305"]; FlowSQForm
+// var Ma_off = ["315","245","297","319","313","305"];
+var Ma_off = ["314","245","297","319","317","305"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; // 
 while(true)
 {
