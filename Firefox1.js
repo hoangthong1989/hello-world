@@ -8,9 +8,8 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","86","177","343","316","319"];
-// var Ma_off = ["305","84","177","343","316","319"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
+var Ma_off = ["305","341","297","313","319","281"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1968,7 +1967,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "177":
+		case "297":
 		Line = 2;
 		break;
 	}
