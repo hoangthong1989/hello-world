@@ -9,7 +9,7 @@ iimPlay(home);
 ClearCookie();
 
 // var Ma_off = ["318","299","330","297","341","313","319"];
-var Ma_off = ["315","299","330","297","341","315","319"];
+var Ma_off = ["315","299","330","297","341","316","319"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; // Samples Avenue : Beauty
 while(true)
 {
