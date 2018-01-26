@@ -8,7 +8,7 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","341","297","313","319","281"];
+var Ma_off = ["305","345","341","297","313","319"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -40,6 +40,7 @@ while(true)
 		/////////////////////////////// 
 		switch(Check_Off)
 		{
+			case "345":
 			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
@@ -588,8 +589,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "CUFI"||title == "Make Room")
-				{ // 218
+				else if(title == "TimeBucks"||title == "CUFI"||title == "Make Room")
+				{ // 218 345
 					try
 					{
 						switch(Check_Off)
@@ -618,6 +619,37 @@ while(true)
 							Make_Room += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:action_page.php ATTR=*"+" \n";
 							Make_Room += "WAIT SECONDS=10"+" \n";
 							iimPlay(Make_Room);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "345":
+							var pass = Tao_Pass();
+							var TimeBucks = "CODE:";
+							TimeBucks += "SET !ERRORIGNORE YES"+"\n";
+							TimeBucks += "SET !TIMEOUT_TAG 0"+"\n";
+							TimeBucks += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							TimeBucks += "SET !DATASOURCE_LINE 1"+"\n";
+							TimeBucks += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							TimeBucks += "FRAME F=2"+"\n";
+							TimeBucks += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:signup-form ATTR=ID:signup_email CONTENT={{!COL1}}"+"\n";
+							TimeBucks += "SET !ENCRYPTION NO"+"\n";
+							TimeBucks += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:signup-form ATTR=ID:signup_password CONTENT="+pass+"\n";
+							TimeBucks += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:signup-form ATTR=ID:signup_confirm_password CONTENT="+pass+"\n";
+							TimeBucks += "TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:signup-form ATTR=ID:signup_button_oneclick"+"\n";
+							TimeBucks += "WAIT SECONDS=15"+"\n";
+							iimPlay(TimeBucks);
+							// var TimeBucks_Login = "CODE:";
+							// TimeBucks_Login += "SET !ERRORIGNORE YES"+"\n";
+							// TimeBucks_Login += "SET !TIMEOUT_TAG 0"+"\n";
+							// TimeBucks_Login += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							// TimeBucks_Login += "SET !DATASOURCE_LINE 1"+"\n";
+							// TimeBucks_Login += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							// TimeBucks_Login += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:loginbox ATTR=ID:username_box CONTENT={{!COL1}}"+"\n";
+							// TimeBucks_Login += "SET !ENCRYPTION NO"+"\n";
+							// TimeBucks_Login += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:loginbox ATTR=ID:password_box CONTENT=hyhgtfrd"+"\n";
+							// TimeBucks_Login += "TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:loginbox ATTR=*"+"\n";
+							// iimPlay(TimeBucks_Login);
 							break;
 						}
 						off++;
@@ -1951,7 +1983,7 @@ while(true)
 }
 // vong lap chính
 
-//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\
+//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\  
 
 function Dailybreak(File_Mail_info)                      // Dailybreak
 {
