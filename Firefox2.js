@@ -8,8 +8,9 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["174","341","297","320","281","319"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; // 
+// var Ma_off = ["318","299","330","297","341","313","319"];
+var Ma_off = ["315","299","330","297","341","315","319"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; // Samples Avenue : Beauty
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1679,12 +1680,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Enfamil_WF - Formstack")
-				{// 292 305
+				{// 292 305 299
 					try
 					{
 						switch(Check_Off)
 						{
-							case "305":case "292":
+							case "299":case "305":case "292":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
