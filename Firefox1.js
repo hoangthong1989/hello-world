@@ -8,7 +8,8 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["305","345","245","297","313","319"];
+var Ma_off = ["305","345","320","297","314","319"];
+// var Ma_off = ["305","345","316","297","313","319"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
