@@ -1966,7 +1966,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "177":
+		case "175":
 		Line = 2;
 		break;
 	}
