@@ -8,7 +8,7 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);
 ClearCookie();
 
-var Ma_off = ["174","175","297","320","281","319"];
+var Ma_off = ["174","341","297","320","281","319"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; // 
 while(true)
 {
@@ -102,13 +102,13 @@ while(true)
 					break;
 				}
 				// Dailybreak
-				if(title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297
+				if(title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
+				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "297":case "129":case "195":case "277":case "258":case "251":case "193":
+							case "341":case "297":case "129":case "195":case "277":case "258":case "251":case "193":
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
 							case "57":case "8":
@@ -463,7 +463,7 @@ while(true)
 								case "314":
 								var National_Quay = "CODE:";
 								National_Quay += "SET !ERRORIGNORE YES"+"\n";
-								National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+								National_Quay += "SET !TIMEOUT_TAG 10"+"\n";
 								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#lb-confirm\" BUTTON=0"+"\n";
 								National_Quay += "WAIT SECONDS=1"+"\n";
 								National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#cp_main>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)\" BUTTON=0"+"\n";
@@ -1966,7 +1966,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "175":
+		case "341":
 		Line = 2;
 		break;
 	}
@@ -2107,8 +2107,47 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Start"+"\n";
 					iimPlay(Dailybreak_KS2);
 					break;
+					//
+					case "341":
+					var Dailybreak_KS3 = "CODE:";
+					Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
+					Dailybreak_KS3 += "SET !TIMEOUT_TAG 0 "+"\n";
+					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
+					Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
+					Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
+					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:*"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:*"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "TAG POS=2 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Coca-Cola®"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "TAG POS=3 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:1,892"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:20,114"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS3 += "TAG POS=2 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:25<SP>points"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+					Dailybreak_KS3 += "TAG POS=3 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "TAG POS=4 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Start"+"\n";
+					iimPlay(Dailybreak_KS3);
+					break;
 				}
-				iimPlayCode("WAIT SECONDS=30");
+				iimPlayCode("WAIT SECONDS=20");
 				break;
 			}
 		}
