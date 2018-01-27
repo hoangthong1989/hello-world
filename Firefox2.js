@@ -7,7 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["315","341","297","245","305","345","316"];
+var Ma_off = ["341","297","245","305","345","316"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -1930,15 +1930,16 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					break;
 					//
 					case "341":
+					iimPlay(REFRESH_Site);
 					var Dailybreak_KS3 = "CODE:";
 					Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
 					Dailybreak_KS3 += "SET !TIMEOUT_TAG 0 "+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
 					Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
-					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";		
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";		
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
@@ -1946,9 +1947,9 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
@@ -1958,11 +1959,11 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
-					Dailybreak_KS3 += "WAIT SECONDS=1"+"\n";
+					Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
 					Dailybreak_KS3 += "WAIT SECONDS=10"+"\n";
 					Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
