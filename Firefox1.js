@@ -27,7 +27,7 @@ while(true)
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
 		///////////////////////////////
-		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
+		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		//////////////////////////////
 		var Load_Link_Nhanh = "CODE:";
 		Load_Link_Nhanh += "SET !ERRORIGNORE YES" + "\n";
@@ -68,7 +68,7 @@ while(true)
 		// Cho Lệnh Chờ Nếu Site Bị Trắng
 		while(true)
 		{ 
-			iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
+			iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 			var title = window.document.title;
 			if(title != "")
 			{ // Neu Site Co Title La Khong Rong
