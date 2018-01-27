@@ -711,7 +711,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Survey"||title == "ResourceDepot.info"||title == "Rent-to-Own Reviews |"title == "- Save With Coupons")
+				else if(title == "Survey"||title == "ResourceDepot.info"||title == "Rent-to-Own Reviews |"||title == "- Save With Coupons")
 				{ //
 					try
 					{	
