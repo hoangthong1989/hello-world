@@ -5,31 +5,30 @@ home += "SET !TIMEOUT_PAGE 0"+"\n";
 home += "WAIT SECONDS=1"+"\n";
 home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
-iimPlay(home);
-ClearCookie();
+iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","175","297","319","316"];
-var File_Mail_info = 2; var sl_chay_off = 4; var off = 0;
+var Ma_off = ["315","341","297","245","305","345","316"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
-	{// check nếu số lượng off đã làm xong
+	{ // Neu Tong So Offer Da Chay Du Thi Out
 		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
 	}
 	else
-	{// check nếu số lượng off chưa làm xong 	
-		var User_member = ["","FireFox_1","FireFox_2"];
-		ClearCookie();
-		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;
-		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
+	{// Con Neu Chua Thi Tiến hành làm offer 
+		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
+		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;		
 		///////////////////////////////
 		var REFRESH_Site = "CODE:";
 		REFRESH_Site += "SET !ERRORIGNORE YES" + "\n";
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
 		///////////////////////////////
+		iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
+		//////////////////////////////
 		var Load_Link_Nhanh = "CODE:";
 		Load_Link_Nhanh += "SET !ERRORIGNORE YES" + "\n";
 		Load_Link_Nhanh += "SET !TIMEOUT_PAGE 50"+"\n";
@@ -69,9 +68,10 @@ while(true)
 		// Cho Lệnh Chờ Nếu Site Bị Trắng
 		while(true)
 		{ 
+			iimDisplay("Đang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 			var title = window.document.title;
 			if(title != "")
-			{ // Kiểm Tra Title Site Hiện Tại
+			{ // Neu Site Co Title La Khong Rong
 				if(Check_Off == "0")
 				{ //
 					var Insurance_check = "CODE:";
@@ -102,9 +102,8 @@ while(true)
 					off++;
 					break;
 				}
-				// Dailybreak
 				if(title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 47 57 11 20 27 66 12 67 8 77 79 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343
+				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343
 				    try
 					{
 						switch(Check_Off)
@@ -122,17 +121,45 @@ while(true)
 					}
 					catch(exception){}
 				}
-				// RewardBee
-				else if(title == "RewardBee")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241
+				else if(title == "RewardBee"||title == "Roblox")
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241 174 204 245 248
 					try
 					{
 						switch(Check_Off)
-						{
+						{ // RewardBee
 							case "241":case "180":case "179":case "123":case "109":case "145":case "239":case "178":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
 							iimPlayCode("WAIT SECONDS=5");
 							RewardBee(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Roblox
+							case "248":case "245":case "174":case "204":
+							var Thang = Math.floor((Math.random() * 12) + 2);
+							var Ngay = Math.floor((Math.random() * 9) + 1);
+							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var pass = "hugyftdedw";
+							var Name = Tao_Name();
+							var Roblox = "CODE:";		
+							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
+							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
+							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
+							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
+							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
+							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
+							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
+							Roblox += "	SET !ENCRYPTION NO"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
+							Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
+							Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
+							Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
+							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
+							Roblox += "	WAIT SECONDS=20"+" \n";
+							iimPlay(Roblox);
 							break;
 						}
 						off++;
@@ -140,7 +167,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				// Tripping
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
 				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281
 					try
@@ -187,7 +213,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				// AARP 
 				else if(title == "Dream Builders Contest"||title == "(re)starting YOUR CAREER AFTER 45"||title == "Small Gestures. BIG Impact. By AARP"||title == "THE AARP DAILY DISCOVERY GIVEAWAY"||title == "Retirement in Reach $50,000 Sweepstakes")
 				{ // 49 46 116 291
 					try
@@ -203,45 +228,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Roblox")
-				{ // 174 204 245 248
-					try
-					{
-						switch(Check_Off)
-						{
-							case "248":case "245":case "174":case "204":
-							var Thang = Math.floor((Math.random() * 12) + 2);
-							var Ngay = Math.floor((Math.random() * 9) + 1);
-							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
-							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var pass = "hugyftdedw";
-							var Name = Tao_Name();
-							var Roblox = "CODE:";		
-							Roblox += 'EVENT TYPE=CLICK SELECTOR="#MonthDropdown" BUTTON=0'+" \n";
-							Roblox += "EVENT TYPE=CLICK SELECTOR=\"#MonthDropdown>OPTION:nth-of-type("+Thang+")\" BUTTON=0"+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:DayDropdown CONTENT=%"+Ngay+" \n";
-							Roblox += "	TAG POS=1 TYPE=SELECT ATTR=ID:YearDropdown CONTENT=%"+Nam+" \n";
-							// Roblox += "	SET !DATASOURCE Last_First.txt"+" \n";
-							// Roblox += "	SET !DATASOURCE_LINE "+Ten_Ho+" \n";
-							// Roblox += "	SET !DATASOURCE_COLUMNS 2"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:signup-username CONTENT="+Name+" \n";
-							Roblox += "	SET !ENCRYPTION NO"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:signup-password-confirm CONTENT="+pass+" \n";
-							Roblox += "	TAG POS=1 TYPE=DIV ATTR=CLASS:cover-sprite<SP>gender<SP>female&&TXT:"+" \n";
-							Roblox += "	TAG POS=1 TYPE=LABEL ATTR=ID:agreeTermsPrivacyLabel	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:agreeTermsPrivacy CONTENT=YES	"+" \n";
-							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
-							Roblox += "	WAIT SECONDS=20"+" \n";
-							iimPlay(Roblox);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				// Hàng Zipcode
 				else if(title == "Life Insurance"||title == "Mortgage"||title == "Insurance Branch"||title == "Mortgage Insurance"||title == "Health Insurance"||title == "Medicare Insurance"||title == "Home Insurance")
 				{ // 115 114 2
 					try  
@@ -301,7 +287,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "0":
 							Free_Offer_for_capcha(File_Mail_info);
 							break;
 						}
@@ -310,14 +296,64 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Free Fantasy Football - NFL.com")
-				{ //
+				else if(title == "Free Fantasy Football - NFL.com"||title == "Share Your Freebies"||title == "Next Millennium")
+				{ // 134 137 186 209
 					try
 					{
 						switch(Check_Off)
-						{
+						{ // NFL
 							case "1":
 							NFL(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Share Your Freebies
+							case "186":case "137":case "134":
+							Share_Your_Freebies(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Next Millennium
+							case "209":
+							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
+							var NextMillennium = "CODE:";
+							NextMillennium += "SET !ERRORIGNORE YES"+"\n";
+							NextMillennium += "SET !TIMEOUT_TAG 0"+"\n";
+							NextMillennium += "SET !DATASOURCE Last_First.txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 5"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:FIRST_NAME CONTENT={{!COL1}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:LAST_NAME CONTENT={{!COL2}}"+"\n";
+							NextMillennium += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:ADDRESS1 CONTENT={{!COL2}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:ZIP CONTENT={{!COL5}}"+"\n";
+							NextMillennium += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
+							NextMillennium += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:PageForm ATTR=ID:form1_leadem CONTENT={{!COL1}}"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_AREA CONTENT="+Random_Phon0+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_PREFIX CONTENT="+Random_Phon1+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_SUFFIX CONTENT="+Random_Phon2+"\n";
+							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Do<SP>you<SP>have<SP>an<SP>active<SP>checking<SP>account?*"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnHasCheckingAccountYes"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnConsultationNo"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnCheckingNSYes"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:PageForm ATTR=ID:TERMS CONTENT=YES"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=BUTTON FORM=ID:PageForm ATTR=ID:SUBMIT"+"\n";
+							NextMillennium += "WAIT SECONDS=3"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=A ATTR=ID:SKIP1"+"\n";
+							NextMillennium += "WAIT SECONDS=1"+"\n";
+							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "TAG POS=2 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
+							NextMillennium += "TAG POS=3 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "TAG POS=4 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
+							NextMillennium += "TAG POS=5 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
+							NextMillennium += "WAIT SECONDS=20"+"\n";
+							iimPlay(NextMillennium);
 							break;
 						}
 						off++;
@@ -331,12 +367,12 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "1":
+							case "0":
 								var Sl_F5 = 0;
 								var Off_2263_link1 = "http://quizfactory.com/simple/witches/2.php";
 								switch(Check_Off)
 								{
-									case "2263":
+									case "0":
 										var Witches_Trivia_Quiz = "CODE:";
 										Witches_Trivia_Quiz += "SET !ERRORIGNORE YES" + "\n";
 										Witches_Trivia_Quiz += "SET !TIMEOUT_PAGE 20"+"\n";
@@ -348,7 +384,7 @@ while(true)
 										Witches_Trivia_Quiz += "TAG POS=1 TYPE=A ATTR=TXT:Continue<SP>>>"+" \n";
 										iimPlay(Witches_Trivia_Quiz);
 									break;
-									case "1280":
+									case "0":
 										var IQ_Quiz = "CODE:";
 										IQ_Quiz += "SET !ERRORIGNORE YES"+" \n";
 										IQ_Quiz += "SET !TIMEOUT_PAGE 30"+" \n";
@@ -358,7 +394,7 @@ while(true)
 										IQ_Quiz += "URL GOTO="+off_1280+"\n";
 										iimPlay(IQ_Quiz);
 									break;
-									case "1960":
+									case "0":
 										var SuperHeroQuiz = "CODE:";
 										SuperHeroQuiz += "SET !ERRORIGNORE YES"+" \n";
 										SuperHeroQuiz += "SET !TIMEOUT_PAGE 30"+" \n";
@@ -495,28 +531,13 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Share Your Freebies")
-				{ // 134 137 186
-					try
-					{
-						switch(Check_Off)
-						{
-							case "186":case "137":case "134":
-							Share_Your_Freebies(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
 				else if(title == "3015-General"||title == "Join RewardTV - TV Trivia - Cash & Prizes - RewardTV UK")
 				{ // 
 					try
 					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // RewardTV
+							case "0":
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
 							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
 							var Pass = Tao_Pass();
@@ -555,8 +576,8 @@ while(true)
 					try
 					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Assisting
+							case "0":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Your = "CODE:";
 							Your += "SET !ERRORIGNORE YES"+" \n";
@@ -589,12 +610,12 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "TimeBucks"||title == "CUFI"||title == "Make Room")
+				else if(title == "TimeBucks"||title == "CUFI"||title == "Make Room"||title == "iPhone 7 or iPhone 7 Plus"||title == "Win $1,000")
 				{ // 218 345
 					try
 					{
 						switch(Check_Off)
-						{
+						{ // CUFI | Make Room
 							case "218":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Make_Room = "CODE:";
@@ -622,7 +643,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{
+						{ // TimeBucks
 							case "345":
 							var pass = Tao_Pass();
 							var TimeBucks = "CODE:";
@@ -652,18 +673,9 @@ while(true)
 							// iimPlay(TimeBucks_Login);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "iPhone 7 or iPhone 7 Plus"||title == "Win $1,000")
-				{ //
-					try
-					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // iPhone 7 | Win $1,000
+							case "0":
 							Win_$1000(File_Mail_info);
 							break;
 						}
@@ -672,43 +684,25 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Vouchers Avenue : Iphone 8")
+				else if(title == "Vouchers Avenue : Iphone 8"||title == "Depend - Formstack"||title == "Simply Cellphones - Get a FREE or Subsized Cell Phone")
 				{ //
 					try
 					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Vouchers Avenue
+							case "0":
 							Vouchers_Avenue(File_Mail_info);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Depend - Formstack")
-				{ //
-					try
-					{
 						switch(Check_Off)
-						{
+						{ // Depend - Formstack
 							case "0":
 							Depend(File_Mail_info);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Simply Cellphones - Get a FREE or Subsized Cell Phone")
-				{ //
-					try
-					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Simply Cellphones
+							case "0":
 							Simply(File_Mail_info);
 							break;
 						}
@@ -717,13 +711,13 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Survey")
+				else if(title == "Survey"||title == "ResourceDepot.info"||title == "Rent-to-Own Reviews |"title == "- Save With Coupons")
 				{ //
 					try
 					{	
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Survey
+							case "0":
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
 							var Random_Nam = Math.floor((Math.random() * (1955 - 1945 + 1)) + 1945);
@@ -809,32 +803,14 @@ while(true)
 							iimPlay(Survey_b2);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "ResourceDepot.info")
-				{ // 
-					try
-					{
 						switch(Check_Off)
-						{
+						{ // ResourceDepot
 							case "1":
 							Find_Family_Support(File_Mail_info);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Rent-to-Own Reviews |")
-				{ // 
-					try
-					{
 						switch(Check_Off)
-						{
+						{ // Rent-to-Own Reviews
 							case "1":
 							iimPlayCode("WAIT SECONDS=3");
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
@@ -863,17 +839,8 @@ while(true)
 							iimPlay(Rent_to_Own);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "- Save With Coupons")
-				{ // 
-					try
-					{
 						switch(Check_Off)
-						{
+						{ // Save With Coupons
 							case "1":
 							iimPlay(REFRESH_Site);
 							var Coupons = "CODE:";
@@ -893,28 +860,19 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Free Fall Samples")
+				else if(title == "Free Fall Samples"||title == "Pillsbury - Wellness by Samples and Rebates")
 				{ // 
 					try
 					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Free Fall Samples
+							case "0":
 							Free_Fall_Samples(File_Mail_info);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Pillsbury - Wellness by Samples and Rebates")
-				{ // 
-					try
-					{
 						switch(Check_Off)
-						{
-							case "1":
+						{ // Pillsbury
+							case "0":
 							var pass = Tao_Pass();
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
@@ -1116,12 +1074,12 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Register To Play")
-				{ // 164 165 167
+				else if(title == "Register To Play"||title == "Disney"||title == "Vaniki US"||title == "Winter Samples")
+				{ // 164 165 167 73 106 112 128 138 62 61 7
 					try
 					{
 						switch(Check_Off)
-						{
+						{ // Register To Play
 							case "167":case "164":case "165":
 							var Register_To_Play = "CODE:";
 							Register_To_Play += "SET !ERRORIGNORE YES"+"\n";
@@ -1138,125 +1096,8 @@ while(true)
 							Giveaway(File_Mail_info);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Visa Pre-paidcard"||title == "XMAS"||title == "(1) Amazon Gift!")
-				{ // 224
-					try
-					{
 						switch(Check_Off)
-						{
-							case "224":
-							Amazon(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Depend - Formstack")
-				{// 
-					try
-					{
-						switch(Check_Off)
-						{
-							case "1":
-							Depend(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "ConsumerRewards.us.com")
-				{// 
-					try
-					{
-						switch(Check_Off)
-						{
-							case "0":
-							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-							var Random_Thang = Math.floor((Math.random() * 9) + 1);
-							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
-							var us_com = "CODE:";
-							us_com += "SET !ERRORIGNORE YES"+"\n";
-							us_com += "SET !TIMEOUT_TAG 0 "+"\n";
-							us_com += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							us_com += "SET !DATASOURCE_LINE 1"+"\n";
-							us_com += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ACTION:/?session_id=* ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=ID:resident CONTENT=YES"+"\n";
-							us_com += "WAIT SECONDS=5"+"\n";
-							us_com += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=* ATTR=TXT:Continue"+"\n";
-							us_com += "WAIT SECONDS=10"+"\n";
-							us_com += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							us_com += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:fname CONTENT={{!COL1}}"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:lname CONTENT={{!COL2}}"+"\n";
-							us_com += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							us_com += "SET !DATASOURCE_LINE 1"+"\n";
-							us_com += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:address CONTENT={{!COL2}}"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_month_digit CONTENT="+Random_Ngay+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_day CONTENT="+Random_Thang+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_year CONTENT="+Random_Nam+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
-							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
-							us_com += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:reg-form ATTR=ID:gender-male"+"\n";
-							us_com += "TAG POS=1 TYPE=BUTTON FORM=ID:reg-form ATTR=TXT:Continue"+"\n";
-							us_com += "WAIT SECONDS=20"+"\n";
-							iimPlay(us_com);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "myrewardscenter.us.com"||title == "FavoriteConsumerBrands.com")
-				{// 103
-					try
-					{
-						switch(Check_Off)
-						{
-							case "103":
-							FavoriteConsumerBrands(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "$500 Amazon Gift Card")
-				{// 
-					try
-					{
-						switch(Check_Off)
-						{
-							case "1":
-							Amazon_$500(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Disney")
-				{// 73 106 112 128 138
-					try
-					{
-						switch(Check_Off)
-						{
+						{ // Disney
 							case "138":case "128":case "112":case "106":case "73":
 							var Ngay = ["February","March","April","May","June","August","January"];
 							var random_Ngay = Math.floor((Math.random() * 6) + 0);
@@ -1306,15 +1147,272 @@ while(true)
 							iimPlay(Disney);
 							break;
 						}
+						switch(Check_Off)
+						{ // Vaniki
+							case "61":case "62":
+							Vaniki(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // QualityHealth | Winter Samples
+							case "7":
+							QualityHealth(File_Mail_info);
+							break;
+						}
 						off++;
 						break;
 					}
 					catch(exception){}
 				}
-				else if(title == "Sign up now for access to your exclusive offers!")
-				{// 310 306
+				else if(title == "Visa Pre-paidcard"||title == "XMAS"||title == "(1) Amazon Gift!"||title == "$500 Amazon Gift Card"||title == "Get a Gift Card")
+				{ // 224
 					try
 					{
+						switch(Check_Off)
+						{
+							case "224":
+							Amazon(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "0":
+							Amazon_$500(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "0":
+							Get_a_Gift_Card(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "myrewardscenter.us.com"||title == "FavoriteConsumerBrands.com"||title == "ConsumerRewards.us.com")
+				{// 103
+					try
+					{
+						switch(Check_Off)
+						{
+							case "103":
+							FavoriteConsumerBrands(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "0":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+							var us_com = "CODE:";
+							us_com += "SET !ERRORIGNORE YES"+"\n";
+							us_com += "SET !TIMEOUT_TAG 0 "+"\n";
+							us_com += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							us_com += "SET !DATASOURCE_LINE 1"+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ACTION:/?session_id=* ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=ID:resident CONTENT=YES"+"\n";
+							us_com += "WAIT SECONDS=5"+"\n";
+							us_com += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=* ATTR=TXT:Continue"+"\n";
+							us_com += "WAIT SECONDS=10"+"\n";
+							us_com += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:fname CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:lname CONTENT={{!COL2}}"+"\n";
+							us_com += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							us_com += "SET !DATASOURCE_LINE 1"+"\n";
+							us_com += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:reg-form ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_month_digit CONTENT="+Random_Ngay+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_day CONTENT="+Random_Thang+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:dob_year CONTENT="+Random_Nam+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:reg-form ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
+							us_com += "TAG POS=1 TYPE=SPAN ATTR=TXT:"+"\n";
+							us_com += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:reg-form ATTR=ID:gender-male"+"\n";
+							us_com += "TAG POS=1 TYPE=BUTTON FORM=ID:reg-form ATTR=TXT:Continue"+"\n";
+							us_com += "WAIT SECONDS=20"+"\n";
+							iimPlay(us_com);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "EverydayFamily.com - Get FREE Baby Samples in your mailbox!"||title == "Publishers Clearing House - Win $2,600,000 Plus $5,000 a Week for Life!")
+				{// 148 211 300
+					try
+					{
+						switch(Check_Off)
+						{
+							case "148":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Nam = Math.floor((Math.random() * (2017 - 2010  + 1)) + 2010 );
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_checkbox = Math.floor((Math.random() * 6) + 1);
+							var EverydayFamily = "CODE:";
+							EverydayFamily += "SET !ERRORIGNORE YES"+"\n";
+							EverydayFamily += "SET !TIMEOUT_TAG 0 "+"\n";
+							EverydayFamily += "SET !DATASOURCE Last_First.txt"+"\n";
+							EverydayFamily += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							EverydayFamily += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							EverydayFamily += "TAG POS="+Random_checkbox+" TYPE=SPAN ATTR=TXT:"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:fn CONTENT={{!COL1}}"+"\n";
+							EverydayFamily += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							EverydayFamily += "SET !DATASOURCE_LINE 1"+"\n";
+							EverydayFamily += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:e CONTENT={{!COL1}}"+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_month CONTENT=%"+Random_Thang+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_day CONTENT=%"+Random_Ngay+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_year CONTENT=%"+Random_Nam+"\n";
+							EverydayFamily += "TAG POS=1 TYPE=A ATTR=TXT:Join<SP>Now<SP>>>"+"\n";
+							EverydayFamily += "WAIT SECONDS=20"+"\n";
+							iimPlay(EverydayFamily);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "300":case "211":
+							var PCH = "CODE:";
+							PCH += "SET !ERRORIGNORE YES"+"\n";
+							PCH += "SET !TIMEOUT_TAG 0"+"\n";
+							PCH += "SET !DATASOURCE Last_First.txt"+"\n";
+							PCH += "SET !DATASOURCE_LINE 3"+"\n";
+							PCH += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:First_Name CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:Last_Name CONTENT={{!COL2}}"+"\n";
+							PCH += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							PCH += "SET !DATASOURCE_LINE 1"+"\n";
+							PCH += "SET !DATASOURCE_COLUMNS 1 "+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:confirm_email CONTENT={{!COL1}}"+"\n";
+							PCH += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ACTION:/s/link/acq ATTR=SRC:http://link.e.pchgiveaway.com/site/9039/images/btn-cs-lp-6-20-16-001.gif"+"\n";
+							PCH += "WAIT SECONDS=20"+"\n";
+							iimPlay(PCH);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
+				else if(title == "LivingWIthPain.org"||title == "Rent 2 Own Homes"||title == "Enfamil_WF - Formstack"||title == "Sign up now for access to your exclusive offers!"||title == "Opinion City")
+				{// 213 219 292 305 299 310 306 147 257
+					try
+					{
+						switch(Check_Off)
+						{ // chưa code xong
+							case "213":
+							var Random_checkbox = ["9","10","11","13","14"];
+							var RD = Math.floor((Math.random() * 4) + 0);
+							var LivingWIthPain = "CODE:";
+							LivingWIthPain += "SET !ERRORIGNORE YES"+"\n";
+							LivingWIthPain += "SET !TIMEOUT_TAG 0"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Last_First.txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 4"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:name-2 CONTENT={{!COL1}}"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Last-Name-3 CONTENT={{!COL2}}"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:wf-form-about ATTR=ID:email-2 CONTENT={{!COL1}}"+"\n";
+							LivingWIthPain += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
+							LivingWIthPain += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Phone-2 CONTENT={{!COL1}} "+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:field-2 CONTENT={{!COL5}} "+"\n";
+							LivingWIthPain += "EVENT TYPE=CLICK SELECTOR=\"#checkbox-"+Random_checkbox[RD]+"\" BUTTON=0"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:wf-form-about ATTR=ID:checkbox CONTENT=YES"+"\n";
+							LivingWIthPain += "TAG POS=1 TYPE=A ATTR=ID:start"+"\n";
+							iimPlay(LivingWIthPain);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "219":
+							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
+							var Rent_2_Own_Homes = "CODE:";
+							Rent_2_Own_Homes += "SET !ERRORIGNORE YES"+"\n";
+							Rent_2_Own_Homes += "SET !TIMEOUT_TAG 0"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Rent_2_Own_Homes += "EVENT TYPE=CLICK SELECTOR=\"#zip\" BUTTON=0"+"\n";
+							Rent_2_Own_Homes += "EVENTS TYPE=KEYPRESS SELECTOR=\"#zip\" CHARS={{!COL5}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:SEARCH"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Last_First.txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 3"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+""+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:YES"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=A ATTR=TXT:Not<SP>interested<SP>in<SP>repairing<SP>my<SP>credit"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
+							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
+							Rent_2_Own_Homes += "WAIT SECONDS=15"+"\n";
+							iimPlay(Rent_2_Own_Homes);
+							break;
+						}
+						switch(Check_Off)
+						{
+							case "299":case "305":case "292":
+							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1989 - 1973  + 1)) + 1973 );
+							var Enfamil_WF = "CODE:";
+							Enfamil_WF += "SET !ERRORIGNORE YES"+"\n";
+							Enfamil_WF += "SET !TIMEOUT_TAG 0"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Last_First.txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:fsForm2915699 ATTR=ID:field59646738_1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-first CONTENT={{!COL1}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-last CONTENT={{!COL2}}"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:fsForm2915699 ATTR=ID:field59646719 CONTENT={{!COL1}}"+"\n";
+							Enfamil_WF += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
+							Enfamil_WF += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646862 CONTENT={{!COL2}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646863 CONTENT={{!COL3}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59646864 CONTENT=%{{!COL4}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646867 CONTENT={{!COL5}}"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361M CONTENT=%0"+Random_Ngay+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361D CONTENT=%0"+Random_Thang+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361Y CONTENT=%"+Random_Nam+"\n";
+							Enfamil_WF += "WAIT SECONDS=1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580M CONTENT=%0"+Random_Ngay+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580D CONTENT=%0"+Random_Thang+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580Y CONTENT=%2018"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647584 CONTENT=%0002"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647902 CONTENT=%1"+"\n";
+							Enfamil_WF += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:fsForm2915699 ATTR=ID:fsSubmitButton2915699"+"\n";
+							Enfamil_WF += "WAIT SECONDS=15"+"\n";
+							iimPlay(Enfamil_WF);
+							break;
+						}
 						switch(Check_Off)
 						{
 							case "306":case "310":
@@ -1371,97 +1469,6 @@ while(true)
 							}
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Get a Gift Card")
-				{// 
-					try
-					{
-						switch(Check_Off)
-						{
-							case "0":
-							Get_a_Gift_Card(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Vaniki US")
-				{// 62 61
-					try
-					{
-						switch(Check_Off)
-						{
-							case "61":case "62":
-							Vaniki(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Winter Samples") // QualityHealth
-				{// 7
-					try
-					{
-						switch(Check_Off)
-						{
-							case "7":
-							QualityHealth(File_Mail_info);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "EverydayFamily.com - Get FREE Baby Samples in your mailbox!")
-				{// 148
-					try
-					{
-						switch(Check_Off)
-						{
-							case "148":
-							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var Random_Nam = Math.floor((Math.random() * (2017 - 2010  + 1)) + 2010 );
-							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-							var Random_Thang = Math.floor((Math.random() * 9) + 1);
-							var Random_checkbox = Math.floor((Math.random() * 6) + 1);
-							var EverydayFamily = "CODE:";
-							EverydayFamily += "SET !ERRORIGNORE YES"+"\n";
-							EverydayFamily += "SET !TIMEOUT_TAG 0 "+"\n";
-							EverydayFamily += "SET !DATASOURCE Last_First.txt"+"\n";
-							EverydayFamily += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							EverydayFamily += "SET !DATASOURCE_COLUMNS 2  "+"\n";
-							EverydayFamily += "TAG POS="+Random_checkbox+" TYPE=SPAN ATTR=TXT:"+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:fn CONTENT={{!COL1}}"+"\n";
-							EverydayFamily += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							EverydayFamily += "SET !DATASOURCE_LINE 1"+"\n";
-							EverydayFamily += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:lpform ATTR=ID:e CONTENT={{!COL1}}"+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_month CONTENT=%"+Random_Thang+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_day CONTENT=%"+Random_Ngay+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=SELECT FORM=NAME:lpform ATTR=ID:due_date_year CONTENT=%"+Random_Nam+"\n";
-							EverydayFamily += "TAG POS=1 TYPE=A ATTR=TXT:Join<SP>Now<SP>>>"+"\n";
-							EverydayFamily += "WAIT SECONDS=20"+"\n";
-							iimPlay(EverydayFamily);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Opinion City")
-				{// 147 257
-					try
-					{
 						switch(Check_Off)
 						{
 							case "257":case "147":
@@ -1545,222 +1552,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Next Millennium")
-				{// 209
-					try
-					{
-						switch(Check_Off)
-						{
-							case "209":
-							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
-							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
-							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
-							var NextMillennium = "CODE:";
-							NextMillennium += "SET !ERRORIGNORE YES"+"\n";
-							NextMillennium += "SET !TIMEOUT_TAG 0"+"\n";
-							NextMillennium += "SET !DATASOURCE Last_First.txt"+"\n";
-							NextMillennium += "SET !DATASOURCE_LINE 5"+"\n";
-							NextMillennium += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:FIRST_NAME CONTENT={{!COL1}}"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:LAST_NAME CONTENT={{!COL2}}"+"\n";
-							NextMillennium += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
-							NextMillennium += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:PageForm ATTR=ID:ADDRESS1 CONTENT={{!COL2}}"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:ZIP CONTENT={{!COL5}}"+"\n";
-							NextMillennium += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							NextMillennium += "SET !DATASOURCE_LINE 1"+"\n";
-							NextMillennium += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:PageForm ATTR=ID:form1_leadem CONTENT={{!COL1}}"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_AREA CONTENT="+Random_Phon0+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_PREFIX CONTENT="+Random_Phon1+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:PageForm ATTR=ID:HOME_PHONE_SUFFIX CONTENT="+Random_Phon2+"\n";
-							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Do<SP>you<SP>have<SP>an<SP>active<SP>checking<SP>account?*"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnHasCheckingAccountYes"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnConsultationNo"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:PageForm ATTR=ID:rbtnCheckingNSYes"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:PageForm ATTR=ID:TERMS CONTENT=YES"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=BUTTON FORM=ID:PageForm ATTR=ID:SUBMIT"+"\n";
-							NextMillennium += "WAIT SECONDS=3"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=A ATTR=ID:SKIP1"+"\n";
-							NextMillennium += "WAIT SECONDS=1"+"\n";
-							NextMillennium += "TAG POS=1 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
-							NextMillennium += "TAG POS=2 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
-							NextMillennium += "TAG POS=3 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
-							NextMillennium += "TAG POS=4 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:No"+"\n";
-							NextMillennium += "TAG POS=5 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
-							NextMillennium += "WAIT SECONDS=20"+"\n";
-							iimPlay(NextMillennium);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Publishers Clearing House - Win $2,600,000 Plus $5,000 a Week for Life!")
-				{// 211 300
-					try
-					{
-						switch(Check_Off)
-						{
-							case "300":case "211":
-							var PCH = "CODE:";
-							PCH += "SET !ERRORIGNORE YES"+"\n";
-							PCH += "SET !TIMEOUT_TAG 0"+"\n";
-							PCH += "SET !DATASOURCE Last_First.txt"+"\n";
-							PCH += "SET !DATASOURCE_LINE 3"+"\n";
-							PCH += "SET !DATASOURCE_COLUMNS 2  "+"\n";
-							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:First_Name CONTENT={{!COL1}}"+"\n";
-							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:Last_Name CONTENT={{!COL2}}"+"\n";
-							PCH += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							PCH += "SET !DATASOURCE_LINE 1"+"\n";
-							PCH += "SET !DATASOURCE_COLUMNS 1 "+"\n";
-							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							PCH += "TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:/s/link/acq ATTR=ID:confirm_email CONTENT={{!COL1}}"+"\n";
-							PCH += "TAG POS=1 TYPE=INPUT:IMAGE FORM=ACTION:/s/link/acq ATTR=SRC:http://link.e.pchgiveaway.com/site/9039/images/btn-cs-lp-6-20-16-001.gif"+"\n";
-							PCH += "WAIT SECONDS=20"+"\n";
-							iimPlay(PCH);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "LivingWIthPain.org")
-				{// 213
-					try
-					{
-						switch(Check_Off)
-						{ // chưa code xong
-							case "213":
-							var Random_checkbox = ["9","10","11","13","14"];
-							var RD = Math.floor((Math.random() * 4) + 0);
-							var LivingWIthPain = "CODE:";
-							LivingWIthPain += "SET !ERRORIGNORE YES"+"\n";
-							LivingWIthPain += "SET !TIMEOUT_TAG 0"+"\n";
-							LivingWIthPain += "SET !DATASOURCE Last_First.txt"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_LINE 4"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:name-2 CONTENT={{!COL1}}"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Last-Name-3 CONTENT={{!COL2}}"+"\n";
-							LivingWIthPain += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:wf-form-about ATTR=ID:email-2 CONTENT={{!COL1}}"+"\n";
-							LivingWIthPain += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_LINE 1"+"\n";
-							LivingWIthPain += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:Phone-2 CONTENT={{!COL1}} "+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:wf-form-about ATTR=ID:field-2 CONTENT={{!COL5}} "+"\n";
-							LivingWIthPain += "EVENT TYPE=CLICK SELECTOR=\"#checkbox-"+Random_checkbox[RD]+"\" BUTTON=0"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:wf-form-about ATTR=ID:checkbox CONTENT=YES"+"\n";
-							LivingWIthPain += "TAG POS=1 TYPE=A ATTR=ID:start"+"\n";
-							iimPlay(LivingWIthPain);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Rent 2 Own Homes")
-				{// 219
-					try
-					{
-						switch(Check_Off)
-						{
-							case "219":
-							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
-							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
-							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
-							var Rent_2_Own_Homes = "CODE:";
-							Rent_2_Own_Homes += "SET !ERRORIGNORE YES"+"\n";
-							Rent_2_Own_Homes += "SET !TIMEOUT_TAG 0"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							Rent_2_Own_Homes += "EVENT TYPE=CLICK SELECTOR=\"#zip\" BUTTON=0"+"\n";
-							Rent_2_Own_Homes += "EVENTS TYPE=KEYPRESS SELECTOR=\"#zip\" CHARS={{!COL5}}"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:SEARCH"+"\n";
-							Rent_2_Own_Homes += "WAIT SECONDS=1"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE Last_First.txt"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 3"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 2  "+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
-							Rent_2_Own_Homes += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+""+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
-							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=TXT:YES"+"\n";
-							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=A ATTR=TXT:Not<SP>interested<SP>in<SP>repairing<SP>my<SP>credit"+"\n";
-							Rent_2_Own_Homes += "WAIT SECONDS=0.5"+"\n";
-							Rent_2_Own_Homes += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
-							Rent_2_Own_Homes += "WAIT SECONDS=15"+"\n";
-							iimPlay(Rent_2_Own_Homes);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Enfamil_WF - Formstack")
-				{// 292 305 299
-					try
-					{
-						switch(Check_Off)
-						{
-							case "299":case "305":case "292":
-							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
-							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-							var Random_Thang = Math.floor((Math.random() * 9) + 1);
-							var Random_Nam = Math.floor((Math.random() * (1989 - 1973  + 1)) + 1973 );
-							var Enfamil_WF = "CODE:";
-							Enfamil_WF += "SET !ERRORIGNORE YES"+"\n";
-							Enfamil_WF += "SET !TIMEOUT_TAG 0"+"\n";
-							Enfamil_WF += "SET !DATASOURCE Last_First.txt"+"\n";
-							Enfamil_WF += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-							Enfamil_WF += "SET !DATASOURCE_COLUMNS 2"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:fsForm2915699 ATTR=ID:field59646738_1"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-first CONTENT={{!COL1}}"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646715-last CONTENT={{!COL2}}"+"\n";
-							Enfamil_WF += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
-							Enfamil_WF += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:fsForm2915699 ATTR=ID:field59646719 CONTENT={{!COL1}}"+"\n";
-							Enfamil_WF += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							Enfamil_WF += "SET !DATASOURCE_LINE 1"+"\n";
-							Enfamil_WF += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646862 CONTENT={{!COL2}}"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646863 CONTENT={{!COL3}}"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59646864 CONTENT=%{{!COL4}}"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:fsForm2915699 ATTR=ID:field59646867 CONTENT={{!COL5}}"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361M CONTENT=%0"+Random_Ngay+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361D CONTENT=%0"+Random_Thang+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field60048361Y CONTENT=%"+Random_Nam+"\n";
-							Enfamil_WF += "WAIT SECONDS=1"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580M CONTENT=%0"+Random_Ngay+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580D CONTENT=%0"+Random_Thang+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647580Y CONTENT=%2018"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647584 CONTENT=%0002"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=SELECT FORM=ID:fsForm2915699 ATTR=ID:field59647902 CONTENT=%1"+"\n";
-							Enfamil_WF += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:fsForm2915699 ATTR=ID:fsSubmitButton2915699"+"\n";
-							Enfamil_WF += "WAIT SECONDS=15"+"\n";
-							iimPlay(Enfamil_WF);
-							break;
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 					try
@@ -1776,7 +1567,6 @@ while(true)
 					}
 					catch(exception){}
 				}
-				// Spam Mail Submit
 				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
 				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315
 					try //
@@ -1893,9 +1683,9 @@ while(true)
 				}
 			}
 			else 
-			{ // 3
+			{// Con Neu Site Co Title La Rong
 				if(Check_Off == "0")
-				{
+				{// Neu Site Rong Thi Check Ma Offer
 					var Insurance_check = "CODE:";
 					Insurance_check += "SET !ERRORIGNORE YES"+" \n";
 					Insurance_check += "SET !TIMEOUT_TAG 0"+" \n";
@@ -1965,7 +1755,7 @@ while(true)
 					}
 				}
 				else
-				{ // site rỗng thì F5 lại 
+				{// Neu Check Ma Offer Tren Khong Co Thi F5
 					iimPlay(REFRESH_Site);
 					F5_site_Rong++;
 					iimDisplay("Code Off "+Check_Off+" Error site\nrefresh : "+F5_site_Rong);
@@ -1976,13 +1766,10 @@ while(true)
 					}
 				}
 			}
-		} // vồng lặp làm off
-		// vồng lặp làm off
+		}
 	}
-	// nếu of chưa xong
-}
-// vong lap chính
-
+}// Vong Lap Cho Toan Bo Qua Trinh Lam
+ 
 //@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\  
 
 function Dailybreak(File_Mail_info)                      // Dailybreak
@@ -2624,20 +2411,20 @@ function Amazon(File_Mail_info)
 	switch(Check_Off)
 	{
 		case "0":
-			var ONDIALOG = "CODE:";
-			ONDIALOG += "WAIT SECONDS=5"+"\n";
-			ONDIALOG += "ONDIALOG POS=1 BUTTON=OK CONTENT="+"\n";
-			iimPlay(ONDIALOG);
-			var Amazon_B1 = "CODE:";
-			Amazon_B1 += "SET !ERRORIGNORE YES"+"\n";
-			Amazon_B1 += "SET !TIMEOUT_TAG 0 "+"\n";
-			Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
-			Amazon_B1 += "WAIT SECONDS=10"+"\n";
-			Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
-			Amazon_B1 += "WAIT SECONDS=10"+"\n";
-			Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#secondpage>DIV:nth-of-type(4)>TABLE>TBODY>TR>TD:nth-of-type(2)>DIV>A\" BUTTON=0"+"\n";
-			Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
-			iimPlay(Amazon_B1);
+		var ONDIALOG = "CODE:";
+		ONDIALOG += "WAIT SECONDS=5"+"\n";
+		ONDIALOG += "ONDIALOG POS=1 BUTTON=OK CONTENT="+"\n";
+		iimPlay(ONDIALOG);
+		var Amazon_B1 = "CODE:";
+		Amazon_B1 += "SET !ERRORIGNORE YES"+"\n";
+		Amazon_B1 += "SET !TIMEOUT_TAG 0 "+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+		Amazon_B1 += "WAIT SECONDS=10"+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+		Amazon_B1 += "WAIT SECONDS=10"+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#secondpage>DIV:nth-of-type(4)>TABLE>TBODY>TR>TD:nth-of-type(2)>DIV>A\" BUTTON=0"+"\n";
+		Amazon_B1 += "EVENT TYPE=CLICK SELECTOR=\"#teaser>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+		iimPlay(Amazon_B1);
 		break;
 		case "224":
 		var Amazon_B1 = "CODE:";
@@ -4018,6 +3805,7 @@ function NFL(File_Mail_info)
 	iimPlay(NFL);
 	iimPlayCode("WAIT SECONDS=10");
 }
+///////////////////////////////////////////////////
 function Tao_Mail() 
 {// hàm reg Mail.com
 	var User_Pas_Mail = "";
