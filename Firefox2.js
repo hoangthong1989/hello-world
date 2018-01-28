@@ -7,8 +7,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","297","305","175","316","319"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["341","297","305","245","316","319","352"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -21,14 +21,14 @@ while(true)
 	{// Con Neu Chua Thi Tiến hành làm offer 
 		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;		
-		///////////////////////////////
+		/////////////// Ham F5 Chờ Gọi ////////////////
 		var REFRESH_Site = "CODE:";
 		REFRESH_Site += "SET !ERRORIGNORE YES" + "\n";
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
 		///////////////////////////////
 		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
-		//////////////////////////////
+		///////////////// Load Link Lam Offers /////////////
 		var Load_Link_Nhanh = "CODE:";
 		Load_Link_Nhanh += "SET !ERRORIGNORE YES" + "\n";
 		Load_Link_Nhanh += "SET !TIMEOUT_PAGE 50"+"\n";
@@ -36,7 +36,7 @@ while(true)
 		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
-		/////////////////////////////// 
+		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
 			case "345":
@@ -65,7 +65,6 @@ while(true)
 			iimPlayCode("WAIT SECONDS=1");
 			break;
 		}
-		// Cho Lệnh Chờ Nếu Site Bị Trắng
 		while(true)
 		{ 
 			iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
@@ -73,7 +72,7 @@ while(true)
 			if(title != "")
 			{ // Neu Site Co Title La Khong Rong
 				if(Check_Off == "0")
-				{ //
+				{ // 
 					var Insurance_check = "CODE:";
 					Insurance_check += "SET !ERRORIGNORE YES"+" \n";
 					Insurance_check += "SET !TIMEOUT_TAG 0"+" \n";
@@ -168,12 +167,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352
 					try
 					{
 						switch(Check_Off)
 						{
-							case "281":case "6":case "286":
+							case "352":case "281":case "6":case "286":
 							case "240":case "203":case "221":case "171":case "172":case "181":case "176":case "26":
 							case "252":case "233":case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -472,7 +471,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Congratulations!"||title == "McDonalds-100$"||title == "SurveysandPromotions")
+				else if(title == "Congratulations!"||title == "McDonalds-100$"||title == "SurveysandPromotions"||title == "Free Fall Samples"||title == "Pillsbury - Wellness by Samples and Rebates")
 				{ // 261 314
 					try
 					{
@@ -526,12 +525,59 @@ while(true)
 							}
 							break;
 						}
+						switch(Check_Off)
+						{ // Free Fall Samples
+							case "0":
+							Free_Fall_Samples(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Pillsbury
+							case "0":
+							var pass = Tao_Pass();
+							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+							var Random_Thang = Math.floor((Math.random() * 9) + 1);
+							var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
+							var Pillsbury = "CODE:";
+							Pillsbury += "SET !ERRORIGNORE YES"+"\n";
+							Pillsbury += "SET !TIMEOUT_TAG 0"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=IMG ATTR=SRC:http://wellness.samplesandrebates.com/Images/offers/Pills300x250Fall.jpg"+"\n";
+							Pillsbury += "WAIT SECONDS=5"+"\n";
+							Pillsbury += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Pillsbury += "SET !DATASOURCE_LINE 1"+"\n";
+							Pillsbury += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_email_inputText CONTENT={{!COL1}} "+"\n";
+							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_anonymousSignUpButton_link"+"\n";
+							Pillsbury += "WAIT SECONDS=5"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=SPAN ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_join_span"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:728294da-12e5-4842-92d9-b3b7eb66352c CONTENT={{!COL1}} "+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:728294da-12e5-4842-92d9-b3b7eb66352c CONTENT={{!COL1}} "+"\n";
+							Pillsbury += "SET !ENCRYPTION NO"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:3f02932a-45ac-4c02-a505-12a7e314fdfa CONTENT=&%"+pass+"\n";
+							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:49d96233-7514-4852-aa93-72148e412f04"+"\n";
+							Pillsbury += "WAIT SECONDS=3"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:f5f1f8c5-6d81-486e-bf5c-fdc613427650 CONTENT=YES"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:6ffa355e-daa7-4cca-a9ca-4f1f708afd34 CONTENT=YES"+"\n";
+							Pillsbury += "TAG POS=2 TYPE=BUTTON ATTR=ID:49d96233-7514-4852-aa93-72148e412f04"+"\n";
+							Pillsbury += "WAIT SECONDS=3"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:montha4183433-636f-4dc5-a166-6b1a21008260 CONTENT=0"+Random_Ngay+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:daya4183433-636f-4dc5-a166-6b1a21008260 CONTENT=0"+Random_Thang+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:yeara4183433-636f-4dc5-a166-6b1a21008260 CONTENT="+Random_Nam+"\n";
+							Pillsbury += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Pillsbury += "SET !DATASOURCE_LINE 1"+"\n";
+							Pillsbury += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							Pillsbury += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:ae38cbfb-597a-4b4a-8f44-c7b9650db748 CONTENT={{!COL5}} "+"\n";
+							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:51c36343-ab4e-4cd1-8dd9-b760a3db6920"+"\n";
+							Pillsbury += "WAIT SECONDS=20"+"\n";
+							iimPlay(Pillsbury);
+							break;
+						}
 						off++;
 						break;
 					}
 					catch(exception){}
 				}
-				else if(title == "3015-General"||title == "Join RewardTV - TV Trivia - Cash & Prizes - RewardTV UK")
+				else if(title == "3015-General"||title == "Join RewardTV - TV Trivia - Cash & Prizes - RewardTV UK"||title == "Your Comprehensive Resource for the Everyday Home Renter | Assisting Renters")
 				{ // 
 					try
 					{
@@ -566,15 +612,6 @@ while(true)
 							iimPlay(Reward_TV);
 							break;
 						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Your Comprehensive Resource for the Everyday Home Renter | Assisting Renters")
-				{ // 
-					try
-					{
 						switch(Check_Off)
 						{ // Assisting
 							case "0":
@@ -854,62 +891,6 @@ while(true)
 							Coupons += "TAG POS=1 TYPE=BUTTON ATTR=ID:buttonBatchPrintMessage&&CLASS:allButton<SP>secondaryButton<SP>batchPrintButton<SP>batchPrintMessage"+"\n";
 							Coupons += "WAIT SECONDS = 20"+"\n";
 							iimPlay(Coupons);
-						}
-						off++;
-						break;
-					}
-					catch(exception){}
-				}
-				else if(title == "Free Fall Samples"||title == "Pillsbury - Wellness by Samples and Rebates")
-				{ // 
-					try
-					{
-						switch(Check_Off)
-						{ // Free Fall Samples
-							case "0":
-							Free_Fall_Samples(File_Mail_info);
-							break;
-						}
-						switch(Check_Off)
-						{ // Pillsbury
-							case "0":
-							var pass = Tao_Pass();
-							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
-							var Random_Thang = Math.floor((Math.random() * 9) + 1);
-							var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
-							var Pillsbury = "CODE:";
-							Pillsbury += "SET !ERRORIGNORE YES"+"\n";
-							Pillsbury += "SET !TIMEOUT_TAG 0"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=IMG ATTR=SRC:http://wellness.samplesandrebates.com/Images/offers/Pills300x250Fall.jpg"+"\n";
-							Pillsbury += "WAIT SECONDS=5"+"\n";
-							Pillsbury += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							Pillsbury += "SET !DATASOURCE_LINE 1"+"\n";
-							Pillsbury += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_email_inputText CONTENT={{!COL1}} "+"\n";
-							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_anonymousSignUpButton_link"+"\n";
-							Pillsbury += "WAIT SECONDS=5"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=SPAN ATTR=ID:gmi_ma_nwCTA_63c68d3b74194b3f9777e64b8ffec408_join_span"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:728294da-12e5-4842-92d9-b3b7eb66352c CONTENT={{!COL1}} "+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:EMAIL ATTR=ID:728294da-12e5-4842-92d9-b3b7eb66352c CONTENT={{!COL1}} "+"\n";
-							Pillsbury += "SET !ENCRYPTION NO"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:3f02932a-45ac-4c02-a505-12a7e314fdfa CONTENT=&%"+pass+"\n";
-							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:49d96233-7514-4852-aa93-72148e412f04"+"\n";
-							Pillsbury += "WAIT SECONDS=3"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:f5f1f8c5-6d81-486e-bf5c-fdc613427650 CONTENT=YES"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:6ffa355e-daa7-4cca-a9ca-4f1f708afd34 CONTENT=YES"+"\n";
-							Pillsbury += "TAG POS=2 TYPE=BUTTON ATTR=ID:49d96233-7514-4852-aa93-72148e412f04"+"\n";
-							Pillsbury += "WAIT SECONDS=3"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:montha4183433-636f-4dc5-a166-6b1a21008260 CONTENT=0"+Random_Ngay+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:daya4183433-636f-4dc5-a166-6b1a21008260 CONTENT=0"+Random_Thang+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:NUMBER ATTR=ID:yeara4183433-636f-4dc5-a166-6b1a21008260 CONTENT="+Random_Nam+"\n";
-							Pillsbury += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							Pillsbury += "SET !DATASOURCE_LINE 1"+"\n";
-							Pillsbury += "SET !DATASOURCE_COLUMNS 5"+"\n";
-							Pillsbury += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:ae38cbfb-597a-4b4a-8f44-c7b9650db748 CONTENT={{!COL5}} "+"\n";
-							Pillsbury += "TAG POS=1 TYPE=BUTTON ATTR=ID:51c36343-ab4e-4cd1-8dd9-b760a3db6920"+"\n";
-							Pillsbury += "WAIT SECONDS=20"+"\n";
-							iimPlay(Pillsbury);
-							break;
 						}
 						off++;
 						break;
@@ -1573,7 +1554,7 @@ while(true)
 					{
 						var Line = 1;
 						switch(Check_Off)
-						{ // Thay Doi Line Info Khi Chay 2 Dang giong Nhau
+						{ // So Line Se Lay Info
 							case "119":
 							Line = 2;
 							break;
@@ -1635,7 +1616,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Điền Mai và chọn yes no
-							case "3":
+							case "0":
 							var SUBMIT = "CODE:"; 
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
 							SUBMIT += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1825,11 +1806,11 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			iimPlay(check_Error);
 			var extract =  iimGetExtract();
 			if(extract == "User already exists.")
-			{
+			{// check Neu Mail Dung Roi
 				break;
 			}
 			else if(extract == "Failed Recaptcha")
-			{
+			{// Check Error Capcha
 				Failed_Recaptcha++;
 				iimPlay(REFRESH_Site);
 				iimDisplay("Error Failed Recaptcha");
@@ -1839,9 +1820,9 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 				}
 			}
 			else
-			{// Khao Sat DAILY
+			{// Neu Ok Thi Chay KS
 				switch(Check_Off)
-				{
+				{// KS loại 1
 					case "343":
 					case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
@@ -1895,8 +1876,10 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					Dailybreak_KS1 += "WAIT SECONDS=10"+"\n";
 					Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
 					iimPlay(Dailybreak_KS1);
-					break;
-					//
+					break;					
+				}
+				switch(Check_Off)
+				{// KS loại 2
 					case "283":
 					var Dailybreak_KS2 = "CODE:";
 					Dailybreak_KS2 += "SET !ERRORIGNORE YES"+"\n";
@@ -1928,7 +1911,9 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 					Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Start"+"\n";
 					iimPlay(Dailybreak_KS2);
 					break;
-					//
+				}
+				switch(Check_Off)
+				{// KS loại 3
 					case "341":
 					iimPlay(REFRESH_Site);
 					var Dailybreak_KS3 = "CODE:";
@@ -1975,11 +1960,11 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			}
 		}
 		else
-		{
+		{// Error Khong Hien Capcha
 			Error_capcha++;
 			iimPlay(REFRESH_Site);
 			iimDisplay("Error Recaptcha");
-			if(Error_capcha > 1)
+			if(Error_capcha > 2)
 			{
 				break;
 			}
@@ -1995,40 +1980,13 @@ function RewardBee(File_Mail_info)                     // RewardBee
 	var Phieu_Mua_Hang1 = Math.floor((Math.random() * 5) + 1);
 	var Phieu_Mua_Hang2 = Math.floor((Math.random() * (9 - 6 + 1)) + 6);
 	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
+	// lay inf khac neu lam off giong nhau
 	switch(Check_Off) 
-	{// lay inf khac neu lam off giong nhau
+	{
 		case "0":
 		Line = 2;
 		break;
 	}
-	var RewardBee = "CODE:";
-	RewardBee += "SET !ERRORIGNORE YES" + "\n";
-	RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
-	RewardBee += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
-	RewardBee += "SET !TIMEOUT_TAG 0" + "\n";
-	RewardBee += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
-	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custEmail CONTENT={{!COL1}}"+"\n";
-	RewardBee += "SET !ENCRYPTION NO" + "\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwd CONTENT="+Pass+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwdCnfrm CONTENT="+Pass+"\n";
-	// Điền info
-	RewardBee += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
-	RewardBee += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custAddress1 CONTENT={{!COL2}}"+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custCity CONTENT={{!COL3}}"+"\n";
-	RewardBee += "TAG POS=1 TYPE=SELECT FORM=ID:frmSurveyBee ATTR=ID:sb-custStateProvince CONTENT=%{{!COL4}}"+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custPostalCode CONTENT={{!COL5}}"+"\n";
-	RewardBee += "SET !DATASOURCE Last_First.txt"+"\n";
-	RewardBee += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
-	RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
-	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "WAIT SECONDS=30"+"\n";
 	while(true)
 	{
 		var capcha = check_capcha();
@@ -2097,7 +2055,7 @@ function RewardBee(File_Mail_info)                     // RewardBee
 				break;
 			}
 			while(true)
-			{ // làm Khảo sát trước
+			{//Chạy KS 2 Lần Để chánh tình Trạng ko click được ô
 				var cau_0 = Math.floor((Math.random() * C0) + 1);
 				var cau_1 = Math.floor((Math.random() * C1) + 1);
 				var cau_2 = Math.floor((Math.random() * C2) + 1);
@@ -2132,7 +2090,35 @@ function RewardBee(File_Mail_info)                     // RewardBee
 				RewardBee_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:frmSurveyBee ATTR=ID:d42404b2-23e0-e711-b60d-0e4c37f58098"+"\n";
 				iimPlay(RewardBee_KS);
 			}
-			//
+			// Check Capcha Và Điền Info
+			var RewardBee = "CODE:";
+			RewardBee += "SET !ERRORIGNORE YES" + "\n";
+			RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
+			RewardBee += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
+			RewardBee += "SET !TIMEOUT_TAG 0" + "\n";
+			RewardBee += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+			RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custEmail CONTENT={{!COL1}}"+"\n";
+			RewardBee += "SET !ENCRYPTION NO" + "\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwd CONTENT="+Pass+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwdCnfrm CONTENT="+Pass+"\n";
+			// Điền info
+			RewardBee += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+			RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
+			RewardBee += "SET !DATASOURCE_COLUMNS 5"+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custAddress1 CONTENT={{!COL2}}"+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custCity CONTENT={{!COL3}}"+"\n";
+			RewardBee += "TAG POS=1 TYPE=SELECT FORM=ID:frmSurveyBee ATTR=ID:sb-custStateProvince CONTENT=%{{!COL4}}"+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custPostalCode CONTENT={{!COL5}}"+"\n";
+			RewardBee += "SET !DATASOURCE Last_First.txt"+"\n";
+			RewardBee += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
+			RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
+			RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
+			RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+			RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
+			RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
+			RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+			RewardBee += "WAIT SECONDS=30"+"\n";
 			iimPlay(RewardBee);
 			break;
 		}
