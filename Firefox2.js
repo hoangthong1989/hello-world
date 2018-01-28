@@ -7,7 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["341","297","305","245","316","319","352"];
+var Ma_off = ["245","297","294","281","320","352","319"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -47,7 +47,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "119":
+			case "119":case "294":
 			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
 			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
@@ -1285,7 +1285,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "LivingWIthPain.org"||title == "Rent 2 Own Homes"||title == "Enfamil_WF - Formstack"||title == "Sign up now for access to your exclusive offers!"||title == "Opinion City")
-				{// 213 219 292 305 299 310 306 147 257
+				{// 213 219 292 305 299 310 306 147 257 294
 					try
 					{
 						switch(Check_Off)
@@ -1317,7 +1317,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{
+						{// Rent 2 Own Homes
 							case "219":
 							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
@@ -1354,8 +1354,8 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{
-							case "299":case "305":case "292":
+						{// Enfamil_WF
+							case "294":case "299":case "305":case "292":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 							var Random_Thang = Math.floor((Math.random() * 9) + 1);
@@ -1395,7 +1395,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{
+						{// Atkins
 							case "306":case "310":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Tuoi = Math.floor((Math.random() * 30) + 19);
@@ -1451,7 +1451,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{
+						{// Opinion
 							case "257":case "147":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
