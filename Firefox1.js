@@ -7,7 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","297","175","357","352","319"]; // hàng sáng mai
+var Ma_off = ["174","297","175","357","352","281"]; // hàng sáng mai
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
 while(true)
 {
