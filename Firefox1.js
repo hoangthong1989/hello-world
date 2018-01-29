@@ -7,8 +7,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","297","175","357","352","281"]; // hàng sáng mai
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
+var Ma_off = ["341","297","305","319","352","320","245"]; // hàng sáng mai
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1764,8 +1764,8 @@ while(true)
 						break;
 					}
 				}
-			}
-		}
+			} 
+		} 
 	}
 }// Vong Lap Cho Toan Bo Qua Trinh Lam
  
