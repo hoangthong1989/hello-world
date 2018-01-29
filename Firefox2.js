@@ -7,18 +7,18 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","297","175","281","352","319"]; // hàng sáng mai
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
+var Ma_off = ["174","297","175","357","352","319"]; // hàng sáng mai
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
 	{ // Neu Tong So Offer Da Chay Du Thi Out
-		iimPlayCode("TAB CLOSEALLOTHERS");
+		iimPlayCode("TAB CLOSEALLOTHERS"); 
 		iimPlayCode("TAB CLOSE");
 		break;
 	}
 	else
-	{// Con Neu Chua Thi Tiến hành làm offer 
+	{// Con Neu Chua Thi Tiến hành làm offer  
 		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;		
 		/////////////// Ham F5 Chờ Gọi ////////////////
@@ -1700,21 +1700,39 @@ while(true)
 						break;
 					}
 				}
-				else if(Check_Off == "0")
-				{
-					// iimPlay(REFRESH_Site);
-					var National_Quay = "CODE:";
-					National_Quay += "SET !ERRORIGNORE YES"+"\n";
-					National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>SPAN\" BUTTON=0"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q4>SPAN\" BUTTON=0"+"\n";
-					National_Quay += "WAIT SECONDS=10"+"\n";
-					National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
-					National_Quay += "WAIT SECONDS=5"+"\n";
-					iimPlay(National_Quay);
+				else if(Check_Off == "357")
+				{// 357
+					switch(Check_Off)
+					{
+						case "0":
+						var National_Quay = "CODE:";
+						National_Quay += "SET !ERRORIGNORE YES"+"\n";
+						National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q1>SPAN\" BUTTON=0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q2>SPAN\" BUTTON=0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q3>SPAN\" BUTTON=0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#q4>SPAN\" BUTTON=0"+"\n";
+						National_Quay += "WAIT SECONDS=10"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#v4>TABLE>TBODY>TR:nth-of-type(2)>TD:nth-of-type(2)>A:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
+						National_Quay += "WAIT SECONDS=5"+"\n";
+						iimPlay(National_Quay);
+						break;
+					}
+					switch(Check_Off)
+					{
+						case "357":
+						var National_Quay = "CODE:";
+						National_Quay += "SET !ERRORIGNORE YES"+"\n";
+						National_Quay += "SET !TIMEOUT_TAG 0"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal01>DIV>DIV>BUTTON\" BUTTON=0"+"\n";
+						National_Quay += "WAIT SECONDS=7"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal02>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+						National_Quay += "WAIT SECONDS=7"+"\n";
+						National_Quay += "EVENT TYPE=CLICK SELECTOR=\"#modal03>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+						iimPlay(National_Quay);
+						break;
+					}
 					iimPlayCode("WAIT SECONDS=1");
 					var title = window.document.title;
 					if(title == "National Consumer Center")
@@ -3317,7 +3335,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
+		case "357":case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
 		National_reward += "SET !TIMEOUT_TAG 30"+"\n";
@@ -3328,13 +3346,13 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	var National = "CODE:";
 	National += "SET !ERRORIGNORE YES"+" \n";
 	National += "SET !TIMEOUT_TAG 0"+" \n";
-	National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
-	National += "WAIT SECONDS=0.5"+" \n";
-	National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
+	// National += "TAG POS=2 TYPE=DIV ATTR=TXT:YES"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=ID:ytta"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:26-35"+" \n";
+	// National += "WAIT SECONDS=0.5"+" \n";
+	// National += "TAG POS=1 TYPE=DIV ATTR=TXT:7-10"+" \n";
 	// National += "WAIT SECONDS=10"+" \n";
 	National += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+" \n";
 	National += "SET !DATASOURCE_LINE 1"+" \n";
