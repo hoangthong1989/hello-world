@@ -7,8 +7,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["297","281","305","319","352","320","245"]; // hàng sáng mai
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
+var Ma_off = ["174","175","297","305","352","319",""]; // hàng sáng mai
+// var Ma_off = ["363"];
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -102,12 +103,12 @@ while(true)
 					break;
 				}
 				if(title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343
+				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343 361 363
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "343":
+							case "363":case "361":case "343":
 							case "341":case "297":case "129":case "195":case "277":case "258":case "251":case "193":
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
@@ -1841,7 +1842,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			{// Neu Ok Thi Chay KS
 				switch(Check_Off)
 				{// KS loại 1
-					case "343":
+					case "363":case "343":
 					case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
@@ -1932,7 +1933,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 				}
 				switch(Check_Off)
 				{// KS loại 3
-					case "341":
+					case "361":case "341":
 					iimPlay(REFRESH_Site);
 					var Dailybreak_KS3 = "CODE:";
 					Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
