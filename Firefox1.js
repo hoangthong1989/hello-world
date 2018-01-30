@@ -7,7 +7,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["305","343","177","313","352","319","281"]; // hàng sáng mai
+var Ma_off = ["367","297","294","316","352","319","245"];
+// var Ma_off = ["366","297","294","316","352","319","245"];
 // var Ma_off = ["363"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
 while(true)
@@ -121,7 +122,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "RewardBee"||title == "Roblox")
+				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
 				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241 174 204 245 248
 					try
 					{
@@ -160,6 +161,12 @@ while(true)
 							Roblox += "	TAG POS=1 TYPE=BUTTON ATTR=ID:signup-button	"+" \n";
 							Roblox += "	WAIT SECONDS=20"+" \n";
 							iimPlay(Roblox);
+							break;
+						}
+						switch(Check_Off)
+						{// chưa code
+							case "0":
+							
 							break;
 						}
 						off++;
@@ -229,12 +236,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Life Insurance"||title == "Mortgage"||title == "Insurance Branch"||title == "Mortgage Insurance"||title == "Health Insurance"||title == "Medicare Insurance"||title == "Home Insurance")
-				{ // 115 114 2
+				{ // 115 114 367 366
 					try  
 					{
 						switch(Check_Off)
 						{ // Zip dang Insurance
-							case "2":case "114":case "115":
+							case "366":case "367":case "114":case "115":
 							var Insurance = "CODE:";
 							Insurance += "SET !ERRORIGNORE YES"+" \n";
 							Insurance += "SET !TIMEOUT_TAG 0"+" \n";
