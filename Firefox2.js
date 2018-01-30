@@ -7,8 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-// var Ma_off = ["367","297","294","316","352","319","245"];
-var Ma_off = ["366","297","294","316","352","319","245"];
+var Ma_off = ["340","297","294","316","352","319","245"];
 // var Ma_off = ["363"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
@@ -55,7 +54,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "0":
+			case "340":
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
@@ -123,7 +122,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241 174 204 245 248
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241 174 204 245 248 340
 					try
 					{
 						switch(Check_Off)
@@ -164,9 +163,9 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{// chưa code
-							case "0":
-							
+						{// TopSweeps
+							case "340":
+							TopSweeps(File_Mail_info);
 							break;
 						}
 						off++;
@@ -2160,6 +2159,151 @@ function RewardBee(File_Mail_info)                     // RewardBee
 			}
 		}
 	}
+}
+function TopSweeps(File_Mail_info)
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1989 - 1975  + 1)) + 1975 );
+	
+	var TopSweeps = "CODE:";
+	TopSweeps += "SET !ERRORIGNORE YES"+"\n";
+	TopSweeps += "SET !TIMEOUT_TAG 0"+"\n";
+	TopSweeps += "SET !DATASOURCE Last_First.txt"+"\n";
+	TopSweeps += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	TopSweeps += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-input-81dfe9a6-361c-4606-95f9-119ffd994f15-first-name\" BUTTON=0"+"\n";
+	TopSweeps += 'EVENTS TYPE=KEYPRESS SELECTOR="#i-input-81dfe9a6-361c-4606-95f9-119ffd994f15-first-name" CHARS="{{!COL1}}"'+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-input-81dfe9a6-361c-4606-95f9-119ffd994f15-last-name\" BUTTON=0"+"\n";
+	TopSweeps += 'EVENTS TYPE=KEYPRESS SELECTOR="#i-input-81dfe9a6-361c-4606-95f9-119ffd994f15-last-name" CHARS="{{!COL2}}"'+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-input-9af4f79d-c77e-4b69-a975-2b46df37610d-default\" BUTTON=0"+"\n";
+	TopSweeps += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	TopSweeps += "SET !DATASOURCE_LINE 1"+"\n";
+	TopSweeps += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	TopSweeps += 'EVENTS TYPE=KEYPRESS SELECTOR="#i-input-9af4f79d-c77e-4b69-a975-2b46df37610d-default" CHARS="{{!COL1}}"'+"\n";
+	TopSweeps += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:i-input-9a9d8356-5ef8-4f0e-aed4-e1fa700307a2-month CONTENT=%"+Random_Ngay+"\n";
+	TopSweeps += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:i-input-9a9d8356-5ef8-4f0e-aed4-e1fa700307a2-day CONTENT=%"+Random_Thang+"\n";
+	TopSweeps += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:i-input-9a9d8356-5ef8-4f0e-aed4-e1fa700307a2-year CONTENT=%"+Random_Nam+"\n";
+	TopSweeps += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	TopSweeps += "SET !DATASOURCE_LINE 1"+"\n";
+	TopSweeps += "SET !DATASOURCE_COLUMNS 5 "+"\n";
+	TopSweeps += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=ID:i-input-aed8d9b3-04f0-42fa-9d8f-2ae196b0aa66-default CONTENT=%460b2f64-e325-4aac-b531-02c3dc4552ca"+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-input-e2391395-ae36-45cd-ab79-f1330f00c4ff-default\" BUTTON=0"+"\n";
+	TopSweeps += 'EVENTS TYPE=KEYPRESS SELECTOR="#i-input-e2391395-ae36-45cd-ab79-f1330f00c4ff-default" CHARS="{{!COL1}}"'+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-input-ec58cc90-9cc1-448a-a95a-f33ed26163a2-address-1\" BUTTON=0"+"\n";
+	TopSweeps += 'EVENTS TYPE=KEYPRESS SELECTOR="#i-input-ec58cc90-9cc1-448a-a95a-f33ed26163a2-address-1" CHARS="{{!COL2}}"'+"\n";
+	TopSweeps += "WAIT SECONDS = 3"+"\n";
+	TopSweeps += "EVENT TYPE=MOUSEDOWN SELECTOR=\"HTML>BODY>DIV:nth-of-type(8)>DIV\" BUTTON=0"+"\n";
+	TopSweeps += 'EVENT TYPE=MOUSEUP POINT="(776,549)"'+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-40c1bddc-4cce-4531-8b13-f2f7d2bfa634-default>DIV>DIV>LABEL>SPAN>SPAN\" BUTTON=0"+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-12aa73fb-141f-4350-97ec-43b8c904df56-default>DIV>DIV>LABEL>SPAN>SPAN\" BUTTON=0"+"\n";
+	TopSweeps += "WAIT SECONDS = 3"+"\n";
+	TopSweeps += "EVENT TYPE=CLICK SELECTOR=\"#i-780faa1b-2c0c-4a66-8634-4effb920724c\" BUTTON=0"+"\n";
+	TopSweeps += "WAIT SECONDS = 15"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:Yes"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:Yes"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:Yes"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No,<SP>thank<SP>you!"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No<SP>Insurance"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:$101,000<SP>-<SP>$250,000"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:DIRECTV"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:No"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:Yes"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=LABEL FORM=NAME:NoFormName ATTR=TXT:Medicare"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=2 TYPE=SPAN ATTR=TXT:"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=IMG ATTR=SRC:https://djk97zng6lbya.cloudfront.net/2016/08/19/01/09/36/39050a90-a493-4b1c-ae22-e3293075378c.png"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-ac8da22a-148d-43ed-8a82-28f18ce4c777"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-88edf918-02db-4c92-b87c-59b5f1a76493"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-2239edd9-6c2f-43d7-86c4-62c44da91fcc"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-28a1f47c-f2b4-4b6c-ae46-b63d5c784ef2"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-b5353aa6-5687-49b7-97aa-2ceb614509f5"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-06f9cd4e-f120-4683-98d4-0d668983abd8"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-c85c0495-0c39-47fc-8d11-93477e73cb34"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-ba0c662e-376c-42b0-b2a8-e5a255ba7356"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-230ab5e3-6a70-459d-8172-517457e15be9"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-2de6aec1-3539-4830-8c34-052c0a972d50"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-25712cd0-e968-4f3f-b9d6-26e80df218cc"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-e68adef6-b836-4b08-92f4-7dab399ef738"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=ID:i-c4b0b753-ae01-4e65-b69e-609f2306cb69"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=IMG ATTR=SRC:https://djk97zng6lbya.cloudfront.net/2018/01/15/19/44/12/3eb32725-c261-4a12-bfb6-d5386470ad05.png"+"\n";
+	TopSweeps += "WAIT SECONDS=0.5"+"\n";
+	TopSweeps += "TAG POS=1 TYPE=IMG ATTR=SRC:https://djk97zng6lbya.cloudfront.net/2018/01/15/19/42/58/dd893024-fe99-48c9-b081-473ac91d97ab.png"+"\n";
+	TopSweeps += "WAIT SECONDS=15"+"\n";
+	iimPlay(TopSweeps);
 }
 function QualityHealth(File_Mail_info)
 {
