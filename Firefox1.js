@@ -253,6 +253,7 @@ while(true)
 							Insurance += "TAG POS=1 TYPE=BUTTON FORM=ID:zip-form ATTR=ID:button"+" \n";
 							Insurance += "TAG POS=1 TYPE=BUTTON FORM=ID:zip-form ATTR=ID:submit-btn"+" \n";
 							Insurance += "WAIT SECONDS=10"+" \n";
+							Insurance += "EVENT TYPE=CLICK SELECTOR=\"#listingTable0>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>IMG\" BUTTON=0"+" \n";
 							Insurance += "TAG POS=1 TYPE=IMG ATTR=SRC:http://d29u10q7qlh006.cloudfront.net/i/i/68/E-ohvumwE-AokkD1dz6gwU26OhA.png"+" \n";
 							Insurance += "TAG POS=1 TYPE=IMG ATTR=SRC:http://qmpcdn.nextinsure.com/content/one/8386/QS_logo.png"+" \n";
 							Insurance += "TAG POS=1 TYPE=IMG ATTR=SRC:http://d29u10q7qlh006.cloudfront.net/i/i/800/7ob9aIKDCKzVWF89q-e_0xKsm8k.png"+" \n";
