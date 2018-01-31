@@ -7,7 +7,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["305","297","177","320","352","319","245"];
+// var Ma_off = ["366","315","294","178","352","319","245"];
+var Ma_off = ["367","315","294","178","352","319","245"];
 // var Ma_off = ["363"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
@@ -108,7 +109,7 @@ while(true)
 					{
 						switch(Check_Off)
 						{
-							case "376":case "363":case "361":case "343":
+							case "178":case "376":case "363":case "361":case "343":
 							case "341":case "297":case "129":case "195":case "277":case "258":case "251":case "193":
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
@@ -122,12 +123,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 178 39 239 241 174 204 245 248 340
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340
 					try
 					{
 						switch(Check_Off)
 						{ // RewardBee
-							case "241":case "180":case "179":case "123":case "109":case "145":case "239":case "178":
+							case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
 							iimPlayCode("WAIT SECONDS=5");
 							RewardBee(File_Mail_info);
