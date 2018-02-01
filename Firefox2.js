@@ -7,10 +7,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-// var Ma_off = ["367","340","341","305","319","384","352"];
-var Ma_off = ["366","340","341","305","319","384","352"];
+var Ma_off = ["174","345","305","319","384","352"];
 // var Ma_off = ["341"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -38,7 +37,7 @@ while(true)
 		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
-		// loginCookie();
+		
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
@@ -115,6 +114,7 @@ while(true)
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
 							case "57":case "8":
+							// loginCookie();
 							// Dailybreak_V2(File_Mail_info);
 							Dailybreak(File_Mail_info);
 							break;
@@ -177,12 +177,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183 384
 					try
 					{
 						switch(Check_Off)
 						{
-							case "352":case "281":case "183":case "286":
+							case "384":case "352":case "281":case "183":case "286":
 							case "240":case "203":case "221":case "171":case "172":case "181":case "176":case "26":
 							case "252":case "233":case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
