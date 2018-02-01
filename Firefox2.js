@@ -7,9 +7,10 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["294","182","181","352","319","245"];
-// var Ma_off = ["363"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; 
+// var Ma_off = ["367","340","341","305","319","384","352"];
+var Ma_off = ["366","340","341","305","319","384","352"];
+// var Ma_off = ["341"];
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -115,6 +116,7 @@ while(true)
 							case "57":case "8":
 							// var thongtincookie = "www.google.com=DV=swu1E5LDeeIU0PXn5VxrPeL1BsvzFBY;.google.com=OGPC=845686784-5:;.google.com=__utmx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:;.google.com=__utmxx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:1517366369:8035200;.google.com=__utma=173272373.1109772875.1517366376.1517366376.1517366376.1;.google.com=__utmc=173272373;.google.com=__utmz=173272373.1517366376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);.google.com=__utmt=1;.google.com=__utmb=173272373.1.10.1517366376;mail.google.com=COMPASS=gmail=CooBAAlriVfEdOHzooWA7fjQU8tX_6z6T-YACuxhLGvn79vtEUD4hwO3UkxBXwnkM5JrpWaR2vnIFmPfJyiCyQuaMDht5D2gqP08XcBZnGLDmeneZyiyq4gaZPjZ9T-yk57T14FVkK2IHdNr0hu50K-PkLxu7SyNx0mt4OtcDBKr7SajxvGCutLN7a5QEO2ZytMFGpMBAAlriVdJCbyb3HUPMe7Sy7kDnYuIhW9vl9GDQypolx4Fza8I-uLytS198Z9fRvXvxnEYTA88j0bfry22BBtmH0Yrzo-gdiEHlhj-bqtdKSAv8_u7fz-GSF3RKM47r_e5veLHUSAr8oBj8g4gG9KaEEojq056FifWaGr6BQqFUsTzBaPGl1G-gPG3m5G3Mdglu9Xh;.google.com=SID=twUnZ3PCmvF_RvEFL2CJgdOd1ZuwHrV3ZRXukjdLJ9L8YMpe_Ausuu0PZnEcaKurPdDr5w.;.google.com=HSID=AWDx2JQYUvgzGIwYE;.google.com=SSID=A22EhwQqJNgHGR1sw;.google.com=APISID=nXsMP5c08h9uA15V/A2xnR3-SbIRkVte_p;.google.com=SAPISID=o6nxLf9SyGDmGl8c/AzxTwNMlla-1fjWJS;accounts.google.com=ACCOUNT_CHOOSER=AFx_qI49CyKzr22BvkVEpeo2zLK1yQQ-P7HDFHuD2HmimRwW9s-MnAps6wKqVfwloozNfxXNBYSyb7k6NbwMwBel4NIW7cTvcoa2jPdzJxWsWt8Jsy8YyXROHw6PIanjC9WXAnERHDxGBn46YDBwyLmh_eFio2TqkQ;mail.google.com=OSID=twUnZ7Gi895Y7PhVt_WyllziiAmrUlik4ukw4CpYG5h3dewd04ZV7Vo-Gr-AZDMeNtrRJQ.;mail.google.com=GMAIL_AT=AF6bupN9mGx0wA1hcpAS4CJJEGgrJtc8WA;.google.com=1P_JAR=2018-1-31-2;.google.com=NID=122=MQ694qZcN65qS-LKWHEY3LVsk_JGECCeWXyBAA8ZF1y8ENUUpaTuNDDx9ihupkZbWfQG9AXjd3azZhjcqUyhJ04oc1KzT4IChGUI6jDOfdbvfVt-vUi9BNkIM3PC4GvyWrZ6tN3Y63HgJ1ROBD_NqRiDNC6F3mgtlc48OmjUr1IKdMDjc_1xiiLcW66ADTT2Mjg;accounts.google.com=GAPS=1:GMtMhgth34qOpYF2OW4La6J-u3vcu-RE1YF3CgNc9pMiQ7imwHWMAGFTmTZcBU8RF5S29hDNoH4Eo3gnXkdFYGw4JLJN7A:t8H1dGO_KISr2m6u;accounts.google.com=LSID=mail|o.mail.google.com|o.notifications.google.com|s.youtube:twUnZ5ADTLUhsBnh13rjGTlQ3OOqiJ867vy9wwQnm84F70Ben5U33mu3izgtWvUEljgZTg.;notifications.google.com=OSID=twUnZ1JD4GZKiZkjDaU027J05TNQnKxe7y-cNoclViUefrLG4CAm0aqXgJmJibndzAmY7Q.;notifications.google.com=OTZ=4251041_76_76__76_;hangouts.google.com=llbcs=0;.google.com=TAID=AJHaeXK9zwsYaIJJ590t-z5Mg7B_B8DTkIpq7RyOhVMY3Q8_FNSVEDBbm-eDrv2Tnb11aeQYLhBAEg6NzzutMbk3KZErByQ;.google.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;mail.google.com=GMAIL_IMP=v*2%2Ftl-ard-s*993%2Fsdim*4%2Ftl-ar-f*1%2Ftl-ar-sdd*82134%2Ftl-ard-s*2231%2Ftl-ar-f*1%2Ftl-ar-s*1%2Fch-lsm*23512%2Fr-cs*1023%2Ftadis*12%2Ftl-ar-s*1;.google.com=SIDCC=AAiTGe8ytPRS54sSChsKvlNKigqsntwDMHtG_cCRPPAYQ8t48mr_xjHWJEEeQrVvy6KX73YsWg;.googleadservices.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;.google.com=NID=122=NNhMlnu0sQhLZnLK9vQKkRleM5lS3s3FNT3zTbTS2zRYSqEUjQms3F1j32wrVMu3m2crCW3OOtUUZrnU0RJZI9E03NU_X5luijQVGNSb1L68bNO0N6o7yjEekJpk81mo;";
 							// loginCookie(thongtincookie);
+							// Dailybreak_V2(File_Mail_info);
 							Dailybreak(File_Mail_info);
 							break;
 						}
@@ -1780,6 +1782,218 @@ while(true)
  
 //@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\//@\\  
 
+function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
+{
+	var KS1 = Math.floor((Math.random() * 3) + 1);
+	var KS2 = Math.floor((Math.random() * 6) + 3);
+	var KS3 = Math.floor((Math.random() * 10) + 6);
+	var Ngay = Math.floor((Math.random() * 9) + 1);
+	var Thang = Math.floor((Math.random() * 9) + 1);
+	var Nam = Math.floor((Math.random() * (1998 - 2004 + 1)) + 2004);
+	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Pass  = Tao_Pass();var Line = 1;
+	var Error_capcha = 0;var Failed_Recaptcha = 0;var Unknown_error = 0;
+	// Lay info Khac neu Lam Off Giong nhau
+	switch(Check_Off)
+	{
+		case "341":
+		Line = 2;
+		break;
+	}
+	//
+	while(true)
+	{
+		iimPlayCode("TAG POS=1 TYPE=BUTTON ATTR=TXT:CREATE<SP>A<SP>NEW<SP>ACCOUNT");
+		var Click_Capcha = "CODE:";
+		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha += "FRAME F=1" + "\n";
+		Click_Capcha += "FRAME F=2" + "\n";
+		Click_Capcha += "FRAME F=3" + "\n";
+		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		Click_Capcha += "WAIT SECONDS=10" + "\n";
+		iimPlay(Click_Capcha);
+		//
+		var Dailybreak_INFO = "CODE:"; 
+		Dailybreak_INFO += "SET !ERRORIGNORE YES" + "\n";
+		Dailybreak_INFO += "SET !TIMEOUT_TAG 0" + "\n";
+		Dailybreak_INFO += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+		Dailybreak_INFO += "SET !DATASOURCE_LINE "+Line+ "\n";
+		Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:EMAIL FORM=NAME:NoFormName ATTR=* CONTENT={{!COL1}}" + "\n";
+		Dailybreak_INFO += "SET !ENCRYPTION NO" + "\n";
+		Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=* CONTENT="+Pass+ "\n";
+		Dailybreak_INFO += "TAG POS=2 TYPE=INPUT:RADIO FORM=NAME:NoFormName ATTR=NAME:gender" + "\n";
+		Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayMonth CONTENT=%"+Ngay+ "\n";
+		Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayDay CONTENT=%"+Thang+ "\n";
+		Dailybreak_INFO += "TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:birthdayYear CONTENT=%"+Nam+ "\n";
+		Dailybreak_INFO += "TAG POS="+KS1+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+		Dailybreak_INFO += "TAG POS="+KS2+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+		Dailybreak_INFO += "TAG POS="+KS3+" TYPE=INPUT:CHECKBOX FORM=NAME:NoFormName ATTR=NAME:answers CONTENT=YES" + "\n";
+		Dailybreak_INFO += "TAG POS=1 TYPE=BUTTON FORM=NAME:NoFormName ATTR=TXT:Sign<SP>Up" + "\n";	
+		Dailybreak_INFO += "WAIT SECONDS=10" + "\n";
+		iimPlay(Dailybreak_INFO);
+		// check lỗi mail hoặc capcha
+		var check_Error = "CODE:";
+		check_Error += "SET !ERRORIGNORE YES" + "\n";
+		check_Error += "SET !TIMEOUT_TAG 6" + "\n";
+		check_Error += "TAG POS=2 TYPE=DIV ATTR=CLASS:errors-display  EXTRACT = TXT" + "\n";
+		iimPlay(check_Error);
+		var extract =  iimGetExtract();
+		if(extract == "User already exists.")
+		{// check Neu Mail Dung Roi
+			break;
+		}
+		else if(extract == "Failed Recaptcha")
+		{// Check Error Capcha
+			Failed_Recaptcha++;
+			iimPlay(REFRESH_Site);
+			iimDisplay("Error Failed Recaptcha");
+			if(Failed_Recaptcha > 2)
+			{
+				break;
+			}
+		}
+		else
+		{// Neu Ok Thi Chay KS
+			switch(Check_Off)
+			{// KS loại 1
+				case "376":case "363":case "343":
+				case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
+				case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
+				case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
+				var Dailybreak_KS1 = "CODE:";
+				Dailybreak_KS1 += "SET !ERRORIGNORE YES"+"\n";
+				Dailybreak_KS1 += "SET !TIMEOUT_TAG 0 "+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
+				Dailybreak_KS1 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON:nth-of-type(3)\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(7)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=3"+"\n"; // click net 
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n"; // click KS
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(6)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=3"+"\n"; // click skip
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click net dang khac
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n"; // click buoc cuoi xem video
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>DIV>SPAN>SPAN\" BUTTON=0"+"\n";
+				Dailybreak_KS1 += "WAIT SECONDS=10"+"\n";
+				Dailybreak_KS1 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+				iimPlay(Dailybreak_KS1);
+				break;					
+			}
+			switch(Check_Off)
+			{// KS loại 2
+				case "283":
+				var Dailybreak_KS2 = "CODE:";
+				Dailybreak_KS2 += "SET !ERRORIGNORE YES"+"\n";
+				Dailybreak_KS2 += "SET !TIMEOUT_TAG 0 "+"\n";
+				Dailybreak_KS2 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
+				Dailybreak_KS2 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
+				Dailybreak_KS2 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
+				Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:50"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:6<SP>feet"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS2 += "TAG POS=2 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:2<SP>Days"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS2 += "TAG POS=3 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS2 += "TAG POS=4 TYPE=BUTTON ATTR=TXT:Next"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=1"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=A ATTR=TXT:Skip"+"\n";
+				Dailybreak_KS2 += "WAIT SECONDS=10"+"\n";
+				Dailybreak_KS2 += "TAG POS=1 TYPE=BUTTON ATTR=TXT:Start"+"\n";
+				iimPlay(Dailybreak_KS2);
+				break;
+			}
+			switch(Check_Off)
+			{// KS loại 3
+				case "361":case "341":
+				iimPlay(REFRESH_Site);
+				var Dailybreak_KS3 = "CODE:";
+				Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
+				Dailybreak_KS3 += "SET !TIMEOUT_TAG 0 "+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV>BUTTON" BUTTON=0'+" \n";
+				Dailybreak_KS3 += 'EVENT TYPE=CLICK SELECTOR="#embedHeightReference>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV>DIV" BUTTON=0 '+" \n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";		
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV:nth-of-type(2)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>BUTTON:nth-of-type(2)\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(3)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=3"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(4)>BUTTON\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(4)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=2"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#embedHeightReference>DIV>DIV:nth-of-type(5)>DIV>DIV>DIV:nth-of-type(4)>A\" BUTTON=0"+"\n";
+				Dailybreak_KS3 += "WAIT SECONDS=10"+"\n";
+				Dailybreak_KS3 += "EVENT TYPE=CLICK SELECTOR=\"#modals>DIV:nth-of-type(3)>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(2)>DIV>BUTTON\" BUTTON=0"+"\n";
+				iimPlay(Dailybreak_KS3);
+				break;
+			}
+			iimPlayCode("WAIT SECONDS=20");
+			break;
+		}
+	}
+}
 function Dailybreak(File_Mail_info)                      // Dailybreak
 {
 	var KS1 = Math.floor((Math.random() * 3) + 1);
