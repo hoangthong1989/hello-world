@@ -38,6 +38,7 @@ while(true)
 		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
+		// loginCookie();
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
@@ -114,8 +115,6 @@ while(true)
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
 							case "57":case "8":
-							// var thongtincookie = "www.google.com=DV=swu1E5LDeeIU0PXn5VxrPeL1BsvzFBY;.google.com=OGPC=845686784-5:;.google.com=__utmx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:;.google.com=__utmxx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:1517366369:8035200;.google.com=__utma=173272373.1109772875.1517366376.1517366376.1517366376.1;.google.com=__utmc=173272373;.google.com=__utmz=173272373.1517366376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);.google.com=__utmt=1;.google.com=__utmb=173272373.1.10.1517366376;mail.google.com=COMPASS=gmail=CooBAAlriVfEdOHzooWA7fjQU8tX_6z6T-YACuxhLGvn79vtEUD4hwO3UkxBXwnkM5JrpWaR2vnIFmPfJyiCyQuaMDht5D2gqP08XcBZnGLDmeneZyiyq4gaZPjZ9T-yk57T14FVkK2IHdNr0hu50K-PkLxu7SyNx0mt4OtcDBKr7SajxvGCutLN7a5QEO2ZytMFGpMBAAlriVdJCbyb3HUPMe7Sy7kDnYuIhW9vl9GDQypolx4Fza8I-uLytS198Z9fRvXvxnEYTA88j0bfry22BBtmH0Yrzo-gdiEHlhj-bqtdKSAv8_u7fz-GSF3RKM47r_e5veLHUSAr8oBj8g4gG9KaEEojq056FifWaGr6BQqFUsTzBaPGl1G-gPG3m5G3Mdglu9Xh;.google.com=SID=twUnZ3PCmvF_RvEFL2CJgdOd1ZuwHrV3ZRXukjdLJ9L8YMpe_Ausuu0PZnEcaKurPdDr5w.;.google.com=HSID=AWDx2JQYUvgzGIwYE;.google.com=SSID=A22EhwQqJNgHGR1sw;.google.com=APISID=nXsMP5c08h9uA15V/A2xnR3-SbIRkVte_p;.google.com=SAPISID=o6nxLf9SyGDmGl8c/AzxTwNMlla-1fjWJS;accounts.google.com=ACCOUNT_CHOOSER=AFx_qI49CyKzr22BvkVEpeo2zLK1yQQ-P7HDFHuD2HmimRwW9s-MnAps6wKqVfwloozNfxXNBYSyb7k6NbwMwBel4NIW7cTvcoa2jPdzJxWsWt8Jsy8YyXROHw6PIanjC9WXAnERHDxGBn46YDBwyLmh_eFio2TqkQ;mail.google.com=OSID=twUnZ7Gi895Y7PhVt_WyllziiAmrUlik4ukw4CpYG5h3dewd04ZV7Vo-Gr-AZDMeNtrRJQ.;mail.google.com=GMAIL_AT=AF6bupN9mGx0wA1hcpAS4CJJEGgrJtc8WA;.google.com=1P_JAR=2018-1-31-2;.google.com=NID=122=MQ694qZcN65qS-LKWHEY3LVsk_JGECCeWXyBAA8ZF1y8ENUUpaTuNDDx9ihupkZbWfQG9AXjd3azZhjcqUyhJ04oc1KzT4IChGUI6jDOfdbvfVt-vUi9BNkIM3PC4GvyWrZ6tN3Y63HgJ1ROBD_NqRiDNC6F3mgtlc48OmjUr1IKdMDjc_1xiiLcW66ADTT2Mjg;accounts.google.com=GAPS=1:GMtMhgth34qOpYF2OW4La6J-u3vcu-RE1YF3CgNc9pMiQ7imwHWMAGFTmTZcBU8RF5S29hDNoH4Eo3gnXkdFYGw4JLJN7A:t8H1dGO_KISr2m6u;accounts.google.com=LSID=mail|o.mail.google.com|o.notifications.google.com|s.youtube:twUnZ5ADTLUhsBnh13rjGTlQ3OOqiJ867vy9wwQnm84F70Ben5U33mu3izgtWvUEljgZTg.;notifications.google.com=OSID=twUnZ1JD4GZKiZkjDaU027J05TNQnKxe7y-cNoclViUefrLG4CAm0aqXgJmJibndzAmY7Q.;notifications.google.com=OTZ=4251041_76_76__76_;hangouts.google.com=llbcs=0;.google.com=TAID=AJHaeXK9zwsYaIJJ590t-z5Mg7B_B8DTkIpq7RyOhVMY3Q8_FNSVEDBbm-eDrv2Tnb11aeQYLhBAEg6NzzutMbk3KZErByQ;.google.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;mail.google.com=GMAIL_IMP=v*2%2Ftl-ard-s*993%2Fsdim*4%2Ftl-ar-f*1%2Ftl-ar-sdd*82134%2Ftl-ard-s*2231%2Ftl-ar-f*1%2Ftl-ar-s*1%2Fch-lsm*23512%2Fr-cs*1023%2Ftadis*12%2Ftl-ar-s*1;.google.com=SIDCC=AAiTGe8ytPRS54sSChsKvlNKigqsntwDMHtG_cCRPPAYQ8t48mr_xjHWJEEeQrVvy6KX73YsWg;.googleadservices.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;.google.com=NID=122=NNhMlnu0sQhLZnLK9vQKkRleM5lS3s3FNT3zTbTS2zRYSqEUjQms3F1j32wrVMu3m2crCW3OOtUUZrnU0RJZI9E03NU_X5luijQVGNSb1L68bNO0N6o7yjEekJpk81mo;";
-							// loginCookie(thongtincookie);
 							// Dailybreak_V2(File_Mail_info);
 							Dailybreak(File_Mail_info);
 							break;
@@ -1796,7 +1795,7 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "341":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -1804,15 +1803,26 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 	while(true)
 	{
 		iimPlayCode("TAG POS=1 TYPE=BUTTON ATTR=TXT:CREATE<SP>A<SP>NEW<SP>ACCOUNT");
+		iimPlayCode("WAIT SECONDS=10");
 		var Click_Capcha = "CODE:";
 		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
 		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=1" + "\n";
-		Click_Capcha += "FRAME F=2" + "\n";
-		Click_Capcha += "FRAME F=3" + "\n";
+		Click_Capcha += "FRAME F=1" + "\n"; // 1 là rebew
 		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
-		Click_Capcha += "WAIT SECONDS=10" + "\n";
 		iimPlay(Click_Capcha);
+		var Click_Capcha = "CODE:";
+		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha += "FRAME F=2" + "\n"; // 1 là rebew
+		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		iimPlay(Click_Capcha);
+		var Click_Capcha = "CODE:";
+		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha += "FRAME F=3" + "\n"; // 1 là rebew
+		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		iimPlay(Click_Capcha);
+		iimPlayCode("WAIT SECONDS=10");
 		//
 		var Dailybreak_INFO = "CODE:"; 
 		Dailybreak_INFO += "SET !ERRORIGNORE YES" + "\n";
@@ -1845,6 +1855,7 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 		}
 		else if(extract == "Failed Recaptcha")
 		{// Check Error Capcha
+			loginCookie();
 			Failed_Recaptcha++;
 			iimPlay(REFRESH_Site);
 			iimDisplay("Error Failed Recaptcha");
@@ -1857,7 +1868,7 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 		{// Neu Ok Thi Chay KS
 			switch(Check_Off)
 			{// KS loại 1
-				case "376":case "363":case "343":
+				case "376":case "363":case "343":case "341":
 				case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 				case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 				case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
@@ -1948,7 +1959,7 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 			}
 			switch(Check_Off)
 			{// KS loại 3
-				case "361":case "341":
+				case "361":
 				iimPlay(REFRESH_Site);
 				var Dailybreak_KS3 = "CODE:";
 				Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
@@ -2008,7 +2019,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 	// Lay info Khac neu Lam Off Giong nhau
 	switch(Check_Off)
 	{
-		case "341":
+		case "0":
 		Line = 2;
 		break;
 	}
@@ -2064,7 +2075,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			{// Neu Ok Thi Chay KS
 				switch(Check_Off)
 				{// KS loại 1
-					case "376":case "363":case "343":
+					case "376":case "363":case "343":case "341":
 					case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
@@ -2155,7 +2166,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 				}
 				switch(Check_Off)
 				{// KS loại 3
-					case "361":case "341":
+					case "361":
 					iimPlay(REFRESH_Site);
 					var Dailybreak_KS3 = "CODE:";
 					Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
@@ -4289,10 +4300,11 @@ function ClearCookie()
         learConsoleimageCacheManager.clearCache(false); // true=chrome, false=content
     } catch(exception) {}
 }
-function loginCookie(thongtincookie)
+function loginCookie()
 {
 	try
 	{
+		var thongtincookie = "www.google.com=DV=swu1E5LDeeIU0PXn5VxrPeL1BsvzFBY;.google.com=OGPC=845686784-5:;.google.com=__utmx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:;.google.com=__utmxx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:1517366369:8035200;.google.com=__utma=173272373.1109772875.1517366376.1517366376.1517366376.1;.google.com=__utmc=173272373;.google.com=__utmz=173272373.1517366376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);.google.com=__utmt=1;.google.com=__utmb=173272373.1.10.1517366376;mail.google.com=COMPASS=gmail=CooBAAlriVfEdOHzooWA7fjQU8tX_6z6T-YACuxhLGvn79vtEUD4hwO3UkxBXwnkM5JrpWaR2vnIFmPfJyiCyQuaMDht5D2gqP08XcBZnGLDmeneZyiyq4gaZPjZ9T-yk57T14FVkK2IHdNr0hu50K-PkLxu7SyNx0mt4OtcDBKr7SajxvGCutLN7a5QEO2ZytMFGpMBAAlriVdJCbyb3HUPMe7Sy7kDnYuIhW9vl9GDQypolx4Fza8I-uLytS198Z9fRvXvxnEYTA88j0bfry22BBtmH0Yrzo-gdiEHlhj-bqtdKSAv8_u7fz-GSF3RKM47r_e5veLHUSAr8oBj8g4gG9KaEEojq056FifWaGr6BQqFUsTzBaPGl1G-gPG3m5G3Mdglu9Xh;.google.com=SID=twUnZ3PCmvF_RvEFL2CJgdOd1ZuwHrV3ZRXukjdLJ9L8YMpe_Ausuu0PZnEcaKurPdDr5w.;.google.com=HSID=AWDx2JQYUvgzGIwYE;.google.com=SSID=A22EhwQqJNgHGR1sw;.google.com=APISID=nXsMP5c08h9uA15V/A2xnR3-SbIRkVte_p;.google.com=SAPISID=o6nxLf9SyGDmGl8c/AzxTwNMlla-1fjWJS;accounts.google.com=ACCOUNT_CHOOSER=AFx_qI49CyKzr22BvkVEpeo2zLK1yQQ-P7HDFHuD2HmimRwW9s-MnAps6wKqVfwloozNfxXNBYSyb7k6NbwMwBel4NIW7cTvcoa2jPdzJxWsWt8Jsy8YyXROHw6PIanjC9WXAnERHDxGBn46YDBwyLmh_eFio2TqkQ;mail.google.com=OSID=twUnZ7Gi895Y7PhVt_WyllziiAmrUlik4ukw4CpYG5h3dewd04ZV7Vo-Gr-AZDMeNtrRJQ.;mail.google.com=GMAIL_AT=AF6bupN9mGx0wA1hcpAS4CJJEGgrJtc8WA;.google.com=1P_JAR=2018-1-31-2;.google.com=NID=122=MQ694qZcN65qS-LKWHEY3LVsk_JGECCeWXyBAA8ZF1y8ENUUpaTuNDDx9ihupkZbWfQG9AXjd3azZhjcqUyhJ04oc1KzT4IChGUI6jDOfdbvfVt-vUi9BNkIM3PC4GvyWrZ6tN3Y63HgJ1ROBD_NqRiDNC6F3mgtlc48OmjUr1IKdMDjc_1xiiLcW66ADTT2Mjg;accounts.google.com=GAPS=1:GMtMhgth34qOpYF2OW4La6J-u3vcu-RE1YF3CgNc9pMiQ7imwHWMAGFTmTZcBU8RF5S29hDNoH4Eo3gnXkdFYGw4JLJN7A:t8H1dGO_KISr2m6u;accounts.google.com=LSID=mail|o.mail.google.com|o.notifications.google.com|s.youtube:twUnZ5ADTLUhsBnh13rjGTlQ3OOqiJ867vy9wwQnm84F70Ben5U33mu3izgtWvUEljgZTg.;notifications.google.com=OSID=twUnZ1JD4GZKiZkjDaU027J05TNQnKxe7y-cNoclViUefrLG4CAm0aqXgJmJibndzAmY7Q.;notifications.google.com=OTZ=4251041_76_76__76_;hangouts.google.com=llbcs=0;.google.com=TAID=AJHaeXK9zwsYaIJJ590t-z5Mg7B_B8DTkIpq7RyOhVMY3Q8_FNSVEDBbm-eDrv2Tnb11aeQYLhBAEg6NzzutMbk3KZErByQ;.google.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;mail.google.com=GMAIL_IMP=v*2%2Ftl-ard-s*993%2Fsdim*4%2Ftl-ar-f*1%2Ftl-ar-sdd*82134%2Ftl-ard-s*2231%2Ftl-ar-f*1%2Ftl-ar-s*1%2Fch-lsm*23512%2Fr-cs*1023%2Ftadis*12%2Ftl-ar-s*1;.google.com=SIDCC=AAiTGe8ytPRS54sSChsKvlNKigqsntwDMHtG_cCRPPAYQ8t48mr_xjHWJEEeQrVvy6KX73YsWg;.googleadservices.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;.google.com=NID=122=NNhMlnu0sQhLZnLK9vQKkRleM5lS3s3FNT3zTbTS2zRYSqEUjQms3F1j32wrVMu3m2crCW3OOtUUZrnU0RJZI9E03NU_X5luijQVGNSb1L68bNO0N6o7yjEekJpk81mo;";
 		var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"].getService(Components.interfaces.nsICookieManager);
 			Components.utils.import("resource://gre/modules/Services.jsm");
 		var cookieService = Services.cookies;
