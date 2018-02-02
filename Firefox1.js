@@ -7,9 +7,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["387","294","391","183","352","386",""];
+var Ma_off = ["367","305","387","245","352","319","385"];
 // var Ma_off = ["387"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1178,8 +1178,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Visa Pre-paidcard"||title == "XMAS"||title == "(1) Amazon Gift!"||title == "$500 Amazon Gift Card"||title == "Get a Gift Card")
-				{ // 224
+				else if(title == "YourCardSearch: Credit Card Matching"||title == "Visa Pre-paidcard"||title == "XMAS"||title == "(1) Amazon Gift!"||title == "$500 Amazon Gift Card"||title == "Get a Gift Card")
+				{ // 224 385
 					try
 					{
 						switch(Check_Off)
@@ -1198,6 +1198,40 @@ while(true)
 						{
 							case "0":
 							Get_a_Gift_Card(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{// YourCardSearch: Credit Card Matching
+							case "385":
+							var Stt = Math.floor((Math.random() * 5) + 2);
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var YourCardSearch = "CODE:";
+							YourCardSearch += "SET !ERRORIGNORE YES"+"\n";
+							YourCardSearch += "SET !TIMEOUT_TAG 0"+"\n";
+							YourCardSearch += "SET !DATASOURCE Last_First.txt"+"\n";
+							YourCardSearch += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
+							YourCardSearch += "SET !DATASOURCE_COLUMNS 2"+"\n";
+							YourCardSearch += "FRAME F=1"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:theForm ATTR=NAME:First_Name CONTENT={{!COL1}}"+"\n";
+							YourCardSearch += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							YourCardSearch += "SET !DATASOURCE_LINE 1"+"\n";
+							YourCardSearch += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:theForm ATTR=NAME:Email CONTENT={{!COL1}}"+"\n";
+							YourCardSearch += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							YourCardSearch += "SET !DATASOURCE_LINE 1"+"\n";
+							YourCardSearch += "SET !DATASOURCE_COLUMNS 5"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:theForm ATTR=NAME:Phone CONTENT={{!COL1}}"+"\n";
+							YourCardSearch += "EVENT TYPE=CLICK SELECTOR=\"#Credit\" BUTTON=0"+"\n";
+							YourCardSearch += "EVENT TYPE=CLICK SELECTOR=\"#Credit>OPTION:nth-of-type("+Stt+")\" BUTTON=0"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=INS ATTR=CLASS:iCheck-helper&&TXT:"+"\n";
+							YourCardSearch += "WAIT SECONDS=1"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=BUTTON FORM=ID:theForm ATTR=TXT:Search"+"\n";
+							YourCardSearch += "WAIT SECONDS=5"+"\n";
+							YourCardSearch += "FRAME F=0"+"\n";
+							YourCardSearch += "TAG POS=1 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
+							YourCardSearch += "TAG POS=2 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
+							YourCardSearch += "WAIT SECONDS=15"+"\n";
+							iimPlay(YourCardSearch);
 							break;
 						}
 						off++;
@@ -1568,6 +1602,7 @@ while(true)
 				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
+
 					try
 					{
 						switch(Check_Off)
@@ -1581,8 +1616,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397
+				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399
 					try //
 					{
 						var Line = 1;
@@ -1593,8 +1628,8 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{ // chọn Yes No đầu rồi mới  
-							case "1":case "2":
+						{ // chọn Yes No đầu rồi mới mail
+							case "399":
 							var Trang_1 = "CODE:"; 
 							Trang_1 += "SET !ERRORIGNORE YES" + "\n";
 							Trang_1 += "SET !TIMEOUT_TAG 0" + "\n";
