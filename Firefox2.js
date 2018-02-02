@@ -7,9 +7,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["386","387","305","319","384","352"];
+var Ma_off = ["397","311","341","319","352","320","386"];
 // var Ma_off = ["341"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; 
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -27,6 +27,28 @@ while(true)
 		REFRESH_Site += "SET !ERRORIGNORE YES" + "\n";
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
+		try
+		{
+			var thongtincookie = "www.google.com=DV=swu1E5LDeeIU0PXn5VxrPeL1BsvzFBY;.google.com=OGPC=845686784-5:;.google.com=__utmx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:;.google.com=__utmxx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:1517366369:8035200;.google.com=__utma=173272373.1109772875.1517366376.1517366376.1517366376.1;.google.com=__utmc=173272373;.google.com=__utmz=173272373.1517366376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);.google.com=__utmt=1;.google.com=__utmb=173272373.1.10.1517366376;mail.google.com=COMPASS=gmail=CooBAAlriVfEdOHzooWA7fjQU8tX_6z6T-YACuxhLGvn79vtEUD4hwO3UkxBXwnkM5JrpWaR2vnIFmPfJyiCyQuaMDht5D2gqP08XcBZnGLDmeneZyiyq4gaZPjZ9T-yk57T14FVkK2IHdNr0hu50K-PkLxu7SyNx0mt4OtcDBKr7SajxvGCutLN7a5QEO2ZytMFGpMBAAlriVdJCbyb3HUPMe7Sy7kDnYuIhW9vl9GDQypolx4Fza8I-uLytS198Z9fRvXvxnEYTA88j0bfry22BBtmH0Yrzo-gdiEHlhj-bqtdKSAv8_u7fz-GSF3RKM47r_e5veLHUSAr8oBj8g4gG9KaEEojq056FifWaGr6BQqFUsTzBaPGl1G-gPG3m5G3Mdglu9Xh;.google.com=SID=twUnZ3PCmvF_RvEFL2CJgdOd1ZuwHrV3ZRXukjdLJ9L8YMpe_Ausuu0PZnEcaKurPdDr5w.;.google.com=HSID=AWDx2JQYUvgzGIwYE;.google.com=SSID=A22EhwQqJNgHGR1sw;.google.com=APISID=nXsMP5c08h9uA15V/A2xnR3-SbIRkVte_p;.google.com=SAPISID=o6nxLf9SyGDmGl8c/AzxTwNMlla-1fjWJS;accounts.google.com=ACCOUNT_CHOOSER=AFx_qI49CyKzr22BvkVEpeo2zLK1yQQ-P7HDFHuD2HmimRwW9s-MnAps6wKqVfwloozNfxXNBYSyb7k6NbwMwBel4NIW7cTvcoa2jPdzJxWsWt8Jsy8YyXROHw6PIanjC9WXAnERHDxGBn46YDBwyLmh_eFio2TqkQ;mail.google.com=OSID=twUnZ7Gi895Y7PhVt_WyllziiAmrUlik4ukw4CpYG5h3dewd04ZV7Vo-Gr-AZDMeNtrRJQ.;mail.google.com=GMAIL_AT=AF6bupN9mGx0wA1hcpAS4CJJEGgrJtc8WA;.google.com=1P_JAR=2018-1-31-2;.google.com=NID=122=MQ694qZcN65qS-LKWHEY3LVsk_JGECCeWXyBAA8ZF1y8ENUUpaTuNDDx9ihupkZbWfQG9AXjd3azZhjcqUyhJ04oc1KzT4IChGUI6jDOfdbvfVt-vUi9BNkIM3PC4GvyWrZ6tN3Y63HgJ1ROBD_NqRiDNC6F3mgtlc48OmjUr1IKdMDjc_1xiiLcW66ADTT2Mjg;accounts.google.com=GAPS=1:GMtMhgth34qOpYF2OW4La6J-u3vcu-RE1YF3CgNc9pMiQ7imwHWMAGFTmTZcBU8RF5S29hDNoH4Eo3gnXkdFYGw4JLJN7A:t8H1dGO_KISr2m6u;accounts.google.com=LSID=mail|o.mail.google.com|o.notifications.google.com|s.youtube:twUnZ5ADTLUhsBnh13rjGTlQ3OOqiJ867vy9wwQnm84F70Ben5U33mu3izgtWvUEljgZTg.;notifications.google.com=OSID=twUnZ1JD4GZKiZkjDaU027J05TNQnKxe7y-cNoclViUefrLG4CAm0aqXgJmJibndzAmY7Q.;notifications.google.com=OTZ=4251041_76_76__76_;hangouts.google.com=llbcs=0;.google.com=TAID=AJHaeXK9zwsYaIJJ590t-z5Mg7B_B8DTkIpq7RyOhVMY3Q8_FNSVEDBbm-eDrv2Tnb11aeQYLhBAEg6NzzutMbk3KZErByQ;.google.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;mail.google.com=GMAIL_IMP=v*2%2Ftl-ard-s*993%2Fsdim*4%2Ftl-ar-f*1%2Ftl-ar-sdd*82134%2Ftl-ard-s*2231%2Ftl-ar-f*1%2Ftl-ar-s*1%2Fch-lsm*23512%2Fr-cs*1023%2Ftadis*12%2Ftl-ar-s*1;.google.com=SIDCC=AAiTGe8ytPRS54sSChsKvlNKigqsntwDMHtG_cCRPPAYQ8t48mr_xjHWJEEeQrVvy6KX73YsWg;.googleadservices.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;.google.com=NID=122=NNhMlnu0sQhLZnLK9vQKkRleM5lS3s3FNT3zTbTS2zRYSqEUjQms3F1j32wrVMu3m2crCW3OOtUUZrnU0RJZI9E03NU_X5luijQVGNSb1L68bNO0N6o7yjEekJpk81mo;";
+			var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"].getService(Components.interfaces.nsICookieManager);
+				Components.utils.import("resource://gre/modules/Services.jsm");
+			var cookieService = Services.cookies;
+			// cookieManager .add("facebook.com","/","c_user","100014280161380", true, true, true, 1487908862);
+			var arrayhostname = "";
+			var arraycookiename = "";
+			var arraycookievalue = "";
+			var cookieall = thongtincookie.split(';');
+			var k=0;
+			// alert(cookieall);
+			for(k;k<cookieall.length;k++)
+			{
+				var allcookie = cookieall[k].split('=');
+				arrayhostname = allcookie[0];
+				arraycookiename = allcookie[1];
+				arraycookievalue = allcookie[2];
+				cookieService.add(arrayhostname,"/",arraycookiename,arraycookievalue, true, true, true, Date.now()+6000000);
+			}
+		} catch (exception) {}
 		///////////////////////////////
 		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////// Load Link Lam Offers /////////////
@@ -37,7 +59,6 @@ while(true)
 		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
-		
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
@@ -132,7 +153,9 @@ while(true)
 						{ // RewardBee
 							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
+							// iimPlay(REFRESH_Site);
 							iimPlayCode("WAIT SECONDS=5");
+							// RewardBee_V2(File_Mail_info);
 							RewardBee(File_Mail_info);
 							break;
 						}
@@ -194,7 +217,7 @@ while(true)
 							Tripping += "SET !ERRORIGNORE YES" + "\n";
 							Tripping += "SET !TIMEOUT_TAG 0"+"\n";
 							Tripping += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT\" BUTTON=0"+"\n";
-							Tripping += 'EVENTS TYPE=KEYPRESS SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT" CHARS="new"'+"\n";
+							Tripping += 'EVENTS TYPE=KEYPRESS SELECTOR="HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV>DIV>SPAN>INPUT" CHARS='+Country[STT]+"\n";
 							Tripping += "WAIT SECONDS = 7"+"\n";
 							Tripping += "EVENT TYPE=MOUSEDOWN SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>SPAN:nth-of-type(2)\" BUTTON=0"+"\n";
 							Tripping += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV>DIV>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV:nth-of-type(2)>DIV>SPAN>DIV\" BUTTON=0"+"\n";
@@ -1558,8 +1581,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315
+				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title == "Target® Gift Card"||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397
 					try //
 					{
 						var Line = 1;
@@ -1606,7 +1629,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "315":case "321":case "318":case "317":case "187":case "21":case "119":case "102":
+							case "397":case "315":case "321":case "318":case "317":case "187":case "21":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
 							SUBMIT += "SET !ERRORIGNORE YES" + "\n";
@@ -1803,25 +1826,25 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 	while(true)
 	{
 		iimPlayCode("TAG POS=1 TYPE=BUTTON ATTR=TXT:CREATE<SP>A<SP>NEW<SP>ACCOUNT");
-		iimPlayCode("WAIT SECONDS=10");
-		var Click_Capcha = "CODE:";
-		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
-		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=1" + "\n";
-		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
-		iimPlay(Click_Capcha);
-		var Click_Capcha = "CODE:";
-		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
-		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=2" + "\n";
-		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
-		iimPlay(Click_Capcha);
-		var Click_Capcha = "CODE:";
-		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
-		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=3" + "\n";
-		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
-		iimPlay(Click_Capcha);
+		iimPlayCode("WAIT SECONDS=5");
+		var Click_Capcha_1 = "CODE:";
+		Click_Capcha_1 += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha_1 += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha_1 += "FRAME F=1" + "\n";
+		Click_Capcha_1 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		iimPlay(Click_Capcha_1);
+		var Click_Capcha_2 = "CODE:";
+		Click_Capcha_2 += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha_2 += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha_2 += "FRAME F=2" + "\n";
+		Click_Capcha_2 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		iimPlay(Click_Capcha_2);
+		var Click_Capcha_3 = "CODE:";
+		Click_Capcha_3 += "SET !ERRORIGNORE YES" + "\n";
+		Click_Capcha_3 += "SET !TIMEOUT_TAG 0" + "\n";
+		Click_Capcha_3 += "FRAME F=3" + "\n";
+		Click_Capcha_3 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+		iimPlay(Click_Capcha_3);
 		iimPlayCode("WAIT SECONDS=10");
 		//
 		var Dailybreak_INFO = "CODE:"; 
@@ -2231,8 +2254,7 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Phieu_Mua_Hang1 = Math.floor((Math.random() * 5) + 1);
 	var Phieu_Mua_Hang2 = Math.floor((Math.random() * (9 - 6 + 1)) + 6);
-	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
-	// lay inf khac neu lam off giong nhau
+	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);	
 	switch(Check_Off) 
 	{
 		case "0":
@@ -2270,7 +2292,7 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 		C4 = 3;C9 = 3;
 		break;
 		// RewardBee (Game Night)
-		case "39":case "179":case "86":case "109":
+		case "387":case "39":case "179":case "86":case "109":
 		C0 = 7;C5 = 5;
 		C1 = 3;C6 = 6;
 		C2 = 5;C7 = 3;
@@ -2301,7 +2323,7 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 		C4 = 4;
 		break;
 	}
-	while(true)
+	while(SL_Chon_KS < 2)
 	{//Chạy KS 2 Lần Để chánh tình Trạng ko click được ô
 		var cau_0 = Math.floor((Math.random() * C0) + 1);
 		var cau_1 = Math.floor((Math.random() * C1) + 1);
@@ -2314,10 +2336,6 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 		var cau_8 = Math.floor((Math.random() * C8) + 1);
 		var cau_9 = Math.floor((Math.random() * C9) + 1);
 		var cau_10 = Math.floor((Math.random() * C10) + 1);
-		if(SL_Chon_KS > 2)
-		{
-			break;
-		}
 		SL_Chon_KS++;
 		var RewardBee_KS = "CODE:";
 		RewardBee_KS += "SET !ERRORIGNORE YES" + "\n";
@@ -2340,8 +2358,6 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 	// Check Capcha Và Điền Info
 	var RewardBee = "CODE:";
 	RewardBee += "SET !ERRORIGNORE YES" + "\n";
-	RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
-	RewardBee += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
 	RewardBee += "SET !TIMEOUT_TAG 0" + "\n";
 	RewardBee += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
 	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
@@ -2361,12 +2377,49 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee
 	RewardBee += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
 	RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
 	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
-	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
-	RewardBee += "WAIT SECONDS=30"+"\n";
+	// RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	// RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
+	// RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
+	// RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	// RewardBee += "WAIT SECONDS=30"+"\n";  
 	iimPlay(RewardBee);
+	//
+	iimPlayCode("WAIT SECONDS=5");
+	var Click_Capcha_1 = "CODE:";
+	Click_Capcha_1 += "SET !ERRORIGNORE YES" + "\n";
+	Click_Capcha_1 += "SET !TIMEOUT_TAG 0" + "\n";
+	Click_Capcha_1 += "FRAME F=1" + "\n";
+	Click_Capcha_1 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+	iimPlay(Click_Capcha_1);
+	var Click_Capcha_2 = "CODE:";
+	Click_Capcha_2 += "SET !ERRORIGNORE YES" + "\n";
+	Click_Capcha_2 += "SET !TIMEOUT_TAG 0" + "\n";
+	Click_Capcha_2 += "FRAME F=2" + "\n";
+	Click_Capcha_2 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+	iimPlay(Click_Capcha_2);
+	var Click_Capcha_3 = "CODE:";
+	Click_Capcha_3 += "SET !ERRORIGNORE YES" + "\n";
+	Click_Capcha_3 += "SET !TIMEOUT_TAG 0" + "\n";
+	Click_Capcha_3 += "FRAME F=3" + "\n";
+	Click_Capcha_3 += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
+	iimPlay(Click_Capcha_3);
+	iimPlayCode("WAIT SECONDS=10");
+	//
+	var Cilck_Submit = "CODE:";
+	Cilck_Submit += "SET !ERRORIGNORE YES" + "\n";
+	Cilck_Submit += "SET !TIMEOUT_TAG 0" + "\n";
+	Cilck_Submit += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	Cilck_Submit += "SET !TIMEOUT_TAG 10" + "\n";
+	Cilck_Submit += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
+	Cilck_Submit += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	iimPlay(Cilck_Submit);
+	//
+	iimPlayCode("WAIT SECONDS=15");
+	var title = window.document.title;
+	if(title == "Confirmation")
+	{
+		iimPlayCode("WAIT SECONDS=15");
+	}
 }
 function RewardBee(File_Mail_info)                     // RewardBee
 {
