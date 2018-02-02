@@ -2098,7 +2098,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			{// Neu Ok Thi Chay KS
 				switch(Check_Off)
 				{// KS loại 1
-					case "376":case "363":case "343":case "341":
+					case "376":case "363":case "343":case "341":case "391":
 					case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
@@ -2189,7 +2189,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 				}
 				switch(Check_Off)
 				{// KS loại 3
-					case "391":case "361":
+					case "361":
 					iimPlay(REFRESH_Site);
 					var Dailybreak_KS3 = "CODE:";
 					Dailybreak_KS3 += "SET !ERRORIGNORE YES"+"\n";
