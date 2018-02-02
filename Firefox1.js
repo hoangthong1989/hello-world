@@ -7,7 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","345","305","319","384","352"];
+var Ma_off = ["386","387","305","319","384","352"];
 // var Ma_off = ["341"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
 while(true)
@@ -125,12 +125,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386
 					try
 					{
 						switch(Check_Off)
 						{ // RewardBee
-							case "241":case "180":case "179":case "123":case "109":case "145":case "239":
+							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
 							iimPlayCode("WAIT SECONDS=5");
 							RewardBee(File_Mail_info);
@@ -138,7 +138,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Roblox
-							case "248":case "245":case "174":case "204":
+							case "386":case "248":case "245":case "174":case "204":
 							var Thang = Math.floor((Math.random() * 12) + 2);
 							var Ngay = Math.floor((Math.random() * 9) + 1);
 							var Nam = Math.floor((Math.random() * (1982 - 1975 + 1)) + 1975);
@@ -1807,19 +1807,19 @@ function Dailybreak_V2(File_Mail_info)                      // Dailybreak V2
 		var Click_Capcha = "CODE:";
 		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
 		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=1" + "\n"; // 1 là rebew
+		Click_Capcha += "FRAME F=1" + "\n";
 		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
 		iimPlay(Click_Capcha);
 		var Click_Capcha = "CODE:";
 		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
 		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=2" + "\n"; // 1 là rebew
+		Click_Capcha += "FRAME F=2" + "\n";
 		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
 		iimPlay(Click_Capcha);
 		var Click_Capcha = "CODE:";
 		Click_Capcha += "SET !ERRORIGNORE YES" + "\n";
 		Click_Capcha += "SET !TIMEOUT_TAG 0" + "\n";
-		Click_Capcha += "FRAME F=3" + "\n"; // 1 là rebew
+		Click_Capcha += "FRAME F=3" + "\n";
 		Click_Capcha += "EVENT TYPE=CLICK SELECTOR=\"#recaptcha-anchor>DIV:nth-of-type(5)\" BUTTON=0" + "\n";
 		iimPlay(Click_Capcha);
 		iimPlayCode("WAIT SECONDS=10");
@@ -2223,6 +2223,151 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 		}
 	}
 }
+function RewardBee_V2(File_Mail_info)                     // RewardBee
+{
+	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;var C10 = 0;
+	var load_F5 = 0;var Line = 1;var SL_Chon_KS = 0;
+	var Pass = Tao_Pass();
+	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Phieu_Mua_Hang1 = Math.floor((Math.random() * 5) + 1);
+	var Phieu_Mua_Hang2 = Math.floor((Math.random() * (9 - 6 + 1)) + 6);
+	var Phieu_Mua_Hang3 = Math.floor((Math.random() * (14 - 11 + 1)) + 11);
+	// lay inf khac neu lam off giong nhau
+	switch(Check_Off) 
+	{
+		case "0":
+		Line = 2;
+		break;
+	}
+	switch(Check_Off)
+	{// chọn Phiếu mua hàng
+		case "145":case "84":case "86":case "109":case "17":case "22":case "39":
+		var Phieu_Mua_Hang_1 = "CODE:";
+		Phieu_Mua_Hang_1 += "SET !ERRORIGNORE YES" + "\n";
+		Phieu_Mua_Hang_1 += "SET !TIMEOUT_TAG 0" + "\n";
+		Phieu_Mua_Hang_1 += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		iimPlay(Phieu_Mua_Hang_1);
+		break;
+		//
+		default:
+		var Phieu_Mua_Hang = "CODE:";
+		Phieu_Mua_Hang += "SET !ERRORIGNORE YES" + "\n";
+		Phieu_Mua_Hang += "SET !TIMEOUT_TAG 0" + "\n";
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang1+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang2+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		Phieu_Mua_Hang += "TAG POS="+Phieu_Mua_Hang3+" TYPE=SPAN ATTR=TXT:$10<SP>in<SP>Reward<SP>Points"+" \n";
+		iimPlay(Phieu_Mua_Hang);
+		break;
+	}
+	switch(Check_Off)
+	{// Phân loại câu hỏi RewardBee
+		// RewardBee
+		case "78":
+		C0 = 3;C5 = 4;
+		C1 = 3;C6 = 3;
+		C2 = 5;C7 = 7;
+		C3 = 8;C8 = 3;
+		C4 = 3;C9 = 3;
+		break;
+		// RewardBee (Game Night)
+		case "39":case "179":case "86":case "109":
+		C0 = 7;C5 = 5;
+		C1 = 3;C6 = 6;
+		C2 = 5;C7 = 3;
+		C3 = 3;C8 = 7;
+		C4 = 3;C9 = 2;C10 = 6;
+		break;
+		//RewardBee -(key) + TV
+		case "145":case "123":case "22":case "76":
+		C0 = 8;C5 = 3;
+		C1 = 5;C6 = 7;
+		C2 = 6;C7 = 3;
+		C3 = 7;C8 = 7;
+		C4 = 4;C9 = 2;
+		break;
+		// RewardBee - Love
+		case "84":
+		C0 = 6;C5 = 8;
+		C1 = 11;C6 = 7;
+		C2 = 4;C7 = 3;
+		C3 = 6;C8 = 3;
+		C4 = 4;C9 = 2;
+		break;
+		case "241":case "239":case "25":case "180":
+		C0 = 8;C5 = 3;
+		C1 = 5;C6 = 7;
+		C2 = 6;C7 = 3;
+		C3 = 7;C8 = 7;
+		C4 = 4;
+		break;
+	}
+	while(true)
+	{//Chạy KS 2 Lần Để chánh tình Trạng ko click được ô
+		var cau_0 = Math.floor((Math.random() * C0) + 1);
+		var cau_1 = Math.floor((Math.random() * C1) + 1);
+		var cau_2 = Math.floor((Math.random() * C2) + 1);
+		var cau_3 = Math.floor((Math.random() * C3) + 1);
+		var cau_4 = Math.floor((Math.random() * C4) + 1);
+		var cau_5 = Math.floor((Math.random() * C5) + 1);
+		var cau_6 = Math.floor((Math.random() * C6) + 1);
+		var cau_7 = Math.floor((Math.random() * C7) + 1);
+		var cau_8 = Math.floor((Math.random() * C8) + 1);
+		var cau_9 = Math.floor((Math.random() * C9) + 1);
+		var cau_10 = Math.floor((Math.random() * C10) + 1);
+		if(SL_Chon_KS > 2)
+		{
+			break;
+		}
+		SL_Chon_KS++;
+		var RewardBee_KS = "CODE:";
+		RewardBee_KS += "SET !ERRORIGNORE YES" + "\n";
+		RewardBee_KS += "SET !TIMEOUT_TAG 0" + "\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_0>DIV:nth-of-type("+cau_0+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_1>DIV:nth-of-type("+cau_1+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_2>DIV:nth-of-type("+cau_2+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_3>DIV:nth-of-type("+cau_3+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_4>DIV:nth-of-type("+cau_4+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_5>DIV:nth-of-type("+cau_5+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_6>DIV:nth-of-type("+cau_6+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_7>DIV:nth-of-type("+cau_7+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_8>DIV:nth-of-type("+cau_8+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_9>DIV:nth-of-type("+cau_9+")>LABEL\" BUTTON=0"+"\n";
+		RewardBee_KS += "EVENT TYPE=CLICK SELECTOR=\"#gridQuestions_gridQContainer_10>DIV:nth-of-type("+cau_10+")>LABEL\" BUTTON=0"+"\n";
+		// click cố định câu 9 
+		RewardBee_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:frmSurveyBee ATTR=ID:d42404b2-23e0-e711-b60d-0e4c37f58098"+"\n";
+		iimPlay(RewardBee_KS);
+	}
+	// Check Capcha Và Điền Info
+	var RewardBee = "CODE:";
+	RewardBee += "SET !ERRORIGNORE YES" + "\n";
+	RewardBee += "SET !TIMEOUT_TAG 80" + "\n";
+	RewardBee += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
+	RewardBee += "SET !TIMEOUT_TAG 0" + "\n";
+	RewardBee += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custEmail CONTENT={{!COL1}}"+"\n";
+	RewardBee += "SET !ENCRYPTION NO" + "\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwd CONTENT="+Pass+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:frmSurveyBee ATTR=ID:sb-custPwdCnfrm CONTENT="+Pass+"\n";
+	// Điền info
+	RewardBee += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	RewardBee += "SET !DATASOURCE_LINE "+Line+"\n";
+	RewardBee += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custAddress1 CONTENT={{!COL2}}"+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custCity CONTENT={{!COL3}}"+"\n";
+	RewardBee += "TAG POS=1 TYPE=SELECT FORM=ID:frmSurveyBee ATTR=ID:sb-custStateProvince CONTENT=%{{!COL4}}"+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custPostalCode CONTENT={{!COL5}}"+"\n";
+	RewardBee += "SET !DATASOURCE Last_First.txt"+"\n";
+	RewardBee += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
+	RewardBee += "SET !DATASOURCE_COLUMNS 2"+"\n";
+	RewardBee += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:frmSurveyBee ATTR=ID:sb-custName CONTENT={{!COL1}}"+"\n";
+	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	RewardBee += "SET !TIMEOUT_TAG 10" + "\n";
+	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=TXT:Click<SP>to<SP>keep<SP>original"+"\n";
+	RewardBee += "TAG POS=1 TYPE=BUTTON FORM=ID:frmSurveyBee ATTR=ID:sb-confRwd"+"\n";
+	RewardBee += "WAIT SECONDS=30"+"\n";
+	iimPlay(RewardBee);
+}
 function RewardBee(File_Mail_info)                     // RewardBee
 {
 	var C0 = 0;var C1 = 0;var C2 = 0;var C3 = 0;var C4 = 0;var C5 = 0;var C6 = 0;var C7 = 0;var C8 = 0;var C9 = 0;var C10 = 0;
@@ -2275,7 +2420,7 @@ function RewardBee(File_Mail_info)                     // RewardBee
 				C4 = 3;C9 = 3;
 				break;
 				// RewardBee (Game Night)
-				case "39":case "179":case "86":case "109":
+				case "387":case "39":case "179":case "86":case "109":
 				C0 = 7;C5 = 5;
 				C1 = 3;C6 = 6;
 				C2 = 5;C7 = 3;
@@ -4324,6 +4469,7 @@ function loginCookie()
 			cookieService.add(arrayhostname,"/",arraycookiename,arraycookievalue, true, true, true, Date.now()+6000000);
 		}
 	} catch (exception) {}
+	
 }
 
 
