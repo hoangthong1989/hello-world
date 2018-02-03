@@ -7,7 +7,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["397","341","311","245","352","319","385"];
+var Ma_off = ["387","400","404","245","352","294","385"];
 // var Ma_off = ["387"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
 while(true)
@@ -27,28 +27,6 @@ while(true)
 		REFRESH_Site += "SET !ERRORIGNORE YES" + "\n";
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
-		try
-		{
-			var thongtincookie = "www.google.com=DV=swu1E5LDeeIU0PXn5VxrPeL1BsvzFBY;.google.com=OGPC=845686784-5:;.google.com=__utmx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:;.google.com=__utmxx=173272373.NsRgTn8iQf-MYLOX8BH_qA$0:1517366369:8035200;.google.com=__utma=173272373.1109772875.1517366376.1517366376.1517366376.1;.google.com=__utmc=173272373;.google.com=__utmz=173272373.1517366376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);.google.com=__utmt=1;.google.com=__utmb=173272373.1.10.1517366376;mail.google.com=COMPASS=gmail=CooBAAlriVfEdOHzooWA7fjQU8tX_6z6T-YACuxhLGvn79vtEUD4hwO3UkxBXwnkM5JrpWaR2vnIFmPfJyiCyQuaMDht5D2gqP08XcBZnGLDmeneZyiyq4gaZPjZ9T-yk57T14FVkK2IHdNr0hu50K-PkLxu7SyNx0mt4OtcDBKr7SajxvGCutLN7a5QEO2ZytMFGpMBAAlriVdJCbyb3HUPMe7Sy7kDnYuIhW9vl9GDQypolx4Fza8I-uLytS198Z9fRvXvxnEYTA88j0bfry22BBtmH0Yrzo-gdiEHlhj-bqtdKSAv8_u7fz-GSF3RKM47r_e5veLHUSAr8oBj8g4gG9KaEEojq056FifWaGr6BQqFUsTzBaPGl1G-gPG3m5G3Mdglu9Xh;.google.com=SID=twUnZ3PCmvF_RvEFL2CJgdOd1ZuwHrV3ZRXukjdLJ9L8YMpe_Ausuu0PZnEcaKurPdDr5w.;.google.com=HSID=AWDx2JQYUvgzGIwYE;.google.com=SSID=A22EhwQqJNgHGR1sw;.google.com=APISID=nXsMP5c08h9uA15V/A2xnR3-SbIRkVte_p;.google.com=SAPISID=o6nxLf9SyGDmGl8c/AzxTwNMlla-1fjWJS;accounts.google.com=ACCOUNT_CHOOSER=AFx_qI49CyKzr22BvkVEpeo2zLK1yQQ-P7HDFHuD2HmimRwW9s-MnAps6wKqVfwloozNfxXNBYSyb7k6NbwMwBel4NIW7cTvcoa2jPdzJxWsWt8Jsy8YyXROHw6PIanjC9WXAnERHDxGBn46YDBwyLmh_eFio2TqkQ;mail.google.com=OSID=twUnZ7Gi895Y7PhVt_WyllziiAmrUlik4ukw4CpYG5h3dewd04ZV7Vo-Gr-AZDMeNtrRJQ.;mail.google.com=GMAIL_AT=AF6bupN9mGx0wA1hcpAS4CJJEGgrJtc8WA;.google.com=1P_JAR=2018-1-31-2;.google.com=NID=122=MQ694qZcN65qS-LKWHEY3LVsk_JGECCeWXyBAA8ZF1y8ENUUpaTuNDDx9ihupkZbWfQG9AXjd3azZhjcqUyhJ04oc1KzT4IChGUI6jDOfdbvfVt-vUi9BNkIM3PC4GvyWrZ6tN3Y63HgJ1ROBD_NqRiDNC6F3mgtlc48OmjUr1IKdMDjc_1xiiLcW66ADTT2Mjg;accounts.google.com=GAPS=1:GMtMhgth34qOpYF2OW4La6J-u3vcu-RE1YF3CgNc9pMiQ7imwHWMAGFTmTZcBU8RF5S29hDNoH4Eo3gnXkdFYGw4JLJN7A:t8H1dGO_KISr2m6u;accounts.google.com=LSID=mail|o.mail.google.com|o.notifications.google.com|s.youtube:twUnZ5ADTLUhsBnh13rjGTlQ3OOqiJ867vy9wwQnm84F70Ben5U33mu3izgtWvUEljgZTg.;notifications.google.com=OSID=twUnZ1JD4GZKiZkjDaU027J05TNQnKxe7y-cNoclViUefrLG4CAm0aqXgJmJibndzAmY7Q.;notifications.google.com=OTZ=4251041_76_76__76_;hangouts.google.com=llbcs=0;.google.com=TAID=AJHaeXK9zwsYaIJJ590t-z5Mg7B_B8DTkIpq7RyOhVMY3Q8_FNSVEDBbm-eDrv2Tnb11aeQYLhBAEg6NzzutMbk3KZErByQ;.google.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;mail.google.com=GMAIL_IMP=v*2%2Ftl-ard-s*993%2Fsdim*4%2Ftl-ar-f*1%2Ftl-ar-sdd*82134%2Ftl-ard-s*2231%2Ftl-ar-f*1%2Ftl-ar-s*1%2Fch-lsm*23512%2Fr-cs*1023%2Ftadis*12%2Ftl-ar-s*1;.google.com=SIDCC=AAiTGe8ytPRS54sSChsKvlNKigqsntwDMHtG_cCRPPAYQ8t48mr_xjHWJEEeQrVvy6KX73YsWg;.googleadservices.com=AID=AJHaeXJUCUA2PnBT-nuazwDG5FqHa0CAquIFYeUDbw;.google.com=NID=122=NNhMlnu0sQhLZnLK9vQKkRleM5lS3s3FNT3zTbTS2zRYSqEUjQms3F1j32wrVMu3m2crCW3OOtUUZrnU0RJZI9E03NU_X5luijQVGNSb1L68bNO0N6o7yjEekJpk81mo;";
-			var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"].getService(Components.interfaces.nsICookieManager);
-				Components.utils.import("resource://gre/modules/Services.jsm");
-			var cookieService = Services.cookies;
-			// cookieManager .add("facebook.com","/","c_user","100014280161380", true, true, true, 1487908862);
-			var arrayhostname = "";
-			var arraycookiename = "";
-			var arraycookievalue = "";
-			var cookieall = thongtincookie.split(';');
-			var k=0;
-			// alert(cookieall);
-			for(k;k<cookieall.length;k++)
-			{
-				var allcookie = cookieall[k].split('=');
-				arrayhostname = allcookie[0];
-				arraycookiename = allcookie[1];
-				arraycookievalue = allcookie[2];
-				cookieService.add(arrayhostname,"/",arraycookiename,arraycookievalue, true, true, true, Date.now()+6000000);
-			}
-		} catch (exception) {}
 		///////////////////////////////
 		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////// Load Link Lam Offers /////////////
@@ -461,19 +439,19 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				{ // 110 146 154 162 163 169 96 199 313 316 319 320
+				{ // 110 146 154 162 163 169 96 199 313 316 319 320 400 404
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
-							case "320":
+							case "400":case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
 						}
 						switch(Check_Off)
 						{ // Step_1
-							case "319":
+							case "404":case "319":
 							Step_1(File_Mail_info);
 							break;
 						}
@@ -1088,7 +1066,7 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Register To Play"||title == "Disney"||title == "Vaniki US"||title == "Winter Samples")
+				else if(title == "Official Rosetta Stone® - Try Our Free Demo"||title == "Register To Play"||title == "Disney"||title == "Vaniki US"||title == "Winter Samples")
 				{ // 164 165 167 73 106 112 128 138 62 61 7
 					try
 					{
@@ -1171,6 +1149,25 @@ while(true)
 						{ // QualityHealth | Winter Samples
 							case "7":
 							QualityHealth(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Rosetta
+							case "0":
+							var Rosetta = "CODE:";
+							Rosetta += "SET !ERRORIGNORE YES  "+"\n";
+							Rosetta += "SET !TIMEOUT_TAG 0 "+"\n";
+							Rosetta += "TAG POS=1 TYPE=DIV ATTR=ID:default-option"+"\n";
+							Rosetta += "TAG POS=2 TYPE=LI ATTR=TXT:English<SP>(American)"+"\n";
+							Rosetta += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Rosetta += "SET !DATASOURCE_LINE 1"+"\n";
+							Rosetta += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Rosetta += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=* CONTENT={{!COL1}}"+"\n";
+							Rosetta += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=*"+"\n";
+							Rosetta += "WAIT SECONDS=5"+"\n";
+							Rosetta += "TAG POS=1 TYPE=A ATTR=TXT:SHOP<SP>NOW"+"\n";
+							Rosetta += "WAIT SECONDS=25"+"\n";
+							iimPlay(Rosetta);
 							break;
 						}
 						off++;
@@ -3922,6 +3919,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
+		case "400":
 		case "357":case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
@@ -4059,38 +4057,48 @@ function Step_1(File_Mail_info)                  // Step_1
 	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
 	switch(Check_Off)
-	{
-		case "0":
-		var Step_1 = "CODE:";
-		Step_1 += "SET !ERRORIGNORE YES"+"\n";
-		Step_1 += "SET !TIMEOUT_TAG 0 "+"\n";
-		Step_1 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-		Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-		Step_1 += "SET !DATASOURCE_COLUMNS 1"+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:* CONTENT={{!COL1}}"+"\n";
-		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=ID:*"+"\n";
-		Step_1 += "WAIT SECONDS=5"+"\n";
-		Step_1 += "SET !DATASOURCE Last_First.txt"+"\n";
-		Step_1 += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-		Step_1 += "SET !DATASOURCE_COLUMNS 2"+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
-		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-		Step_1 += "WAIT SECONDS=1"+"\n";
-		Step_1 += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-		Step_1 += "SET !DATASOURCE_LINE 1"+"\n";
-		Step_1 += "SET !DATASOURCE_COLUMNS 5"+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
-		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
-		Step_1 += "WAIT SECONDS=1"+"\n";
-		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
-		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
-		Step_1 += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
-		Step_1 += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
-		Step_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
-		iimPlay(Step_1);
+	{//
+		case "404":
+		var sweepstakesamonth_Mail = "CODE:";
+		sweepstakesamonth_Mail += "SET !ERRORIGNORE YES"+"\n";
+		sweepstakesamonth_Mail += "SET !TIMEOUT_TAG 0"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE_LINE 1"+"\n";
+		sweepstakesamonth_Mail += "SET !DATASOURCE_COLUMNS 1"+"\n";
+		// sweepstakesamonth_Mail += "FRAME F=1"+"\n";
+		sweepstakesamonth_Mail += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth_Mail += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+		sweepstakesamonth_Mail += "WAIT SECONDS=10"+"\n";
+		iimPlay(sweepstakesamonth_Mail);
+		var sweepstakesamonth = "CODE:";
+		sweepstakesamonth += "SET !ERRORIGNORE YES"+"\n";
+		sweepstakesamonth += "SET !TIMEOUT_TAG 0"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE Last_First.txt"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:firstname CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:lastname CONTENT={{!COL2}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=1"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_LINE 1"+"\n";
+		sweepstakesamonth += "SET !DATASOURCE_COLUMNS 5"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:FlowSQForm ATTR=ID:telephone CONTENT={{!COL1}}"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:CONTINUE"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=1"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthmonth CONTENT=%0"+Random_Ngay+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthday CONTENT=%0"+Random_Thang+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:birthyear CONTENT=%"+Random_Nam+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:iAgree-Checkbox CONTENT=YES"+"\n";
+		sweepstakesamonth += "TAG POS=1 TYPE=SPAN ATTR=TXT:ENTER<SP>TO<SP>WIN"+"\n";
+		sweepstakesamonth += "WAIT SECONDS=10"+"\n";
+		iimPlay(sweepstakesamonth);
 		break;
+		
+	}
+	switch(Check_Off)
+	{// FRAME F=1
 		case "319":
 		var sweepstakesamonth_Mail = "CODE:";
 		sweepstakesamonth_Mail += "SET !ERRORIGNORE YES"+"\n";
@@ -4131,7 +4139,7 @@ function Step_1(File_Mail_info)                  // Step_1
 	}
 	var str = window.document.body.textContent;
 	if(str.indexOf("Take Survey"))
-	{
+	{// KS
 		var National_KS = "CODE:";
 		National_KS += "SET !ERRORIGNORE YES"+"\n";
 		National_KS += "SET !TIMEOUT_TAG 0"+"\n";
@@ -4557,7 +4565,6 @@ function loginCookie()
 			cookieService.add(arrayhostname,"/",arraycookiename,arraycookievalue, true, true, true, Date.now()+6000000);
 		}
 	} catch (exception) {}
-	
 }
 
 
