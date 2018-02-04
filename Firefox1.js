@@ -1,4 +1,5 @@
 //======================================================================================================================
+// Nếu Tạo Mem thì Port 50001 đến 50019 sẽ tạo mã là từ 0 đến 6 còn từ 50021 đến 50035 sẽ tạo là từ 0 đến 7 
 var home = "CODE:";
 home += "SET !ERRORIGNORE YES" + "\n";
 home += "SET !TIMEOUT_PAGE 0"+"\n";
@@ -8,9 +9,9 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
 
-var Ma_off = ["413","399","319","245","352","183","292"];
+var Ma_off = ["174","292","345","319","352","183",""];
 // var Ma_off = ["413"];
-var File_Mail_info = 1; var sl_chay_off = 6; var off = 0; 
+var File_Mail_info = 1; var sl_chay_off = 5; var off = 0; 
 while(true)
 {
 	if(off > sl_chay_off)
@@ -21,6 +22,16 @@ while(true)
 	}
 	else
 	{// Con Neu Chua Thi Tiến hành làm offer  
+		// var File_Mem = "CODE:";
+		// File_Mem += "SET !ERRORIGNORE YES"+" \n";
+		// File_Mem += "SET !TIMEOUT_TAG 0"+" \n";
+		// File_Mem += "SET !DATASOURCE Code_Mem.txt"+" \n";
+		// File_Mem += "SET !DATASOURCE_LINE 1"+" \n";
+		// File_Mem += "SET !DATASOURCE_COLUMNS 5"+" \n";
+		// File_Mem += "ADD !EXTRACT {{!COL1}}"+" \n";
+		// iimPlay(File_Mem);
+		// var Code_Mem = iimGetLastExtract(1); 
+		
 		var User_member = ["","FireFox_1","FireFox_2"];ClearCookie();
 		var Check_Off = Ma_off[off]; var F5_site_Rong = 0; var F5_Off_sai_dang = 0;		
 		/////////////// Ham F5 Chờ Gọi ////////////////
@@ -29,7 +40,7 @@ while(true)
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
 		///////////////////////////////
-		loginCookie();
+		// loginCookie();
 		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////// Load Link Lam Offers /////////////
 		var Load_Link_Nhanh = "CODE:";
@@ -1518,7 +1529,7 @@ while(true)
 							break;
 						}
 						switch(Check_Off)
-						{// Opinion
+						{// Opinion			
 							case "257":case "147":
 							var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Ngay = Math.floor((Math.random() * 9) + 1);
@@ -4598,6 +4609,5 @@ function loginCookie()
 		}
 	} catch (exception) {}
 }
-
 
 
