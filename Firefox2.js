@@ -7,8 +7,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["385","412","319","245","397","340","292"];
-// var Ma_off = ["410"];
+
+var Ma_off = ["413","399","319","245","352","183","292"];
+// var Ma_off = ["413"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
@@ -37,6 +38,7 @@ while(true)
 		Load_Link_Nhanh += "TAB CLOSEALLOTHERS"+"\n";
 		Load_Link_Nhanh += "CLEAR"+"\n";
 		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
+		// Load_Link_Nhanh += "URL GOTO=http://earnmoneyoffer.net/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
@@ -1615,7 +1617,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410
+				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410 413
 					try //
 					{
 						var Line = 1;
@@ -1663,6 +1665,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
+							case "413":
 							case "397":case "315":case "321":case "318":case "317":case "187":case "21":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":
 							var SUBMIT = "CODE:";
