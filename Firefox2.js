@@ -7,8 +7,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["294","387","319","245","352","399",""];
-// var Ma_off = ["387"];
+var Ma_off = ["385","412","319","245","397","340","292"];
+// var Ma_off = ["410"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0; 
 while(true)
 {
@@ -28,6 +28,7 @@ while(true)
 		REFRESH_Site += "SET !TIMEOUT_PAGE 30"+"\n";
 		REFRESH_Site += "REFRESH"+"\n";
 		///////////////////////////////
+		loginCookie();
 		iimDisplay("Dang Chay Off Ma La : "+Check_Off+"\nSo Off Da Lam : "+off);
 		///////////////// Load Link Lam Offers /////////////
 		var Load_Link_Nhanh = "CODE:";
@@ -40,7 +41,7 @@ while(true)
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
-			case "376":case "345":
+			case "412":case "376":case "345":
 			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
@@ -131,10 +132,10 @@ while(true)
 						{ // RewardBee
 							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
-							// iimPlay(REFRESH_Site);
+							iimPlay(REFRESH_Site);
 							iimPlayCode("WAIT SECONDS=5");
-							// RewardBee_V2(File_Mail_info);
-							RewardBee(File_Mail_info);
+							RewardBee_V2(File_Mail_info);
+							// RewardBee(File_Mail_info);
 							break;
 						}
 						switch(Check_Off)
@@ -1614,35 +1615,35 @@ while(true)
 					catch(exception){}
 				}
 				else if(title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("Amazon® Gift Card")||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399
+				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410
 					try //
 					{
 						var Line = 1;
 						switch(Check_Off)
 						{ // So Line Se Lay Info
-							case "399":case "119":
+							case "399":case "397":
 							Line = 2;
 							break;
 						}
 						switch(Check_Off)
 						{ // chọn Yes No đầu rồi mới mail
-							case "399":
+							case "410":case "412":case "399":
 							var Trang_1 = "CODE:"; 
 							Trang_1 += "SET !ERRORIGNORE YES" + "\n";
 							Trang_1 += "SET !TIMEOUT_TAG 0" + "\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5 "+"\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
-							Trang_1 += "TAG POS=1 TYPE=LI ATTR=TXT:YES" + "\n";
-							Trang_1 += "WAIT SECONDS=0.5" + "\n";
 							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
 							Trang_1 += "WAIT SECONDS=0.5" + "\n";
 							Trang_1 += "TAG POS=2 TYPE=A ATTR=TXT:yes" + "\n";
 							Trang_1 += "WAIT SECONDS=0.5" + "\n";
 							Trang_1 += "TAG POS=3 TYPE=A ATTR=TXT:yes" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
+							Trang_1 += "WAIT SECONDS=0.5" + "\n";
+							Trang_1 += "TAG POS=1 TYPE=A ATTR=TXT:yes" + "\n";
 							iimPlay(Trang_1);
-							iimPlayCode("WAIT SECONDS=1");
+							iimPlayCode("WAIT SECONDS=5");
 							var Trang_2 = "CODE:";
 							Trang_2 += "SET !ERRORIGNORE YES" + "\n";
 							Trang_2 += "SET !TIMEOUT_TAG 0" + "\n";
@@ -1654,6 +1655,7 @@ while(true)
 							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
 							Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
 							Trang_2 += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
+							Trang_2 += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:form-submit"+"\n";
 							Trang_2 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
 							Trang_2 += "WAIT SECONDS=15"+"\n";
 							iimPlay(Trang_2);
@@ -1707,7 +1709,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Problem loading page")
-				{// Lỗi Mạng F5 lại                                  
+				{// Lỗi Mạng F5 lại                                   
 					try
 					{
 						iimPlay(REFRESH_Site);
@@ -1722,7 +1724,7 @@ while(true)
 					catch(exception){}
 				}
 				else 
-				{// sai dạng bỏ làm con mới
+				{// sai dạng bỏ làm con mới 
 					iimDisplay("Code Off "+Check_Off+" Khong Trung !");
 					off++;
 					break;
@@ -1829,8 +1831,8 @@ while(true)
 						break;
 					}
 				}
-			} 
-		} 
+			}
+		}
 	}
 }// Vong Lap Cho Toan Bo Qua Trinh Lam
  
@@ -2455,6 +2457,7 @@ function RewardBee_V2(File_Mail_info)                     // RewardBee_V2
 			Error_Off++;
 			iimPlay(REFRESH_Site);
 			iimDisplay("Error Offers");
+			iimPlayCode("WAIT SECONDS=10");
 			if(Error_Off > 2)
 			{
 				break;
