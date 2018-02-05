@@ -8,9 +8,10 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["397","413","245","319","352","292",""];
+// var Ma_off = ["433","413","245","387","352","183","426"];
+var Ma_off = ["427","413","245","387","352","183","434"];
 // var Ma_off = ["413"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0; 
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -452,12 +453,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				{ // 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426
+				{ // 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
-							case "426":case "427":case "428":case "429":case "400":case "320":
+							case "434":case "433":case "426":case "427":case "428":case "429":case "400":case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
 							break;
@@ -1626,8 +1627,10 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title.indexOf("Bed Bath & Beyond®")||title.indexOf("PS4® Pro Visa® Gift Card")||title.indexOf("Nintendo® Switch Gift Card")||title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("IPhone®")||title.indexOf("Amazon® Gift Card")||title == "Pizza Gift Card"||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
-				{ // 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410 413 423 422 421 420 419 418 417 416
+				else if(title.indexOf("Summer Gift Card")||title.indexOf("Bed Bath & Beyond®")||title.indexOf("PS4® Pro Visa® Gift Card")||title.indexOf("Nintendo® Switch Gift Card")||title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("IPhone®")||title.indexOf("Amazon® Gift Card")||title == "Pizza Gift Card"||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				// 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410 413 423 422 421 420 419 418 417 416
+				// 431
+				{ 
 					try //
 					{
 						var Line = 1;
@@ -1675,7 +1678,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "415":case "416":
+							case "431":case "415":case "416":
 							case "417":case "418":case "419":case "420":case "421":case "422":case "423":case "413":
 							case "397":case "315":case "321":case "318":case "317":case "187":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":case "21":
@@ -3973,7 +3976,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click chọn yes no với sảng phẩm
-		case "426":case "427":case "428":
+		case "434":case "433":case "426":case "427":case "428":
 		var National_1 = "CODE:";
 		National_1 += "SET !ERRORIGNORE YES"+"\n";
 		National_1 += "SET !TIMEOUT_TAG 0"+"\n";
