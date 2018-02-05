@@ -145,10 +145,10 @@ while(true)
 						{ // RewardBee
 							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
-							iimPlay(REFRESH_Site);
+							// iimPlay(REFRESH_Site);
 							iimPlayCode("WAIT SECONDS=5");
-							RewardBee_V2(File_Mail_info);
-							// RewardBee(File_Mail_info);
+							// RewardBee_V2(File_Mail_info);
+							RewardBee(File_Mail_info);
 							break;
 						}
 						switch(Check_Off)
