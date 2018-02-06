@@ -3062,19 +3062,14 @@ function Vaniki(File_Mail_info)
 	Vaniki += 'EVENTS TYPE=KEYPRESS SELECTOR="#addressLine" CHARS="{{!COL2}}"'+"\n";
 	Vaniki += "WAIT SECONDS=5"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>B:nth-of-type(3)\" BUTTON=0"+"\n";
-	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
-	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
-	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
-	Vaniki += "WAIT SECONDS=1"+"\n";
-	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
-	Vaniki += "WAIT SECONDS=1"+"\n";
-	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
 	Vaniki += "WAIT SECONDS=30"+"\n";
 	iimPlay(Vaniki);
 }
