@@ -8,8 +8,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["366","449","292","245","444","455",""];
-// var Ma_off = ["367","448","292","245","444","455",""];
+var Ma_off = ["366","399","292","245","384","455",""];
+// var Ma_off = ["367","397","292","245","384","455",""];
 // var Ma_off = ["448"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
@@ -3036,7 +3036,6 @@ function Vaniki(File_Mail_info)
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
-	var Random_phone = Math.floor((Math.random() * (9999999 - 1111111  + 1)) + 1111111 );
 	var Vaniki = "CODE:";
 	Vaniki += "SET !ERRORIGNORE YES"+"\n";
 	Vaniki += "SET !TIMEOUT_TAG 0"+"\n";
@@ -3063,12 +3062,12 @@ function Vaniki(File_Mail_info)
 	Vaniki += "WAIT SECONDS=5"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV>B:nth-of-type(3)\" BUTTON=0"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
-	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=NAME:pageForm ATTR=ID:terms CONTENT=YES"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
-	Vaniki += "WAIT SECONDS=1"+"\n";
+	Vaniki += "WAIT SECONDS=2"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
-	Vaniki += "WAIT SECONDS=1"+"\n";
+	Vaniki += "WAIT SECONDS=3"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
 	Vaniki += "WAIT SECONDS=30"+"\n";
 	iimPlay(Vaniki);
