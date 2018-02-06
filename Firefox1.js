@@ -54,7 +54,7 @@ while(true)
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
-			case "448":case "412":case "376":case "345":case "450":case "449":
+			case "412":case "376":case "345":
 			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
@@ -1158,6 +1158,8 @@ while(true)
 						switch(Check_Off)
 						{ // Vaniki
 							case "450":case "449":case "448":
+							iimPlay(REFRESH_Site);
+							iimPlayCode("WAIT SECONDS=10");
 							Vaniki(File_Mail_info);
 							break;
 						}
@@ -3065,6 +3067,7 @@ function Vaniki(File_Mail_info)
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
+	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
 	Vaniki += "WAIT SECONDS=30"+"\n";
 	iimPlay(Vaniki);
 }
