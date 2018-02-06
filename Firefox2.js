@@ -8,7 +8,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","292","345","319","352","183",""];
+var Ma_off = ["385","245","429","412","439","183",""];
 // var Ma_off = ["413"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
@@ -116,7 +116,7 @@ while(true)
 					break;
 				}
 				if(title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343 361 363 376 391
+				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343 361 363 376 391 
 				    try
 					{
 						switch(Check_Off)
@@ -191,12 +191,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183 384
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183 384 439
 					try
 					{
 						switch(Check_Off)
 						{
-							case "384":case "352":case "281":case "183":case "286":
+							case "439":case "384":case "352":case "281":case "183":case "286":
 							case "240":case "203":case "221":case "171":case "172":case "181":case "176":case "26":
 							case "252":case "233":case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -452,11 +452,13 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				{ // 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434
+				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437
+				{
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
+							case "437":
 							case "434":case "433":case "426":case "427":case "428":case "429":case "400":case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
@@ -3964,7 +3966,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "400":
+		case "437":case "400":
 		case "357":case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
