@@ -62,7 +62,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "183":case "119":case "294":
+			case "183":case "119":case "294":case "450":case "449":case "448":
 			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
 			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
@@ -1158,8 +1158,6 @@ while(true)
 						switch(Check_Off)
 						{ // Vaniki
 							case "450":case "449":case "448":
-							iimPlay(REFRESH_Site);
-							iimPlayCode("WAIT SECONDS=10");
 							Vaniki(File_Mail_info);
 							break;
 						}
@@ -3033,7 +3031,8 @@ function Depend(File_Mail_info)
 }
 function Vaniki(File_Mail_info) 
 {
-	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Ten = Tao_Name();
+	var Ho = Tao_Name();
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
@@ -3041,12 +3040,12 @@ function Vaniki(File_Mail_info)
 	var Vaniki = "CODE:";
 	Vaniki += "SET !ERRORIGNORE YES"+"\n";
 	Vaniki += "SET !TIMEOUT_TAG 0"+"\n";
-	Vaniki += "SET !DATASOURCE Last_First.txt"+"\n";
-	Vaniki += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
-	Vaniki += "SET !DATASOURCE_COLUMNS 2 "+"\n";
+	// Vaniki += "SET !DATASOURCE Last_First.txt"+"\n";
+	// Vaniki += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	// Vaniki += "SET !DATASOURCE_COLUMNS 2 "+"\n";
 	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:sel CONTENT=%Mr"+"\n";
-	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:firstName CONTENT={{!COL1}}"+"\n";
-	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:lastName CONTENT={{!COL2}}"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:firstName CONTENT="+Ten+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:lastName CONTENT="+Ho+"\n";
 	Vaniki += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
 	Vaniki += "SET !DATASOURCE_LINE 1"+"\n";
 	Vaniki += "SET !DATASOURCE_COLUMNS 1"+"\n";
@@ -3054,7 +3053,7 @@ function Vaniki(File_Mail_info)
 	Vaniki += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
 	Vaniki += "SET !DATASOURCE_LINE 1"+"\n";
 	Vaniki += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT=301"+Random_phone+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
 	Vaniki += "WAIT SECONDS=2"+"\n";
 	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+"\n";
 	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+"\n";
