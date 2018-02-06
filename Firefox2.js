@@ -8,9 +8,10 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["387","410","292","245","319","183","439"];
-// var Ma_off = ["397"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
+// var Ma_off = ["366","449","292","245","444","455",""];
+var Ma_off = ["367","448","292","245","444","455",""];
+// var Ma_off = ["448"];
+var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -53,7 +54,7 @@ while(true)
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
 		switch(Check_Off)
 		{
-			case "412":case "376":case "345":
+			case "448":case "412":case "376":case "345":case "450":case "449":
 			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
@@ -452,13 +453,13 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437
+				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437 455
 				{
 					try
 					{
 						switch(Check_Off)
 						{ // National_Consumer_Center
-							case "437":
+							case "455":case "437":
 							case "434":case "433":case "426":case "427":case "428":case "429":case "400":case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
@@ -1082,7 +1083,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Official Rosetta Stone® - Try Our Free Demo"||title == "Register To Play"||title == "Disney"||title == "Vaniki US"||title == "Winter Samples")
-				{ // 164 165 167 73 106 112 128 138 62 61 7
+				{ // 164 165 167 73 106 112 128 138 448 449 450
 					try
 					{
 						switch(Check_Off)
@@ -1156,7 +1157,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Vaniki
-							case "61":case "62":
+							case "450":case "449":case "448":
 							Vaniki(File_Mail_info);
 							break;
 						}
@@ -1761,6 +1762,36 @@ while(true)
 					if(extract == "Join The Club!")
 					{
 						Find_Family_Support(File_Mail_info)
+						off++;
+						break;
+					}
+				}
+				else if(Check_Off == "444"||Check_Off == "445"||Check_Off == "443")
+				{// 443 444 445
+					var str = window.document.body.textContent;
+					if(str.indexOf("DISCOVER HOW")||str.indexOf("Request your month´s")||str.indexOf("Your next trip is on us"))
+					{
+						var Cilck_Trang_1 = "CODE:";
+						Cilck_Trang_1 += "SET !ERRORIGNORE YES" + "\n";
+						Cilck_Trang_1 += "SET !TIMEOUT_TAG 0" + "\n";
+						Cilck_Trang_1 += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>SECTION>DIV>DIV>A\" BUTTON=0"+"\n";
+						Cilck_Trang_1 += "TAG POS=1 TYPE=SPAN ATTR=TXT:Click<SP>here"+"\n";
+						Cilck_Trang_1 += "WAIT SECONDS=1"+"\n";
+						iimPlay(Cilck_Trang_1);
+						var SUBMIT_Trang_2 = "CODE:";
+						SUBMIT_Trang_2 += "SET !ERRORIGNORE YES" + "\n";
+						SUBMIT_Trang_2 += "SET !TIMEOUT_TAG 0" + "\n";
+						SUBMIT_Trang_2 += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+						SUBMIT_Trang_2 += "SET !DATASOURCE_LINE 1"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:email-form ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email-address CONTENT={{!COL1}}"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:email-form ATTR=ID:submit"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=ID:submit"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=BUTTON FORM=ID:email-form ATTR=ID:submit-form"+"\n";
+						SUBMIT_Trang_2 += "TAG POS=1 TYPE=SPAN ATTR=ID:submit-text"+"\n";
+						SUBMIT_Trang_2 += "WAIT SECONDS=15"+"\n";
+						iimPlay(SUBMIT_Trang_2);
 						off++;
 						break;
 					}
@@ -3032,6 +3063,7 @@ function Vaniki(File_Mail_info)
 	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"HTML>BODY>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(2)>DIV\" BUTTON=0"+"\n";
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
+	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
 	Vaniki += "WAIT SECONDS=30"+"\n";
 	iimPlay(Vaniki);
@@ -3966,7 +3998,7 @@ function National_Consumer_Center(File_Mail_info) // National_Consumer_Center
 	}
 	switch(Check_Off)
 	{// click vào hình mặt cười
-		case "437":case "400":
+		case "455":case "437":case "400":
 		case "357":case "320":case "316":case "314":case "313":case "261":case "146":case "169":case "163":case "162":
 		var National_reward = "CODE:";
 		National_reward += "SET !ERRORIGNORE YES"+"\n";
