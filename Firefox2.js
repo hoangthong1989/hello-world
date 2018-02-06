@@ -3037,6 +3037,7 @@ function Vaniki(File_Mail_info)
 	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
 	var Random_Thang = Math.floor((Math.random() * 9) + 1);
 	var Random_Nam = Math.floor((Math.random() * (1969 - 1965  + 1)) + 1965 );
+	var Random_phone = Math.floor((Math.random() * (9999999 - 1111111  + 1)) + 1111111 );
 	var Vaniki = "CODE:";
 	Vaniki += "SET !ERRORIGNORE YES"+"\n";
 	Vaniki += "SET !TIMEOUT_TAG 0"+"\n";
@@ -3053,7 +3054,7 @@ function Vaniki(File_Mail_info)
 	Vaniki += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
 	Vaniki += "SET !DATASOURCE_LINE 1"+"\n";
 	Vaniki += "SET !DATASOURCE_COLUMNS 5"+"\n";
-	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
+	Vaniki += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:pageForm ATTR=ID:phone CONTENT=301"+Random_phone+"\n";
 	Vaniki += "WAIT SECONDS=2"+"\n";
 	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+"\n";
 	Vaniki += "TAG POS=1 TYPE=SELECT FORM=NAME:pageForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+"\n";
@@ -3067,6 +3068,13 @@ function Vaniki(File_Mail_info)
 	Vaniki += "EVENT TYPE=CLICK SELECTOR=\"#terms\" BUTTON=0"+"\n";
 	Vaniki += "WAIT SECONDS=1"+"\n";
 	Vaniki += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:pageForm ATTR=*"+"\n";
+	Vaniki += "WAIT SECONDS=0.5"+"\n";
+	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
+	Vaniki += "WAIT SECONDS=0.5"+"\n";
+	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
+	Vaniki += "WAIT SECONDS=0.5"+"\n";
+	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
+	Vaniki += "WAIT SECONDS=0.5"+"\n";
 	Vaniki += 'EVENT TYPE=CLICK SELECTOR="#page-html>DIV>DIV>DIV>DIV>DIV>DIV:nth-of-type(2)>ASIDE>PAGE-FORM>FORM>INPUT-PREVIEW-DIRECTIVE:nth-of-type(9)>FIELDSET>INPUT" BUTTON=0'+"\n";
 	Vaniki += "WAIT SECONDS=30"+"\n";
 	iimPlay(Vaniki);
