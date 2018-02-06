@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["385","399","292","245","434","183",""];
+var Ma_off = ["387","410","292","245","319","183","439"];
 // var Ma_off = ["397"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1242,9 +1242,7 @@ while(true)
 							YourCardSearch += "FRAME F=0"+"\n";
 							YourCardSearch += "TAG POS=1 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
 							YourCardSearch += "TAG POS=2 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
-							YourCardSearch += "TAB T = 2"+"\n";
-							YourCardSearch += "REFRESH"+"\n";
-							YourCardSearch += "WAIT SECONDS=15"+"\n";
+							YourCardSearch += "WAIT SECONDS=20"+"\n";
 							iimPlay(YourCardSearch);
 							break;
 						}
