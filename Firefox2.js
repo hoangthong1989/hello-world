@@ -8,8 +8,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["385","245","429","412","439","183",""];
-// var Ma_off = ["413"];
+var Ma_off = ["385","397","292","245","434","183",""];
+// var Ma_off = ["397"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
