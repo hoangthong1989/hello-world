@@ -1242,6 +1242,8 @@ while(true)
 							YourCardSearch += "FRAME F=0"+"\n";
 							YourCardSearch += "TAG POS=1 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
 							YourCardSearch += "TAG POS=2 TYPE=A ATTR=TXT:Visit<SP>Site"+"\n";
+							YourCardSearch += "TAB T = 2"+"\n";
+							YourCardSearch += "REFRESH"+"\n";
 							YourCardSearch += "WAIT SECONDS=15"+"\n";
 							iimPlay(YourCardSearch);
 							break;
