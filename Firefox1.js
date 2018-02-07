@@ -2684,7 +2684,7 @@ function RewardBee(File_Mail_info)                     // RewardBee
 				Error_Off++;
 				iimPlay(REFRESH_Site);
 				iimDisplay("Error Offers");
-				if(Error_Off > 2)
+				if(Error_Off > 1)
 				{
 					break;
 				}
