@@ -8,8 +8,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","319","292","397","384","345",""];
-// var Ma_off = ["448"];
+var Ma_off = ["474","471","292","397","384","319",""];
+// var Ma_off = ["473"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -115,13 +115,13 @@ while(true)
 					off++;
 					break;
 				}
-				if(title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
-				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343 361 363 376 391 
+				if(title == "Hit The Snack Spot"||title == "Game Day Is Here! Are You Prepared?"||title == "What Coffee Are You?"||title == "Make 2018 Your Best Year with Great Tips and Big Savings"||title == "Have Yourself A Very Merry Holiday"||title == "Gorton's Guide to Holiday Hosting"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "Celebrate the Flavor of the Holidays"||title == "Barilla's Passport To Wonderful At ShopRite"||title == "Dove Wants To Know: Are there any dynamic teenage girls in your life?"||title == "Celebrate The Holidays With Happiness, And Snacks!"||title == "What Meal Will Get Your Family To The Table Tonight?"||title == "Discover Your Perfect Holiday Pair"||title == "How Should You Celebrate Fall?"||title == "Getting Through The Holidays Germ Free With CVS Pharmacy"||title == "Because You Were Born To Move, Let's Move with Dr. Scholl's®"||title == "When Your Family Gathers, Things Get Messy. Ours Can Help."||title == "Enjoy The Drive"||title == "Start Strong With Mott's® On-The-Go 100% Juice Pouches"||title == "Deo Made Simple"||title == "Once Upon a Whole Grain"||title == "KNOW YOUR PROTEIN"||title == "#MYOREOCREATION #CONTEST"||title == "Despicably Delicious"||title == "Refresh & Revive Your Hair This Summer"||title == "Pick Your Pepper"||title == "They Grow Up Fast – See How You Can Savor Every Delicious Moment"||title == "Transform Your Laundry Routine into a Sensorial Experience")
+				{ // 104 127 157 159 173 177 175 182 193 251 258 277 195 129 297 341 343 361 363 376 391 471
 				    try
 					{
 						switch(Check_Off)
 						{
-							case "391":case "178":case "376":case "363":case "361":case "343":
+							case "471":case "391":case "178":case "376":case "363":case "361":case "343":
 							case "341":case "297":case "129":case "195":case "277":case "258":case "251":case "193":
 							case "175":case "159":case "157":case "127":case "104":case "173":case "177":case "182":
 							case "79":case "77":case "67":case "12":case "66":case "27":case "20":case "11":case "47":
@@ -1613,6 +1613,22 @@ while(true)
 					}
 					catch(exception){}
 				}
+				else if(title == "Local Rent-to-Own Homes | Buy and sell mobile homes in your area")
+				{// 473 474
+
+					try
+					{
+						switch(Check_Off)
+						{
+							case "474":case "473":
+							Local_Rent_to_Own_Homes(File_Mail_info);
+							break;
+						}
+						off++;
+						break;
+					}
+					catch(exception){}
+				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu
 
@@ -2181,7 +2197,7 @@ function Dailybreak(File_Mail_info)                      // Dailybreak
 			{// Neu Ok Thi Chay KS
 				switch(Check_Off)
 				{// KS loại 1
-					case "376":case "363":case "343":case "341":case "391":
+					case "471":case "376":case "363":case "343":case "341":case "391":
 					case "297":case "129":case "195":case "277":case "258":case "251":case "193":case "178":case "182":
 					case "177":case "173":case "157":case "127":case "104":case "79":case "77":case "8":case "67":
 					case "175":case "159":case "12":case "66":case "27":case "20":case "11":case "57":case "47":
@@ -4514,6 +4530,83 @@ function NFL(File_Mail_info)
 	NFL += "TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:* ATTR=CLASS:submit&&NAME:jSubmit&&VALUE:Create<SP>My<SP>League&&ID:*&&TYPE:submit"+" \n";
 	iimPlay(NFL);
 	iimPlayCode("WAIT SECONDS=10");
+}
+function Local_Rent_to_Own_Homes(File_Mail_info)
+{
+	var ERROR_capcha = 0;
+	var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Local_Rent_to_Own_Homes = "CODE:";
+	Local_Rent_to_Own_Homes += "SET !ERRORIGNORE YES"+"\n";
+	Local_Rent_to_Own_Homes += "SET !TIMEOUT_TAG 0 "+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE Last_First.txt"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=2 TYPE=A ATTR=TXT:Browse<SP>Home<SP>Listings"+"\n";
+	Local_Rent_to_Own_Homes += "WAIT SECONDS = 1"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-first-name CONTENT={{!COL1}}"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-last-name CONTENT={{!COL2}}"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-email-address CONTENT={{!COL1}}"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_LINE 1"+"\n";
+	Local_Rent_to_Own_Homes += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-phone-number CONTENT={{!COL1}}"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:No"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-tax-2"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=2 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:Yes"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-slc-1"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=3 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:No"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-personalloan-2"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=4 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:No"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-creditrepair-2"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=5 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:Yes"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-refi-1"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=LABEL FORM=ID:webform-client-form-40 ATTR=TXT:I<SP>agree<SP>to<SP>the<SP>Terms<SP>of<SP>Service"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:webform-client-form-40 ATTR=ID:edit-submitted-tcpa-1"+"\n";
+	Local_Rent_to_Own_Homes += "TAG POS=1 TYPE=BUTTON FORM=ID:webform-client-form-40 ATTR=NAME:op"+"\n";
+	Local_Rent_to_Own_Homes += "WAIT SECONDS = 2"+"\n";
+	iimPlay(Local_Rent_to_Own_Homes);
+	while(true)
+	{
+		var capcha = check_capcha();
+		if(capcha == true)
+		{
+			var Local_Rent_to_Own_Homes_Capcha = "CODE:";
+			Local_Rent_to_Own_Homes_Capcha += "SET !ERRORIGNORE YES"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !TIMEOUT_TAG 80 "+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !TIMEOUT_TAG 0 "+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE Last_First.txt"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_LINE 4"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_COLUMNS 2"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:user-register-form ATTR=ID:edit-name CONTENT={{!COL1}}{{!COL2}}"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_LINE 1"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_COLUMNS 1"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:user-register-form ATTR=ID:edit-mail CONTENT={{!COL1}}"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !ENCRYPTION NO"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:user-register-form ATTR=ID:edit-pass-pass1 CONTENT=@Hjuhddd1"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:user-register-form ATTR=ID:edit-pass-pass2 CONTENT=@Hjuhddd1"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=BUTTON FORM=ID:user-register-form ATTR=ID:edit-submit"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "WAIT SECONDS = 1"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=A ATTR=TXT:Browse<SP>Homes"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "WAIT SECONDS = 15"+"\n";
+			iimPlay(Local_Rent_to_Own_Homes_Capcha);
+			break;
+		}
+		else
+		{
+			ERROR_capcha++;
+			iimDisplay("Lỗi Duyệt captcha");
+			iimPlay(REFRESH_Site);
+			if(ERROR_capcha > 2)
+			{
+				break;
+			}
+		}
+	}
 }
 ///////////////////////////////////////////////////
 function Tao_Mail() 
