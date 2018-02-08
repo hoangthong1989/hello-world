@@ -8,7 +8,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["476","245","311","183","384","455",""];
+var Ma_off = ["477","245","311","183","384","455",""];
 // var Ma_off = ["476"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
@@ -1083,12 +1083,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Official Rosetta Stone® - Try Our Free Demo"||title == "Register To Play"||title == "Disney"||title == "Vaniki US"||title == "Winter Samples")
-				{ // 164 165 167 73 106 112 128 138 448 449 450
+				{ // 164 165 167 73 106 112 128 138 448 449 450 477
 					try
 					{
 						switch(Check_Off)
 						{ // Register To Play
-							case "167":case "164":case "165":
+							case "477":case "167":case "164":case "165":
 							var Register_To_Play = "CODE:";
 							Register_To_Play += "SET !ERRORIGNORE YES"+"\n";
 							Register_To_Play += "SET !TIMEOUT_TAG 0"+"\n";
