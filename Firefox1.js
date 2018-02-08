@@ -8,7 +8,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["306","245","311","476","384","455","183"];
+var Ma_off = ["306","442","311","476","384","245","183"];
 // var Ma_off = ["476"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
@@ -61,7 +61,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "183":case "119":case "294":case "450":case "449":case "448":case "306":
+			case "306":case "183":case "119":case "294":case "450":case "449":case "448":
 			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
 			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
@@ -137,12 +137,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386 442
 					try
 					{
 						switch(Check_Off)
 						{ // RewardBee
-							case "459":
+							case "442":case "459":
 							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
 							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
 							// iimPlay(REFRESH_Site);
@@ -2597,7 +2597,7 @@ function RewardBee(File_Mail_info)                     // RewardBee
 				C4 = 3;C9 = 2;C10 = 6;
 				break;
 				// RewardBee Football
-				case "459":
+				case "442":case "459":
 				C0 = 4;C5 = 3;
 				C1 = 5;C6 = 3;
 				C2 = 8;C7 = 7;
@@ -4741,6 +4741,62 @@ function Get_Samples(File_Mail_info)
 		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
 		National_KS += "WAIT SECONDS=15"+"\n";
 		iimPlay(National_KS); 
+	}
+}
+function Dieting_Solutions()                 // Atkins
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Tuoi = Math.floor((Math.random() * 30) + 19);
+	var Dieting_Solutions = "CODE:";
+	Dieting_Solutions += "SET !ERRORIGNORE YES"+"\n";
+	Dieting_Solutions += "SET !TIMEOUT_TAG 0"+"\n";
+	Dieting_Solutions += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:optin"+"\n";
+	Dieting_Solutions += "TAG POS=2 TYPE=INPUT:RADIO FORM=ID:offerForm ATTR=NAME:gender"+"\n";
+	Dieting_Solutions += "TAG POS=1 TYPE=INPUT:NUMBER FORM=ID:offerForm ATTR=ID:age CONTENT="+Random_Tuoi+"\n";
+	Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Continue"+"\n";
+
+	Dieting_Solutions += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+	Dieting_Solutions += "TAG POS=5 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+	Dieting_Solutions += "TAG POS=10 TYPE=INPUT:CHECKBOX FORM=ID:offerForm ATTR=NAME:interests[] CONTENT=YES"+"\n";
+
+	Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Click<SP>Here<SP>To<SP>Get<SP>Your<SP>Free<SP>Samples"+"\n";
+	Dieting_Solutions += "WAIT SECONDS = 3"+"\n";
+	Dieting_Solutions += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Dieting_Solutions += "SET !DATASOURCE_LINE 1"+"\n";
+	Dieting_Solutions += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	Dieting_Solutions += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:offerForm ATTR=NAME:email CONTENT={{!COL1}}"+"\n";
+	Dieting_Solutions += "TAG POS=1 TYPE=BUTTON FORM=ID:offerForm ATTR=TXT:Submit"+"\n";
+	Dieting_Solutions += "WAIT SECONDS = 3"+"\n";
+	Dieting_Solutions += "EVENT TYPE=CLICK SELECTOR=\"#slot>A>IMG\" BUTTON=0"+"\n";
+	iimPlay(Dieting_Solutions);
+	iimPlayCode("TAB T=2");
+	iimPlayCode("WAIT SECONDS=1");
+	var title = window.document.title;
+	if(title == "Free Weight Loss Starter Kit Registration | Atkins")
+	{
+		var Atkins = "CODE:";
+		Atkins += "SET !ERRORIGNORE YES"+"\n";
+		Atkins += "SET !TIMEOUT_TAG 0"+"\n";
+		Atkins += "SET !DATASOURCE Last_First.txt"+"\n";
+		Atkins += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+		Atkins += "SET !DATASOURCE_COLUMNS 2"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:first_name CONTENT={{!COL1}}"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:last_name CONTENT={{!COL2}}"+"\n";
+		Atkins += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+		Atkins += "SET !DATASOURCE_LINE 1"+"\n";
+		Atkins += "SET !DATASOURCE_COLUMNS 1"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+		Atkins += "SET !DATASOURCE Last_First.txt"+"\n";
+		Atkins += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+		Atkins += "SET !DATASOURCE_COLUMNS 2"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:NoFormName ATTR=ID:username CONTENT={{!COL1}}{{!COL2}}"+"\n";
+		Atkins += "SET !ENCRYPTION NO"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password CONTENT=hjuhygtde"+"\n";
+		Atkins += "TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:NoFormName ATTR=ID:password_confirmation CONTENT=hjuhygtde"+"\n";
+		Atkins += "TAG POS=3 TYPE=INPUT:SUBMIT FORM=NAME:NoFormName ATTR=*"+"\n";
+		Atkins += "TAG POS=1 TYPE=A ATTR=TXT:Get<SP>Started<SP>»"+"\n";
+		Atkins += "WAIT SECONDS = 20"+"\n";
+		iimPlay(Atkins);
 	}
 }
 ///////////////////////////////////////////////////
