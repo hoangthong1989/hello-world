@@ -61,7 +61,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "183":case "119":case "294":case "450":case "449":case "448":
+			case "183":case "119":case "294":case "450":case "449":case "448":case "306":
 			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
 			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
