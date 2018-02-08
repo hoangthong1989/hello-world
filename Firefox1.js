@@ -8,8 +8,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["399","245","311","183","384","455",""];
-// var Ma_off = ["473"];
+var Ma_off = ["476","245","311","183","384","455",""];
+// var Ma_off = ["476"];
 var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -1613,15 +1613,21 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Local Rent-to-Own Homes | Buy and sell mobile homes in your area")
-				{// 473 474
+				else if(title == "Get Samples"||title == "Local Rent-to-Own Homes | Buy and sell mobile homes in your area")
+				{// 473 474 476
 
 					try
 					{
 						switch(Check_Off)
-						{
+						{// Local_Rent_to_Own_Homes
 							case "474":case "473":
 							Local_Rent_to_Own_Homes(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{// Get Samples
+							case "476":
+							Get_Samples(File_Mail_info);
 							break;
 						}
 						off++;
@@ -1630,7 +1636,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Check Title Offers")
-				{// Code Mẫu
+				{// Code Mẫu    
 
 					try
 					{
@@ -4323,11 +4329,17 @@ function Step_1(File_Mail_info)                  // Step_1
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
 		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
-		National_KS += "WAIT SECONDS=5"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
 		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
 		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
 		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
-		National_KS += "WAIT SECONDS=20"+"\n";
+		National_KS += "WAIT SECONDS=15"+"\n";
 		iimPlay(National_KS); 
 	}
 }
@@ -4607,6 +4619,128 @@ function Local_Rent_to_Own_Homes(File_Mail_info)
 				break;
 			}
 		}
+	}
+}
+function Get_Samples(File_Mail_info)
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+	var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+	var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+	var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);	
+	var Get_Samples = "CODE:";
+	Get_Samples += "SET !ERRORIGNORE YES"+"\n";
+	Get_Samples += "SET !TIMEOUT_TAG 0 "+"\n";
+	Get_Samples += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Get_Samples += "SET !DATASOURCE_LINE 1"+"\n";
+	Get_Samples += "SET !DATASOURCE_COLUMNS 1"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:em CONTENT={{!COL1}}"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=10"+"\n";
+	Get_Samples += "SET !DATASOURCE Last_First.txt"+"\n";
+	Get_Samples += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	Get_Samples += "SET !DATASOURCE_COLUMNS 2"+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:fn CONTENT={{!COL1}}"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=1"+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:ln CONTENT={{!COL2}}"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=1"+"\n";
+	Get_Samples += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	Get_Samples += "SET !DATASOURCE_LINE 1"+"\n";
+	Get_Samples += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:ad CONTENT={{!COL2}}"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=1"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=1"+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:CELLAREA CONTENT="+Random_Phon0+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell2 CONTENT="+Random_Phon1+"\n";
+	Get_Samples += "TAG POS=2 TYPE=INPUT:TEXT FORM=ID:FlowSQForm ATTR=ID:cell3 CONTENT="+Random_Phon2+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=1"+"\n";
+	Get_Samples += "TAG POS=2 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobmonth CONTENT=%0"+Random_Ngay+"\n";
+	Get_Samples += "TAG POS=2 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:dobday CONTENT=%0"+Random_Thang+"\n";
+	Get_Samples += "TAG POS=2 TYPE=SELECT FORM=ID:FlowSQForm ATTR=ID:DOBYEAR CONTENT=%"+Random_Nam+"\n";
+	Get_Samples += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:FlowSQForm ATTR=ID:chkboxn CONTENT=YES"+"\n";
+	Get_Samples += "TAG POS=1 TYPE=DIV ATTR=ID:subtn"+"\n";
+	Get_Samples += "WAIT SECONDS=10"+"\n";
+	iimPlay(Get_Samples);
+	var str = window.document.body.textContent;
+	if(str.indexOf("Take Survey"))
+	{// KS
+		var National_KS = "CODE:";
+		National_KS += "SET !ERRORIGNORE YES"+"\n";
+		National_KS += "SET !TIMEOUT_TAG 0"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:The<SP>food"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid165339"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Health/Advice"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174569"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2<SP>children"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174659"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2-5<SP>years"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid174789"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Moving<SP>/<SP>Just<SP>Moved"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174509 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52689"+"\n";
+		National_KS += "TAG POS=2 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid177549"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Today"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid162949"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Cigars"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid157959"+"\n";
+		National_KS += "TAG POS=7 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147381"+"\n";
+		National_KS += "TAG POS=10 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid113381"+"\n";
+		National_KS += "TAG POS=13 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid135781"+"\n";
+		National_KS += "TAG POS=14 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid163169"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:New<SP>Windows"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid175229 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid52869"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:DirecTV"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid111001"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Student"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid171149"+"\n";
+		National_KS += "TAG POS=16 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid156141"+"\n";
+		National_KS += "TAG POS=17 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid155501"+"\n";
+		National_KS += "TAG POS=18 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid147401"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Democrat"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid30071"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:2"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid77921"+"\n";
+		National_KS += "TAG POS=1 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:Yes,<SP>Life<SP>Insurance"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:Aid174469 CONTENT=YES"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:btnSubmitQid51059"+"\n";
+		National_KS += "TAG POS=29 TYPE=LABEL FORM=ID:RgForm ATTR=TXT:No"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:RgForm ATTR=ID:Aid143831"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:confirmbox"+"\n";
+		National_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:RgForm ATTR=ID:cb CONTENT=YES"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=ID:tcpaSubBtn"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=3"+"\n";
+		National_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:No,<SP>thanks"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=A ATTR=ID:skippro"+"\n";
+		National_KS += "WAIT SECONDS=1"+"\n";
+		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
+		National_KS += "WAIT SECONDS=15"+"\n";
+		iimPlay(National_KS); 
 	}
 }
 ///////////////////////////////////////////////////
