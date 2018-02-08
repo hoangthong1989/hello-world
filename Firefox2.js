@@ -4573,13 +4573,14 @@ function Local_Rent_to_Own_Homes(File_Mail_info)
 		var capcha = check_capcha();
 		if(capcha == true)
 		{
+			var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 			var Local_Rent_to_Own_Homes_Capcha = "CODE:";
 			Local_Rent_to_Own_Homes_Capcha += "SET !ERRORIGNORE YES"+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "SET !TIMEOUT_TAG 80 "+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved" + "\n";
 			Local_Rent_to_Own_Homes_Capcha += "SET !TIMEOUT_TAG 0 "+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE Last_First.txt"+"\n";
-			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_LINE 4"+"\n";
+			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE_COLUMNS 2"+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:user-register-form ATTR=ID:edit-name CONTENT={{!COL1}}{{!COL2}}"+"\n";
 			Local_Rent_to_Own_Homes_Capcha += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
