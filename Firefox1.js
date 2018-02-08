@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["306","481","245","476","384","183",""];
+var Ma_off = ["366","306","481","245","476","384","183",""];
 // var Ma_off = ["476"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -1651,9 +1651,9 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title.indexOf("Summer Gift Card")||title.indexOf("Bed Bath & Beyond®")||title.indexOf("PS4® Pro Visa® Gift Card")||title.indexOf("Nintendo® Switch Gift Card")||title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("IPhone®")||title.indexOf("Amazon® Gift Card")||title == "Pizza Gift Card"||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
+				else if(title.indexOf("Listerine®")||title.indexOf("Summer Gift Card")||title.indexOf("Bed Bath & Beyond®")||title.indexOf("PS4® Pro Visa® Gift Card")||title.indexOf("Nintendo® Switch Gift Card")||title.indexOf("Aldi® Gift Card")||title.indexOf("Hardrock® Gift Card")||title.indexOf("Wish I had a Wet Ones® this cough & cold season")||title.indexOf("Super Mario Odyssey® Game")||title == "Survey Voices"||title.indexOf("Madden 2018® Game")||title.indexOf("IPhone®")||title.indexOf("Amazon® Gift Card")||title == "Pizza Gift Card"||title == "iPhone® X"||title == "Starbucks® Gift Card"||title == "Hardrock® Gift Card"||title == "Christmas"||title == "Christmas Visa®"||title.indexOf("Visa® Gift Card")||title == "NFL® Tickets"||title == "Charmin® Toilet Paper"||title == "Walmart® Gift Card"||title == "Papa John's® Gift Card"||title == "Protein Powder"||title == "TheFreeSamplesGuide"||title.indexOf("Target® Gift Card")||title == "Bath & Body Works® Card"||title == "Force Arena® Credits"||title == "Johnsons® Baby Relief Kit"||title == "Gerber® Bath Set"||title == "Uber® Gift Card"||title == "Labor Day Visa® Gift Card")
 				// 30 31 75 82 5 118 102 119 187 283 317 318 321 315 397 399 412 410 413 423 422 421 420 419 418 417 416
-				// 431
+				// 431 480 479
 				{ 
 					try //
 					{
@@ -1702,7 +1702,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Dien Mail Done
-							case "431":case "415":case "416":
+							case "479":case "480":case "431":case "415":case "416":
 							case "417":case "418":case "419":case "420":case "421":case "422":case "423":case "413":
 							case "397":case "315":case "321":case "318":case "317":case "187":case "119":case "102":
 							case "118":case "5":case "82":case "75":case "31":case "30":case "21":
