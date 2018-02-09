@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["399","490","484","292","455","245",""];
+var Ma_off = ["367","490","399","292","491","245","306"];
 // var Ma_off = ["484"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -383,36 +383,62 @@ while(true)
 						switch(Check_Off)
 						{ // Rent2OwnHelper
 							case "484":
+							var Error_capcha = 0;
 							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
 							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
-							var Rent2OwnHelper = "CODE:";
-							Rent2OwnHelper += "SET !ERRORIGNORE YES"+"\n";
-							Rent2OwnHelper += "SET !TIMEOUT_TAG 0"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 5 "+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL ATTR=ID:location CONTENT={{!COL5}}"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnSearch"+"\n";
-							Rent2OwnHelper += "WAIT SECONDS = 5"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE Last_First.txt"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 2  "+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 1"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
-							Rent2OwnHelper += "WAIT SECONDS=5"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=TXT:NO"+"\n";
-							Rent2OwnHelper += "WAIT SECONDS=1"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
-							Rent2OwnHelper += "WAIT SECONDS=15"+"\n";
-							iimPlay(Rent2OwnHelper);
+							var Rent2OwnHelper_Zip = "CODE:";
+							Rent2OwnHelper_Zip += "SET !ERRORIGNORE YES"+"\n";
+							Rent2OwnHelper_Zip += "SET !TIMEOUT_TAG 0"+"\n";
+							Rent2OwnHelper_Zip += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Rent2OwnHelper_Zip += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent2OwnHelper_Zip += "SET !DATASOURCE_COLUMNS 5 "+"\n";
+							Rent2OwnHelper_Zip += 'EVENT TYPE=CLICK SELECTOR="#location" BUTTON=0'+"\n";
+							Rent2OwnHelper_Zip += 'EVENTS TYPE=KEYPRESS SELECTOR="#location" CHARS="{{!COL5}}"'+"\n";
+							Rent2OwnHelper_Zip += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnSearch"+"\n";
+							Rent2OwnHelper_Zip += "WAIT SECONDS = 5"+"\n";
+							iimPlay(Rent2OwnHelper_Zip);
+							while(true)
+							{
+								var capcha = check_capcha();
+								if(capcha == true)
+								{
+									var Rent2OwnHelper = "CODE:";
+									Rent2OwnHelper += "SET !ERRORIGNORE YES"+"\n";
+									Rent2OwnHelper += "SET !TIMEOUT_TAG 60"+"\n";
+									Rent2OwnHelper += "TAG POS=3 TYPE=DIV ATTR=TXT:Solved"+"\n";
+									Rent2OwnHelper += "SET !TIMEOUT_TAG 0"+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE Last_First.txt"+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
+									Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 1"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
+									Rent2OwnHelper += "WAIT SECONDS=5"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=TXT:NO"+"\n";
+									Rent2OwnHelper += "WAIT SECONDS=1"+"\n";
+									Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
+									Rent2OwnHelper += "WAIT SECONDS=15"+"\n";
+									iimPlay(Rent2OwnHelper);
+									break;
+								}
+								else
+								{
+									Error_capcha++;
+									iimPlay(REFRESH_Site);
+									iimDisplay("Error Recaptcha");
+									if(Error_capcha > 2)
+									{
+										break;
+									}
+								}
+							}
 							break;
 						}
 						off++;
@@ -488,7 +514,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437 455
+				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437 455 491
 				{
 					try
 					{
@@ -502,7 +528,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{ // Step_1
-							case "404":case "319":
+							case "491":case "404":case "319":
 							Step_1(File_Mail_info);
 							break;
 						}
@@ -4299,7 +4325,7 @@ function Step_1(File_Mail_info)                  // Step_1
 	}
 	switch(Check_Off)
 	{// FRAME F=1
-		case "319":
+		case "491":case "319":
 		var sweepstakesamonth_Mail = "CODE:";
 		sweepstakesamonth_Mail += "SET !ERRORIGNORE YES"+"\n";
 		sweepstakesamonth_Mail += "SET !TIMEOUT_TAG 0"+"\n";
