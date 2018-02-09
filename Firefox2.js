@@ -9,7 +9,7 @@ home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
 var Ma_off = ["484","481","486","476","384","405","485"];
-// var Ma_off = ["476"];
+// var Ma_off = ["484"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
@@ -383,9 +383,13 @@ while(true)
 						switch(Check_Off)
 						{ // Rent2OwnHelper
 							case "484":
+							var Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+							var Random_Phon0 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon1 = Math.floor((Math.random() * (999 - 123 + 1)) + 123);
+							var Random_Phon2 = Math.floor((Math.random() * (9999 - 1111 + 1)) + 1111);
 							var Rent2OwnHelper = "CODE:";
 							Rent2OwnHelper += "SET !ERRORIGNORE YES"+"\n";
-							Rent2OwnHelper += "SET !TIMEOUT_TAG 0   "+"\n";
+							Rent2OwnHelper += "SET !TIMEOUT_TAG 0"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 5 "+"\n";
@@ -393,11 +397,11 @@ while(true)
 							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnSearch"+"\n";
 							Rent2OwnHelper += "WAIT SECONDS = 5"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE Last_First.txt"+"\n";
-							Rent2OwnHelper += "SET !DATASOURCE_LINE 4"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_LINE "+Ten_Ho+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 2  "+"\n";
 							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
 							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
-							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=(301)<SP>564-5685"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=("+Random_Phon0+")<SP>"+Random_Phon1+"-"+Random_Phon2+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
 							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 1"+"\n";
