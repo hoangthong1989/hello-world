@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["479","306","183","476","311","245",""];
+var Ma_off = ["484","306","481","476","384","245","183"];
 // var Ma_off = ["484"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -4914,7 +4914,7 @@ function Samples_Avenue(File_Mail_info)
 	//
 	Vouchers_Avenue += 'EVENT TYPE=CLICK SELECTOR="#registerform-panel>DIV>DIV:nth-of-type(2)>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV:nth-of-type(4)>BUTTON" BUTTON=0' + "\n";
 	Vouchers_Avenue += 'EVENT TYPE=CLICK SELECTOR="#registerform-panel>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV:nth-of-type(4)>BUTTON" BUTTON=0' + "\n";
-	Vouchers_Avenue += "WAIT SECONDS=20" + "\n";
+	Vouchers_Avenue += "WAIT SECONDS=30" + "\n";
 	iimPlay(Vouchers_Avenue);
 }
 
