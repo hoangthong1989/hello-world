@@ -8,7 +8,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","481","486","476","384","405","485"];
+var Ma_off = ["484","481","486","476","384","405","485"];
 // var Ma_off = ["476"];
 var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
@@ -57,7 +57,7 @@ while(true)
 			case "310":case "305":case "175":case "297":case "292":case "291":case "286":case "277":
 			case "181":case "176":case "171":case "110":case "252":case "203":case "172":case "187":
 			case "61":case "26":case "10":
-			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "6":
+			case "57":case "66":case "30":case "31":case "23":case "45":case "18":case "50":case "484":
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
@@ -67,7 +67,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=10");
 			break;
 			////
-			case "340":
+			case "485":
 			iimPlayCode("WAIT SECONDS=15");
 			break;
 			////
@@ -320,8 +320,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Free Fantasy Football - NFL.com"||title == "Share Your Freebies"||title == "Next Millennium")
-				{ // 134 137 186 209
+				else if(title == "Rent2OwnHelper.com"||title == "Free Fantasy Football - NFL.com"||title == "Share Your Freebies"||title == "Next Millennium")
+				{ // 134 137 186 209 484
 					try
 					{
 						switch(Check_Off)
@@ -378,6 +378,37 @@ while(true)
 							NextMillennium += "TAG POS=5 TYPE=LABEL FORM=ID:PageForm ATTR=TXT:Yes"+"\n";
 							NextMillennium += "WAIT SECONDS=20"+"\n";
 							iimPlay(NextMillennium);
+							break;
+						}
+						switch(Check_Off)
+						{ // Rent2OwnHelper
+							case "484":
+							var Rent2OwnHelper = "CODE:";
+							Rent2OwnHelper += "SET !ERRORIGNORE YES"+"\n";
+							Rent2OwnHelper += "SET !TIMEOUT_TAG 0   "+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 5 "+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL ATTR=ID:location CONTENT={{!COL5}}"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnSearch"+"\n";
+							Rent2OwnHelper += "WAIT SECONDS = 5"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE Last_First.txt"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_LINE 4"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 2  "+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:first CONTENT={{!COL1}}"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:form1 ATTR=ID:last CONTENT={{!COL2}}"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:form1 ATTR=ID:phone CONTENT=(301)<SP>564-5685"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_LINE 1"+"\n";
+							Rent2OwnHelper += "SET !DATASOURCE_COLUMNS 1"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:form1 ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON FORM=ID:form1 ATTR=TXT:View<SP>Listings"+"\n";
+							Rent2OwnHelper += "WAIT SECONDS=5"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=TXT:NO"+"\n";
+							Rent2OwnHelper += "WAIT SECONDS=1"+"\n";
+							Rent2OwnHelper += "TAG POS=1 TYPE=BUTTON ATTR=ID:btnCredit"+"\n";
+							Rent2OwnHelper += "WAIT SECONDS=15"+"\n";
+							iimPlay(Rent2OwnHelper);
 							break;
 						}
 						off++;
@@ -4852,6 +4883,7 @@ function Samples_Avenue(File_Mail_info)
 	Vouchers_Avenue += "WAIT SECONDS=20" + "\n";
 	iimPlay(Vouchers_Avenue);
 }
+
 ///////////////////////////////////////////////////
 function Tao_Mail() 
 {// hàm reg Mail.com
