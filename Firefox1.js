@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","481","306","476","384","183",""];
+var Ma_off = ["174","481","306","476","384","183","486"];
 // var Ma_off = ["476"];
-var File_Mail_info = 1; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -137,7 +137,7 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386 442
+				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386 442 486
 					try
 					{
 						switch(Check_Off)
@@ -182,7 +182,7 @@ while(true)
 						}
 						switch(Check_Off)
 						{// TopSweeps
-							case "340":
+							case "486":case "340":
 							TopSweeps(File_Mail_info);
 							break;
 						}
