@@ -8,7 +8,7 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","481","306","476","384","183","486"];
+var Ma_off = ["174","481","486","476","384","405","485"];
 // var Ma_off = ["476"];
 var File_Mail_info = 1; var sl_chay_off = 6; var off = 0;
 while(true)
@@ -192,12 +192,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "Vacation Rentals - Beach Houses, Condos, Cabins, Apartments & Vacation Homes | Tripping.com")
-				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183 384 439
+				{ // 23 45 50 18 1 83 10 26 176 181 172 171 221 203 233 240 252 286 6 281 352 183 384 439 405
 					try
 					{
 						switch(Check_Off)
 						{
-							case "439":case "384":case "352":case "281":case "183":case "286":
+							case "405":case "439":case "384":case "352":case "281":case "183":case "286":
 							case "240":case "203":case "221":case "171":case "172":case "181":case "176":case "26":
 							case "252":case "233":case "10":case "83":case "1":case "18":case "50":case "23":case "45":
 							var pref = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -1613,9 +1613,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "Get Samples"||title == "Local Rent-to-Own Homes | Buy and sell mobile homes in your area")
-				{// 473 474 476
-
+				else if(title == "Samples Avenue : free samples cosmetics"||title == "Get Samples"||title == "Local Rent-to-Own Homes | Buy and sell mobile homes in your area")
+				{// 473 474 476 485
 					try
 					{
 						switch(Check_Off)
@@ -1630,6 +1629,12 @@ while(true)
 							Get_Samples(File_Mail_info);
 							break;
 						}
+						switch(Check_Off)
+						{// Samples Avenue
+							case "485": // con này cho chạy cuối
+							Samples_Avenue(File_Mail_info);
+							break;
+						}
 						off++;
 						break;
 					}
@@ -1637,7 +1642,6 @@ while(true)
 				}
 				else if(title == "Check Title Offers")
 				{// Code Mẫu    
-
 					try
 					{
 						switch(Check_Off)
@@ -4743,7 +4747,7 @@ function Get_Samples(File_Mail_info)
 		iimPlay(National_KS); 
 	}
 }
-function Dieting_Solutions()                 // Atkins
+function Dieting_Solutions(File_Mail_info)                 // Atkins
 {
 	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
 	var Random_Tuoi = Math.floor((Math.random() * 30) + 19);
@@ -4798,6 +4802,55 @@ function Dieting_Solutions()                 // Atkins
 		Atkins += "WAIT SECONDS = 20"+"\n";
 		iimPlay(Atkins);
 	}
+}
+function Samples_Avenue(File_Mail_info)
+{
+	var New_dong = 1;
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1975 - 1965 + 1)) + 1965);
+	var Vouchers_Avenue = "CODE:"; 
+	Vouchers_Avenue += "SET !ERRORIGNORE YES" + "\n";
+	Vouchers_Avenue += "SET !TIMEOUT_TAG 0" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=LABEL FORM=ID:register_member ATTR=TXT:Ms." + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=SELECT FORM=ID:register_member ATTR=ID:personal_gender CONTENT=%0" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE Last_First.txt" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_LINE "+Random_Ten_Ho + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_COLUMNS 2" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register_member ATTR=ID:personal_firstname CONTENT={{!COL1}}" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register_member ATTR=ID:personal_lastname CONTENT={{!COL2}}" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=BUTTON FORM=ID:register_member ATTR=TXT:Continue" + "\n";
+	Vouchers_Avenue += "WAIT SECONDS=1" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_LINE "+New_dong + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_COLUMNS 5" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register_member ATTR=ID:personal_address CONTENT={{!COL2}}" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register_member ATTR=ID:personal_postal_code CONTENT={{!COL5}}" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=SELECT FORM=ID:register_member ATTR=ID:personal_state CONTENT=%{{!COL4}}" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register_member ATTR=ID:personal_locality CONTENT={{!COL3}}" + "\n";
+	Vouchers_Avenue += "TAG POS=2 TYPE=BUTTON FORM=ID:register_member ATTR=TXT:Continue" + "\n";
+	Vouchers_Avenue += "WAIT SECONDS=1" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_LINE "+New_dong + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_COLUMNS 1" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:register_member ATTR=ID:email CONTENT= {{!COL1}}" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt" + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_LINE "+New_dong + "\n";
+	Vouchers_Avenue += "SET !DATASOURCE_COLUMNS 5" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:register_member ATTR=ID:personal_phone CONTENT={{!COL1}}" + "\n";
+	Vouchers_Avenue += "TAG POS=3 TYPE=BUTTON FORM=ID:register_member ATTR=TXT:Continue" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=LABEL FORM=ID:register_member ATTR=TXT:Yes" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=INPUT:RADIO FORM=ID:register_member ATTR=ID:optin_isOptinToNewsletter_0" + "\n";
+	Vouchers_Avenue += "WAIT SECONDS=1" + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=SELECT FORM=ID:register_member ATTR=ID:personal_birthdate_month CONTENT=%"+Random_Thang + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=SELECT FORM=ID:register_member ATTR=ID:personal_birthdate_day CONTENT=%"+Random_Ngay + "\n";
+	Vouchers_Avenue += "TAG POS=1 TYPE=SELECT FORM=ID:register_member ATTR=ID:personal_birthdate_year CONTENT=%"+Random_Nam + "\n";
+	//
+	Vouchers_Avenue += 'EVENT TYPE=CLICK SELECTOR="#registerform-panel>DIV>DIV:nth-of-type(2)>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV:nth-of-type(4)>BUTTON" BUTTON=0' + "\n";
+	Vouchers_Avenue += 'EVENT TYPE=CLICK SELECTOR="#registerform-panel>DIV>DIV>DIV>DIV:nth-of-type(2)>DIV:nth-of-type(4)>DIV:nth-of-type(4)>BUTTON" BUTTON=0' + "\n";
+	Vouchers_Avenue += "WAIT SECONDS=20" + "\n";
+	iimPlay(Vouchers_Avenue);
 }
 ///////////////////////////////////////////////////
 function Tao_Mail() 
