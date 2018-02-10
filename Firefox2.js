@@ -6,7 +6,7 @@ home += "SET !TIMEOUT_PAGE 0"+"\n";
 home += "WAIT SECONDS=1"+"\n";
 home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
-iimPlay(home);ClearCookie();
+iimPlay(home);ClearCookie(); 
 
 var Ma_off = ["405","292","491","306","493","386",""];
 // var Ma_off = ["493"];
