@@ -6,16 +6,16 @@ home += "SET !TIMEOUT_PAGE 0"+"\n";
 home += "WAIT SECONDS=1"+"\n";
 home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
-iimPlay(home);ClearCookie(); 
+iimPlay(home);ClearCookie();
 
-var Ma_off = ["405","292","491","306","493","386",""];
+var Ma_off = ["399","292","491","245","490","183","384"];
 // var Ma_off = ["493"];
-var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
+var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
 	{ // Neu Tong So Offer Da Chay Du Thi Out
-		iimPlayCode("TAB CLOSEALLOTHERS"); 
+		iimPlayCode("TAB CLOSEALLOTHERS");
 		iimPlayCode("TAB CLOSE");
 		break;
 	}
