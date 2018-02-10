@@ -8,8 +8,8 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["174","292","491","345","384","183",""];
-// var Ma_off = ["491"];
+var Ma_off = ["399","292","491","306","493","386",""];
+// var Ma_off = ["493"];
 var File_Mail_info = 2; var sl_chay_off = 5; var off = 0;
 while(true)
 {
@@ -513,8 +513,8 @@ while(true)
 					}
 					catch(exception){}
 				}
-				else if(title == "National Consumer Center"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
-				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437 455 491
+				else if(title == "National Consumer Center"||title == "Nationaldigitalsurvey.com"||title == "sweepstakesamonth"||title == "Are you lucky?"||title == "Amazon Fresh 500"||title == "Step 1 - Register"||title == "$1000 Visa Giftcard"||title == "(1) Prize Alert!!!"||title == "SurveysandPromotions")
+				// 110 146 154 162 163 169 96 199 313 316 319 320 400 404 429 428 427 426 433 434 437 455 491 493
 				{
 					try
 					{
@@ -524,6 +524,12 @@ while(true)
 							case "434":case "433":case "426":case "427":case "428":case "429":case "400":case "320":
 							case "316":case "313":case "96":case "169":case "163":case "162":case "146":case "110":
 							National_Consumer_Center(File_Mail_info);
+							break;
+						}
+						switch(Check_Off)
+						{ // Nationaldigitalsurvey dạng mới
+							case "493":
+							Nationaldigitalsurvey(File_Mail_info);
 							break;
 						}
 						switch(Check_Off)
@@ -4575,6 +4581,108 @@ function National_FRAME_1(File_Mail_info)       // National_FRAME_1
 		National_KS += "TAG POS=1 TYPE=TD ATTR=TXT:No,<SP>I'm<SP>already<SP>rich"+"\n";
 		National_KS += "WAIT SECONDS=30"+"\n";
 		iimPlay(National_KS);
+	}
+}
+function Nationaldigitalsurvey(File_Mail_info)
+{
+	var Random_Ten_Ho = Math.floor((Math.random() * 2659) + 1);
+	var Random_Ngay = Math.floor((Math.random() * 9) + 1);
+	var Random_Thang = Math.floor((Math.random() * 9) + 1);
+	var Random_Nam = Math.floor((Math.random() * (1989 - 1975 + 1)) + 1975);
+	var Nationaldigitalsurvey = "CODE:";
+	Nationaldigitalsurvey += "SET !ERRORIGNORE YES"+"\n";
+	Nationaldigitalsurvey += "SET !TIMEOUT_TAG 0"+"\n";
+	Nationaldigitalsurvey += "EVENT TYPE=CLICK SELECTOR=\"#yes\" BUTTON=0"+"\n";
+	Nationaldigitalsurvey += "EVENT TYPE=CLICK SELECTOR=\"#btn2-25\" BUTTON=0"+"\n";
+	Nationaldigitalsurvey += "EVENT TYPE=CLICK SELECTOR=\"#btn3-7\" BUTTON=0"+"\n";
+	Nationaldigitalsurvey += "WAIT SECONDS=5"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE Last_First.txt"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_LINE "+Random_Ten_Ho+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_COLUMNS 2"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formEmail ATTR=ID:fname CONTENT={{!COL1}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formEmail ATTR=ID:lname CONTENT={{!COL2}}"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE Mail_FF"+File_Mail_info+".txt"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_LINE 1"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_COLUMNS 1 "+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:formEmail ATTR=ID:email CONTENT={{!COL1}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=LABEL FORM=ID:formEmail ATTR=TXT:"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:formEmail ATTR=ID:disclaimerP CONTENT=YES"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=BUTTON FORM=ID:formEmail ATTR=ID:btn4"+"\n";
+	Nationaldigitalsurvey += "WAIT SECONDS=3"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE Info_FF"+File_Mail_info+".txt"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_LINE 1"+"\n";
+	Nationaldigitalsurvey += "SET !DATASOURCE_COLUMNS 5"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formCongratulations ATTR=ID:address CONTENT={{!COL2}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formCongratulations ATTR=ID:city CONTENT={{!COL3}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=SELECT FORM=ID:formCongratulations ATTR=ID:state CONTENT=%{{!COL4}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:formCongratulations ATTR=ID:zip CONTENT={{!COL5}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=INPUT:TEL FORM=ID:formCongratulations ATTR=ID:phone CONTENT={{!COL1}}"+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=SELECT FORM=ID:formCongratulations ATTR=NAME:pse_1324_dob_month_digit CONTENT=%"+Random_Ngay+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=SELECT FORM=ID:formCongratulations ATTR=NAME:pse_1324_dob_day CONTENT=%"+Random_Thang+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=SELECT FORM=ID:formCongratulations ATTR=NAME:pse_1324_dob_year CONTENT=%"+Random_Nam+"\n";
+	Nationaldigitalsurvey += "TAG POS=1 TYPE=BUTTON FORM=ID:formCongratulations ATTR=ID:btn4"+"\n";
+	Nationaldigitalsurvey += "WAIT SECONDS=5"+"\n";
+	iimPlay(Nationaldigitalsurvey);
+	var str = window.document.body.textContent;
+	if(str.indexOf("Take Survey"))
+	{
+		var Nationaldigitalsurvey_KS = "CODE:";
+		Nationaldigitalsurvey_KS += "SET !ERRORIGNORE YES"+"\n";
+		Nationaldigitalsurvey_KS += "SET !TIMEOUT_TAG 0"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=DIV ATTR=TXT:Yes"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=ID:no"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/?session_id=* ATTR=ID:confirm CONTENT=YES"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=* ATTR=TXT:Continue"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ID:ocs_form ATTR=TXT:Skip"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=A ATTR=TXT:No<SP>thanks,<SP>I<SP>don't<SP>feel<SP>like<SP>saving<SP>tod*"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ID:ocs_form ATTR=TXT:Skip"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=ebba53360e1911e8aeefde6294bcc7b7 ATTR=NAME:sub"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=ebba53360e1911e8aeefde6294bcc7b7 ATTR=NAME:sub"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ACTION:/?session_id=ebba53360e1911e8aeefde6294bcc7b7 ATTR=NAME:sub"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=BUTTON FORM=ID:ocs_form ATTR=TXT:Skip"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=1"+"\n";
+		Nationaldigitalsurvey_KS += "TAG POS=1 TYPE=IMG ATTR=ID:listing-td-div0-img"+"\n";
+		Nationaldigitalsurvey_KS += "WAIT SECONDS=20"+"\n";
+		iimPlay(Nationaldigitalsurvey_KS);
 	}
 }
 function NFL(File_Mail_info)
