@@ -8,9 +8,9 @@ home += "TAB CLOSEALLOTHERS"+"\n";
 home += "URL GOTO=about:home"+"\n";
 iimPlay(home);ClearCookie();
 
-var Ma_off = ["399","493","491","245","183","481","490"];
+var Ma_off = ["3725","493","491","245","183","481","490"];
 // var Ma_off = ["493"];
-var File_Mail_info = 2; var sl_chay_off = 6; var off = 0;
+var File_Mail_info = 2; var sl_chay_off = 0; var off = 0;
 while(true)
 {
 	if(off > sl_chay_off)
@@ -47,7 +47,7 @@ while(true)
 		Load_Link_Nhanh += "SET !TIMEOUT_PAGE 50"+"\n";
 		Load_Link_Nhanh += "TAB CLOSEALLOTHERS"+"\n";
 		Load_Link_Nhanh += "CLEAR"+"\n";
-		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
+		Load_Link_Nhanh += "URL GOTO=http://leadadsoffers.com/click/to/5/"+Ma_off[off]+"\n";
 		// Load_Link_Nhanh += "URL GOTO=http://earnmoneyoffer.net/home/quickbanner/"+User_member[File_Mail_info]+"/"+Ma_off[off]+"\n";
 		iimPlay(Load_Link_Nhanh);
 		////////////// Cho Lệnh Chờ Nếu Site Bị Trắng /////////////////// 
@@ -61,7 +61,7 @@ while(true)
 			iimPlayCode("WAIT SECONDS=5");
 			break;
 			////
-			case "306":case "183":case "119":case "294":case "450":case "449":case "448":
+			case "0":case "183":case "119":case "294":case "450":case "449":case "448":
 			case "138":case "128":case "127":case "102":case "118":case "114":case "115":case "213":
 			case "21":case "75":case "62":case "73":case "5":case "2":
 			iimPlayCode("WAIT SECONDS=10");
@@ -137,14 +137,12 @@ while(true)
 					catch(exception){}
 				}
 				else if(title == "RewardBee"||title == "Roblox"||title == "TopSweeps - Survey")
-				{ // 17 22 71 76 25 86 109 123 84 145 78 180 179 39 239 241 174 204 245 248 340 387 386 442 486 490
+				{ // 3725
 					try
 					{
 						switch(Check_Off)
 						{ // RewardBee
-							case "442":case "459":
-							case "387":case "241":case "180":case "179":case "123":case "109":case "145":case "239":
-							case "25":case "78":case "84":case "39":case "86":case "76":case "71":case "17":case "22":
+							case "3725":
 							// iimPlay(REFRESH_Site);
 							iimPlayCode("WAIT SECONDS=5");
 							// RewardBee_V2(File_Mail_info);
